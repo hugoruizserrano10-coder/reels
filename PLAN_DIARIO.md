@@ -52,6 +52,8 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
   `python3 generador/desmontar.py video.mp4 <usuario>-<fecha>`, mirar las hojas de fotogramas y escribir el análisis en su `ficha.md`.
   Nunca resubir ni copiar el vídeo, la música o el texto: solo la estructura, el tipo de gancho, las frases puente y el ritmo.
 - Pasar lo aprendido a `datos/ganchos.md` y `datos/formatos.md`, y usarlo en los siguientes reels.
+- **Contador**: después de cada ronda, sumar en `datos/contador_analisis.json` (total e historial con la fecha) cuántos reels se han
+  revisado, cuántos eran virales y cuántos se han desmontado. Al medir nuestros reels, sumar también `propios_medidos`.
 - Si no hay webhook todavía: desmontar los vídeos nuevos de `referencias/` con el mismo programa.
 
 ## 2c. Pruebas (cuando uno funciona)
