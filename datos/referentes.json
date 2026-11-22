@@ -1,9 +1,20 @@
 {
  "explicacion": "Cuentas de referencia (Business o Creator) cuyos reels revisa el Descubridor. Hugo puede añadir más. La tarea añade cuentas nuevas que encuentre (colaboraciones, menciones, búsquedas) si son del mismo estilo o del público objetivo.",
  "cuentas": [
-  {"usuario": "curiosfer", "motivo": "sistema content-os, ganchos y frases puente"},
-  {"usuario": "santiremedio", "motivo": "listas de herramientas, estética pixel-art, CTA 'Comenta REPO'"},
-  {"usuario": "marketingconlaurita", "motivo": "reel de referencia del estilo de flujos por pasos"}
+  {
+   "usuario": "curiosfer",
+   "motivo": "sistema content-os, ganchos y frases puente",
+   "no_usar": "youtube.com/@curiosfer y tiktok @curiosfer son otras personas"
+  },
+  {
+   "usuario": "santiremedio",
+   "motivo": "listas de herramientas, estética pixel-art, CTA 'Comenta REPO'",
+   "no_usar": "tiktok @santiremedio existe pero sin vídeos"
+  },
+  {
+   "usuario": "marketingconlaurita",
+   "motivo": "reel de referencia del estilo de flujos por pasos"
+  }
  ],
  "umbral_viral": 3.0
 }

@@ -30,10 +30,18 @@ def main(argv):
     if argv[:1] == ["--bajar"]:
         url, carpeta = argv[1], argv[2]
         os.makedirs(carpeta, exist_ok=True)
-        r = subprocess.run(["yt-dlp", "-q", "--no-warnings", "-o", os.path.join(carpeta, "video.%(ext)s"),
-                            "--merge-output-format", "mp4", url], capture_output=True, text=True, timeout=300)
-        print(r.stderr.strip() or "ok")
-        return
+        import time
+        for intento, espera in enumerate([0, 60, 180]):
+            time.sleep(espera)
+            r = subprocess.run(["yt-dlp", "-q", "--no-warnings", "-o", os.path.join(carpeta, "video.%(ext)s"),
+                                "--merge-output-format", "mp4", "--write-info-json", url],
+                               capture_output=True, text=True, timeout=300)
+            if r.returncode == 0:
+                print("ok"); return
+            if "429" not in r.stderr:
+                break
+            print(f"Instagram limita (429), espero y reintento ({intento + 1}/3)")
+        print(r.stderr.strip()[-300:]); sys.exit(1)
     n, umbral, salida, perfiles = 30, 3.0, None, []
     i = 0
     while i < len(argv):

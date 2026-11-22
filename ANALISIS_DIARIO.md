@@ -18,6 +18,12 @@ Fuentes, por este orden; usa todas las que funcionen:
   automatización, marketing local, dueños de negocios, reformas/talleres/clínicas que hacen reels) con vídeos que
   superen claramente su media. Añadirlas a `datos/referentes.json` con el motivo. Quitar las que no aporten en 2 semanas.
 
+**Cuidado con los nombres:** antes de usar un perfil de TikTok/YouTube comprueba que es el mismo creador (idioma,
+tema, enlace de la bio, mismos vídeos). Ej.: youtube.com/@curiosfer es un canal francés que NO es nuestro referente.
+**Instagram limita** las descargas desde la nube (error 429 tras 3–4 seguidas): máximo 5 reels de Instagram al día,
+dejando ~1 minuto entre cada uno; Instagram no da visualizaciones sin sesión, solo me gusta (usarlos para comparar).
+El grueso de los revisados sale de TikTok y YouTube Shorts, que sí dan visualizaciones fiables.
+
 Viral = 3x la mediana de visualizaciones (o de me gusta+comentarios con Make) de su propio creador.
 Guardar la ronda del día en `datos/virales.json` (añadir, sin duplicar por id).
 
