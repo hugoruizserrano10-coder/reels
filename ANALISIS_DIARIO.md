@@ -55,7 +55,13 @@ Cada día se elige el viral más fuerte que se pueda rehacer y se **copia tal cu
   (Mixkit). Si lleva voz y la nuestra suena peor que la suya, priorizar texto en pantalla.
 - Lo que NO se copia: el vídeo, la música y la voz de otros creadores (el algoritmo de Instagram detecta contenido
   duplicado y lo hunde, y pueden denunciarlo). Solo se usan trozos literales de otros cuando Hugo lo pide para una prueba concreta.
-Renderizar el clon con `generador/hacer_reel.sh` o el script que haga falta, revisarlo (hoja de fotogramas: que se lea,
+**Herramienta principal para clonar: la habilidad `reverse-any-video` de HyperFrames** (en `.claude/skills/`, instalada
+con permiso de Hugo el 22-nov): reconstruye el viral como proyecto editable comprobándolo fotograma a fotograma; luego se
+cambian textos, datos, imágenes (por las de Mixkit) y audio por los nuestros. Para animaciones con Remotion, seguir la
+habilidad `remotion-best-practices`. Exportar antes `DO_NOT_TRACK=1 HYPERFRAMES_TELEMETRY=0` y
+`PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome`. HyperFrames no se instala: se ejecuta con
+`node .claude/skills/hyperframes/scripts/plugin-cli.mjs <comando>` (init --non-interactive --skip-skills, render --output …).
+Renderizar el clon con eso, con `generador/hacer_reel.sh` o el script que haga falta, revisarlo (hoja de fotogramas: que se lea,
 que no haya textos cortados, que el gancho se entienda en 1–2 s), subirlo a `videos/<fecha>-M.mp4` y dejar
 `historias/<fecha>-M-clon-<cuenta>.json` con `"tipo":"video_listo"`, `"clon_de":"<url del viral>"`, su caption
 (adaptada del original) y el tipo de gancho. <fecha> = el primer día cuya franja M (13:40) esté libre, empezando por HOY (la tarea de las 13:25 lo publicará).

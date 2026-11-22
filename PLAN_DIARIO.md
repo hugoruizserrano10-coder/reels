@@ -95,7 +95,9 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
   `historias/ejemplo-pro-peluqueria.json`. Escenas: hook · notifs · chat · agenda · lista · cta. Tarda ~4 min en
   renderizar. Si falla el render, rehacer la misma historia con el formato A antiguo y apuntarlo en diario.md.
   Ritmo: seguir "Ritmo y claridad" de datos/aprendizajes.md (voz 1.05, pausas, campo "en", sin subtítulos sobre chats).
-  Cuando haga falta una escena nueva (p. ej. llamada entrante, mapa, gráfico), añadirla en ReelPro.tsx.
+  Cuando haga falta una escena nueva (p. ej. llamada entrante, mapa, gráfico), añadirla en ReelPro.tsx siguiendo la
+  habilidad `remotion-best-practices` (.claude/skills). Para piezas de motion graphics cortas y pulidas también se puede
+  usar HyperFrames (habilidad `hyperframes`, ver ANALISIS_DIARIO.md para cómo ejecutarlo).
 - **Formatos — rotación semanal:** 5 días historias (formato PRO; el A antiguo solo como respaldo) y 2 días formato F (`"tipo":"palabras"`).
   Hugo (22-nov) quiere el F **con un inicio de vídeo real, gracioso o raro, como los reels de referencia** (chut de fútbol,
   gato con gafas…), y después corte seco a nuestras palabras y la CTA. Ese inicio sale SIEMPRE de un vídeo de stock gratuito
