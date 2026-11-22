@@ -1,6 +1,6 @@
 # Plan diario de reels — norte.local
 
-Instrucciones para la tarea programada. Se ejecuta 3 veces al día (13:45, 16:15 y 20:15, hora de Madrid),
+Instrucciones para la tarea programada. Se ejecuta 3 veces al día (13:40, 16:40 y 20:40, hora de Madrid),
 pero **solo publica una vez al día**: la ejecución de la franja que toca según `datos/horarios.json`.
 Las demás ejecuciones del día terminan sin hacer nada.
 
