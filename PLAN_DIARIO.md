@@ -38,6 +38,12 @@ Las demás ejecuciones del día terminan sin hacer nada.
 
 ## 2b. Descubridor, virales y desmontaje (lunes y jueves)
 Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (sin scraping).
+- **Montaje automático del Descubridor** (una sola vez): si `make_descubridor_webhook` es null, mirar en Make (organización 9494560,
+  equipo 3444695, plan gratuito: máx. 2 escenarios y 1.000 operaciones/mes) si ya hay una conexión de tipo Instagram for Business
+  (connections_list). Si la hay: crear el escenario "Descubridor norte.local" = webhook (recibe {"usuario"}) → Instagram for Business
+  "List public user posts" (GetUserDataMedia, 25 publicaciones, con like_count, comments_count, timestamp, permalink, caption,
+  media_type, media_url) → agregador → "Webhook response" con el JSON. Validarlo, activarlo, probarlo con una cuenta de referentes,
+  guardar la URL del webhook en `datos/config.json`, commit, y avisar a Hugo de que ya funciona. Si no hay conexión, seguir sin él.
 - **Descubridor**: si `datos/config.json` tiene `make_descubridor_webhook`, llamarlo (POST {"usuario": ...}) para cada cuenta de
   `datos/referentes.json`. Devuelve sus últimas publicaciones con me gusta, comentarios, fecha, enlace, descripción y media_url.
 - **Virales**: para cada cuenta, mediana de me gusta + comentarios de sus últimas 25 publicaciones; un reel es viral si supera
@@ -91,6 +97,13 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 ## 4b. Retroalimentación de la propia tarea
 - Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.
 - Si un mismo problema aparece 2 veces, cambiar este plan o el generador para que no vuelva a pasar (y apuntarlo).
+
+## 4c. Analíticas que hay que mirar SIEMPRE (Hugo lo pidió: todo automático)
+- De cada reel: visualizaciones, alcance, % visto (tiempo medio / duración), % que lo pasa en 3 s, me gusta, comentarios, guardados,
+  envíos, y desglose por `tipo_negocio`, `tipo_gancho`, `cta` y franja horaria.
+- De la cuenta: seguidores, visitas al perfil, toques en el enlace de la bio.
+- Una vez por semana (lunes), una tabla resumen en `datos/semanal.md`: qué tipo de negocio, gancho, CTA, duración y hora funcionan mejor,
+  y qué se cambia esa semana por esos datos.
 
 ## 5. Avisar a Hugo
 Mensaje corto en español: qué se ha publicado y a qué hora, qué se probaba, cómo fueron los reels anteriores
