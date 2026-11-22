@@ -138,6 +138,11 @@ Hugo. Nunca publicar algo que no haya pasado el control.
 - Publicar a las :40 (esperar si el control termina antes). Apuntar en el registro: fecha, hora_publicacion, franja (M/N),
   historia, video, media_id, duracion_s, formato, clon_de, variante, cta y control. Commit y push.
 
+## 4a. TikTok (conectado el 22-nov, cuenta Windsor tiktok_organic `_000yNAuStHLUPyUtg3B5rtCXhsZx_ubs-8N`)
+- Windsor solo lee métricas de TikTok, no publica. Tras publicar en Instagram, mandar a Hugo en el resumen el vídeo
+  (enlace raw de GitHub) y el texto para TikTok (caption más corta + 3–5 hashtags) para que lo suba él desde el móvil
+  con un sonido en tendencia. Medir también los vídeos de TikTok (get_data, conector tiktok_organic) y compararlos en el informe.
+
 ## 4b. Retroalimentación de la propia tarea
 - Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.
 - Si un mismo problema aparece 2 veces, cambiar este plan o el generador para que no vuelva a pasar (y apuntarlo).
