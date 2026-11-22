@@ -40,10 +40,14 @@ Las demás ejecuciones del día terminan sin hacer nada.
 - Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa.
 - Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Elegir un caso de `historias/banco.md`
   (no repetir oficio + problema en 7 días), marcarlo como usado y añadir 1–2 casos nuevos al banco. Nombres y empresas inventados.
+- **Variar el tipo de negocio cada día** entre los clientes potenciales (talleres, reformas, academias, inmobiliarias, estética y peluquería,
+  fontanería y climatización, gimnasios, tiendas…): nunca el mismo tipo dos días seguidos, y cada historia distinta. Adaptar al negocio
+  el título, la escena, la agenda, el resumen, el estado de "cerrado", la etiqueta y los hashtags. Apuntar el tipo en el registro
+  (`tipo_negocio`) para ver qué negocios dan más visualizaciones y comentarios.
 - Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
   construir el siguiente formato ampliando el generador.
 - Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.
-- CTA: alternar "Comenta RECEPCIÓN" con "Envíaselo a alguien que tenga una empresa de reformas" (los envíos pesan mucho)
+- CTA: alternar "Comenta RECEPCIÓN" con "Envíaselo a alguien que tenga un <tipo de negocio del reel>" (los envíos pesan mucho)
   y medir cuál da más comentarios/envíos.
 - Mantener lo que funciona y **cambiar una sola cosa** respecto a la mejor versión (la siguiente de "Ideas pendientes"
   o lo que sugieran los datos). Apuntar en el JSON `"variante"` qué cambia.

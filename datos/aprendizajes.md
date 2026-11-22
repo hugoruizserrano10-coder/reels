@@ -3,6 +3,7 @@
 Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se aplica ya.
 
 ## Reglas que aplicamos ahora
+- (22-nov) Hugo abre la agencia a cualquier negocio local: cada reel, un tipo de negocio y una historia distinta. Medir qué tipo de negocio funciona mejor.
 - Instagram reparte los reels sobre todo por **tiempo de visualización / % visto**, luego **envíos por DM por alcance** y **me gusta por alcance**. El % de gente que pasa en los 3 primeros segundos (skip rate) es la señal de alarma. (Fuentes: Buffer, SocialPilot, Later — oct/2026.)
 - Lo más concreto (número, dinero, hora, lugar) va en los **3 primeros segundos**: en el título de arriba y en la primera frase.
 - Más corto suele ganar en % visto: un reel de 15–30 s visto entero puntúa mejor que uno de 60 s a medias.
@@ -34,4 +35,4 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 - Gancho con municipio concreto ("Esto pasó en Tres Cantos…").
 - Formato "error que te cuesta obras" (lista de 3 errores, ~20 s).
 - Loop: que el final enlace con el principio para que se vuelva a ver.
-- CTA de compartir ("Envíaselo a alguien que tenga una empresa de reformas") para subir envíos por DM.
+- CTA de compartir ("Envíaselo a alguien que tenga un taller / una academia…", según el negocio del reel) para subir envíos por DM.
