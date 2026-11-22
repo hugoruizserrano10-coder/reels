@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cuestionario para tu asistente · norte.local</title>
-<meta name="description" content="Cuéntanos cómo trabaja tu empresa de reformas y te preparamos una demo del asistente con tus servicios, zona y horarios.">
+<meta name="description" content="Cuéntanos cómo trabaja tu negocio y te preparamos una demo del asistente con tus servicios, precios y horarios.">
 <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/estilo.css">
 <style>
@@ -32,7 +32,7 @@
 
 <main class="cuestionario">
   <h1>Cuéntame cómo trabajas</h1>
-  <p>Con esto preparo un asistente de prueba con tus servicios, tu zona y tus horarios. Son unos 3 minutos; lo que no sepas, déjalo en blanco y lo vemos juntos.</p>
+  <p>Con esto preparo un asistente de prueba con tus servicios, tus precios y tus horarios. Son unos 3 minutos; lo que no sepas, déjalo en blanco y lo vemos juntos.</p>
 
   <form class="formulario" id="form-cuestionario" action="https://formsubmit.co/hugoruizserrano10@gmail.com" method="POST" data-gracias="gracias.html">
     <input type="hidden" name="_subject" value="norte.local · Cuestionario rellenado">
@@ -42,43 +42,44 @@
     <input class="oculto" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
     <div class="bloque">
-      <h2><span>1</span>Tu empresa</h2>
+      <h2><span>1</span>Tu negocio</h2>
       <div class="dos">
-        <div class="campo"><label for="empresa">Nombre de la empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization" required></div>
+        <div class="campo"><label for="empresa">Nombre del negocio</label><input id="empresa" name="empresa" type="text" autocomplete="organization" required></div>
         <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
       </div>
       <div class="dos">
         <div class="campo"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
         <div class="campo"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email"></div>
       </div>
-      <div class="campo"><label for="web">Web o Instagram de la empresa</label><input id="web" name="web_o_instagram" type="text"></div>
+      <div class="campo"><label for="web">Web o Instagram del negocio</label><input id="web" name="web_o_instagram" type="text"></div>
     </div>
 
     <div class="bloque">
       <h2><span>2</span>Qué hacéis</h2>
       <fieldset class="campo">
-        <legend>Tipo de trabajos</legend>
+        <legend>Tipo de negocio</legend>
         <div class="opciones">
-          <label><input type="checkbox" name="trabajos[]" value="Reformas integrales"> Reformas integrales</label>
-          <label><input type="checkbox" name="trabajos[]" value="Cocinas"> Cocinas</label>
-          <label><input type="checkbox" name="trabajos[]" value="Baños"> Baños</label>
-          <label><input type="checkbox" name="trabajos[]" value="Climatización y calderas"> Climatización y calderas</label>
-          <label><input type="checkbox" name="trabajos[]" value="Fontanería"> Fontanería</label>
-          <label><input type="checkbox" name="trabajos[]" value="Pintura"> Pintura</label>
-          <label><input type="checkbox" name="trabajos[]" value="Suelos"> Suelos</label>
-          <label><input type="checkbox" name="trabajos[]" value="Electricidad"> Electricidad</label>
+          <label><input type="radio" name="tipo_negocio" value="Taller"> Taller</label>
+          <label><input type="radio" name="tipo_negocio" value="Reformas"> Reformas</label>
+          <label><input type="radio" name="tipo_negocio" value="Academia"> Academia</label>
+          <label><input type="radio" name="tipo_negocio" value="Inmobiliaria"> Inmobiliaria</label>
+          <label><input type="radio" name="tipo_negocio" value="Estética o peluquería"> Estética o peluquería</label>
+          <label><input type="radio" name="tipo_negocio" value="Fontanería o climatización"> Fontanería o climatización</label>
+          <label><input type="radio" name="tipo_negocio" value="Gimnasio"> Gimnasio</label>
+          <label><input type="radio" name="tipo_negocio" value="Tienda"> Tienda</label>
+          <label><input type="radio" name="tipo_negocio" value="Otro"> Otro</label>
         </div>
       </fieldset>
-      <div class="campo"><label for="mas-pedidos">Los trabajos que más os piden y su precio orientativo <span class="ayuda">(por ejemplo: cambio de bañera por plato, desde 1.200 €)</span></label><textarea id="mas-pedidos" name="mas_pedidos_y_precios"></textarea></div>
-      <div class="campo"><label for="no-hacemos">Trabajos que no hacéis o clientes que no os interesan</label><input id="no-hacemos" name="no_hacemos" type="text" placeholder="Obras muy pequeñas, fuera de Madrid…"></div>
+      <div class="campo"><label for="mas-pedidos">Los servicios o productos que más os piden y su precio orientativo <span class="ayuda">(por ejemplo: revisión de frenos, 25 €)</span></label><textarea id="mas-pedidos" name="mas_pedidos_y_precios"></textarea></div>
+      <div class="campo"><label for="no-hacemos">Lo que no hacéis o clientes que no os interesan</label><input id="no-hacemos" name="no_hacemos" type="text" placeholder="Servicios que no ofrecéis, zonas a las que no vais…"></div>
     </div>
 
     <div class="bloque">
       <h2><span>3</span>Zona y horario</h2>
-      <div class="campo"><label for="zona">Municipios donde trabajáis</label><input id="zona" name="zona" type="text" placeholder="Alcobendas, Sanse, Tres Cantos…"></div>
+      <div class="campo"><label for="zona">Dónde estáis o a qué zona dais servicio</label><input id="zona" name="zona" type="text" placeholder="Alcobendas, Sanse, Tres Cantos…"></div>
       <div class="dos">
         <div class="campo"><label for="horario">Horario de oficina</label><input id="horario" name="horario_oficina" type="text" placeholder="L-V 9:00-14:00 y 16:00-19:00"></div>
-        <div class="campo"><label for="visitas">Días y horas para visitas</label><input id="visitas" name="dias_visitas" type="text" placeholder="L-V por la tarde"></div>
+        <div class="campo"><label for="visitas">Días y horas para citas</label><input id="visitas" name="dias_citas" type="text" placeholder="L-V por la tarde"></div>
       </div>
     </div>
 
@@ -92,7 +93,7 @@
           <label><input type="checkbox" name="canales[]" value="Formulario web"> Formulario de la web</label>
           <label><input type="checkbox" name="canales[]" value="Teléfono"> Teléfono</label>
           <label><input type="checkbox" name="canales[]" value="Correo"> Correo</label>
-          <label><input type="checkbox" name="canales[]" value="Portales (Habitissimo, etc.)"> Portales de reformas</label>
+          <label><input type="checkbox" name="canales[]" value="Portales o webs de reservas"> Portales o webs de reservas</label>
         </div>
       </fieldset>
       <div class="dos">
@@ -109,9 +110,9 @@
       <fieldset class="campo">
         <legend>¿Qué debería agendar el asistente?</legend>
         <div class="opciones">
-          <label><input type="radio" name="que_agenda" value="Visita para medir" checked> Visita para medir</label>
+          <label><input type="radio" name="que_agenda" value="Cita en el local" checked> Una cita en el local</label>
+          <label><input type="radio" name="que_agenda" value="Visita a domicilio"> Una visita a domicilio</label>
           <label><input type="radio" name="que_agenda" value="Llamada"> Una llamada</label>
-          <label><input type="radio" name="que_agenda" value="Visita a la exposición"> Visita a la exposición</label>
         </div>
       </fieldset>
       <fieldset class="campo">
@@ -122,7 +123,7 @@
           <label><input type="radio" name="calendario" value="No, en papel o de memoria"> No</label>
         </div>
       </fieldset>
-      <div class="campo"><label for="persona">Casos que deben pasar a una persona en el acto</label><input id="persona" name="pasar_a_persona" type="text" placeholder="Quejas, urgencias, obras grandes…"></div>
+      <div class="campo"><label for="persona">Casos que deben pasar a una persona en el acto</label><input id="persona" name="pasar_a_persona" type="text" placeholder="Quejas, urgencias, pedidos grandes…"></div>
       <div class="campo"><label for="nunca">Algo que el asistente no deba decir o prometer nunca</label><input id="nunca" name="no_prometer" type="text" placeholder="Precios cerrados, plazos…"></div>
     </div>
 

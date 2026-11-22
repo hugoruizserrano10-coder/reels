@@ -38,7 +38,7 @@ document.querySelectorAll("form[data-gracias]").forEach(function (f) {
   io.observe(chat);
 })();
 
-// Calculadora de obras perdidas (todo en el navegador).
+// Calculadora de clientes perdidos (todo en el navegador).
 (function () {
   var ids = ["c-msg", "c-tarde", "c-perdidos", "c-cierre", "c-valor"];
   var els = ids.map(function (i) { return document.getElementById(i); });
@@ -49,11 +49,11 @@ document.querySelectorAll("form[data-gracias]").forEach(function (f) {
   function calc() {
     var tarde = Math.min(n(els[1]), n(els[0]));
     var perdidosMes = tarde * Math.min(n(els[2]), 100) / 100;
-    var obrasAno = perdidosMes * 12 * Math.min(n(els[3]), 10) / 10;
-    var euros = obrasAno * n(els[4]);
+    var ventasAno = perdidosMes * 12 * Math.min(n(els[3]), 10) / 10;
+    var euros = ventasAno * n(els[4]);
     out.textContent = fmt.format(Math.round(euros / 100) * 100) + " €";
-    det.textContent = "Unos " + fmt.format(perdidosMes * 12) + " clientes al año que se van con otro, que serían unas " +
-      (obrasAno < 10 ? obrasAno.toLocaleString("es-ES", { maximumFractionDigits: 1 }) : fmt.format(obrasAno)) + " obras.";
+    det.textContent = "Unos " + fmt.format(perdidosMes * 12) + " clientes al año que se van con otro, de los que unos " +
+      (ventasAno < 10 ? ventasAno.toLocaleString("es-ES", { maximumFractionDigits: 1 }) : fmt.format(ventasAno)) + " te habrían comprado.";
   }
   els.forEach(function (e) { e.addEventListener("input", calc); });
   calc();
