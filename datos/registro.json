@@ -1,5 +1,8 @@
 {
- "cuenta_instagram": {"windsor_account": "17841476774457077", "usuario": "norte.local_"},
+ "cuenta_instagram": {
+  "windsor_account": "17841476774457077",
+  "usuario": "norte.local_"
+ },
  "reels": [
   {
    "fecha": "2026-11-22",
@@ -10,6 +13,34 @@
    "duracion_s": 46.9,
    "variante": "base: historia larga con 4 pasos, gancho 'ESTA IA TE CONSIGUE OBRAS MIENTRAS DUERMES'",
    "nota": "Publicado de madrugada para probar el sistema; su hora no cuenta para el experimento de horarios.",
+   "metricas_24h": null,
+   "metricas_72h": null,
+   "metricas_parciales": {
+    "medido": "2026-11-22 ~11 h tras publicar",
+    "views": 108,
+    "reach": 101,
+    "avg_watch_ms": 8581,
+    "pct_visto": 0.18,
+    "skip_rate": 0.59,
+    "likes": 1,
+    "comentarios": 0,
+    "envios": 0
+   }
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora_publicacion": "13:52",
+   "franja": "extra",
+   "historia": "historias/2026-11-22-academia-selectividad.json",
+   "video": "videos/2026-11-22b.mp4",
+   "media_id": "18119532692582550",
+   "story_id": "18115305905627826",
+   "duracion_s": 34.5,
+   "tipo_negocio": "academia",
+   "tipo_gancho": "resultado primero + número concreto",
+   "variante": "reel extra pedido por Hugo: formato corto con gancho g0 y academia",
+   "cta": "Comenta RECEPCIÓN",
+   "nota": "Extra a petición de Hugo; su hora no cuenta para el experimento de horarios.",
    "metricas_24h": null,
    "metricas_72h": null
   }

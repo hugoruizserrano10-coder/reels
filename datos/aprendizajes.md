@@ -27,7 +27,8 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 ## Experimentos
 | Fecha | Variable que cambia | Respecto a | Resultado |
 |---|---|---|---|
-| 2026-11-22 | (base, 47 s) | — | pendiente |
+| 2026-11-22 | (base, 47 s) | — | parcial a ~11 h: 108 vistas, 18 % visto, 59 % lo pasa en 3 s |
+| 2026-11-22 (extra) | ~35 s + gancho g0 + academia | base | pendiente |
 | 2026-11-23 | versión nueva: ~30 s + gancho "resultado primero" (escena g0) + taller en vez de reformas (historia ya preparada: historias/2026-11-23-taller-frenos.json) | base (47 s, gancho de historia) | pendiente |
 
 ## Ideas pendientes de probar (una cada vez)
