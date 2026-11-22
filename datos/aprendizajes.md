@@ -3,6 +3,7 @@
 Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se aplica ya.
 
 ## Reglas que aplicamos ahora
+- (22-nov) Ganchos: ver `datos/ganchos.md`. Resultado o número concreto en el primer segundo; el gancho tipo "Son las diez de la noche…" (historia sin resultado) es de los que peor funcionan en 2026.
 - (22-nov) Hugo abre la agencia a cualquier negocio local: cada reel, un tipo de negocio y una historia distinta. Medir qué tipo de negocio funciona mejor.
 - Instagram reparte los reels sobre todo por **tiempo de visualización / % visto**, luego **envíos por DM por alcance** y **me gusta por alcance**. El % de gente que pasa en los 3 primeros segundos (skip rate) es la señal de alarma. (Fuentes: Buffer, SocialPilot, Later — oct/2026.)
 - Lo más concreto (número, dinero, hora, lugar) va en los **3 primeros segundos**: en el título de arriba y en la primera frase.
@@ -25,7 +26,7 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 | Fecha | Variable que cambia | Respecto a | Resultado |
 |---|---|---|---|
 | 2026-11-22 | (base, 47 s) | — | pendiente |
-| 2026-11-23 | duración ~26 s (escenas s1, s2, s3, p2, p3, p3b, p4, cta) + dinero o dato concreto en el gancho, con un negocio que no sea reformas | base | pendiente |
+| 2026-11-23 | versión nueva: ~30 s + gancho "resultado primero" (escena g0) + taller en vez de reformas (historia ya preparada: historias/2026-11-23-taller-frenos.json) | base (47 s, gancho de historia) | pendiente |
 
 ## Ideas pendientes de probar (una cada vez)
 - Gancho con pregunta directa al dueño ("¿Cuántos clientes pierdes los domingos?").

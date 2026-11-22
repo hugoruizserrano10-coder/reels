@@ -1,0 +1,32 @@
+# Biblioteca de ganchos (primeros 3 segundos)
+
+Investigación del 22-nov-2026 (análisis públicos de reels/TikToks virales de 2026: FluxNote 500 vídeos >1M, OpusClip 13,5M clips,
+Emplifi, NestScale, Blitzcut, Metricool). Los datos vienen de análisis de terceros, no de nuestra cuenta: hay que confirmarlos con nuestras métricas.
+
+## Reglas
+- En Reels la gente decide en ~1,4 s si se queda; el gancho tiene que estar entendido antes del segundo 3.
+- El **primer fotograma** ya enseña algo que se mueve y un texto de 5–8 palabras (el título de arriba). Nada de arrancar con escena vacía.
+- Voz desde el primer segundo (los reels con voz en los 3 primeros segundos retienen más que los de solo música).
+- Números concretos (22:14, 3 citas, 25 €) mejor que redondos o vagos.
+- Lo que peor funciona en 2026: empezar "contando una historia" sin resultado ("Son las diez de la noche…"), contexto de más de 4 s,
+  curiosidad genérica ("no te vas a creer esto"), solo música, y una pregunta sola sin afirmación.
+- En Reels el que mejor encaja es **demostración / resultado primero**: enseñar el resultado y luego cómo se consiguió.
+- Duración objetivo 15–30 s.
+
+## Tipos de gancho adaptados a norte.local (rotar y medir; apuntar `tipo_gancho` en la historia y en el registro)
+1. **Resultado primero** (escena `g0` del generador: notificaciones "Nueva cita agendada" con el negocio cerrado).
+   Título: "EL TALLER CERRÓ A LAS 20:00 Y GANÓ 3 CITAS NUEVAS". Voz: "Este taller cerró a las ocho y por la noche consiguió tres citas nuevas."
+2. **Número concreto**: "Esta academia contestó 31 mensajes un domingo sin abrir el móvil."
+3. **Contraste / contra lo que se cree**: "Contestar rápido no es estar pegado al móvil." / "No necesitas más clientes: necesitas contestar a los que ya te escriben."
+4. **Mándale esto a…** (sube los envíos por DM, la señal que más pesa para llegar a gente nueva):
+   "Mándale esto a quien tenga un taller y conteste los WhatsApp a las once de la noche."
+5. **Error y corrección**: "Si contestas a tus clientes al día siguiente, este reel es para ti."
+6. **Pregunta que ya te hacen + afirmación**: "¿Cuánto cuesta una cita? La recepcionista lo contesta en 4 segundos."
+7. **Lista corta**: "3 mensajes que pierdes cada semana sin darte cuenta."
+8. **Plazo corto**: "Así se monta en 10 minutos una recepcionista para tu negocio."
+POV funciona peor en Reels que en TikTok: usarlo poco.
+
+## Cómo probarlos
+- Cambiar solo el gancho entre reels comparables (misma duración y estructura) y comparar `media_reel_skip_rate` (% que lo pasa en 3 s)
+  y `pct_visto`. El que baje el skip rate gana y pasa a ser el gancho por defecto.
+- Cuando la cuenta tenga ~1.000 seguidores, probar dos ganchos del mismo reel con trial reels.

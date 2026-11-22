@@ -44,6 +44,9 @@ Las demás ejecuciones del día terminan sin hacer nada.
   fontanería y climatización, gimnasios, tiendas…): nunca el mismo tipo dos días seguidos, y cada historia distinta. Adaptar al negocio
   el título, la escena, la agenda, el resumen, el estado de "cerrado", la etiqueta y los hashtags. Apuntar el tipo en el registro
   (`tipo_negocio`) para ver qué negocios dan más visualizaciones y comentarios.
+- **Gancho**: elegirlo de `datos/ganchos.md` siguiendo sus reglas (resultado o dato concreto en el primer segundo, nunca empezar
+  contando la historia sin resultado). Apuntar `tipo_gancho` en la historia y en el registro. Por defecto usar la escena `g0`
+  (resultado primero) hasta que los datos digan otra cosa; ir probando los otros tipos de uno en uno.
 - Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
   construir el siguiente formato ampliando el generador.
 - Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.

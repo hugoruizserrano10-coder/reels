@@ -230,6 +230,19 @@ def c_chat(im, d, w, h, state):
     bubble(d, 34, y, w - 140, H_["mensaje"], time=HM)
 CARDS["chat"] = c_chat
 
+def c_notif(im, d, w, h, titulo, detalle, nota, hora, grande):
+    k = 1.0 if grande else 0.78
+    s_ = int(76 * k)
+    d.ellipse((26, 26, 26 + s_, 26 + s_), fill=OR)
+    icon(d, "moon", 26 + s_ * 0.16, 26 + s_ * 0.16, s_ / 64 * 0.68)
+    x = 26 + s_ + 22
+    d.text((x, 24), "Agenda · " + hora, font=MD(int(22 * k + 2)), fill=GREY)
+    d.text((x, 24 + 34 * k), titulo, font=XB(int(38 * k)), fill=INK)
+    if detalle: d.text((x, 24 + 86 * k), detalle, font=SB(int(28 * k)), fill=OR)
+    if nota: d.text((x, 24 + 128 * k), nota, font=MD(int(24 * k)), fill=GREY)
+    d.ellipse((w - 72, 30, w - 28, 74), fill=GREEN); check(d, w - 50, 53, 20, WHITE, 5)
+CARDS["notif"] = c_notif
+
 def c_quote(im, d, w, h):
     d.text((30, 26), "Mensaje de " + C["nombre"].split()[0] + "  →  texto", font=SB(22), fill=GREY)
     for i, l in enumerate(wrap("«" + H_["mensaje"] + "»", MD(30), w - 60)):
@@ -431,16 +444,28 @@ def draw_caption(img, t):
 
 # ---------- scenes ----------
 PY = 600  # origen vertical del panel
-SC = ["s1", "s2", "s3", "p1", "p2", "p2b", "p3", "p3b", "p4", "p4b", "fin", "cta"]
+SC = ["g0", "s1", "s2", "s3", "p1", "p2", "p2b", "p3", "p3b", "p4", "p4b", "fin", "cta"]
 SC = [x for x in SC if x == "s1" or any(l["scene"] == x for l in LINES)]  # escenas opcionales
-STARTS = {s: (0.0 if s == "s1" else first(s) - 0.35) for s in SC}
+STARTS = {s: (0.0 if i == 0 else first(s) - 0.35) for i, s in enumerate(SC)}  # la primera escena empieza en 0
 ORDER = sorted(SC, key=lambda s: STARTS[s])
 def scene_range(s):
     i = ORDER.index(s)
     return STARTS[s], (STARTS[ORDER[i + 1]] if i + 1 < len(ORDER) else TOTAL)
 
 # Escenas que comparten lienzo (no hay transición entre ellas)
-GROUP = {"s1": "A", "s2": "A", "s3": "B", "p1": "C", "p2": "D", "p2b": "D", "p3": "E", "p3b": "E", "p4": "F", "p4b": "G", "fin": "H", "cta": "I"}
+GROUP = {"g0": "Z", "s1": "A", "s2": "A", "s3": "B", "p1": "C", "p2": "D", "p2b": "D", "p3": "E", "p3b": "E", "p4": "F", "p4b": "G", "fin": "H", "cta": "I"}
+
+def sc_Z(L, t):
+    """Gancho 'resultado primero': la cita ya está agendada antes de contar la historia."""
+    g = H_.get("gancho", {})
+    p = pr(t, 0.05, 0.5)
+    shake = math.sin(t * 38) * 10 * (1 - p) if t < 0.6 else 0
+    tile = card(860, 250, "notif", g.get("titulo", "Nueva cita agendada"), g.get("detalle", ""), g.get("nota", ""), g.get("hora", H_["hora_mensaje"]), True)
+    paste(L, tile, W / 2 + shake, 120 + (1 - eo(p)) * -160 + 80, 0.9 + 0.1 * eback(p), eo(min(1, p * 2)))
+    for i, ex in enumerate(g.get("extras", [])[:2]):
+        t0 = 0.55 + 0.4 * i
+        tt = card(760, 200, "notif", ex[0], ex[1], "", ex[2], False)
+        pop(L, tt, W / 2, 430 + i * 190, t, t0)
 
 def sc_A(L, t):
     t2 = first("s2")
@@ -503,7 +528,9 @@ def sc_E(L, t):
         link(d, (src[0] + 72, src[1]), (x - 72, y), eio(pr(t, tl[i] - 0.6, 0.6)), t_show=pr(t, t0 + 0.6, 0.3))
     node_at(L, "chat", "Responde", "WhatsApp", *src, t, t0, t0 + 0.5)
     sel = t >= tb + 0.5
-    pop(L, card(460, 440, "reply", sel), src[0] + 20, 500, t, t0 + 0.4)
+    _lines = len(wrap(H_["respuesta"], MD(29), 460 - 48 - 52))
+    _h = 24 + (34 + _lines * 42 + 26) + 18 + 2 * 76 + 10
+    pop(L, card(460, _h, "reply", sel), src[0] + 20, 280 + _h / 2, t, t0 + 0.4)
     for i, (x, y, k, l, s, ct, cs) in enumerate(outs):
         node_at(L, k, l, ct if t >= tl[i] + 0.15 else s, x, y, t, t0 + 0.8 + 0.15 * i, tl[i])
 
@@ -537,7 +564,7 @@ def sc_I(L, t):
     t0 = first("cta")
     pass  # se dibuja en draw_cta (usa todo el lienzo)
 
-SCN = {"A": sc_A, "B": sc_B, "C": sc_C, "D": sc_D, "E": sc_E, "F": sc_F, "G": sc_G, "H": sc_H, "I": sc_I}
+SCN = {"Z": sc_Z, "A": sc_A, "B": sc_B, "C": sc_C, "D": sc_D, "E": sc_E, "F": sc_F, "G": sc_G, "H": sc_H, "I": sc_I}
 GSTART = {}
 for s in ORDER:
     g = GROUP[s]; GSTART.setdefault(g, STARTS[s])
