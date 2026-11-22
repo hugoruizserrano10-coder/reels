@@ -37,7 +37,29 @@ hacer con nuestro generador > más veces la mediana):
    CTA, por qué crees que funcionó y **qué copiamos** (solo estructura, nunca vídeo, música ni texto literal).
 3. Borrar el vídeo descargado (no subirlo al repo).
 
+Prioriza para desmontar los virales que se puedan clonar sin grabar a una persona hablando (texto en pantalla, objetos, animaciones,
+pantallas de móvil, vídeos de stock), porque esos los podemos rehacer igual.
 Si no aparece ningún viral nuevo, desmontar igualmente los 2 vídeos con más vistas revisados hoy.
+
+## 2b. CLONAR el mejor viral (lo más importante del día — Hugo, 22-nov)
+Hugo quiere que **no nos ciñamos a nuestro diseño**: si un reel se ha viralizado una vez, puede volver a hacerlo.
+Cada día se elige el viral más fuerte que se pueda rehacer y se **copia tal cual, cambiando solo la información**
+(el negocio, el problema y la oferta de norte.local):
+- Mismo gancho (misma frase o misma estructura de frase, traducida y adaptada), mismo orden de escenas y misma duración.
+- Mismo estilo visual: colores, tipografía (o la más parecida), tamaño y posición de los textos, estilo de subtítulos,
+  transiciones, ritmo de cortes (cortes/s) y de voz (palabras/s) medidos en el desmontaje.
+- Mismo tipo de imagen: si el viral usa un vídeo de algo (un objeto, una persona, un paisaje), buscar uno igual o muy
+  parecido en Mixkit (gratis, uso comercial). Si es texto animado o animación, rehacerlo con palabras.py, Remotion
+  (remotion/src: se pueden crear composiciones nuevas para cada clon) o ffmpeg/PIL.
+- Mismo audio: si no tiene voz, el nuestro tampoco; si la tiene, voz con el mismo tono y ritmo. Música del mismo estilo
+  (Mixkit). Si lleva voz y la nuestra suena peor que la suya, priorizar texto en pantalla.
+- Lo que NO se copia: el vídeo, la música y la voz de otros creadores (el algoritmo de Instagram detecta contenido
+  duplicado y lo hunde, y pueden denunciarlo). Solo se usan trozos literales de otros cuando Hugo lo pide para una prueba concreta.
+Renderizar el clon con `generador/hacer_reel.sh` o el script que haga falta, revisarlo (hoja de fotogramas: que se lea,
+que no haya textos cortados, que el gancho se entienda en 1–2 s), subirlo a `videos/<fecha de mañana>.mp4` y dejar
+`historias/<fecha de mañana>-clon-<cuenta>.json` con `"tipo":"video_listo"`, `"clon_de":"<url del viral>"`, su caption
+(adaptada del original) y el tipo de gancho. Si ya hay una historia para mañana, el clon va al primer día libre.
+Ritmo de la semana: clones casi todos los días; 1–2 días a la semana una historia propia (formato PRO) para comparar.
 
 ## 3. Pasar lo aprendido a los reels
 - Ganchos nuevos o confirmados → `datos/ganchos.md` (con ejemplo y fuente). Formatos → `datos/formatos.md`.

@@ -77,7 +77,10 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - **Gancho**: elegirlo de `datos/ganchos.md` siguiendo sus reglas (resultado o dato concreto en el primer segundo, nunca empezar
   contando la historia sin resultado). Apuntar `tipo_gancho` en la historia y en el registro. Por defecto usar la escena `g0`
   (resultado primero) hasta que los datos digan otra cosa; ir probando los otros tipos de uno en uno.
-- **Formato PRO (desde el 23-nov, el de por defecto para las historias):** `"tipo":"pro"` → animaciones motion con
+- **Clones de virales (prioridad, Hugo 22-nov):** si hay en `historias/` un clon preparado por la tarea de análisis
+  ("tipo":"video_listo" con "clon_de"), se publica ese. En el registro apuntar `clon_de` para comparar clones con
+  historias propias en el informe.
+- **Formato PRO (historias propias, 1–2 días por semana como control):** `"tipo":"pro"` → animaciones motion con
   Remotion (remotion/src/ReelPro.tsx): títulos que entran palabra a palabra, contadores, avisos del móvil, chat con
   "escribiendo…", agenda que se llena, subtítulos palabra a palabra sincronizados con la voz (faster-whisper), música
   libre de Mixkit (`musica_mixkit`, cambiar de pista cada semana: 623, 1167, 744, 729, 471…) y efectos. Ejemplo:
