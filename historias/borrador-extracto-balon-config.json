@@ -1,0 +1,62 @@
+{
+ "id": "prueba-extracto-asad",
+ "tipo": "palabras",
+ "formato": "F",
+ "tipo_negocio": "comun",
+ "tipo_gancho": "extracto literal del inicio del reel de @asadwebsites (prueba pedida por Hugo)",
+ "bpm": 124,
+ "marca": "norte.local",
+ "intro": {
+  "tipo": "clip",
+  "archivo": "/mnt/user-data/uploads/c2d6e134-ScreenRecording_11-22-2026_14-51-38_1.mp4",
+  "recorte": "912:1620:100:330",
+  "desde": 0,
+  "dur": 1.72,
+  "audio_original": false,
+  "realzar": false,
+  "impacto": {
+   "x": 0.58,
+   "y": 0.7,
+   "dur": 0.22
+  }
+ },
+ "escenas": [
+  {
+   "texto": "¿Necesitas una|*recepcionista*?",
+   "estilo": "crema",
+   "golpes": 3,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "24/7.",
+   "estilo": "oscuro",
+   "golpes": 2,
+   "efecto": "sube"
+  },
+  {
+   "texto": "rápida.",
+   "estilo": "naranja",
+   "golpes": 2,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "al teléfono.",
+   "estilo": "crema",
+   "golpes": 2,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "y en WhatsApp.",
+   "estilo": "oscuro",
+   "golpes": 2,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "Comenta|*RECEPCIÓN*",
+   "estilo": "blanco",
+   "golpes": 5,
+   "efecto": "zoom"
+  }
+ ],
+ "caption": "¿Tu negocio coge el teléfono a las 21:00 de un domingo? Una recepcionista con IA contesta llamadas y WhatsApp, responde dudas y agenda citas sola, 24/7. Para talleres, clínicas, academias, peluquerías y cualquier negocio local del norte de Madrid. Comenta RECEPCIÓN y te enseño cómo quedaría en el tuyo. #negocioslocales #alcobendas #sansebastiandelosreyes #trescantos #recepcionista"
+}

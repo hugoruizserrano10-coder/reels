@@ -65,7 +65,9 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
   que solo ven los que aún no nos siguen.
 
 ## 3. Crear el reel de hoy
-- Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa.
+- Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa. Si su "tipo" es "video_listo",
+  el vídeo ya está hecho y revisado (Hugo lo aprobó): NO generar nada, publicar directamente el archivo de "video_listo"
+  con su caption (paso 4) y apuntar `formato` y `variante` en el registro.
 - Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Elegir un caso de `historias/banco.md`
   (no repetir oficio + problema en 7 días), marcarlo como usado y añadir 1–2 casos nuevos al banco. Nombres y empresas inventados.
 - **Variar el tipo de negocio cada día** entre los clientes potenciales (talleres, reformas, academias, inmobiliarias, estética y peluquería,

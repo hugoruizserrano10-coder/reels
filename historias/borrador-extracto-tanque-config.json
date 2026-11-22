@@ -1,0 +1,20 @@
+{
+ "archivo": "/mnt/user-data/uploads/ScreenRecording_11-22-2026_14-48-21_1.mp4",
+ "recorte": "911:1620:60:330",
+ "hasta": 14.35,
+ "tapar_subtitulos": {"y": 1642, "w": 980},
+ "primer_subtitulo": "UNOS SOLDADOS",
+ "voz_velocidad": 0.92,
+ "voz_intro": [
+  [0.15, "Unos soldados pegaron cientos de códigos QR en sus tanques. Por todas partes."],
+  [5.9, "Porque los drones enemigos no paraban de atacarlos."],
+  [9.5, "Pero ahora, cuando un dron escanea el tanque, escanea el código QR…"]
+ ],
+ "final": [
+  {"tipo": "enlace", "url": "https://norte.local", "voz": "que le lleva directo a norte punto local."},
+  {"tipo": "web", "voz": "La recepcionista con inteligencia artificial para negocios del norte de Madrid. Contesta llamadas y WhatsApp, y te agenda las citas. Ella sola."},
+  {"tipo": "cta", "voz": "Comenta RECEPCIÓN y te la monto en tu negocio.", "pausa": 1.2}
+ ],
+ "web": "/tmp/web_movil.png",
+ "cta": ["Comenta", "RECEPCIÓN"]
+}
