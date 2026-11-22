@@ -1,0 +1,90 @@
+{
+ "id": "hugo-1122-v4",
+ "duracion_s": 36.0,
+ "cortes_s": [
+  3.53,
+  4.23,
+  4.26,
+  4.73,
+  4.76,
+  5.16,
+  6.02,
+  6.09,
+  9.82,
+  9.88,
+  12.53,
+  12.6,
+  15.66,
+  15.69,
+  15.72
+ ],
+ "cortes_por_10s": 4.2,
+ "palabras_por_s": 2.58,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 3.5,
+   "texto": "los soldados once attached countless QR codes on their tanks,"
+  },
+  {
+   "ini": 3.5,
+   "fin": 6.0,
+   "texto": "from literally every corner."
+  },
+  {
+   "ini": 6.0,
+   "fin": 9.5,
+   "texto": "They did this because enemy drones were blasting their tanks more often."
+  },
+  {
+   "ini": 9.5,
+   "fin": 12.5,
+   "texto": "But now, as these drones scan the tank,"
+  },
+  {
+   "ini": 12.5,
+   "fin": 14.5,
+   "texto": "they scan the QR code,"
+  },
+  {
+   "ini": 14.5,
+   "fin": 16.5,
+   "texto": "which takes them straight to taskless,"
+  },
+  {
+   "ini": 16.5,
+   "fin": 20.5,
+   "texto": "the GTA's Automation Agency for Operations Heavy Businesses."
+  },
+  {
+   "ini": 20.5,
+   "fin": 23.5,
+   "texto": "We find the repetitive work your team does every day,"
+  },
+  {
+   "ini": 23.5,
+   "fin": 26.0,
+   "texto": "invoices, data entry, follow ups,"
+  },
+  {
+   "ini": 26.0,
+   "fin": 28.0,
+   "texto": "and make it run by itself,"
+  },
+  {
+   "ini": 28.0,
+   "fin": 30.0,
+   "texto": "using the tools you already have."
+  },
+  {
+   "ini": 30.0,
+   "fin": 32.0,
+   "texto": "Book your free automation audit."
+  },
+  {
+   "ini": 32.0,
+   "fin": 35.0,
+   "texto": "Stop doing it by hand, only at Taskless."
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "ejemplo-palabras-llamadas",
+ "tipo": "palabras",
+ "tipo_negocio": "comun",
+ "tipo_gancho": "interrupción visual + PCD (promesa: no perder clientes; curiosidad: ¿cómo?; disrupción: avisos cayendo)",
+ "bpm": 124,
+ "marca": "norte.local",
+ "intro": {"tipo": "notificaciones", "n": 6},
+ "escenas": [
+  {"texto": "¿Cuántos|clientes|*perdiste* hoy?", "estilo": "crema", "golpes": 4, "efecto": "zoom"},
+  {"texto": "llamadas.", "estilo": "oscuro", "golpes": 2, "efecto": "sube"},
+  {"texto": "whatsapps.", "estilo": "naranja", "golpes": 2, "efecto": "sube"},
+  {"texto": "citas.", "estilo": "crema", "golpes": 2, "efecto": "tachar"},
+  {"texto": "Que conteste|una *IA*.", "estilo": "oscuro", "golpes": 3, "efecto": "zoom"},
+  {"texto": "24/7.", "estilo": "naranja", "golpes": 2, "efecto": "sacude"},
+  {"texto": "Comenta|*RECEPCIÓN*", "estilo": "blanco", "golpes": 5, "efecto": "zoom"}
+ ],
+ "caption": "Cada llamada que no coges es un cliente que llama al siguiente de Google. Una recepcionista con IA contesta llamadas y WhatsApp, agenda citas y te avisa, 24/7. Comenta RECEPCIÓN y te enseño cómo quedaría en tu negocio. Negocios locales del norte de Madrid (Alcobendas, San Sebastián de los Reyes, Tres Cantos, Colmenar)."
+}

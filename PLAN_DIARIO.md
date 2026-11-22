@@ -75,6 +75,7 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - **Gancho**: elegirlo de `datos/ganchos.md` siguiendo sus reglas (resultado o dato concreto en el primer segundo, nunca empezar
   contando la historia sin resultado). Apuntar `tipo_gancho` en la historia y en el registro. Por defecto usar la escena `g0`
   (resultado primero) hasta que los datos digan otra cosa; ir probando los otros tipos de uno en uno.
+- Formatos disponibles: A (flujos por pasos, hacer_reel.sh) y F (palabras gigantes, generador/palabras.py, 1–2 veces por semana). Todo gancho pasa el test PCD de `datos/ganchos.md`.
 - Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
   construir el siguiente formato ampliando el generador.
 - Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.

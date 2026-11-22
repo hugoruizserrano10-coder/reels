@@ -1,8 +1,27 @@
 {
  "explicacion": "Contador de reels analizados. Lo actualiza la tarea diaria cada vez que analiza algo. 'revisados' = reels de otras cuentas cuyos datos se han mirado con el Descubridor; 'virales' = de esos, los que superan el umbral; 'desmontados' = analizados a fondo (transcripción, fotogramas, estructura); 'propios_medidos' = mediciones de nuestros reels.",
- "total": {"revisados": 0, "virales": 0, "desmontados": 3, "propios_medidos": 2},
+ "total": {
+  "revisados": 0,
+  "virales": 0,
+  "desmontados": 9,
+  "propios_medidos": 2
+ },
  "historial": [
-  {"fecha": "2026-11-22", "revisados": 0, "virales": 0, "desmontados": 3, "propios_medidos": 2,
-   "detalle": "Desmontados a mano: reel de referencia de flujos por pasos (dentista), reel de @santiremedio (9 repos) y reel de @curiosfer (content-os). Medidos: 2 reels propios del 22-nov."}
+  {
+   "fecha": "2026-11-22",
+   "revisados": 0,
+   "virales": 0,
+   "desmontados": 3,
+   "propios_medidos": 2,
+   "detalle": "Desmontados a mano: reel de referencia de flujos por pasos (dentista), reel de @santiremedio (9 repos) y reel de @curiosfer (content-os). Medidos: 2 reels propios del 22-nov."
+  },
+  {
+   "fecha": "2026-11-22",
+   "revisados": 0,
+   "virales": 0,
+   "desmontados": 6,
+   "propios_medidos": 0,
+   "detalle": "6 vídeos que mandó Hugo: tutorial de ganchos PCD (@ramongonzalez.media), 2 anuncios de webs con palabras gigantes, @trytaskless (analogía de tanques), @wantsneeds (lluvia), @annderrey (10 efectos con Claude)."
+  }
  ]
 }

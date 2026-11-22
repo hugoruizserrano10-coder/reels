@@ -29,3 +29,21 @@ Grabación del móvil escribiendo al asistente y su respuesta en tiempo real. Es
 - Hugo sube grabaciones de pantalla a `referencias/`. La tarea de los lunes saca fotogramas cada 1 s con ffmpeg,
   apunta: duración, gancho (qué se ve y se dice en 0–3 s), cuándo cambia la imagen, estructura, CTA, y lo añade aquí como formato nuevo.
 - Copiamos estructura, ritmo y tipo de gancho; nunca el vídeo, la música ni los textos.
+
+## F. Palabras gigantes (8–15 s) — `python3 generador/palabras.py historias/<id>.json salida.mp4`
+Una palabra o frase enorme por golpe de ritmo, cortes secos, fondos alternos crema/oscuro/naranja, efectos zoom/sube/
+sacude/tachar y la palabra clave en naranja con *asteriscos*. Opcional: intro de interrupción con avisos de "Llamada
+perdida" cayendo. Sin voz (el ritmo es la música). Al ser tan corto se ve entero y se repite → mucho % visto.
+Ejemplo: `historias/ejemplo-palabras-llamadas.json`. Usarlo 1–2 veces por semana alternando con el formato A.
+
+## G. Analogía absurda con giro (25–35 s) — pendiente de generador
+Historia ilustrada que no parece anuncio → giro que conecta con el problema del negocio → lista de tareas que se tachan
+con ✓ "lo hace sola" → CTA. Se puede hacer con render.py usando tarjetas grandes; pendiente: escenas ilustradas planas.
+
+## H. Lista numerada "N cosas que hace tu recepcionista" (20–30 s)
+Números gigantes 01…N, una idea por golpe, pensado para que lo guarden ("guarda este vídeo"). Se puede con palabras.py
+(una tarjeta por número) o con render.py.
+
+## Efectos para dar profundidad (vídeo de @annderrey) — ideas para el generador
+Zoom rápido de entrada en cada escena (ya: efecto "zoom"), la cámara atraviesa un objeto al cambiar de escena,
+pantalla de móvil que se mueve, gráfico que crece con datos, titulares pegados en la pared, garabatos alrededor.

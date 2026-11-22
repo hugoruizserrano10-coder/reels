@@ -1,0 +1,22 @@
+{
+ "id": "hugo-1122-v5",
+ "duracion_s": 23.6,
+ "cortes_s": [
+  0.03,
+  0.07,
+  4.88,
+  4.96,
+  5.06,
+  5.16,
+  14.89
+ ],
+ "cortes_por_10s": 3.0,
+ "palabras_por_s": 0.89,
+ "transcripcion": [
+  {
+   "ini": 15.2,
+   "fin": 22.1,
+   "texto": "Parece que el río quiere saber de nuestro Black Friday Early Access Sale, hasta 30% en wantsneeds.com, es link en bio."
+  }
+ ]
+}

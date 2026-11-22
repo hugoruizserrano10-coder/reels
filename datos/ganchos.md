@@ -36,3 +36,28 @@ POV funciona peor en Reels que en TikTok: usarlo poco.
 - Cambiar solo el gancho entre reels comparables (misma duración y estructura) y comparar `media_reel_skip_rate` (% que lo pasa en 3 s)
   y `pct_visto`. El que baje el skip rate gana y pasa a ser el gancho por defecto.
 - Cuando la cuenta tenga ~1.000 seguidores, probar dos ganchos del mismo reel con trial reels.
+
+## Sistema PCD (tutorial que mandó Hugo, 22-nov — @ramongonzalez.media, reels de 4M, 10M y 20M sin apenas edición)
+Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescribe:
+- **P · Promesa**: ¿qué se lleva el espectador si se queda? Tiene que estar clara en 1–2 s. ("Te enseño cómo no perder
+  ni una llamada más", "Así ganó 3 citas un taller cerrado").
+- **C · Curiosidad**: hueco entre lo que sabe y lo que quiere saber. ("No vas a llenar la agenda hasta que entiendas esto",
+  "El taller cerró a las 20:00… y siguió cogiendo citas").
+- **D · Disruptividad**: romper el patrón del scroll: ángulo inesperado, idea polémica o formato visual raro. Sin D,
+  aunque haya promesa y curiosidad, la gente no quiere recibirla.
+- Además existen el gancho **P2** (promesa secundaria a mitad de vídeo para que no se vayan: "y lo mejor viene al final")
+  y el gancho **statement** (afirmación rotunda: "Tu negocio pierde 4 clientes a la semana y no lo sabes"). Sus detalles
+  están detrás de un "comenta 24", así que se aprenden de los virales que desmonte el análisis diario.
+- Su CTA: "comenta un número/palabra y te llega un mensaje" → igual que nuestro "Comenta RECEPCIÓN".
+
+## Ganchos sacados de los vídeos de Hugo (22-nov)
+- **Interrupción visual sin relación** (2 vídeos de webs, 7k y 4,8k me gusta, 10,7k envíos): 1–2 s de algo raro o
+  satisfactorio (un huevo rodando, un chut de fútbol) y corte seco a palabras gigantes. → Nuestro formato F con intro
+  de "llamadas perdidas" cayendo.
+- **Analogía absurda con giro** (@trytaskless, agencia de automatización, 5,8k me gusta): una historia rara que no parece
+  un anuncio ("los soldados pegaron códigos QR por todo el tanque…") → giro: el QR lleva a la agencia → lista de tareas
+  repetitivas que se tachan con ✓ "funciona solo" → "con las herramientas que ya usas" → CTA auditoría gratis.
+- **Premisa surrealista** (@wantsneeds, 33k me gusta): "Siempre me pregunté qué diría la lluvia" + teclado bajo la lluvia
+  escribiendo letras sin sentido → la última palabra es la oferta. La curiosidad aguanta hasta el final.
+- **Lista numerada con promesa** (@annderrey, 1,9k me gusta, 1,7k envíos): "Si tus vídeos se ven planos, pídele a Claude
+  estos 10 efectos" → números gigantes 01…10 en verde, uno por golpe, y "guarda este vídeo". Lo guardan → alcance.
