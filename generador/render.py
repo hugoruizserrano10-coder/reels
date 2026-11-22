@@ -75,6 +75,40 @@ def check(d, cx, cy, s, color=WHITE, w=5):
 
 def text_w(txt, font): b = font.getbbox(txt); return b[2] - b[0]
 
+# --- dibujo sobremuestreado (x2) para bordes suaves ---
+SSK = 2
+@lru_cache(None)
+def _fx(path, size): return ImageFont.truetype(path, size)
+class SS:
+    """Envuelve ImageDraw y multiplica coordenadas, grosores y fuentes por SSK."""
+    def __init__(self, im): self.d = ImageDraw.Draw(im)
+    def _p(self, v):
+        if isinstance(v, (int, float)): return v * SSK
+        if isinstance(v, (list, tuple)):
+            if v and isinstance(v[0], (list, tuple)): return [tuple(c * SSK for c in p) for p in v]
+            return [c * SSK for c in v]
+        return v
+    def _k(self, kw):
+        if "width" in kw: kw["width"] = max(1, int(round(kw["width"] * SSK)))
+        if "radius" in kw: kw["radius"] = kw["radius"] * SSK
+        if "font" in kw and kw["font"] is not None: kw["font"] = _fx(kw["font"].path, int(kw["font"].size * SSK))
+        return kw
+    def rounded_rectangle(self, box, radius=0, **kw): kw = self._k(kw); self.d.rounded_rectangle(self._p(box), radius=radius * SSK, **kw)
+    def rectangle(self, box, **kw): self.d.rectangle(self._p(box), **self._k(kw))
+    def ellipse(self, box, **kw): self.d.ellipse(self._p(box), **self._k(kw))
+    def line(self, pts, **kw): self.d.line(self._p(pts), **self._k(kw))
+    def polygon(self, pts, **kw): self.d.polygon(self._p(pts), **self._k(kw))
+    def pieslice(self, box, a, b, **kw): self.d.pieslice(self._p(box), a, b, **self._k(kw))
+    def arc(self, box, a, b, **kw): self.d.arc(self._p(box), a, b, **self._k(kw))
+    def text(self, xy, txt, **kw): self.d.text(self._p(xy), txt, **self._k(kw))
+def lienzo(size):
+    w, h = size
+    im = Image.new("RGBA", (int(w * SSK), int(h * SSK)), (0, 0, 0, 0))
+    im._final = (int(w), int(h))
+    return im, SS(im)
+def fin(im):
+    return im.resize(im._final, Image.LANCZOS)
+
 def wrap(txt, font, maxw):
     words, lines, cur = txt.split(), [], ""
     for w_ in words:
@@ -162,7 +196,7 @@ def icon(d, kind, x, y, k=1.0):
 @lru_cache(None)
 def node(kind, label, sub):
     s = 132
-    im = Image.new("RGBA", (300, 250), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((300, 250))
     x0 = (300 - s) // 2
     rr(d, (x0, 8, x0 + s, 8 + s), 32, fill=OR)                      # canto 3D
     rr(d, (x0, 0, x0 + s, s - 2), 32, fill=WHITE, outline=(243, 205, 195), width=3)
@@ -170,14 +204,14 @@ def node(kind, label, sub):
     f1, f2 = BD(30), MD(21)
     d.text((150, s + 34), label, font=f1, fill=INK, anchor="mm")
     if sub: d.text((150, s + 68), sub, font=f2, fill=GREY, anchor="mm")
-    return shadowed(im)
+    return shadowed(fin(im))
 NODE_DY = 78  # desplazamiento: centro del tile -> centro del cuadrado
 
 @lru_cache(None)
 def badge():
-    im = Image.new("RGBA", (52, 52), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((52, 52))
     d.ellipse((2, 2, 50, 50), fill=OR, outline=WHITE, width=4); check(d, 26, 27, 22, WHITE, 5)
-    return im
+    return fin(im)
 
 def node_at(dst, kind, label, sub, cx, cy, t, t0, tcheck=None):
     """cx,cy = centro del cuadrado del nodo."""
@@ -189,10 +223,10 @@ def node_at(dst, kind, label, sub, cx, cy, t, t0, tcheck=None):
 
 @lru_cache(None)
 def card(w, h, key, *args):
-    im = Image.new("RGBA", (w, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((w, h))
     rr(d, (0, 0, w - 1, h - 1), 30, fill=WHITE, outline=(240, 226, 222), width=2)
     CARDS[key](im, d, w, h, *args)
-    return shadowed(im, blur=20, dy=14, alpha=45)
+    return shadowed(fin(im), blur=20, dy=14, alpha=45)
 
 def ticks(d, x, y, col=(110, 160, 220)):
     for o in (0, 9):
@@ -337,14 +371,18 @@ def bez(p0, p3, vertical=False, n=60):
         pts.append((x, y))
     return pts
 
+LINEAS = [None]  # lienzo x2 de los conectores de la escena que se está dibujando
 def link(d, p0, p1, prog, t_show=1.0, vertical=False):
     if t_show <= 0: return
-    pts = bez(p0, p1, vertical)
-    d.line(pts, fill=(230, 222, 220), width=5, joint="curve")
+    d = LINEAS[0][1] if LINEAS[0] else d
+    pts = bez(p0, p1, vertical, n=90)
+    d.line(pts, fill=(226, 210, 203), width=7, joint="curve")
     if prog > 0:
         k = max(2, int(len(pts) * prog))
-        d.line(pts[:k], fill=OR, width=6, joint="curve")
-        x, y = pts[k - 1]; d.ellipse((x - 8, y - 8, x + 8, y + 8), fill=OR)
+        d.line(pts[:k], fill=OR, width=8, joint="curve")
+        x, y = pts[k - 1]
+        d.ellipse((x - 13, y - 13, x + 13, y + 13), fill=(250, 222, 212))
+        d.ellipse((x - 8, y - 8, x + 8, y + 8), fill=OR)
 
 # ---------- background ----------
 def make_bg():
@@ -352,16 +390,22 @@ def make_bg():
     px = bg.load()
     for y in range(H):
         g = y / H
-        c = (int(252 - 3 * g), int(249 - 8 * g), int(247 - 8 * g))
+        c = (int(254 - 2 * g), int(252 - 6 * g), int(250 - 7 * g))
         for x in range(W): px[x, y] = c + (255,)
-    glow = Image.new("RGBA", (W, H), (0, 0, 0, 0)); gd = ImageDraw.Draw(glow)
-    gd.ellipse((-200, 700, W + 200, 1500), fill=(250, 214, 200, 110))
-    glow = glow.filter(ImageFilter.GaussianBlur(140))
+    m = Image.new("L", (W, H), 0); ImageDraw.Draw(m).ellipse((-150, 650, W + 150, 1550), fill=120)
+    m = m.filter(ImageFilter.GaussianBlur(160))
+    glow = Image.new("RGBA", (W, H), (252, 222, 208, 255)); glow.putalpha(m)
     bg.alpha_composite(glow)
-    d = ImageDraw.Draw(bg)
-    for y in range(600, 1420, 34):
-        for x in range(20, W, 34):
-            d.ellipse((x - 2, y - 2, x + 2, y + 2), fill=(232, 210, 204))
+    dots, dd = lienzo((W, 900))
+    for y in range(12, 880, 36):
+        for x in range(18, W, 36):
+            dd.ellipse((x - 1.8, y - 1.8, x + 1.8, y + 1.8), fill=(236, 216, 208, 255))
+    dots = fin(dots)
+    a_ = dots.getchannel("A")
+    fade = Image.linear_gradient("L").resize((W, 900))
+    fade = Image.eval(fade, lambda v: int(255 * min(1, v / 60, (255 - v) / 60)))
+    dots.putalpha(Image.composite(a_, Image.new("L", a_.size, 0), fade))
+    bg.alpha_composite(dots, (0, 560))
     return bg
 BG = make_bg()
 
@@ -370,10 +414,10 @@ TITLE = [(l, bool(a)) for l, a in H_["titulo"]]
 @lru_cache(None)
 def title_tile(size):
     f = BLK(size); lh = int(size * 1.02)
-    im = Image.new("RGBA", (W, lh * 3 + 40), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((W, lh * 3 + 40))
     for i, (l, acc) in enumerate(TITLE):
         d.text((W / 2, 20 + lh * i + lh / 2), l, font=f, fill=OR if acc else INK, anchor="mm")
-    return im
+    return fin(im)
 
 def pill(content, h=60):
     """content: list of (kind, value)"""
@@ -384,7 +428,7 @@ def pill(content, h=60):
         elif kind == "icon": w_ = 34
         parts.append((kind, v, w_)); wsum += w_ + 12
     wsum += 10
-    im = Image.new("RGBA", (wsum, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((wsum, h))
     rr(d, (0, 0, wsum - 1, h - 1), h // 2, fill=WHITE, outline=(238, 228, 226), width=2)
     x = 22
     for kind, v, w_ in parts:
@@ -393,7 +437,7 @@ def pill(content, h=60):
         elif kind == "txt": d.text((x, h / 2), v, font=BD(28), fill=INK, anchor="lm")
         elif kind == "icon": icon(d, v, x, h / 2 - 15, 0.48)
         x += w_ + 12
-    return shadowed(im, blur=10, dy=5, alpha=35)
+    return shadowed(fin(im), blur=10, dy=5, alpha=35)
 
 def fmt_clock(sec):
     sec = int(sec) % 86400
@@ -423,16 +467,40 @@ def build_chunks():
     return out
 CHUNKS = build_chunks()
 
+@lru_cache(None)
+def caption_tile(ci, activa):
+    s, e, c = CHUNKS[ci]
+    f = XB(56)
+    words = [w_ for w_, _, _ in c]
+    widths = [text_w(w_, f) for w_ in words]
+    sp = 26; tw = sum(widths) + sp * (len(words) - 1)
+    bw, bh = tw + 76, 100
+    im, d = lienzo((bw, bh))
+    rr(d, (0, 0, bw - 1, bh - 1), 22, fill=WHITE)
+    x = 38
+    for i, ((w_, ws, we), ww) in enumerate(zip(c, widths)):
+        if i == activa:
+            rr(d, (x - 11, 14, x + ww + 11, bh - 14), 12, fill=OR)
+            d.text((x, bh / 2 + 2), w_, font=f, fill=WHITE, anchor="lm")
+        else:
+            d.text((x, bh / 2 + 2), w_, font=f, fill=INK, anchor="lm")
+        x += ww + sp
+    return shadowed(fin(im), blur=14, dy=8, alpha=45)
+
 def draw_caption(img, t):
-    for s, e, c in CHUNKS:
+    for ci, (s, e, c) in enumerate(CHUNKS):
         if s <= t < e: break
     else: return
+    activa = next((i for i, (_, ws, we) in enumerate(c) if ws <= t < we + 0.05), -1)
+    p = pr(t, s, 0.18)
+    paste(img, caption_tile(ci, activa), W / 2, 1440, 0.9 + 0.1 * eback(p), 1.0)
+    return
     f = XB(52)
     words = [w_ for w_, _, _ in c]
     widths = [text_w(w_, f) for w_ in words]
     sp = 16; tw = sum(widths) + sp * (len(words) - 1)
     bw, bh = tw + 56, 92
-    im = Image.new("RGBA", (bw, bh), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((bw, bh))
     rr(d, (0, 0, bw - 1, bh - 1), 16, fill=WHITE)
     x = 28
     for (w_, ws, we), ww in zip(c, widths):
@@ -512,11 +580,11 @@ def sc_D(L, t):
 @lru_cache(None)
 def urgent_tag():
     f = BD(24); txt = H_["etiqueta"]; w_ = text_w(txt, f) + 70
-    im = Image.new("RGBA", (w_, 48), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((w_, 48))
     rr(d, (0, 0, w_ - 1, 47), 24, fill=WHITE, outline=OR, width=3)
     d.rectangle((20, 16, 30, 32), fill=OR)
     d.text((44, 24), txt, font=f, fill=OR, anchor="lm")
-    return shadowed(im, blur=8, dy=4, alpha=35)
+    return shadowed(fin(im), blur=8, dy=4, alpha=35)
 
 def sc_E(L, t):
     t0 = first("p3"); tb = first("p3b"); tc = sl("p3b", 1)
@@ -592,40 +660,45 @@ def draw_panel(img, t):
     for gg, ox, a in layers:
         if gg == "I": continue
         L = Image.new("RGBA", (W, PANEL_H), (0, 0, 0, 0))
+        LINEAS[0] = lienzo((W, PANEL_H))
         SCN[gg](L, t)
-        paste(img, L, W / 2 + ox, PY + PANEL_H / 2, 1.0, a)
+        base = fin(LINEAS[0][0]); LINEAS[0] = None
+        base.alpha_composite(L)
+        # cámara: acercamiento lento dentro de cada escena
+        zoom = 1.0 + 0.035 * eio(pr(t, GSTART[gg], 6.0))
+        paste(img, base, W / 2 + ox, PY + PANEL_H / 2, zoom, a)
 
 @lru_cache(None)
 def comment_box(txt):
     w_, h = 820, 92
-    im = Image.new("RGBA", (w_, h), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((w_, h))
     rr(d, (0, 0, w_ - 1, h - 1), 46, fill=WHITE, outline=OR if txt else (232, 228, 228), width=4 if txt else 2)
     d.ellipse((26, 26, 66, 66), fill=(250, 210, 90))
     if txt: d.text((88, h / 2), txt, font=BD(34), fill=INK, anchor="lm")
     else: d.text((88, h / 2), "Añade un comentario…", font=MD(30), fill=GREY, anchor="lm")
     d.text((w_ - 36, h / 2), "Publicar", font=BD(28), fill=(60, 140, 240), anchor="rm")
-    return shadowed(im, blur=14, dy=6, alpha=40)
+    return shadowed(fin(im), blur=14, dy=6, alpha=40)
 
 @lru_cache(None)
 def cta_title():
     f = XB(62)
     a, b, c = "¿Quieres esta ", "recepcionista", "?"
-    im = Image.new("RGBA", (W, 100), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((W, 100))
     tw = text_w(a + b + c, f); x = (W - tw) / 2
     d.text((x, 50), a, font=f, fill=INK, anchor="lm"); x += text_w(a, f) + 14
     d.text((x, 50), b, font=f, fill=OR, anchor="lm"); x += text_w(b, f) + 4
     d.text((x, 50), c, font=f, fill=INK, anchor="lm")
-    return im
+    return fin(im)
 
 @lru_cache(None)
 def brand():
-    im = Image.new("RGBA", (W, 160), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((W, 160))
     f = BLK(54); tw = text_w(AGENCIA, f)
     x = (W - tw - 70) / 2
     d.ellipse((x, 52, x + 50, 102), fill=OR); icon(d, "moon", x + 9, 61, 0.5)
     d.text((x + 70, 77), AGENCIA, font=f, fill=INK, anchor="lm")
     d.text((W / 2, 135), "Recepcionistas con IA para negocios locales", font=MD(28), fill=GREY, anchor="mm")
-    return im
+    return fin(im)
 
 def draw_cta(img, t):
     t0 = STARTS["cta"]
@@ -644,9 +717,9 @@ def draw_cta(img, t):
 
 @lru_cache(None)
 def sub_note():
-    im = Image.new("RGBA", (W, 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    im, d = lienzo((W, 60))
     d.text((W / 2, 30), "y te enseñamos una demo con tu negocio", font=SB(30), fill=GREY, anchor="mm")
-    return im
+    return fin(im)
 
 # ---------- header ----------
 _T0 = hm_sec(HM); _IC = "moon" if (_T0 >= 20 * 3600 or _T0 < 7 * 3600) else "sun"
