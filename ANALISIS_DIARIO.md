@@ -56,9 +56,10 @@ Cada día se elige el viral más fuerte que se pueda rehacer y se **copia tal cu
 - Lo que NO se copia: el vídeo, la música y la voz de otros creadores (el algoritmo de Instagram detecta contenido
   duplicado y lo hunde, y pueden denunciarlo). Solo se usan trozos literales de otros cuando Hugo lo pide para una prueba concreta.
 Renderizar el clon con `generador/hacer_reel.sh` o el script que haga falta, revisarlo (hoja de fotogramas: que se lea,
-que no haya textos cortados, que el gancho se entienda en 1–2 s), subirlo a `videos/<fecha de mañana>.mp4` y dejar
-`historias/<fecha de mañana>-clon-<cuenta>.json` con `"tipo":"video_listo"`, `"clon_de":"<url del viral>"`, su caption
-(adaptada del original) y el tipo de gancho. Si ya hay una historia para mañana, el clon va al primer día libre.
+que no haya textos cortados, que el gancho se entienda en 1–2 s), subirlo a `videos/<fecha>-M.mp4` y dejar
+`historias/<fecha>-M-clon-<cuenta>.json` con `"tipo":"video_listo"`, `"clon_de":"<url del viral>"`, su caption
+(adaptada del original) y el tipo de gancho. <fecha> = el primer día cuya franja M (13:40) esté libre, empezando por HOY (la tarea de las 13:25 lo publicará).
+Antes de dejarlo listo, pasa tú también el control de `CONTROL.md`.
 Ritmo de la semana: clones casi todos los días; 1–2 días a la semana una historia propia (formato PRO) para comparar.
 
 ## 3. Pasar lo aprendido a los reels
