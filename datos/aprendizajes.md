@@ -25,7 +25,7 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 | Fecha | Variable que cambia | Respecto a | Resultado |
 |---|---|---|---|
 | 2026-11-22 | (base, 47 s) | — | pendiente |
-| 2026-11-23 | duración ~26 s + dinero en el gancho | base | pendiente |
+| 2026-11-23 | duración ~26 s (escenas s1, s2, s3, p2, p3, p3b, p4, cta) + dinero o dato concreto en el gancho, con un negocio que no sea reformas | base | pendiente |
 
 ## Ideas pendientes de probar (una cada vez)
 - Gancho con pregunta directa al dueño ("¿Cuántos clientes pierdes los domingos?").

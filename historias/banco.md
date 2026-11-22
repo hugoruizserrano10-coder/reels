@@ -10,7 +10,7 @@ Todos en el norte de Madrid, con nombres y negocios inventados.
 - [ ] Cambio de neumáticos antes de un viaje: pide precio por foto de la rueda
 ## Reformas
 - [x] Fuga de agua en el baño a las 22:00 (Marta) — 22-nov
-- [x] Reforma de cocina de 12.000 € un domingo 21:40 (Javier) — 23-nov
+- [ ] Reforma de cocina de 12.000 € un domingo 21:40 (ya escrita en el historial de git, versión corta de ~26 s)
 - [ ] Inquilino que se va y el propietario quiere pintar el piso en 1 semana (Sanse)
 ## Academias (refuerzo, idiomas)
 - [ ] Madre que pregunta a las 22:30 por clases de matemáticas para selectividad: clase de prueba el jueves (Tres Cantos)
