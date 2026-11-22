@@ -36,7 +36,9 @@ Las demás ejecuciones del día terminan sin hacer nada.
   en comentarios y formularios. Commit y push. Mantener la estética y no inventar testimonios ni resultados.
 - Horarios: cuando haya ≥4 reels por franja, elegir la ganadora y escribirla en `franja_fija`.
 
-## 2b. Descubridor, virales y desmontaje (lunes y jueves)
+## 2b. Descubridor, virales y desmontaje
+> Desde el 22-nov lo hace cada mañana la tarea "Análisis diario de reels" (ver ANALISIS_DIARIO.md). Aquí solo: leer la
+> entrada "Análisis" de hoy en datos/diario.md y aplicar sus ideas. Si esa tarea no ha corrido hoy, hacer lo de abajo.
 Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (sin scraping).
 - **Montaje automático del Descubridor** (una sola vez): si `make_descubridor_webhook` es null, mirar en Make (organización 9494560,
   equipo 3444695, plan gratuito: máx. 2 escenarios y 1.000 operaciones/mes) si ya hay una conexión de tipo Instagram for Business
