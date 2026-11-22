@@ -1,0 +1,4 @@
+{
+ "make_descubridor_webhook": null,
+ "nota": "Cuando Hugo conecte Instagram en Make, se crea el escenario 'Descubridor' (webhook con usuario → Instagram for Business 'List public user posts' → respuesta JSON) y su URL va aquí."
+}

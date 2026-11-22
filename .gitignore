@@ -1,2 +1,5 @@
 *_revision.jpg
 __pycache__/
+datos/desmontajes/*/hoja_*.jpg
+datos/desmontajes/*/primer_fotograma.jpg
+datos/desmontajes/*/audio.wav

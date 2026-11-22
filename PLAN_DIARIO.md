@@ -36,6 +36,24 @@ Las demás ejecuciones del día terminan sin hacer nada.
   en comentarios y formularios. Commit y push. Mantener la estética y no inventar testimonios ni resultados.
 - Horarios: cuando haya ≥4 reels por franja, elegir la ganadora y escribirla en `franja_fija`.
 
+## 2b. Descubridor, virales y desmontaje (lunes y jueves)
+Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (sin scraping).
+- **Descubridor**: si `datos/config.json` tiene `make_descubridor_webhook`, llamarlo (POST {"usuario": ...}) para cada cuenta de
+  `datos/referentes.json`. Devuelve sus últimas publicaciones con me gusta, comentarios, fecha, enlace, descripción y media_url.
+- **Virales**: para cada cuenta, mediana de me gusta + comentarios de sus últimas 25 publicaciones; un reel es viral si supera
+  `umbral_viral` veces esa mediana (es lo que hace content-os: "por encima de lo normal de su creador"). Guardar en `datos/virales.json`.
+- **Desmontar** los 2 virales más fuertes que no estén ya en `datos/desmontajes/`: descargar el vídeo (media_url) solo para analizarlo,
+  `python3 generador/desmontar.py video.mp4 <usuario>-<fecha>`, mirar las hojas de fotogramas y escribir el análisis en su `ficha.md`.
+  Nunca resubir ni copiar el vídeo, la música o el texto: solo la estructura, el tipo de gancho, las frases puente y el ritmo.
+- Pasar lo aprendido a `datos/ganchos.md` y `datos/formatos.md`, y usarlo en los siguientes reels.
+- Si no hay webhook todavía: desmontar los vídeos nuevos de `referencias/` con el mismo programa.
+
+## 2c. Pruebas (cuando uno funciona)
+- Si un reel nuestro tiene a las 72 h el doble o más de visualizaciones que la mediana de nuestros reels, al día siguiente hacer una
+  variante: la misma historia con otro tipo de gancho (y otro color de acento o arranque visual). Apuntar `variante_de` en la historia.
+- Cuando la cuenta llegue a ~1.000 seguidores, publicar esas variantes como trial reels (`trial_params`, graduation_strategy SS_PERFORMANCE),
+  que solo ven los que aún no nos siguen.
+
 ## 3. Crear el reel de hoy
 - Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa.
 - Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Elegir un caso de `historias/banco.md`

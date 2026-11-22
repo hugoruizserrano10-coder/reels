@@ -24,6 +24,12 @@ Emplifi, NestScale, Blitzcut, Metricool). Los datos vienen de análisis de terce
 6. **Pregunta que ya te hacen + afirmación**: "¿Cuánto cuesta una cita? La recepcionista lo contesta en 4 segundos."
 7. **Lista corta**: "3 mensajes que pierdes cada semana sin darte cuenta."
 8. **Plazo corto**: "Así se monta en 10 minutos una recepcionista para tu negocio."
+9. **Trabaja mientras duermes + "Y mira lo que hace"** (de @curiosfer, reel "content-os"): "La recepcionista de este taller trabaja cada noche mientras el dueño duerme. Y mira lo que hace."
+
+## Frases puente (entre pasos, para que no se vayan a mitad)
+"Y mira lo que hace." · "Primero…" · "Después…" · "Pero no se queda ahí." · "Y lo más loco:" · "O sea…" · "Y cuando…"
+Usar 2–3 por reel. Cerrar a ser posible en bucle (una frase final que conecte con la primera) para que lo vuelvan a ver.
+
 POV funciona peor en Reels que en TikTok: usarlo poco.
 
 ## Cómo probarlos
