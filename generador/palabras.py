@@ -95,14 +95,18 @@ def pelota(t_local, dur):
 def cargar_clip(intro):
     """Vídeo de stock gratuito (Mixkit, licencia libre para uso comercial) recortado a vertical. Se descarga al vuelo
     por su id y no se guarda en el repositorio (la licencia no permite redistribuir el archivo suelto)."""
-    mid = intro["mixkit"]; cache = os.path.expanduser(f"~/clips/{mid}.mp4"); os.makedirs(os.path.dirname(cache), exist_ok=True)
-    if not os.path.exists(cache):
+    if intro.get("archivo"):
+        cache = intro["archivo"]
+    else:
+        mid = intro["mixkit"]; cache = os.path.expanduser(f"~/clips/{mid}.mp4"); os.makedirs(os.path.dirname(cache), exist_ok=True)
+    if not intro.get("archivo") and not os.path.exists(cache):
         subprocess.run(["curl", "-sL", "--max-time", "120", "-o", cache, f"https://assets.mixkit.co/videos/{mid}/{mid}-720.mp4"], check=True)
     cx = intro.get("centro_x", 0.5); vel = intro.get("velocidad", 1.0)
     marco = intro.get("encuadre") == "marco"
     MW, MH = (W, 1000) if marco else (W, H)
     escala = f"scale=-2:{MH}:flags=lanczos" if not marco else f"scale={int(MH * 16 / 9)}:{MH}:flags=lanczos"
-    vf = (f"setpts=PTS/{vel},fps={FPS},{escala},crop={MW}:{MH}:(iw-{MW})*{cx}:0"
+    pre = f"crop={intro['recorte']}," if intro.get("recorte") else ""
+    vf = (f"{pre}setpts=PTS/{vel},fps={FPS},{escala},crop={MW}:{MH}:(iw-{MW})*{cx}:0"
           + (",eq=saturation=1.15:contrast=1.05" if intro.get("realzar", True) else ""))
     r = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(intro.get("desde", 0)), "-t", str(intro["dur"] * vel + 0.2),
                         "-i", cache, "-vf", vf, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True)
@@ -204,6 +208,13 @@ def main(hist, salida):
         for b_ in (0.0, 0.31, 0.62): add(b_ * t_intro, kick(), 0.9)
     for s, _ in tiempos: add(s, hit(), 0.9)
     out /= max(1e-9, np.abs(out).max())
+    if intro and intro.get("audio_original") and intro.get("archivo"):
+        r = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(intro.get("desde", 0)), "-t", str(t_intro), "-i", intro["archivo"],
+                            "-ac", "1", "-ar", str(SR), "-f", "s16le", "-"], capture_output=True)
+        a = np.frombuffer(r.stdout, np.int16).astype(np.float32) / 32768
+        if len(a):
+            a = a / max(1e-9, np.abs(a).max()) * 0.9; L = min(len(a), n)
+            fade = np.minimum(1, (L - np.arange(L)) / (0.08 * SR)); out[:L] = out[:L] * 0.3 + a[:L] * fade
     aud = os.path.join(tmp, "a.wav"); w = wave.open(aud, "w"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((out * 0.9 * 32767).astype(np.int16).tobytes()); w.close()
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", vid, "-i", aud, "-c:v", "copy", "-af",
