@@ -37,7 +37,7 @@ def sfx():
     wav(f"{PUB}/sfx/ding.wav", (np.sin(2 * np.pi * 1318 * t) + 0.5 * np.sin(2 * np.pi * 1976 * t)) * np.exp(-t * 7) * 0.5, sr)
 
 def main(hist, salida):
-    H_ = json.load(open(hist)); ls = H_.get("voz_velocidad", 0.95)
+    H_ = json.load(open(hist)); ls = H_.get("voz_velocidad", 1.05)
     tmp = os.path.join(PUB, "tmp"); shutil.rmtree(tmp, ignore_errors=True); os.makedirs(tmp)
     sfx()
     from faster_whisper import WhisperModel
@@ -47,21 +47,27 @@ def main(hist, salida):
     for i, e in enumerate(H_["escenas"]):
         a = voz(e["voz"], ls) if e.get("voz") else np.zeros(int(0.8 * SR))
         dv = len(a) / SR
-        lead = e.get("antes", 0.25 if i else 0.1)
-        dur = lead + dv + e.get("pausa", 0.35)
+        lead = e.get("antes", H_.get("antes", 0.45) if i else 0.15)
+        dur = lead + dv + e.get("pausa", H_.get("pausa", 0.9))
         pista.append((t + lead, a))
         if e.get("voz") and e["type"] != "cta":
             a16 = np.interp(np.arange(0, len(a), SR / 16000), np.arange(len(a)), a).astype(np.float32)
             segs, _ = wm.transcribe(a16, language="es", word_timestamps=True, initial_prompt=e["voz"])
-            for s in segs:
-                for w in s.words:
-                    words.append({"t0": round(t + lead + w.start, 3), "t1": round(t + lead + w.end, 3), "w": w.word.strip()})
-        sc = {k: v for k, v in e.items() if k not in ("voz", "pausa", "antes")}
+            ws = [w for s in segs for w in s.words]
+            guion = e["voz"].split()
+            for k, w in enumerate(ws):  # si cuadra el número de palabras, se escribe el texto del guion (sin erratas de whisper)
+                txt = guion[k] if len(guion) == len(ws) else w.word.strip()
+                words.append({"t0": round(t + lead + w.start, 3), "t1": round(t + lead + w.end, 3), "w": txt})
+        sc = {k: v for k, v in e.items() if k not in ("voz", "pausa", "antes", "en")}
         for key in ("mensajes", "huecos", "items"):
             if key in sc:
                 n = len(sc[key])
                 for j, it in enumerate(sc[key]):
+                    if "en" in it:  # aparece cuando la voz dice esa palabra
+                        cand = [w for w in words if w["t0"] >= t and it["en"].lower() in w["w"].lower()]
+                        if cand: it["t"] = round(cand[0]["t0"] - t, 2)
                     it.setdefault("t", round(lead + 0.15 + dv * 0.85 * (j + 0.15) / max(1, n), 2))
+                    it.pop("en", None)
                     sonidos.append({"t": round(t + it["t"], 2), "s": "sfx/pop.wav" if key != "huecos" else "sfx/ding.wav", "v": 0.35})
         sc["from"] = int(round(t * FPS)); sc["dur"] = int(round(dur * FPS))
         escenas.append(sc)

@@ -83,6 +83,7 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
   libre de Mixkit (`musica_mixkit`, cambiar de pista cada semana: 623, 1167, 744, 729, 471…) y efectos. Ejemplo:
   `historias/ejemplo-pro-peluqueria.json`. Escenas: hook · notifs · chat · agenda · lista · cta. Tarda ~4 min en
   renderizar. Si falla el render, rehacer la misma historia con el formato A antiguo y apuntarlo en diario.md.
+  Ritmo: seguir "Ritmo y claridad" de datos/aprendizajes.md (voz 1.05, pausas, campo "en", sin subtítulos sobre chats).
   Cuando haga falta una escena nueva (p. ej. llamada entrante, mapa, gráfico), añadirla en ReelPro.tsx.
 - **Formatos — rotación semanal:** 5 días historias (formato PRO; el A antiguo solo como respaldo) y 2 días formato F (`"tipo":"palabras"`).
   Hugo (22-nov) quiere el F **con un inicio de vídeo real, gracioso o raro, como los reels de referencia** (chut de fútbol,

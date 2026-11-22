@@ -134,7 +134,7 @@ const Notifs: React.FC<{sc: Scene}> = ({sc}) => {
       <div style={{position: 'absolute', top: 230, width: '100%', textAlign: 'center', fontFamily: 'InterD', fontSize: 230, color: C.ink, letterSpacing: -8}}>{String(sc.reloj)}</div>
       <div style={{position: 'absolute', top: 500, width: '100%', textAlign: 'center', fontFamily: 'Inter', fontWeight: 600, fontSize: 42, color: C.soft}}>{String(sc.subreloj)}</div>
       {items.map((it, i) => {
-        const s = spring({frame: f - 8 - i * 9, fps, config: {damping: 12, stiffness: 170, mass: 0.6}});
+        const s = spring({frame: f - 10 - i * 22, fps, config: {damping: 12, stiffness: 170, mass: 0.6}});
         return (
           <div key={i} style={{
             position: 'absolute', left: 60, right: 60, top: 640 + i * 200, height: 172, borderRadius: 44,
@@ -167,9 +167,9 @@ const Chat: React.FC<{sc: Scene}> = ({sc}) => {
         <div style={{padding: '36px 34px', display: 'flex', flexDirection: 'column', gap: 22}}>
           {msgs.map((m, i) => {
             const start = Math.round(m.t * fps);
-            const typing = m.de === 'ia' && f >= start - 22 && f < start;
+            const typing = m.de === 'ia' && f >= start - 30 && f < start;
             const s = spring({frame: f - start, fps, config: {damping: 13, stiffness: 190, mass: 0.6}});
-            if (f < start - (m.de === 'ia' ? 22 : 0)) return null;
+            if (f < start - (m.de === 'ia' ? 30 : 0)) return null;
             const yo = m.de === 'ia';
             return (
               <div key={i} style={{alignSelf: yo ? 'flex-end' : 'flex-start', maxWidth: '82%'}}>
@@ -294,7 +294,7 @@ const Subtitulos: React.FC<{words: Word[]; ocultar: [number, number][]}> = ({wor
 // ---------- composición ----------
 export const ReelPro: React.FC<ReelProps> = ({scenes, words, voice, music, brand, musicVol = 0.12, sfx = []}) => {
   const {fps} = useVideoConfig();
-  const ocultar: [number, number][] = scenes.filter((s) => s.type === 'cta').map((s) => [s.from / fps, (s.from + s.dur) / fps]);
+  const ocultar: [number, number][] = scenes.filter((s) => s.type === 'cta' || s.subtitulos === false).map((s) => [s.from / fps, (s.from + s.dur) / fps]);
   return (
     <AbsoluteFill>
       <style>{fontCss}</style>

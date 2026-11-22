@@ -40,3 +40,11 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 - Formato "error que te cuesta obras" (lista de 3 errores, ~20 s).
 - Loop: que el final enlace con el principio para que se vuelva a ver.
 - CTA de compartir ("Envíaselo a alguien que tenga un taller / una academia…", según el negocio del reel) para subir envíos por DM.
+
+## Ritmo y claridad (Hugo, 22-nov: "va muy rápido, no se entiende, la gente no se queda")
+- Una sola idea por escena. Orden fijo: situación → problema → solución → resultado → CTA.
+- Voz más lenta (voz_velocidad 1.05) y pausa de 0,75–0,9 s al final de cada escena para que dé tiempo a leer.
+- Cada elemento aparece cuando la voz lo nombra (campo "en": palabra que lo dispara), no repartidos al azar.
+- Nunca dos cosas que leer a la vez: en escenas de chat, sin subtítulos ("subtitulos": false) y la voz cuenta lo que pasa.
+- Máximo 2 mensajes por chat y 4 huecos por agenda. Mejor 30–38 s que se entiendan que 24 s que no.
+- Medir en el informe: % visto y % que lo pasa en 3 s de estos reels lentos frente a los anteriores.
