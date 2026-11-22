@@ -13,7 +13,8 @@ Todos en el norte de Madrid, con nombres y negocios inventados.
 - [ ] Reforma de cocina de 12.000 € un domingo 21:40 (ya escrita en el historial de git, versión corta de ~26 s)
 - [ ] Inquilino que se va y el propietario quiere pintar el piso en 1 semana (Sanse)
 ## Academias (refuerzo, idiomas)
-- [ ] Madre que pregunta a las 22:30 por clases de matemáticas para selectividad: clase de prueba el jueves (Tres Cantos)
+- [x] Madre que pregunta a las 22:30 por clases de matemáticas para selectividad: clase de prueba el jueves (Tres Cantos) — 22-nov (extra)
+- [ ] Academia de música: padre pregunta un domingo por clases de guitarra para su hijo de 10 años; clase de prueba el sábado (Colmenar Viejo)
 - [ ] Adulto que quiere preparar el B2 de inglés para el trabajo: le ofrece prueba de nivel
 - [ ] Septiembre: 30 mensajes en un día preguntando horarios; el asistente contesta a todos
 ## Inmobiliarias
@@ -32,6 +33,7 @@ Todos en el norte de Madrid, con nombres y negocios inventados.
 ## Tiendas
 - [ ] Pregunta si tienen una talla o un producto en stock un domingo; reserva para recoger el lunes
 - [ ] Encargo de una tarta o un ramo para un cumpleaños, fuera de horario
+- [ ] Óptica: cliente rompe las gafas un viernes noche y pregunta si se las arreglan el sábado (Alcobendas)
 ## Comunes a cualquier negocio
 - [ ] Cliente que pregunta "¿eres un bot?" (el asistente lo dice y pasa a una persona)
 - [ ] Audio de 2 minutos: el asistente lo transcribe y resume para el dueño
