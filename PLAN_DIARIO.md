@@ -77,7 +77,14 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - **Gancho**: elegirlo de `datos/ganchos.md` siguiendo sus reglas (resultado o dato concreto en el primer segundo, nunca empezar
   contando la historia sin resultado). Apuntar `tipo_gancho` en la historia y en el registro. Por defecto usar la escena `g0`
   (resultado primero) hasta que los datos digan otra cosa; ir probando los otros tipos de uno en uno.
-- **Formatos — rotación semanal:** 5 días formato A (flujos por pasos) y 2 días formato F (`"tipo":"palabras"`).
+- **Formato PRO (desde el 23-nov, el de por defecto para las historias):** `"tipo":"pro"` → animaciones motion con
+  Remotion (remotion/src/ReelPro.tsx): títulos que entran palabra a palabra, contadores, avisos del móvil, chat con
+  "escribiendo…", agenda que se llena, subtítulos palabra a palabra sincronizados con la voz (faster-whisper), música
+  libre de Mixkit (`musica_mixkit`, cambiar de pista cada semana: 623, 1167, 744, 729, 471…) y efectos. Ejemplo:
+  `historias/ejemplo-pro-peluqueria.json`. Escenas: hook · notifs · chat · agenda · lista · cta. Tarda ~4 min en
+  renderizar. Si falla el render, rehacer la misma historia con el formato A antiguo y apuntarlo en diario.md.
+  Cuando haga falta una escena nueva (p. ej. llamada entrante, mapa, gráfico), añadirla en ReelPro.tsx.
+- **Formatos — rotación semanal:** 5 días historias (formato PRO; el A antiguo solo como respaldo) y 2 días formato F (`"tipo":"palabras"`).
   Hugo (22-nov) quiere el F **con un inicio de vídeo real, gracioso o raro, como los reels de referencia** (chut de fútbol,
   gato con gafas…), y después corte seco a nuestras palabras y la CTA. Ese inicio sale SIEMPRE de un vídeo de stock gratuito
   con licencia comercial (Mixkit: `"intro":{"tipo":"clip","mixkit":<id>,...}`; se descarga al generar y no se sube al

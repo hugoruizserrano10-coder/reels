@@ -1,0 +1,35 @@
+{
+ "id": "ejemplo-pro-peluqueria",
+ "tipo": "pro",
+ "tipo_negocio": "estetica",
+ "tipo_gancho": "resultado primero + número concreto (PCD)",
+ "marca": "norte.local",
+ "musica_mixkit": 623,
+ "musica_vol": 0.12,
+ "voz_velocidad": 0.93,
+ "escenas": [
+  {"type": "hook", "chip": "Peluquería · Tres Cantos", "titulo": [["Cerró a las 20:00", false], ["y llenó el", false], ["sábado entero", true]],
+   "stat": {"valor": 4, "prefijo": "+", "etiqueta": "citas nuevas\nmientras dormía"},
+   "voz": "Esta peluquería cerró a las ocho y llenó el sábado entero."},
+  {"type": "notifs", "reloj": "22:47", "subreloj": "viernes · peluquería cerrada",
+   "items": [
+     {"app": "WhatsApp", "titulo": "Marta", "texto": "¿Tenéis hueco mañana para mechas?", "hora": "ahora"},
+     {"app": "WhatsApp", "titulo": "Lucía", "texto": "Hola! Corte y peinado el sábado?", "hora": "2 min"},
+     {"app": "Llamada", "titulo": "Llamada perdida", "texto": "+34 6•• ••• 218", "hora": "5 min"}],
+   "voz": "Viernes por la noche. Tres clientas escribiendo, y una llamada perdida."},
+  {"type": "chat", "negocio": "Peluquería Nerea", "inicial": "N",
+   "mensajes": [
+     {"de": "cliente", "texto": "¿Tenéis hueco mañana para mechas?"},
+     {"de": "ia", "texto": "¡Hola Marta! Mañana tengo a las 10:00 o a las 12:30. ¿Cuál te viene mejor? 💇‍♀️"},
+     {"de": "cliente", "texto": "A las 10 perfecto"},
+     {"de": "ia", "texto": "Hecho ✅ Te reservo mañana a las 10:00. Te mando un recordatorio por la mañana."}],
+   "voz": "Pero la recepcionista con inteligencia artificial contesta al momento, ofrece los huecos libres, y deja la cita cerrada."},
+  {"type": "agenda", "dia": "SÁBADO", "titulo": "Agenda llena",
+   "huecos": [{"hora": "10:00", "nombre": "Marta · mechas"}, {"hora": "11:30", "nombre": "Lucía · corte"},
+              {"hora": "12:30", "nombre": "Carmen · color"}, {"hora": "17:00", "nombre": "Ana · peinado"}],
+   "voz": "El sábado por la mañana, Nerea abre la agenda. Cuatro citas nuevas. Sin coger el móvil ni una vez."},
+  {"type": "cta", "arriba": "Comenta", "palabra": "RECEPCIÓN", "abajo": "y te lo monto en tu negocio",
+   "voz": "Comenta RECEPCIÓN y te lo monto en tu negocio.", "pausa": 1.3}
+ ],
+ "caption": "Cerró a las 20:00 y el sábado tenía 4 citas nuevas 💇‍♀️ Una recepcionista con IA contesta WhatsApp y llamadas cuando no puedes, ofrece tus huecos libres y deja la cita apuntada. Comenta RECEPCIÓN y te enseño cómo quedaría en tu negocio. Peluquerías y centros de estética en Tres Cantos, Alcobendas, San Sebastián de los Reyes y Colmenar Viejo. #peluqueria #trescantos #alcobendas #negocioslocales"
+}

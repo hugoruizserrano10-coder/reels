@@ -3,3 +3,6 @@ __pycache__/
 datos/desmontajes/*/hoja_*.jpg
 datos/desmontajes/*/primer_fotograma.jpg
 datos/desmontajes/*/audio.wav
+remotion/node_modules/
+remotion/public/tmp/
+remotion/public/sfx/

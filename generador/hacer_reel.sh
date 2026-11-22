@@ -10,6 +10,17 @@ export VOZ_MODELO="$VOCES/es_ES-davefx-medium.onnx"
 python3 -c "import piper" 2>/dev/null || pip install -q --break-system-packages piper-tts
 # Formatos nuevos: F (palabras gigantes) y G (cuento / analogía absurda)
 TIPO="$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('tipo','flujo'))" "$HISTORIA")"
+if [ "$TIPO" = "pro" ]; then
+  [ -d "$GEN/../remotion/node_modules" ] || (cd "$GEN/../remotion" && npm ci --no-audit --no-fund >/dev/null 2>&1 || npm install --no-audit --no-fund >/dev/null 2>&1)
+  python3 -c "import faster_whisper" 2>/dev/null || pip install -q --break-system-packages faster-whisper
+  if [ ! -f "$VOZ_MODELO" ]; then
+    curl -sL -o "$VOZ_MODELO" https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx
+    curl -sL -o "$VOZ_MODELO.json" https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx.json
+  fi
+  python3 "$GEN/pro.py" "$HISTORIA" "$OUTF"
+  ffmpeg -v error -y -i "$OUTF" -vf "fps=1,scale=216:-1,tile=10x3" -frames:v 1 "${OUTF%.mp4}_revision.jpg"
+  exit 0
+fi
 if [ "$TIPO" = "palabras" ] || [ "$TIPO" = "cuento" ]; then
   if [ ! -f "$VOZ_MODELO" ]; then
     curl -sL -o "$VOZ_MODELO" https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx
