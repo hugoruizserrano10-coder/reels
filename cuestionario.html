@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuestionario para tu asistente · norte.local</title>
+<meta name="description" content="Cuéntanos cómo trabaja tu empresa de reformas y te preparamos una demo del asistente con tus servicios, zona y horarios.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/estilo.css">
+<style>
+  .cuestionario{max-width:820px;margin:0 auto;padding:56px 24px 96px}
+  .cuestionario > p{font-size:20px;color:var(--gris);margin:18px 0 36px;max-width:60ch}
+  .bloque{margin-bottom:26px}
+  .bloque > h2{font:700 22px Inter,sans-serif;letter-spacing:-.01em;margin:0 0 18px;display:flex;gap:12px;align-items:center}
+  .bloque > h2 span{width:32px;height:32px;border-radius:50%;background:var(--naranja);color:#fff;display:grid;place-items:center;font-size:16px;flex:none}
+  .bloque + .bloque{border-top:1px solid var(--linea);padding-top:30px}
+  .progreso{position:sticky;top:68px;z-index:5;height:5px;background:var(--linea)}
+  .progreso i{display:block;height:100%;width:0;background:var(--naranja);transition:width .2s}
+</style>
+</head>
+<body>
+<header class="cabecera">
+  <div class="envoltura">
+    <a class="marca" href="index.html" aria-label="norte.local, inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#e25434"/><path d="M38 14a19 19 0 1 0 12 32A16 16 0 0 1 38 14z" fill="#fff"/></svg>
+      norte.local
+    </a>
+    <nav aria-label="Principal"><a class="boton pequeno secundario" href="index.html#contacto">Prefiero que me llaméis</a></nav>
+  </div>
+</header>
+<div class="progreso" aria-hidden="true"><i id="barra"></i></div>
+
+<main class="cuestionario">
+  <h1>Cuéntame cómo trabajas</h1>
+  <p>Con esto preparo un asistente de prueba con tus servicios, tu zona y tus horarios. Son unos 3 minutos; lo que no sepas, déjalo en blanco y lo vemos juntos.</p>
+
+  <form class="formulario" id="form-cuestionario" action="https://formsubmit.co/hugoruizserrano10@gmail.com" method="POST" data-gracias="gracias.html">
+    <input type="hidden" name="_subject" value="norte.local · Cuestionario rellenado">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="">
+    <input type="hidden" name="formulario" value="Cuestionario (web)">
+    <input class="oculto" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+    <div class="bloque">
+      <h2><span>1</span>Tu empresa</h2>
+      <div class="dos">
+        <div class="campo"><label for="empresa">Nombre de la empresa</label><input id="empresa" name="empresa" type="text" autocomplete="organization" required></div>
+        <div class="campo"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" required></div>
+      </div>
+      <div class="dos">
+        <div class="campo"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel" autocomplete="tel" required></div>
+        <div class="campo"><label for="email">Correo</label><input id="email" name="email" type="email" autocomplete="email"></div>
+      </div>
+      <div class="campo"><label for="web">Web o Instagram de la empresa</label><input id="web" name="web_o_instagram" type="text"></div>
+    </div>
+
+    <div class="bloque">
+      <h2><span>2</span>Qué hacéis</h2>
+      <fieldset class="campo">
+        <legend>Tipo de trabajos</legend>
+        <div class="opciones">
+          <label><input type="checkbox" name="trabajos[]" value="Reformas integrales"> Reformas integrales</label>
+          <label><input type="checkbox" name="trabajos[]" value="Cocinas"> Cocinas</label>
+          <label><input type="checkbox" name="trabajos[]" value="Baños"> Baños</label>
+          <label><input type="checkbox" name="trabajos[]" value="Climatización y calderas"> Climatización y calderas</label>
+          <label><input type="checkbox" name="trabajos[]" value="Fontanería"> Fontanería</label>
+          <label><input type="checkbox" name="trabajos[]" value="Pintura"> Pintura</label>
+          <label><input type="checkbox" name="trabajos[]" value="Suelos"> Suelos</label>
+          <label><input type="checkbox" name="trabajos[]" value="Electricidad"> Electricidad</label>
+        </div>
+      </fieldset>
+      <div class="campo"><label for="mas-pedidos">Los trabajos que más os piden y su precio orientativo <span class="ayuda">(por ejemplo: cambio de bañera por plato, desde 1.200 €)</span></label><textarea id="mas-pedidos" name="mas_pedidos_y_precios"></textarea></div>
+      <div class="campo"><label for="no-hacemos">Trabajos que no hacéis o clientes que no os interesan</label><input id="no-hacemos" name="no_hacemos" type="text" placeholder="Obras muy pequeñas, fuera de Madrid…"></div>
+    </div>
+
+    <div class="bloque">
+      <h2><span>3</span>Zona y horario</h2>
+      <div class="campo"><label for="zona">Municipios donde trabajáis</label><input id="zona" name="zona" type="text" placeholder="Alcobendas, Sanse, Tres Cantos…"></div>
+      <div class="dos">
+        <div class="campo"><label for="horario">Horario de oficina</label><input id="horario" name="horario_oficina" type="text" placeholder="L-V 9:00-14:00 y 16:00-19:00"></div>
+        <div class="campo"><label for="visitas">Días y horas para visitas</label><input id="visitas" name="dias_visitas" type="text" placeholder="L-V por la tarde"></div>
+      </div>
+    </div>
+
+    <div class="bloque">
+      <h2><span>4</span>Cómo os escriben hoy</h2>
+      <fieldset class="campo">
+        <legend>Por dónde os escriben más</legend>
+        <div class="opciones">
+          <label><input type="checkbox" name="canales[]" value="WhatsApp"> WhatsApp</label>
+          <label><input type="checkbox" name="canales[]" value="Instagram"> Instagram</label>
+          <label><input type="checkbox" name="canales[]" value="Formulario web"> Formulario de la web</label>
+          <label><input type="checkbox" name="canales[]" value="Teléfono"> Teléfono</label>
+          <label><input type="checkbox" name="canales[]" value="Correo"> Correo</label>
+          <label><input type="checkbox" name="canales[]" value="Portales (Habitissimo, etc.)"> Portales de reformas</label>
+        </div>
+      </fieldset>
+      <div class="dos">
+        <div class="campo"><label for="mensajes">Mensajes de clientes a la semana</label>
+          <select id="mensajes" name="mensajes_semana"><option value="">Elige</option><option>Menos de 5</option><option>5 a 15</option><option>15 a 40</option><option>Más de 40</option></select></div>
+        <div class="campo"><label for="tarda">¿Cuánto tardáis en contestar?</label>
+          <select id="tarda" name="tiempo_respuesta"><option value="">Elige</option><option>Menos de 15 minutos</option><option>Una o dos horas</option><option>Por la noche o al día siguiente</option><option>A veces se nos olvida</option></select></div>
+      </div>
+      <div class="campo"><label for="repetidas">Las tres preguntas que más os repiten</label><textarea id="repetidas" name="preguntas_repetidas" placeholder="¿Cuánto cuesta…? ¿Cuánto tardáis? ¿Trabajáis en…?"></textarea></div>
+    </div>
+
+    <div class="bloque">
+      <h2><span>5</span>Citas y límites</h2>
+      <fieldset class="campo">
+        <legend>¿Qué debería agendar el asistente?</legend>
+        <div class="opciones">
+          <label><input type="radio" name="que_agenda" value="Visita para medir" checked> Visita para medir</label>
+          <label><input type="radio" name="que_agenda" value="Llamada"> Una llamada</label>
+          <label><input type="radio" name="que_agenda" value="Visita a la exposición"> Visita a la exposición</label>
+        </div>
+      </fieldset>
+      <fieldset class="campo">
+        <legend>¿Tenéis calendario online?</legend>
+        <div class="opciones">
+          <label><input type="radio" name="calendario" value="Google Calendar"> Google Calendar</label>
+          <label><input type="radio" name="calendario" value="Otro"> Otro</label>
+          <label><input type="radio" name="calendario" value="No, en papel o de memoria"> No</label>
+        </div>
+      </fieldset>
+      <div class="campo"><label for="persona">Casos que deben pasar a una persona en el acto</label><input id="persona" name="pasar_a_persona" type="text" placeholder="Quejas, urgencias, obras grandes…"></div>
+      <div class="campo"><label for="nunca">Algo que el asistente no deba decir o prometer nunca</label><input id="nunca" name="no_prometer" type="text" placeholder="Precios cerrados, plazos…"></div>
+    </div>
+
+    <label class="consentimiento"><input type="checkbox" name="acepta_privacidad" value="sí" required> <span>Acepto que norte.local use estos datos para preparar la demo y contactarme, como explica la <a href="privacidad.html">política de privacidad</a>.</span></label>
+    <button class="boton" type="submit">Enviar el cuestionario</button>
+  </form>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <div><a class="marca" href="index.html">norte.local</a><p>Norte de Madrid.</p></div>
+    <nav aria-label="Legal"><a href="aviso-legal.html">Aviso legal</a><a href="privacidad.html">Privacidad</a></nav>
+  </div>
+</footer>
+<script src="assets/web.js" defer></script>
+<script>
+  (function(){var f=document.getElementById("form-cuestionario"),b=document.getElementById("barra");
+  function act(){var c=f.querySelectorAll("input:not([type=hidden]):not(.oculto),select,textarea"),n=0,t=0,g={};
+    c.forEach(function(e){if(e.type==="checkbox"||e.type==="radio"){if(e.name==="acepta_privacidad")return;if(!(e.name in g)){g[e.name]=0;t++}if(e.checked&&!g[e.name]){g[e.name]=1;n++}}else{t++;if(e.value.trim())n++}});
+    b.style.width=Math.round(n/t*100)+"%"}
+  f.addEventListener("input",act);f.addEventListener("change",act);})();
+</script>
+</body>
+</html>

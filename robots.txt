@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hugoruizserrano10-coder.github.io/reels/sitemap.xml
