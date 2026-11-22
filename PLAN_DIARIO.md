@@ -28,6 +28,7 @@ Las demás ejecuciones del día terminan sin hacer nada.
 - Horarios: cuando haya ≥4 reels por franja, elegir la ganadora y escribirla en `franja_fija`.
 
 ## 3. Crear el reel de hoy
+- Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa.
 - Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Cada día un caso distinto y creíble
   de un negocio local del norte de Madrid (sobre todo empresas de reformas). Nombres y empresas inventados.
 - Mantener lo que funciona y **cambiar una sola cosa** respecto a la mejor versión (la siguiente de "Ideas pendientes"
