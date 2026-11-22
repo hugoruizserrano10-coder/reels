@@ -20,3 +20,8 @@ Casos creíbles del norte de Madrid. Marcar con [x] cuando se usen.
 - [ ] Recordatorio que evita un plantón (el cliente confirma o cambia la hora)
 - [ ] Reseña de Google: el asistente pide reseña tras terminar la obra (idea de servicio extra)
 - [ ] Cocina en Colmenar Viejo: el cliente manda fotos y el dueño llega a la visita sabiendo qué hay
+
+## Ideas de otros formatos (ver datos/formatos.md)
+- [ ] Dato del estudio de tiempos de respuesta (cuando Hugo tenga las 20 pruebas): "Escribí a 20 reformistas a las 19:30…" (anónimo, sin nombres)
+- [ ] Calculadora: "Una obra de 6.000 € perdida al mes son 72.000 € al año" → "Comenta CALCULA"
+- [ ] Portales de reformas: el mismo cliente llega a 5 empresas y gana la primera que contesta
