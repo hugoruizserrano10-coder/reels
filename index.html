@@ -28,6 +28,7 @@
     </a>
     <nav aria-label="Principal">
       <a class="solo-ancho" href="#como-funciona">Cómo funciona</a>
+      <a class="solo-ancho" href="#calculadora">Calculadora</a>
       <a class="solo-ancho" href="#precio">Precio</a>
       <a class="solo-ancho" href="cuestionario.html">Cuestionario</a>
       <a class="boton pequeno" href="#contacto">Pedir demo</a>
@@ -130,6 +131,30 @@
         <li>Alcobendas</li><li>San Sebastián de los Reyes</li><li>Tres Cantos</li><li>Algete</li><li>Colmenar Viejo</li><li>Madrid norte</li>
       </ul>
       <p>Si estás cerca, voy a tu local a enseñarte la demo en persona.</p>
+    </div>
+  </div>
+</section>
+
+<section class="calculadora" id="calculadora" aria-labelledby="t-calc">
+  <div class="envoltura">
+    <div class="cabeza-seccion">
+      <h2 id="t-calc">¿Cuánto te cuesta contestar tarde?</h2>
+      <p>Pon tus números. El cálculo es orientativo y se hace en tu navegador: no se guarda nada.</p>
+    </div>
+    <div class="calc">
+      <div class="calc-campos">
+        <div class="campo"><label for="c-msg">Mensajes de clientes nuevos al mes</label><input id="c-msg" type="number" inputmode="numeric" min="0" value="15"></div>
+        <div class="campo"><label for="c-tarde">De ellos, cuántos contestas tarde (más de 1 hora)</label><input id="c-tarde" type="number" inputmode="numeric" min="0" value="5"></div>
+        <div class="campo"><label for="c-perdidos">De los que contestas tarde, % que se va con otra empresa</label><input id="c-perdidos" type="number" inputmode="numeric" min="0" max="100" value="25"></div>
+        <div class="campo"><label for="c-cierre">De cada 10 visitas, cuántas acaban en obra</label><input id="c-cierre" type="number" inputmode="numeric" min="0" max="10" value="3"></div>
+        <div class="campo"><label for="c-valor">Valor medio de una obra (€)</label><input id="c-valor" type="number" inputmode="numeric" min="0" step="100" value="5000"></div>
+      </div>
+      <div class="calc-resultado" aria-live="polite">
+        <p>Al año pierdes alrededor de</p>
+        <output id="c-euros">0 €</output>
+        <p id="c-detalle"></p>
+        <a class="boton" href="#contacto">Quiero que no se me escape ninguno</a>
+      </div>
     </div>
   </div>
 </section>
