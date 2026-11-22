@@ -1,0 +1,58 @@
+{
+ "id": "2026-11-28-palabras-gato",
+ "tipo": "palabras",
+ "formato": "F",
+ "tipo_negocio": "comun",
+ "tipo_gancho": "inicio gracioso real (gato con gafas de sol que se gira, vídeo de stock gratuito) + texto arriba + palabras gigantes",
+ "bpm": 118,
+ "marca": "norte.local",
+ "intro": {
+  "tipo": "clip",
+  "mixkit": 49058,
+  "desde": 0.0,
+  "dur": 4.2,
+  "centro_x": 0.35,
+  "texto_arriba": "Mi recepcionista cuando le escriben|a las 23:00 de un domingo:",
+  "encuadre": "marco"
+ },
+ "escenas": [
+  {
+   "texto": "contesta.",
+   "estilo": "oscuro",
+   "golpes": 2,
+   "efecto": "sube"
+  },
+  {
+   "texto": "resuelve|dudas.",
+   "estilo": "naranja",
+   "golpes": 2,
+   "efecto": "sube"
+  },
+  {
+   "texto": "agenda|la cita.",
+   "estilo": "crema",
+   "golpes": 2,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "y ni se|*despeina*.",
+   "estilo": "oscuro",
+   "golpes": 3,
+   "efecto": "sacude"
+  },
+  {
+   "texto": "Es una *IA*.",
+   "estilo": "naranja",
+   "golpes": 2,
+   "efecto": "zoom"
+  },
+  {
+   "texto": "Comenta|*RECEPCIÓN*",
+   "estilo": "blanco",
+   "golpes": 5,
+   "efecto": "zoom"
+  }
+ ],
+ "creditos": "Vídeo de inicio: Mixkit (licencia gratuita para uso comercial), id 49058",
+ "caption": "Mi recepcionista no duerme 😎 Contesta WhatsApp y llamadas, resuelve dudas y agenda citas a cualquier hora, también los domingos. Es una IA y trabaja para negocios locales del norte de Madrid: clínicas, talleres, academias, peluquerías… Comenta RECEPCIÓN y te enseño cómo quedaría en el tuyo. #negocioslocales #alcobendas #sansebastiandelosreyes #trescantos #inteligenciaartificial"
+}

@@ -3,18 +3,18 @@
  "tipo": "palabras",
  "formato": "F",
  "tipo_negocio": "comun",
- "tipo_gancho": "interrupción visual sin relación (balón que choca con la pantalla) + palabras gigantes",
+ "tipo_gancho": "interrupción visual real (chut de fútbol de noche, vídeo de stock gratuito) + corte seco a palabras gigantes",
  "bpm": 124,
  "marca": "norte.local",
- "intro": {"tipo": "pelota", "dur": 1.9},
+ "intro": {"tipo": "clip", "mixkit": 43494, "desde": 1.2, "dur": 3.4, "centro_x": 0.5, "golpes_audio": [3.25]},
  "escenas": [
   {"texto": "¿Necesitas una|*recepcionista*?", "estilo": "crema", "golpes": 3, "efecto": "zoom"},
   {"texto": "24/7.", "estilo": "oscuro", "golpes": 2, "efecto": "sube"},
-  {"texto": "sin vacaciones.", "estilo": "naranja", "golpes": 2, "efecto": "sube"},
+  {"texto": "rápida.", "estilo": "naranja", "golpes": 2, "efecto": "zoom"},
   {"texto": "al teléfono.", "estilo": "crema", "golpes": 2, "efecto": "zoom"},
   {"texto": "y en WhatsApp.", "estilo": "oscuro", "golpes": 2, "efecto": "zoom"},
-  {"texto": "agenda|*sola*.", "estilo": "naranja", "golpes": 2, "efecto": "sacude"},
   {"texto": "Comenta|*RECEPCIÓN*", "estilo": "blanco", "golpes": 5, "efecto": "zoom"}
  ],
+ "creditos": "Vídeo de inicio: Mixkit (licencia gratuita para uso comercial), id 43494",
  "caption": "¿Tu negocio coge el teléfono a las 21:00 de un domingo? Una recepcionista con IA contesta llamadas y WhatsApp, responde dudas y agenda citas sola, 24/7. Para talleres, clínicas, academias, peluquerías y cualquier negocio local del norte de Madrid. Comenta RECEPCIÓN y te enseño cómo quedaría en el tuyo. #negocioslocales #alcobendas #sansebastiandelosreyes #trescantos #recepcionista"
 }

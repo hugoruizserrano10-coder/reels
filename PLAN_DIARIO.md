@@ -75,14 +75,16 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - **Gancho**: elegirlo de `datos/ganchos.md` siguiendo sus reglas (resultado o dato concreto en el primer segundo, nunca empezar
   contando la historia sin resultado). Apuntar `tipo_gancho` en la historia y en el registro. Por defecto usar la escena `g0`
   (resultado primero) hasta que los datos digan otra cosa; ir probando los otros tipos de uno en uno.
-- **Formatos (Hugo los aprobó el 22-nov) — rotación semanal:** 4 días formato A (flujos por pasos), 2 días formato F
-  (palabras gigantes con inicio gracioso/raro: avisos cayendo, balón que choca con la pantalla…; `"tipo":"palabras"`),
-  1 día formato G (cuento con analogía absurda y giro, tipo "el fontanero de los 12 móviles"; `"tipo":"cuento"`).
-  Nunca dos días seguidos el mismo formato F o G. Todos se generan igual: `generador/hacer_reel.sh historias/<id>.json …`
-  (el script mira el campo "tipo"). Al inventar inicios nuevos para F, añadir un tipo de "intro" en palabras.py
-  (algo raro y satisfactorio de 1–2 s sin relación con el negocio). Para G, se pueden añadir dibujos en cuento.py
-  (otro oficio, otra analogía absurda) manteniendo la estructura: absurdo → problema → giro → lista ✓ → CTA.
-  Todo gancho pasa el test PCD de `datos/ganchos.md`. Apuntar `formato` en el registro para comparar formatos.
+- **Formatos — rotación semanal:** 5 días formato A (flujos por pasos) y 2 días formato F (`"tipo":"palabras"`).
+  Hugo (22-nov) quiere el F **con un inicio de vídeo real, gracioso o raro, como los reels de referencia** (chut de fútbol,
+  gato con gafas…), y después corte seco a nuestras palabras y la CTA. Ese inicio sale SIEMPRE de un vídeo de stock gratuito
+  con licencia comercial (Mixkit: `"intro":{"tipo":"clip","mixkit":<id>,...}`; se descarga al generar y no se sube al
+  repo). Buscar clips en mixkit.co/free-stock-video/<tema>/ (graciosos, satisfactorios o de tensión de 2–4 s) y no repetir
+  clip. **Nunca usar el vídeo de otro creador de Instagram/TikTok** (derechos de autor y la norma de originalidad de
+  Instagram penaliza la cuenta). `"encuadre":"marco"` + `"texto_arriba"` para el estilo meme (texto blanco arriba).
+  El formato G (cuento dibujado, `borrador-cuento-fontanero.json`) está en pausa: a Hugo no le convenció el dibujo.
+  Todos se generan con `generador/hacer_reel.sh historias/<id>.json …` (el script mira "tipo"). Todo gancho pasa el test
+  PCD de `datos/ganchos.md`. Apuntar `formato` en el registro para comparar formatos.
 - Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
   construir el siguiente formato ampliando el generador.
 - Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.

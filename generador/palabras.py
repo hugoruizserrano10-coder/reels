@@ -92,11 +92,42 @@ def pelota(t_local, dur):
     balon(d, cx, cy, r, p * 9)
     return im
 
+def cargar_clip(intro):
+    """Vídeo de stock gratuito (Mixkit, licencia libre para uso comercial) recortado a vertical. Se descarga al vuelo
+    por su id y no se guarda en el repositorio (la licencia no permite redistribuir el archivo suelto)."""
+    mid = intro["mixkit"]; cache = os.path.expanduser(f"~/clips/{mid}.mp4"); os.makedirs(os.path.dirname(cache), exist_ok=True)
+    if not os.path.exists(cache):
+        subprocess.run(["curl", "-sL", "--max-time", "120", "-o", cache, f"https://assets.mixkit.co/videos/{mid}/{mid}-720.mp4"], check=True)
+    cx = intro.get("centro_x", 0.5); vel = intro.get("velocidad", 1.0)
+    marco = intro.get("encuadre") == "marco"
+    MW, MH = (W, 1000) if marco else (W, H)
+    escala = f"scale=-2:{MH}:flags=lanczos" if not marco else f"scale={int(MH * 16 / 9)}:{MH}:flags=lanczos"
+    vf = (f"setpts=PTS/{vel},fps={FPS},{escala},crop={MW}:{MH}:(iw-{MW})*{cx}:0"
+          + (",eq=saturation=1.15:contrast=1.05" if intro.get("realzar", True) else ""))
+    r = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", str(intro.get("desde", 0)), "-t", str(intro["dur"] * vel + 0.2),
+                        "-i", cache, "-vf", vf, "-f", "rawvideo", "-pix_fmt", "rgb24", "-"], capture_output=True, check=True)
+    n = len(r.stdout) // (MW * MH * 3); out = []
+    for i in range(n):
+        fr = Image.frombytes("RGB", (MW, MH), r.stdout[i * MW * MH * 3:(i + 1) * MW * MH * 3])
+        if marco:
+            im = Image.new("RGB", (W, H), (255, 255, 255)); im.paste(fr, (0, 520)); fr = im
+        out.append(fr)
+    return out
+
+def texto_arriba(im, texto):
+    d = ImageDraw.Draw(im); f = F("Inter-Bold.otf", 58); lineas = texto.split("|")
+    h = 90 + 72 * len(lineas)
+    d.rectangle((0, 0, W, 170 + h), fill=(255, 255, 255))
+    for i, l in enumerate(lineas):
+        d.text((W // 2, 230 + i * 72), l, font=f, fill=(20, 20, 20), anchor="mm")
+    return im
+
 def main(hist, salida):
     H_ = json.load(open(hist)); bpm = float(H_.get("bpm", 120)); beat = 60 / bpm
     marca = H_.get("marca", "norte.local")
     esc = H_["escenas"]; intro = H_.get("intro")
     t_intro = ((0.16 * intro.get("n", 6) + 0.9) if intro.get("tipo") == "notificaciones" else intro.get("dur", 1.8)) if intro else 0.0
+    clip = cargar_clip(intro) if intro and intro.get("tipo") == "clip" else None
     t_intro = round(t_intro / beat) * beat if intro else 0.0
     tiempos = []; t = t_intro
     for e in esc:
@@ -111,7 +142,11 @@ def main(hist, salida):
     for fi in range(int(T * FPS)):
         tt = fi / FPS
         if tt < t_intro:
-            im = notif(tt, intro.get("n", 6), None) if intro.get("tipo") == "notificaciones" else pelota(tt, t_intro)
+            if clip:
+                im = clip[min(len(clip) - 1, fi)].copy()
+                if intro.get("texto_arriba"): im = texto_arriba(im, intro["texto_arriba"])
+            else:
+                im = notif(tt, intro.get("n", 6), None) if intro.get("tipo") == "notificaciones" else pelota(tt, t_intro)
         else:
             k = max(i for i, (s, _) in enumerate(tiempos) if s <= tt or i == 0)
             e = esc[min(k, len(esc) - 1)]; s0, dur = tiempos[min(k, len(esc) - 1)]; tl = tt - s0
@@ -156,13 +191,15 @@ def main(hist, salida):
     def tic():
         tt = np.arange(int(0.12 * SR)) / SR
         return np.sin(2 * np.pi * 1760 * tt) * np.exp(-tt * 40)
-    b = 0.0
+    b = t_intro if (intro and intro.get("tipo") == "clip") else 0.0
     while b < T - 0.3:
         add(b, kick(), 0.8)
         if int(round(b / beat)) % 2: add(b, 0.15 * rng.standard_normal(int(0.04 * SR)) * np.exp(-np.arange(int(0.04 * SR)) / SR * 90))
         b += beat
     if intro and intro.get("tipo") == "notificaciones":
         for k in range(intro.get("n", 6)): add(k * 0.16, tic(), 0.5)
+    elif intro and intro.get("tipo") == "clip":
+        for g in intro.get("golpes_audio", []): add(g, kick(), 1.0)
     elif intro:  # botes del balón
         for b_ in (0.0, 0.31, 0.62): add(b_ * t_intro, kick(), 0.9)
     for s, _ in tiempos: add(s, hit(), 0.9)
