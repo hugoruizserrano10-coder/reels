@@ -3,6 +3,7 @@
 Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se aplica ya.
 
 ## Reglas que aplicamos ahora
+- (22-nov) Calidad: efectos de sonido (ding en notificaciones, whoosh entre escenas) y volumen normalizado a -14 LUFS en todos los reels. Voz: Piper "davefx" por defecto; alternativa gratis con licencia comercial clara: Kokoro (Apache 2.0), voces em_alex, em_santa, ef_dora (`"voz_motor": "kokoro", "voz_id": "em_alex"` en la historia). Pendiente de que Hugo elija.
 - (22-nov) Ganchos: ver `datos/ganchos.md`. Resultado o número concreto en el primer segundo; el gancho tipo "Son las diez de la noche…" (historia sin resultado) es de los que peor funcionan en 2026.
 - (22-nov) Hugo abre la agencia a cualquier negocio local: cada reel, un tipo de negocio y una historia distinta. Medir qué tipo de negocio funciona mejor.
 - Instagram reparte los reels sobre todo por **tiempo de visualización / % visto**, luego **envíos por DM por alcance** y **me gusta por alcance**. El % de gente que pasa en los 3 primeros segundos (skip rate) es la señal de alarma. (Fuentes: Buffer, SocialPilot, Later — oct/2026.)

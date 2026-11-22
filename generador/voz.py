@@ -12,7 +12,27 @@ GAP = 0.18   # silencio entre frases
 LEAD = 0.35  # silencio inicial
 SR = 22050
 
+MOTOR = H_.get("voz_motor", "piper")  # "piper" (davefx) o "kokoro" (em_alex, em_santa, ef_dora)
+_KOK = None
+def synth_kokoro(text):
+    global _KOK
+    import numpy as _np
+    from kokoro_onnx import Kokoro
+    if _KOK is None:
+        base = os.path.expanduser("~/voces/kokoro/")
+        _KOK = Kokoro(base + "kokoro-v1.0.onnx", base + "voices-v1.0.bin")
+    a, sr = _KOK.create(text, voice=H_.get("voz_id", "em_alex"), speed=H_.get("voz_velocidad_kokoro", 1.05), lang="es")
+    # a 22050 Hz mono int16-like float
+    import math
+    n = int(len(a) * SR / sr)
+    a = _np.interp(_np.linspace(0, len(a) - 1, n), _np.arange(len(a)), a).astype(_np.float32) * 32767
+    thr = 300
+    idx = _np.where(_np.abs(a) > thr)[0]
+    return a[max(0, idx[0] - 400): idx[-1] + 800]
+
 def synth(text, path):
+    if MOTOR == "kokoro":
+        return synth_kokoro(text)
     subprocess.run([sys.executable, "-m", "piper", "-m", MODEL, "--length-scale", str(LS), "-f", path],
                    input=text.encode(), check=True, capture_output=True)
     with wave.open(path) as w:
