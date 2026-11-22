@@ -1,0 +1,26 @@
+{
+ "id": "2026-11-24-cuento-fontanero",
+ "tipo": "cuento",
+ "formato": "G",
+ "tipo_negocio": "fontaneria",
+ "tipo_gancho": "analogía absurda con giro (PCD: promesa al final, curiosidad '¿por qué 12 móviles?', disrupción visual)",
+ "marca": "norte.local",
+ "color_mono": [40, 90, 170],
+ "competencia": "Otro fontanero",
+ "voz_velocidad": 0.95,
+ "bpm": 100,
+ "escenas": [
+  {"dibujo": "pegar_moviles", "voz": "Este fontanero se pegó doce móviles al mono de trabajo."},
+  {"dibujo": "fuga", "voz": "Así no perdía ni una llamada mientras arreglaba una fuga."},
+  {"dibujo": "perdidas", "voz": "Pero con las manos mojadas, no cogía ninguno."},
+  {"dibujo": "se_van", "voz": "Y cada llamada perdida era un cliente llamando al siguiente de Google."},
+  {"dibujo": "lista", "voz": "Ahora contesta una recepcionista con inteligencia artificial. Coge las llamadas, responde los WhatsApp y le agenda las visitas. Ella sola."},
+  {"dibujo": "herramientas", "voz": "Con el móvil y el calendario que ya usa."},
+  {"dibujo": "cta", "voz": "Comenta RECEPCIÓN y te la monto en tu negocio.", "pausa": 1.2}
+ ],
+ "lista": ["Coge llamadas", "Responde WhatsApp", "Agenda visitas"],
+ "herramientas": ["Tu móvil", "Tu WhatsApp", "Tu Google Calendar"],
+ "cta": ["Comenta", "RECEPCIÓN"],
+ "cta_sub": "y te la monto en tu negocio",
+ "caption": "Doce móviles y ni una llamada cogida 📵 Si eres fontanero, electricista o técnico y no puedes coger el teléfono con las manos ocupadas, una recepcionista con IA contesta por ti, responde los WhatsApp y te agenda las visitas. Comenta RECEPCIÓN y te enseño cómo quedaría. Fontaneros en Alcobendas, San Sebastián de los Reyes, Tres Cantos y Colmenar Viejo. #fontanero #fontaneria #alcobendas #sansebastiandelosreyes #negocioslocales"
+}

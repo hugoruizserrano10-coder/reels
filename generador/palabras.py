@@ -64,11 +64,39 @@ def notif(t_local, n, est):
         im.paste(card, (80, y), card)
     return im
 
+def balon(d, cx, cy, r, rot):
+    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(250, 250, 250), outline=(30, 30, 30), width=max(2, int(r * 0.04)))
+    def pent(px, py, pr, a0):
+        pts = [(px + pr * math.cos(a0 + k * 2 * math.pi / 5), py + pr * math.sin(a0 + k * 2 * math.pi / 5)) for k in range(5)]
+        d.polygon(pts, fill=(30, 30, 30))
+    pent(cx + r * 0.12 * math.cos(rot), cy + r * 0.12 * math.sin(rot), r * 0.3, rot)
+    for k in range(5):
+        a = rot + k * 2 * math.pi / 5 + math.pi / 5; rr = r * 0.78
+        px, py = cx + rr * math.cos(a), cy + rr * math.sin(a)
+        if math.hypot(px - cx, py - cy) < r * 0.95: pent(px, py, r * 0.2, a)
+
+def pelota(t_local, dur):
+    """Intro de interrupción: un balón rebota por el suelo acercándose a cámara hasta tapar la pantalla."""
+    im = Image.new("RGB", (W, H), (120, 170, 90)); d = ImageDraw.Draw(im)
+    d.rectangle((0, 0, W, 760), fill=(40, 52, 80))                      # cielo de noche
+    for x in (160, 920):                                                 # focos
+        d.rectangle((x - 6, 180, x + 6, 760), fill=(70, 70, 80)); d.ellipse((x - 40, 150, x + 40, 210), fill=(255, 250, 220))
+    for k in range(9): d.rectangle((0, 760 + k * 130, W, 760 + k * 130 + 65), fill=(110, 160, 82))  # franjas de césped
+    d.rectangle((330, 520, 750, 760), outline=(255, 255, 255), width=8)  # portería al fondo
+    p = min(1.0, t_local / dur)
+    r = 40 + (p ** 2.2) * 1500
+    cx = 540 + math.sin(p * 3) * 80 * (1 - p)
+    rebote = abs(math.sin(p * math.pi * 3.2)) * 260 * (1 - p)
+    cy = 900 + p * 500 - rebote
+    d.ellipse((cx - r * 0.9, cy + r * 0.85, cx + r * 0.9, cy + r * 1.05), fill=(80, 120, 60))   # sombra
+    balon(d, cx, cy, r, p * 9)
+    return im
+
 def main(hist, salida):
     H_ = json.load(open(hist)); bpm = float(H_.get("bpm", 120)); beat = 60 / bpm
     marca = H_.get("marca", "norte.local")
     esc = H_["escenas"]; intro = H_.get("intro")
-    t_intro = (0.16 * intro.get("n", 6) + 0.9) if intro else 0.0
+    t_intro = ((0.16 * intro.get("n", 6) + 0.9) if intro.get("tipo") == "notificaciones" else intro.get("dur", 1.8)) if intro else 0.0
     t_intro = round(t_intro / beat) * beat if intro else 0.0
     tiempos = []; t = t_intro
     for e in esc:
@@ -83,7 +111,7 @@ def main(hist, salida):
     for fi in range(int(T * FPS)):
         tt = fi / FPS
         if tt < t_intro:
-            im = notif(tt, intro.get("n", 6), None)
+            im = notif(tt, intro.get("n", 6), None) if intro.get("tipo") == "notificaciones" else pelota(tt, t_intro)
         else:
             k = max(i for i, (s, _) in enumerate(tiempos) if s <= tt or i == 0)
             e = esc[min(k, len(esc) - 1)]; s0, dur = tiempos[min(k, len(esc) - 1)]; tl = tt - s0
@@ -133,8 +161,10 @@ def main(hist, salida):
         add(b, kick(), 0.8)
         if int(round(b / beat)) % 2: add(b, 0.15 * rng.standard_normal(int(0.04 * SR)) * np.exp(-np.arange(int(0.04 * SR)) / SR * 90))
         b += beat
-    if intro:
+    if intro and intro.get("tipo") == "notificaciones":
         for k in range(intro.get("n", 6)): add(k * 0.16, tic(), 0.5)
+    elif intro:  # botes del balón
+        for b_ in (0.0, 0.31, 0.62): add(b_ * t_intro, kick(), 0.9)
     for s, _ in tiempos: add(s, hit(), 0.9)
     out /= max(1e-9, np.abs(out).max())
     aud = os.path.join(tmp, "a.wav"); w = wave.open(aud, "w"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)

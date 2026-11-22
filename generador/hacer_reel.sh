@@ -8,6 +8,17 @@ export WORK="$(mktemp -d)"
 VOCES="$HOME/voces"; mkdir -p "$VOCES"
 export VOZ_MODELO="$VOCES/es_ES-davefx-medium.onnx"
 python3 -c "import piper" 2>/dev/null || pip install -q --break-system-packages piper-tts
+# Formatos nuevos: F (palabras gigantes) y G (cuento / analogía absurda)
+TIPO="$(python3 -c "import json,sys;print(json.load(open(sys.argv[1])).get('tipo','flujo'))" "$HISTORIA")"
+if [ "$TIPO" = "palabras" ] || [ "$TIPO" = "cuento" ]; then
+  if [ ! -f "$VOZ_MODELO" ]; then
+    curl -sL -o "$VOZ_MODELO" https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx
+    curl -sL -o "$VOZ_MODELO.json" https://huggingface.co/rhasspy/piper-voices/resolve/main/es/es_ES/davefx/medium/es_ES-davefx-medium.onnx.json
+  fi
+  python3 "$GEN/$TIPO.py" "$HISTORIA" "$OUTF"
+  ffmpeg -v error -y -i "$OUTF" -vf "fps=1.5,scale=216:-1,tile=10x4" -frames:v 1 "${OUTF%.mp4}_revision.jpg"
+  exit 0
+fi
 if grep -q '"voz_motor": *"chatterbox"' "$HISTORIA"; then
   python3 -c "import chatterbox" 2>/dev/null || pip install -q --break-system-packages chatterbox-tts
 fi
