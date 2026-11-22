@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      /* Clon de la estructura del reel de @asadwebsites: chut 1,73 s → tarjetas de 1 s alternando claro/oscuro
+         con texto condensado en cursiva, tarjeta de CTA, tarjeta de marca y cierre con el logo. */
+      :root {
+        --claro: #f3f3f2;
+        --oscuro: #1c1c1c;
+        --tinta: #111111;
+        --blanco: #ffffff;
+        --naranja: #e25434;
+        --font-display: "Oswald";
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: var(--oscuro); }
+      #root { width: 100%; height: 100%; position: relative; font-family: var(--font-display); }
+      .tarjeta { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .claro { background: var(--claro); color: var(--tinta); }
+      .oscuro { background: var(--oscuro); color: var(--blanco); }
+      .txt { font-weight: 700; font-style: italic; letter-spacing: 0.5px; line-height: 1.12; text-align: center; transform-origin: 50% 50%; }
+      .g { font-size: 140px; }
+      .m { font-size: 80px; }
+      .s { font-size: 120px; }
+      .acento { color: var(--naranja); }
+      #chut { position: absolute; inset: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .logo { width: 280px; height: 280px; margin-bottom: 60px; }
+      .marca { font-family: "Inter"; font-weight: 900; font-style: normal; font-size: 64px; letter-spacing: -1px; color: var(--blanco); margin-top: 40px; }
+      #cierre-caja { width: 560px; height: 560px; border-radius: 28px; background: #2a2a2a; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="11.733333" data-width="1080" data-height="1920">
+      <video id="chut" class="clip" src="assets/chut.mp4" muted playsinline data-start="0" data-duration="1.733333" data-track-index="0"></video>
+
+      <div id="t1" class="tarjeta claro clip" data-start="1.733333" data-duration="1" data-track-index="1">
+        <div id="t1x" class="txt s">¿necesitas<br />recepcionista?</div>
+      </div>
+      <div id="t2" class="tarjeta oscuro clip" data-start="2.733333" data-duration="1.033333" data-track-index="1">
+        <div id="t2x" class="txt g">24/7.</div>
+      </div>
+      <div id="t3" class="tarjeta claro clip" data-start="3.766666" data-duration="1.033333" data-track-index="1">
+        <div id="t3x" class="txt g">rápida.</div>
+      </div>
+      <div id="t4" class="tarjeta oscuro clip" data-start="4.8" data-duration="1.033333" data-track-index="1">
+        <div id="t4x" class="txt g">agenda sola.</div>
+      </div>
+      <div id="t5" class="tarjeta claro clip" data-start="5.833333" data-duration="1.8" data-track-index="1">
+        <div id="t5x" class="txt m">Comenta "<span class="acento">RECEPCIÓN</span>"<br />para una demo gratis</div>
+      </div>
+      <div id="t6" class="tarjeta oscuro clip" data-start="7.633333" data-duration="1.7" data-track-index="1">
+        <img id="t6logo" class="logo" src="assets/logo.svg" alt="" />
+        <div id="t6x" class="txt m">Recepcionista con IA<br />para negocios locales</div>
+      </div>
+      <div id="t7" class="tarjeta oscuro clip" data-start="9.333333" data-duration="2.4" data-track-index="1">
+        <div id="cierre-caja">
+          <img id="t7logo" class="logo" src="assets/logo.svg" alt="" style="margin-bottom: 0" />
+          <div id="t7marca" class="marca">norte.local</div>
+        </div>
+      </div>
+
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="1.733333" data-duration="10" data-media-start="0" data-volume="0.9" data-fade-out="0.5" data-track-index="2"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // Cambios secos como el original; cada texto entra con un golpe corto de escala (4 fotogramas) y se queda quieto.
+      const golpes = [["#t1x", 1.733333], ["#t2x", 2.733333], ["#t3x", 3.766666], ["#t4x", 4.8], ["#t5x", 5.833333], ["#t6x", 7.633333]];
+      golpes.forEach(([sel, t]) => {
+        tl.fromTo(sel, { scale: 1.08, skewX: -6 }, { scale: 1, skewX: -6, duration: 0.133, ease: "power3.out" }, t);
+      });
+      tl.fromTo("#t6logo", { scale: 0.9 }, { scale: 1, duration: 0.2, ease: "power3.out" }, 7.633333);
+      // Cierre: la caja con el logo encoge hasta su sitio (como el original a 7,87 s).
+      tl.fromTo("#cierre-caja", { scale: 1.9 }, { scale: 1, duration: 0.233, ease: "power2.out" }, 9.333333);
+      tl.fromTo("#t7marca", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, 9.566666);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

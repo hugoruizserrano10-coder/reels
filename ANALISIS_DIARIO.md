@@ -55,9 +55,12 @@ Cada día se elige el viral más fuerte que se pueda rehacer y se **copia tal cu
   (Mixkit). Si lleva voz y la nuestra suena peor que la suya, priorizar texto en pantalla.
 - Lo que NO se copia: el vídeo, la música y la voz de otros creadores (el algoritmo de Instagram detecta contenido
   duplicado y lo hunde, y pueden denunciarlo). Solo se usan trozos literales de otros cuando Hugo lo pide para una prueba concreta.
-**Herramienta principal para clonar: la habilidad `reverse-any-video` de HyperFrames** (en `.claude/skills/`, instalada
-con permiso de Hugo el 22-nov): reconstruye el viral como proyecto editable comprobándolo fotograma a fotograma; luego se
-cambian textos, datos, imágenes (por las de Mixkit) y audio por los nuestros. Para animaciones con Remotion, seguir la
+**Herramienta principal para clonar: HyperFrames** (habilidades en `.claude/skills/`, instaladas con permiso de Hugo el
+22-nov). OJO: el comando automático `reverse` es de pago (HeyGen Pro) y Hugo no lo tiene: NO iniciar sesión ni pagar.
+Se clona a mano con el motor gratuito siguiendo el método de `reverse-any-video`: `measure cuts <video>` para los cortes
+exactos, fotogramas de cada plano, y una composición en HTML con los mismos tiempos, colores, tipografía (las incluidas:
+Oswald, League Gothic, Archivo Black, Inter…) y tamaños; luego `check` y `render`. Ejemplo completo:
+`clones/asadwebsites-balon/` (LEEME.md). Para animaciones con Remotion, seguir la
 habilidad `remotion-best-practices`. Exportar antes `DO_NOT_TRACK=1 HYPERFRAMES_TELEMETRY=0` y
 `PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome`. HyperFrames no se instala: se ejecuta con
 `node .claude/skills/hyperframes/scripts/plugin-cli.mjs <comando>` (init --non-interactive --skip-skills, render --output …).
