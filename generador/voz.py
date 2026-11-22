@@ -30,9 +30,31 @@ def synth_kokoro(text):
     idx = _np.where(_np.abs(a) > thr)[0]
     return a[max(0, idx[0] - 400): idx[-1] + 800]
 
+_CB = None
+def synth_chatterbox(text):
+    """Chatterbox multilingüe (MIT). Si la historia trae "voz_referencia" (wav de 10-20 s con permiso), clona esa voz."""
+    global _CB
+    import numpy as _np
+    if _CB is None:
+        from chatterbox.mtl_tts import ChatterboxMultilingualTTS
+        _CB = ChatterboxMultilingualTTS.from_pretrained(device="cpu")
+    kw = {}
+    ref = H_.get("voz_referencia")
+    if ref:
+        kw["audio_prompt_path"] = os.path.join(os.path.dirname(os.environ["HISTORIA"]), "..", ref)
+    wav = _CB.generate(text, language_id="es", exaggeration=H_.get("voz_emocion", 0.5), cfg_weight=H_.get("voz_ritmo", 0.5), **kw)
+    a = wav.squeeze().numpy()
+    sr = _CB.sr
+    n = int(len(a) * SR / sr)
+    a = _np.interp(_np.linspace(0, len(a) - 1, n), _np.arange(len(a)), a).astype(_np.float32) * 32767
+    idx = _np.where(_np.abs(a) > 300)[0]
+    return a[max(0, idx[0] - 400): idx[-1] + 800]
+
 def synth(text, path):
     if MOTOR == "kokoro":
         return synth_kokoro(text)
+    if MOTOR == "chatterbox":
+        return synth_chatterbox(text)
     subprocess.run([sys.executable, "-m", "piper", "-m", MODEL, "--length-scale", str(LS), "-f", path],
                    input=text.encode(), check=True, capture_output=True)
     with wave.open(path) as w:

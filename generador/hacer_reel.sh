@@ -8,6 +8,9 @@ export WORK="$(mktemp -d)"
 VOCES="$HOME/voces"; mkdir -p "$VOCES"
 export VOZ_MODELO="$VOCES/es_ES-davefx-medium.onnx"
 python3 -c "import piper" 2>/dev/null || pip install -q --break-system-packages piper-tts
+if grep -q '"voz_motor": *"chatterbox"' "$HISTORIA"; then
+  python3 -c "import chatterbox" 2>/dev/null || pip install -q --break-system-packages chatterbox-tts
+fi
 if grep -q '"voz_motor": *"kokoro"' "$HISTORIA"; then
   python3 -c "import kokoro_onnx" 2>/dev/null || pip install -q --break-system-packages kokoro-onnx soundfile
   K="$HOME/voces/kokoro"; mkdir -p "$K"
