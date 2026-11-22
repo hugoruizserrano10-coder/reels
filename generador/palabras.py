@@ -132,6 +132,23 @@ def main(hist, salida):
     esc = H_["escenas"]; intro = H_.get("intro")
     t_intro = ((0.16 * intro.get("n", 6) + 0.9) if intro.get("tipo") == "notificaciones" else intro.get("dur", 1.8)) if intro else 0.0
     clip = cargar_clip(intro) if intro and intro.get("tipo") == "clip" else None
+    if clip:  # quitar fotogramas que ya son del siguiente plano (fondo casi blanco)
+        from PIL import ImageStat
+        clip = clip[:int(intro.get("dur", 1.8) * FPS)]
+        while len(clip) > 1 and ImageStat.Stat(clip[-1].convert("L")).mean[0] > 200: clip.pop()
+        t_intro = len(clip) / FPS
+    imp = intro.get("impacto") if intro else None
+    if clip and imp:  # la bola "choca" con la cámara: zoom rápido al punto, temblor y destello
+        base = clip[-1]; nimp = int(imp.get("dur", 0.22) * FPS)
+        for i in range(nimp):
+            p_ = (i + 1) / nimp; z = 1 + 3.5 * p_ ** 2
+            cx, cy = imp["x"] * W, imp["y"] * H
+            cw, ch = W / z, H / z
+            x0 = min(max(cx - cw / 2, 0), W - cw); y0 = min(max(cy - ch / 2, 0), H - ch)
+            fr = base.crop((int(x0), int(y0), int(x0 + cw), int(y0 + ch))).resize((W, H), Image.BILINEAR)
+            if p_ > 0.6: fr = Image.blend(fr, Image.new("RGB", (W, H), "white"), (p_ - 0.6) / 0.4 * 0.9)
+            clip.append(fr)
+        t_intro = len(clip) / FPS
     t_intro = round(t_intro / beat) * beat if intro else 0.0
     tiempos = []; t = t_intro
     for e in esc:
@@ -196,6 +213,20 @@ def main(hist, salida):
         tt = np.arange(int(0.12 * SR)) / SR
         return np.sin(2 * np.pi * 1760 * tt) * np.exp(-tt * 40)
     b = t_intro if (intro and intro.get("tipo") == "clip") else 0.0
+    if H_.get("musica", "rica") == "rica":   # acordes + bajo + charles por encima del pulso
+        f_ = lambda m: 440 * 2 ** ((m - 69) / 12)
+        prog = [[57, 60, 64], [53, 57, 60], [48, 52, 55], [55, 59, 62]]; bar = beat * 4; k = 0; tb = b
+        while tb < T - 0.2:
+            L = int(min(bar, T - tb) * SR); tt = np.arange(L) / SR
+            env = np.minimum(1, tt / 0.05) * np.exp(-tt * 0.6)
+            ch = prog[k % 4]; sig = sum(np.sign(np.sin(2 * np.pi * f_(m) * tt)) * 0.03 + np.sin(2 * np.pi * f_(m + 12) * tt) * 0.05 for m in ch)
+            add(tb, sig * env, 0.5)
+            for q in range(8):  # bajo en corcheas
+                tq = q * beat / 2; Lq = int(beat / 2 * SR * 0.9); t2 = np.arange(Lq) / SR
+                add(tb + tq, np.sin(2 * np.pi * f_(ch[0] - 24) * t2) * np.exp(-t2 * 6), 0.35)
+                Lh = int(0.03 * SR); add(tb + tq + beat / 4, rng.standard_normal(Lh) * np.exp(-np.arange(Lh) / SR * 150), 0.12)
+            tb += bar; k += 1
+    if imp: add(t_intro - 0.05, hit(), 1.4); add(t_intro - 0.05, kick(), 1.2)
     while b < T - 0.3:
         add(b, kick(), 0.8)
         if int(round(b / beat)) % 2: add(b, 0.15 * rng.standard_normal(int(0.04 * SR)) * np.exp(-np.arange(int(0.04 * SR)) / SR * 90))
