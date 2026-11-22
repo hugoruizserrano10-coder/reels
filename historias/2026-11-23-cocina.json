@@ -1,0 +1,138 @@
+{
+ "id": "2026-11-23-cocina",
+ "marca": "norte.local",
+ "variante": "corta (~30 s): sin pasos 1 y recordatorio; gancho con dinero en el primer segundo",
+ "titulo": [
+  [
+   "UN PRESUPUESTO DE",
+   0
+  ],
+  [
+   "12.000 € QUE SE",
+   0
+  ],
+  [
+   "IBA A PERDER",
+   1
+  ]
+ ],
+ "cliente": {
+  "nombre": "Javier L.",
+  "color": [
+   90,
+   140,
+   230
+  ]
+ },
+ "hora_mensaje": "21:40",
+ "estado_cerrado": "Cerrado · abre el lunes a las 8:00",
+ "mensaje": "Buenas, quiero reformar la cocina entera. ¿Me podéis dar presupuesto?",
+ "rechazo": "Gracias, ya me lo ha hecho otra empresa.",
+ "hora_rechazo": "08:05",
+ "etiqueta": "Cocina completa · alto valor",
+ "agenda": [
+  [
+   "10:00",
+   true
+  ],
+  [
+   "12:00",
+   false
+  ],
+  [
+   "17:00",
+   true
+  ]
+ ],
+ "respuesta": "¡Hola, Javier! Claro. Podemos ir a medir la cocina mañana:",
+ "huecos": [
+  "10:00",
+  "17:00"
+ ],
+ "acciones": [
+  [
+   "cal",
+   "Crea la visita",
+   "calendario",
+   "Lunes · 10:00",
+   ""
+  ],
+  [
+   "card",
+   "Guarda ficha",
+   "clientes",
+   "Ficha creada",
+   ""
+  ],
+  [
+   "camera",
+   "Pide fotos",
+   "por WhatsApp",
+   "Fotos pedidas",
+   ""
+  ]
+ ],
+ "empresa": "Reformas del Norte",
+ "resumen_intro": "Buenos días. Este fin de semana entraron 4 clientes:",
+ "resumen": [
+  [
+   "10:00",
+   "Javier L.",
+   "Cocina",
+   true
+  ],
+  [
+   "13:00",
+   "Pedro S.",
+   "Suelos",
+   false
+  ],
+  [
+   "17:00",
+   "Lucía P.",
+   "Baño",
+   false
+  ]
+ ],
+ "recordatorio": "Hola, Javier. Te recordamos la visita de mañana a las 10:00.",
+ "pie": "Sin que nadie coja el teléfono",
+ "cta_palabra": "RECEPCIÓN",
+ "voz_velocidad": 0.86,
+ "voz": [
+  [
+   "s1",
+   "Domingo, diez menos veinte de la noche. Javier quiere reformar su cocina entera."
+  ],
+  [
+   "s2",
+   "Nadie le contesta, y el lunes ya tiene presupuesto de otra empresa."
+  ],
+  [
+   "s3",
+   "Pero esta empresa tiene una recepcionista con IA."
+  ],
+  [
+   "p2",
+   "Entiende que es una cocina completa, un cliente de mucho valor."
+  ],
+  [
+   "p3",
+   "Le ofrece dos horas para ir a medir,"
+  ],
+  [
+   "p3b",
+   "y crea la visita, guarda su ficha y le pide fotos."
+  ],
+  [
+   "p4",
+   "El lunes, el dueño se encuentra cuatro clientes nuevos en la agenda.",
+   "El lunes, el dueño se encuentra 4 clientes nuevos en la agenda."
+  ],
+  [
+   "cta",
+   "¿La quieres en tu empresa? Comenta, RECEPCIÓN.",
+   "¿La quieres en tu empresa? Comenta RECEPCIÓN."
+  ]
+ ],
+ "caption": "Un domingo a las 21:40 entra una reforma de cocina de 12.000 €. ¿Quién contesta? 🌙\n\nLa recepcionista con IA responde al momento, le ofrece hora para medir y le deja la visita en tu agenda.\n\n👇 Comenta RECEPCIÓN y te enseñamos una demo con tu negocio.\n\n#reformas #cocinas #madrid #alcobendas #sanse #trescantos"
+}

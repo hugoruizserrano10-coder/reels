@@ -1,0 +1,17 @@
+{
+ "cuenta_instagram": {"windsor_account": "17841476774457077", "usuario": "norte.local_"},
+ "reels": [
+  {
+   "fecha": "2026-11-22",
+   "hora_publicacion": "02:55",
+   "historia": "historias/2026-11-22-fuga.json",
+   "video": "videos/2026-11-22.mp4",
+   "media_id": "18124536770324207",
+   "duracion_s": 46.9,
+   "variante": "base: historia larga con 4 pasos, gancho 'ESTA IA TE CONSIGUE OBRAS MIENTRAS DUERMES'",
+   "nota": "Publicado de madrugada para probar el sistema; su hora no cuenta para el experimento de horarios.",
+   "metricas_24h": null,
+   "metricas_72h": null
+  }
+ ]
+}
