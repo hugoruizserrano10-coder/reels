@@ -1,7 +1,7 @@
 {
- "explicacion": "Rotamos 3 franjas para descubrir la mejor hora. Cada día publica solo la franja que toca según 'orden' (índice = días desde 'inicio' % 3). Cuando haya 4 reels por franja, se elige la ganadora (más visualizaciones medianas a las 24 h, con desempate por tiempo medio de visualización) y se fija en 'franja_fija'. Después, 1 de cada 5 días se sigue probando otra franja.",
+ "explicacion": "Desde el 23-nov se publican 2 reels al día (prueba de 2 semanas). Franja M = 13:40 (clon del viral), salvo cuando (días desde inicio) % 5 == 4, que se publica a las 16:40 para seguir probando horas. Franja N = 20:40 (historia propia / palabras / extracto aprobado). En el informe se compara M frente a N y 13:40 frente a 16:40.",
  "inicio": "2026-11-23",
- "franjas": {"A": "13:40", "B": "16:40", "C": "20:40"},
- "orden": ["C", "A", "B"],
+ "dos_al_dia_desde": "2026-11-23",
+ "franjas": {"M": "13:40", "M_prueba": "16:40", "N": "20:40"},
  "franja_fija": null
 }

@@ -1,15 +1,23 @@
 # Plan diario de reels — norte.local
 
-Instrucciones para la tarea programada. Se ejecuta 3 veces al día (13:40, 16:40 y 20:40, hora de Madrid),
-pero **solo publica una vez al día**: la ejecución de la franja que toca según `datos/horarios.json`.
-Las demás ejecuciones del día terminan sin hacer nada.
+Instrucciones para la tarea programada. Desde el 23-nov **se publican 2 reels al día** (prueba de 2 semanas pedida por
+Hugo; en el informe se compara con la etapa de 1 al día). La tarea arranca a las 13:25, 16:25 y 20:25 (Madrid) para tener
+el reel listo y revisado y **publicar a las :40**. Franjas en `datos/horarios.json`:
+- **Franja M (mediodía, 13:40)** → el clon del viral preparado por la tarea de análisis (o una historia PRO si no hay).
+- **Franja N (noche, 20:40)** → historia propia PRO, palabras gigantes o extracto aprobado por Hugo.
+- 1 de cada 5 días la franja M se mueve a las 16:40 para seguir probando horas (lo marca `horarios.json`).
+Las ejecuciones que no tocan terminan sin hacer nada.
 
 ## 0. Preparación
 - Leer `datos/diario.md` (lecciones de ejecuciones anteriores: errores y cómo se arreglaron) y aplicarlas.
 - Conectar el repositorio `hugoruizserrano10-coder/reels` (add_repo con push) y clonarlo en /home/claude/reels.
-- Fecha y hora de Madrid. Si hoy ya hay un reel en `datos/registro.json` con `fecha` = hoy y `hora_publicacion` no nula → terminar.
-- Calcular la franja de hoy: si `franja_fija` no es null, usarla (salvo 1 de cada 5 días, que se prueba otra);
-  si no, `orden[(días desde inicio) % 3]`. Si la hora actual no corresponde a esa franja (±30 min) → terminar sin hacer nada.
+- Fecha y hora de Madrid. Saber qué franja es esta ejecución (M o N) según `datos/horarios.json`: a las 13:25 toca M
+  salvo los días de prueba de 16:40 (días desde inicio % 5 == 4), en los que M se hace a las 16:25; a las 20:25 toca N.
+  Si esta ejecución no corresponde a ninguna franja de hoy → terminar sin hacer nada.
+- Si en `datos/registro.json` ya hay un reel con `fecha` = hoy y `franja` = esta franja → terminar.
+- Historia de esta franja: `historias/AAAA-MM-DD-M-*.json` o `historias/AAAA-MM-DD-N-*.json`. Si no existe: en M, el
+  primer clon libre (`"clon_de"`) de `historias/`; si no hay clon, crear una historia PRO; en N, crear una historia PRO
+  o de palabras gigantes (alternando). Vídeo: `videos/AAAA-MM-DD-M.mp4` / `videos/AAAA-MM-DD-N.mp4`.
 
 ## 1. Medir (Windsor, conector instagram, cuenta 17841476774457077)
 - Para cada reel del registro con >24 h y sin `metricas_24h`, o >72 h y sin `metricas_72h`, leer con get_data:
@@ -112,14 +120,21 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - **Revisar** la hoja `videos/AAAA-MM-DD_revision.jpg` (y fotogramas sueltos si hace falta): textos que no se corten,
   horas y nombres coherentes entre escenas, logo al final. Si algo falla, corregir y volver a generar. No subir la hoja de revisión.
 
+## 3c. CONTROL DE CALIDAD (obligatorio, ~10 min antes de publicar — Hugo, 22-nov)
+Antes de publicar, repasar `CONTROL.md` punto por punto con el vídeo y la historia de esta franja, y guardar el resultado
+en el registro como `"control": {"punto": "ok" | "corregido: …" | "fallo: …"}`. Si algún punto obligatorio falla:
+corregirlo y volver a generar; si no da tiempo, publicar la siguiente historia preparada que sí pase el control y avisar a
+Hugo. Nunca publicar algo que no haya pasado el control.
+
 ## 4. Publicar
 - `git add historias videos/*.mp4 datos` → commit → `git push` (con push.negotiate=true).
-- URL pública: `https://raw.githubusercontent.com/hugoruizserrano10-coder/reels/main/videos/AAAA-MM-DD.mp4`
+- URL pública: `https://raw.githubusercontent.com/hugoruizserrano10-coder/reels/main/videos/AAAA-MM-DD-<franja>.mp4`
   (comprobar con curl -I que da 200).
 - Windsor execute_action: connector instagram, action create_video_post, account 17841476774457077,
   params {video_url, caption (del JSON), share_to_feed: true}.
 - Si el vídeo dura entre 3 y 60 s, publicarlo también como historia (create_story con el mismo video_url) para que lo vean los seguidores.
-- Apuntar en el registro: fecha, hora_publicacion, franja, historia, video, media_id, duracion_s, variante, cta. Commit y push.
+- Publicar a las :40 (esperar si el control termina antes). Apuntar en el registro: fecha, hora_publicacion, franja (M/N),
+  historia, video, media_id, duracion_s, formato, clon_de, variante, cta y control. Commit y push.
 
 ## 4b. Retroalimentación de la propia tarea
 - Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.
