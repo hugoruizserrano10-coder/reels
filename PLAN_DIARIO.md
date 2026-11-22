@@ -5,6 +5,7 @@ pero **solo publica una vez al día**: la ejecución de la franja que toca segú
 Las demás ejecuciones del día terminan sin hacer nada.
 
 ## 0. Preparación
+- Leer `datos/diario.md` (lecciones de ejecuciones anteriores: errores y cómo se arreglaron) y aplicarlas.
 - Conectar el repositorio `hugoruizserrano10-coder/reels` (add_repo con push) y clonarlo en /home/claude/reels.
 - Fecha y hora de Madrid. Si hoy ya hay un reel en `datos/registro.json` con `fecha` = hoy y `hora_publicacion` no nula → terminar.
 - Calcular la franja de hoy: si `franja_fija` no es null, usarla (salvo 1 de cada 5 días, que se prueba otra);
@@ -17,20 +18,33 @@ Las demás ejecuciones del día terminan sin hacer nada.
 - Guardar en el registro. Calcular `pct_visto` = avg_watch_time / (duracion_s*1000).
 - Leer comentarios nuevos (comment_text, comment_username, comment_timestamp). Si alguien comenta RECEPCIÓN o pregunta algo,
   **no contestar automáticamente**: incluirlo en el resumen para Hugo.
+- Leer `followers_count`. Si llega a 1.000 (umbral de los trial reels), empezar a usar `trial_params` para los experimentos arriesgados
+  (graduation_strategy SS_PERFORMANCE) y apuntarlo en aprendizajes.
+- Contactos de la web: buscar en Gmail `subject:"norte.local ·" newer_than:2d` (correos de FormSubmit con "Nueva petición de demo"
+  o "Cuestionario rellenado"). Resumir cada uno para Hugo (empresa, municipio, teléfono, cuándo llamar). No contestar por él.
 
 ## 2. Aprender
 - Comparar el último experimento con la base (vistas, % visto, skip rate, envíos y me gusta por alcance).
   Con pocos datos, no sacar conclusiones fuertes: hacen falta al menos 2–3 reels por variante.
 - Actualizar `datos/aprendizajes.md`: tabla de experimentos, reglas (añadir/quitar según los datos).
+- Las preguntas repetidas de comentarios y formularios son ideas de reel y de FAQ para la web: apuntarlas.
 - Los lunes: buscar en la web (WebSearch) novedades sobre reels que funcionan (estructura, ganchos, duración, algoritmo)
   y apuntar lo útil con su fuente. Si hay vídeos en la carpeta `referencias/` que no estén analizados, sacar fotogramas
   con ffmpeg, estudiar la estructura y apuntarla.
+- Los lunes, además: revisar la web (index.html, cuestionario.html): sacar capturas con Playwright y Chrome
+  (/usr/bin/google-chrome, escritorio y móvil), comprobar enlaces, y mejorar textos o preguntas frecuentes con lo aprendido
+  en comentarios y formularios. Commit y push. Mantener la estética y no inventar testimonios ni resultados.
 - Horarios: cuando haya ≥4 reels por franja, elegir la ganadora y escribirla en `franja_fija`.
 
 ## 3. Crear el reel de hoy
 - Si ya existe `historias/AAAA-MM-DD-*.json` para hoy (preparada de antemano), usar esa.
-- Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Cada día un caso distinto y creíble
-  de un negocio local del norte de Madrid (sobre todo empresas de reformas). Nombres y empresas inventados.
+- Escribir `historias/AAAA-MM-DD-<tema>.json` (mismo formato que las anteriores). Elegir un caso de `historias/banco.md`
+  (no repetir oficio + problema en 7 días), marcarlo como usado y añadir 1–2 casos nuevos al banco. Nombres y empresas inventados.
+- Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
+  construir el siguiente formato ampliando el generador.
+- Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.
+- CTA: alternar "Comenta RECEPCIÓN" con "Envíaselo a alguien que tenga una empresa de reformas" (los envíos pesan mucho)
+  y medir cuál da más comentarios/envíos.
 - Mantener lo que funciona y **cambiar una sola cosa** respecto a la mejor versión (la siguiente de "Ideas pendientes"
   o lo que sugieran los datos). Apuntar en el JSON `"variante"` qué cambia.
 - Si los datos piden cambiar la estructura o la estética, se puede editar `generador/render.py`, pero sin romper
@@ -46,7 +60,12 @@ Las demás ejecuciones del día terminan sin hacer nada.
   (comprobar con curl -I que da 200).
 - Windsor execute_action: connector instagram, action create_video_post, account 17841476774457077,
   params {video_url, caption (del JSON), share_to_feed: true}.
-- Apuntar en el registro: fecha, hora_publicacion, franja, historia, video, media_id, duracion_s, variante. Commit y push.
+- Si el vídeo dura entre 3 y 60 s, publicarlo también como historia (create_story con el mismo video_url) para que lo vean los seguidores.
+- Apuntar en el registro: fecha, hora_publicacion, franja, historia, video, media_id, duracion_s, variante, cta. Commit y push.
+
+## 4b. Retroalimentación de la propia tarea
+- Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.
+- Si un mismo problema aparece 2 veces, cambiar este plan o el generador para que no vuelva a pasar (y apuntarlo).
 
 ## 5. Avisar a Hugo
 Mensaje corto en español: qué se ha publicado y a qué hora, qué se probaba, cómo fueron los reels anteriores

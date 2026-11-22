@@ -9,6 +9,14 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 - El 65 % de las visualizaciones llega en los 3 primeros días (Metricool 2026): medimos a las 24 h y a las 72 h.
 - Estructura que usamos: gancho con tensión (cliente que se pierde) → giro ("pero esta empresa tiene…") → pasos rápidos → resultado concreto → CTA "Comenta RECEPCIÓN".
 
+## Investigación del 22-nov-2026 (crecimiento, visitas y DMs)
+- Las 3 señales que más pesan siguen siendo: tiempo de visualización/% visto, envíos por DM por alcance y me gusta por alcance. Para llegar a gente nueva pesan más los **envíos** que los me gusta → probar CTA de "envíaselo a…".
+- **Trial reels** (se enseñan solo a no seguidores): requieren cuenta profesional y, según varias fuentes, unos 1.000 seguidores (algunas dicen 200). Windsor los admite (`trial_params`). Activarlos cuando `followers_count` llegue al umbral.
+- Para negocio local: ganchos con la ciudad concreta ("en Alcobendas…") y palabras clave locales en el texto; Instagram muestra reels públicos en Google, así que la descripción debe llevar servicio + municipio.
+- El carrusel es el formato con más interacción en Instagram (Metricool 2026) → probar 1–2 carruseles por semana además del reel.
+- Política de originalidad (abr-2026): penaliza contenido duplicado. Nunca resubir vídeos de otros: copiar estructuras, no vídeos.
+- Comentario → DM automático: ManyChat gratis solo 25 contactos/mes (se agota con un reel); alternativas gratis con más margen: Inrō (100 contactos/mes), CreatorFlow (500 DMs/mes), ReplyRush. Es legal porque el usuario pide el mensaje al comentar. Requiere que Hugo conecte la cuenta (Meta).
+
 ## Hora de publicación
 - Estudios generales para España: picos a las 14–16 h y sobre las 20 h; varían mucho entre fuentes, así que lo decidimos con nuestros datos (ver datos/horarios.json).
 
@@ -23,5 +31,7 @@ Este archivo lo actualiza la tarea diaria. Arriba lo más reciente y lo que se a
 - Empezar sin título grande, directamente con el chat del cliente.
 - Otros negocios locales del norte de Madrid (fontanero, electricista, pintor, clínica, academia).
 - Velocidad de voz 0.80 (más rápida).
+- Gancho con municipio concreto ("Esto pasó en Tres Cantos…").
+- Formato "error que te cuesta obras" (lista de 3 errores, ~20 s).
 - Loop: que el final enlace con el principio para que se vuelva a ver.
 - CTA de compartir ("Envíaselo a alguien que tenga una empresa de reformas") para subir envíos por DM.
