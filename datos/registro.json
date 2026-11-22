@@ -43,6 +43,36 @@
    "nota": "Extra a petición de Hugo; su hora no cuenta para el experimento de horarios.",
    "metricas_24h": null,
    "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora_publicacion": "23:10",
+   "franja": "extra",
+   "historia": "historias/2026-11-22-N-extracto-balon.json",
+   "video": "videos/2026-11-22-N.mp4",
+   "media_id": "18126918823910954",
+   "story_id": "17887373562627386",
+   "duracion_s": 10.1,
+   "formato": "F-extracto",
+   "tipo_negocio": "comun",
+   "tipo_gancho": "extracto literal de reel viral (chut que choca con la cámara) + palabras gigantes",
+   "variante": "prueba pedida por Hugo: extracto literal del inicio de un viral",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "investigacion": "ok: reel de @asadwebsites desmontado (hugo-1122-v3)",
+    "gancho": "ok",
+    "se_entiende": "ok",
+    "sin_errores": "ok",
+    "audio": "ok",
+    "derechos": "ok: extracto aprobado por Hugo",
+    "variedad": "ok",
+    "cta_descripcion": "ok",
+    "duracion": "ok",
+    "aprendizaje": "ok"
+   },
+   "nota": "Publicado a petición de Hugo a las 23:10; su hora no cuenta para el experimento de horarios.",
+   "metricas_24h": null,
+   "metricas_72h": null
   }
  ]
 }
