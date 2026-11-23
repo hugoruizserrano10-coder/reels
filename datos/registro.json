@@ -52,7 +52,18 @@
    "variante": "reel extra pedido por Hugo: formato corto con gancho g0 y academia",
    "cta": "Comenta RECEPCIÓN",
    "nota": "Extra a petición de Hugo; su hora no cuenta para el experimento de horarios.",
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-23 20:41",
+    "views": 23,
+    "reach": 20,
+    "avg_watch_ms": 6555,
+    "pct_visto": 0.19,
+    "skip_rate": 0.556,
+    "likes": 3,
+    "comments": 0,
+    "saved": 1,
+    "shares": 0
+   },
    "metricas_72h": null
   },
   {
@@ -111,6 +122,36 @@
     "cta_descripcion": "ok: 'Comenta RECEPCIÓN para una demo gratis'; descripción con servicio + municipios y 5 hashtags",
     "duracion_formato": "ok: 1080x1920, 12,1 s, cierre con logo norte.local",
     "aprendizaje": "ok: variante = primer clon con HyperFrames (cambia el formato frente a historias propias)"
+   },
+   "metricas_24h": null,
+   "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-23",
+   "hora_publicacion": "20:40",
+   "franja": "N",
+   "historia": "historias/2026-11-23-N-fontanero-empanao.json",
+   "video": "videos/2026-11-23-N.mp4",
+   "media_id": "18122682914089294",
+   "story_id": "18055405466602762",
+   "duracion_s": 25.4,
+   "formato": "dibujo-humor",
+   "clon_de": null,
+   "tipo_negocio": "fontaneria",
+   "tipo_gancho": "insulto cómico directo al protagonista + pregunta (¿por qué?) — guion de Hugo",
+   "variante": "humor gamberro con dibujos (guion de Hugo) frente a reels serios",
+   "cta": "Pide tu demo gratis / comenta RECEPCIÓN (descripción)",
+   "control": {
+    "1_investigacion": "ok (Análisis 2026-11-23 en diario; reel propio con guion de Hugo, no clon)",
+    "2_gancho": "ok (dibujo + subtítulo en caja desde el s0; insulto cómico + «¿por qué?»)",
+    "3_se_entiende": "ok (una idea por escena, subtítulos en caja sincronizados; hoja de 15 fotogramas revisada)",
+    "4_sin_errores": "ok (sin textos cortados; Fontanería Paco coherente; oferta real: responde llamadas y WhatsApps)",
+    "5_audio": "ok (media -17,7 dB, pico -1,3 dB, sin saturar; voz por encima de la música)",
+    "6_derechos": "ok (dibujos propios en HyperFrames, voz sintética, música Mixkit 623)",
+    "7_variedad": "ok (anterior: clon genérico; formato distinto). Aviso: el 22-nov también fue fontanería (fuga), problema distinto",
+    "8_cta_descripcion": "ok (CTA demo gratis + RECEPCIÓN en descripción; «norte de Madrid» sin municipio concreto; 5 hashtags)",
+    "9_duracion_formato": "ok (1080x1920, 25,4 s, última imagen con norte.local)",
+    "10_aprendizaje": "ok (variante: humor con dibujos)"
    },
    "metricas_24h": null,
    "metricas_72h": null
