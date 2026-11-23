@@ -61,3 +61,13 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
   escribiendo letras sin sentido → la última palabra es la oferta. La curiosidad aguanta hasta el final.
 - **Lista numerada con promesa** (@annderrey, 1,9k me gusta, 1,7k envíos): "Si tus vídeos se ven planos, pídele a Claude
   estos 10 efectos" → números gigantes 01…10 en verde, uno por golpe, y "guarda este vídeo". Lo guardan → alcance.
+
+## Ganchos de los virales del 23-nov (análisis diario, TikTok)
+- **Pregunta de incredulidad + "esto"** (@alejavirivera, God's Eye View, 511k vistas, **58x** su mediana): «¿Cómo puede ser
+  LEGAL tener acceso a todo esto?» sobre un visual imponente. LEGAL en grande. Adaptado: «¿Cómo puede ser LEGAL que cualquier
+  negocio tenga esto?» (clon del 24-nov). Medir frente a "resultado primero".
+- **Autoridad + cambio** (@marketingconlaurita, 9,7x): «El CEO de X ya no usa A, ahora usa B». Para nosotros: «Los negocios
+  que más citas cierran en Alcobendas ya no contestan ellos los WhatsApp.»
+- **Noticia + "y no me refiero a…, sino a…"** (@alejavirivera, 11,7x): la aclaración sube la promesa en el segundo 4.
+- Frases puente nuevas: «Desde aquí vas a poder ver…» · «Podrías incluso…» · «No solo eso, sino que también…» ·
+  «¿Y quién estaba detrás de todo esto? Tú.» · «Y un segundo, que ahora te explico.»

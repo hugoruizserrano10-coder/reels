@@ -1,0 +1,16 @@
+{
+ "id": "2026-11-24-M-clon-alejavirivera",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-24-M.mp4",
+ "formato": "clon",
+ "clon_de": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+ "viral": "511.500 vistas, 58x la mediana de @alejavirivera (God's Eye View)",
+ "proyecto": "clones/alejavirivera-ojo/",
+ "tipo_negocio": "comun",
+ "tipo_gancho": "pregunta de incredulidad '¿Cómo puede ser LEGAL…?' + visual imponente (globo con paneles HUD) en el segundo 0",
+ "variante": "clon fiel de un viral de 58x: mismo gancho y orden de escenas, 36 s, todo b-roll con voz davefx y subtítulos a dos tonos",
+ "duracion_s": 36.2,
+ "cta": "Comenta RECEPCIÓN",
+ "caption": "¿Cómo puede ser LEGAL que cualquier negocio tenga esto? 👁️ Una recepcionista con IA que contesta cualquier mensaje a cualquier hora, te deja ver cada conversación y la cita que ha dado, y recuerda la cita al cliente el día antes. Para negocios de Alcobendas, San Sebastián de los Reyes, Tres Cantos, Algete y Colmenar Viejo. Comenta RECEPCIÓN y te mando la demo. #recepcionistaIA #alcobendas #sansebastiandelosreyes #trescantos #negocioslocales",
+ "control": {"1_investigacion": "ok (Análisis 2026-11-23, viral desmontado)", "2_gancho": "ok (pregunta + LEGAL en grande en 0 s)", "3_se_entiende": "ok (subtítulos de 1-4 palabras, sin subtítulos en ficha/chat)", "4_sin_errores": "ok (bot se identifica como automático; solo contesta, agenda y recuerda)", "5_audio": "ok (-14 LUFS, voz por encima de música)", "6_derechos": "ok (Mixkit + voz propia)", "7_variedad": "ok (anterior: fontanero humor)", "8_cta": "ok", "9_formato": "ok 1080x1920, 36 s, cierre con marca", "10_aprendizaje": "ok"}
+}

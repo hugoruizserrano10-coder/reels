@@ -1,0 +1,58 @@
+{
+ "fecha": "2026-11-23",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@emprendeaprendiendo",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] emprendeaprendiendo: This account does not have any videos posted"
+  },
+  {
+   "perfil": "https://www.youtube.com/@nicksaraev/shorts",
+   "revisados": 19,
+   "mediana_vistas": 10000,
+   "virales": [
+    {
+     "id": "aIflIQMacV4",
+     "url": "https://www.youtube.com/shorts/aIflIQMacV4",
+     "webpage_url": "https://www.youtube.com/shorts/aIflIQMacV4",
+     "title": "Why Saturation Doesn't Matter",
+     "view_count": 54000,
+     "veces_mediana": 5.4,
+     "viral": true
+    },
+    {
+     "id": "On_DVAjnkRY",
+     "url": "https://www.youtube.com/shorts/On_DVAjnkRY",
+     "webpage_url": "https://www.youtube.com/shorts/On_DVAjnkRY",
+     "title": "AI automation is just like any other business",
+     "view_count": 51000,
+     "veces_mediana": 5.1,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@LaHoraMaker/shorts",
+   "revisados": 12,
+   "mediana_vistas": 482.0,
+   "virales": [
+    {
+     "id": "oXDab_CKCrg",
+     "url": "https://www.youtube.com/shorts/oXDab_CKCrg",
+     "webpage_url": "https://www.youtube.com/shorts/oXDab_CKCrg",
+     "title": "¿Cuál es la diferencia entre RAG y fine-tune para añadir información a nuestro #LLM?",
+     "view_count": 3700,
+     "veces_mediana": 7.68,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 31,
+ "total_virales": 3
+}

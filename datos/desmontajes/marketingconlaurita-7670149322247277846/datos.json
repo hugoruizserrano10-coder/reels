@@ -1,0 +1,128 @@
+{
+ "id": "marketingconlaurita-7670149322247277846",
+ "duracion_s": 61.6,
+ "cortes_s": [
+  3.77,
+  20.9,
+  23.03,
+  23.1,
+  27.77,
+  29.9,
+  30.13,
+  54.87
+ ],
+ "cortes_por_10s": 1.3,
+ "palabras_por_s": 3.74,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 3.8,
+   "texto": "El CEO de Cloud Code ya no usa prompt, ahora está usando loops."
+  },
+  {
+   "ini": 3.8,
+   "fin": 7.9,
+   "texto": "Y es que la mayoría de personas le piden algo a Cloud, reciben una respuesta, y cuando"
+  },
+  {
+   "ini": 7.9,
+   "fin": 12.3,
+   "texto": "esta tiene algún error o no les gusta, iteran y vuelven a recibir otra respuesta."
+  },
+  {
+   "ini": 12.3,
+   "fin": 15.7,
+   "texto": "Pero los usuarios más avanzados están creando los llamados loops."
+  },
+  {
+   "ini": 15.7,
+   "fin": 16.7,
+   "texto": "¿Y qué es un loop?"
+  },
+  {
+   "ini": 16.7,
+   "fin": 21.0,
+   "texto": "Un disparador que lo pone a trabajar y una meta verificable que decide cuándo parar."
+  },
+  {
+   "ini": 21.0,
+   "fin": 23.4,
+   "texto": "Y un segundo que ahora te explico qué significa esto."
+  },
+  {
+   "ini": 23.4,
+   "fin": 26.8,
+   "texto": "Antes escribías un prompt, lo corregías, lo leías y volvías a escribir otro y"
+  },
+  {
+   "ini": 26.8,
+   "fin": 28.0,
+   "texto": "otro y otro."
+  },
+  {
+   "ini": 28.0,
+   "fin": 30.0,
+   "texto": "Pero ¿quién estaba detrás de todo esto?"
+  },
+  {
+   "ini": 30.0,
+   "fin": 31.0,
+   "texto": "Tú."
+  },
+  {
+   "ini": 31.0,
+   "fin": 34.4,
+   "texto": "Ahora solo tienes que definir la meta una vez y él empieza a promptear hasta llegar"
+  },
+  {
+   "ini": 34.4,
+   "fin": 35.4,
+   "texto": "a ese objetivo."
+  },
+  {
+   "ini": 35.4,
+   "fin": 39.2,
+   "texto": "Eso sí, esto va a gastar más tokens de lo normal, así que ya depende de ti que quieras"
+  },
+  {
+   "ini": 39.2,
+   "fin": 41.9,
+   "texto": "aumentar tu consumo para llegar a esa meta antes."
+  },
+  {
+   "ini": 41.9,
+   "fin": 45.9,
+   "texto": "Y para eso tienes este comando en Cloud que se llama barra loop."
+  },
+  {
+   "ini": 45.9,
+   "fin": 50.0,
+   "texto": "Y la diferencia es enorme porque dejas de usar la IA como una máquina de respuestas"
+  },
+  {
+   "ini": 50.0,
+   "fin": 52.6,
+   "texto": "y lo empiezas a usar como un equipo pequeño de trabajo."
+  },
+  {
+   "ini": 52.6,
+   "fin": 55.1,
+   "texto": "Y esto sirve para cualquier área que le pidas."
+  },
+  {
+   "ini": 55.1,
+   "fin": 59.3,
+   "texto": "Comenta loop y te mando un esquema y una serie de ejemplos para que aprendas a utilizarlos"
+  },
+  {
+   "ini": 59.3,
+   "fin": 60.3,
+   "texto": "en tu día a día."
+  },
+  {
+   "ini": 60.3,
+   "fin": 61.2,
+   "texto": "Nos vemos."
+  }
+ ]
+}

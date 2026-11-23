@@ -1,0 +1,291 @@
+{
+ "explicacion": "Virales detectados (>=3x la mediana de su creador). Se añade sin duplicar por id.",
+ "virales": [
+  {
+   "id": "7688762956502355233",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+   "titulo": "¿Cómo puede ser LEGAL tener acceso a todo esto? 🌍 God’s Eye View reún...",
+   "vistas": 511500,
+   "veces_mediana": 58.34,
+   "desmontado": true,
+   "clonado": true
+  },
+  {
+   "id": "pwcrn5bdr9c",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/pwcrn5bdr9c",
+   "titulo": "She became a millionaire by reinventing gym wear",
+   "vistas": 365000,
+   "veces_mediana": 20.86,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7614218882076740896",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@javadex",
+   "url": "https://www.tiktok.com/@javadex/video/7614218882076740896",
+   "titulo": "¿Cómo ves eso? Para mí, la ingeniería de software está cambiando: nec...",
+   "vistas": 5210,
+   "veces_mediana": 14.84,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7691731215258242336",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7691731215258242336",
+   "titulo": "Google acaba de liberar su mejor modelo de generación de vídeo con IA...",
+   "vistas": 102100,
+   "veces_mediana": 11.65,
+   "desmontado": true,
+   "clonado": false
+  },
+  {
+   "id": "hc34VXRoX7s",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/hc34VXRoX7s",
+   "titulo": "Claude Can Run a GTA 6 Clipping Channel on Autopilot",
+   "vistas": 131000,
+   "veces_mediana": 10.92,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "tXRno9MAa-I",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/tXRno9MAa-I",
+   "titulo": "Recording herself cooking changed her life",
+   "vistas": 186000,
+   "veces_mediana": 10.63,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7670149322247277846",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "url": "https://www.tiktok.com/@marketingconlaurita/video/7670149322247277846",
+   "titulo": "Y tu, estás usando ya loops?? 🔂 o sigues prompteando🫤",
+   "vistas": 9352,
+   "veces_mediana": 9.68,
+   "desmontado": true,
+   "clonado": false
+  },
+  {
+   "id": "iTOXHp4c1YE",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/iTOXHp4c1YE",
+   "titulo": "He was fired for recording viral videos",
+   "vistas": 143000,
+   "veces_mediana": 8.17,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "oXDab_CKCrg",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@LaHoraMaker/shorts",
+   "url": "https://www.youtube.com/shorts/oXDab_CKCrg",
+   "titulo": "¿Cuál es la diferencia entre RAG y fine-tune para añadir información a nuestro #LLM?",
+   "vistas": 3700,
+   "veces_mediana": 7.68,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "0IPuk63FwU0",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/0IPuk63FwU0",
+   "titulo": "You Can Make $100/day With a Grok Bot GTA 6 Clipper",
+   "vistas": 83000,
+   "veces_mediana": 6.92,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "V0PzEBcnAdk",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/V0PzEBcnAdk",
+   "titulo": "Claude code mods are insane. Steal these 3.",
+   "vistas": 71000,
+   "veces_mediana": 5.92,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7708818254814383393",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+   "titulo": "🤯 ¡DeepSeek acaba de hacer otra LOCURA con su nuevo Modo Creador! Aho...",
+   "vistas": 51200,
+   "veces_mediana": 5.84,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "PmSVAtTKZ8U",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/PmSVAtTKZ8U",
+   "titulo": "Make It Better Reel   FINAL",
+   "vistas": 65000,
+   "veces_mediana": 5.42,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "aIflIQMacV4",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@nicksaraev/shorts",
+   "url": "https://www.youtube.com/shorts/aIflIQMacV4",
+   "titulo": "Why Saturation Doesn't Matter",
+   "vistas": 54000,
+   "veces_mediana": 5.4,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7696185141852409121",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7696185141852409121",
+   "titulo": "🎬 ¡6 herramientas de IA para crear vídeos completamente GRATIS! 🤯🔥 ¿Q...",
+   "vistas": 45000,
+   "veces_mediana": 5.13,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "On_DVAjnkRY",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@nicksaraev/shorts",
+   "url": "https://www.youtube.com/shorts/On_DVAjnkRY",
+   "titulo": "AI automation is just like any other business",
+   "vistas": 51000,
+   "veces_mediana": 5.1,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "_EChYLC3Vag",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/_EChYLC3Vag",
+   "titulo": "I Turned Codex Into My AI Operating System",
+   "vistas": 58000,
+   "veces_mediana": 4.83,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "Hk20QLW6nEc",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/Hk20QLW6nEc",
+   "titulo": "The knife sharpener who created a knife empire",
+   "vistas": 82000,
+   "veces_mediana": 4.69,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7691367052703026464",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7691367052703026464",
+   "titulo": "¿Más de 7.000 MILLONES de tokens GRATIS al mes? 🤯 FreeLLMAPI está reg...",
+   "vistas": 40900,
+   "veces_mediana": 4.67,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7651593972300680470",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "url": "https://www.tiktok.com/@marketingconlaurita/video/7651593972300680470",
+   "titulo": "🟠 Creo una app para entrenadores online con Claude.",
+   "vistas": 4177,
+   "veces_mediana": 4.32,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "_agQV6gtDGE",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/_agQV6gtDGE",
+   "titulo": "This is how he sold 10k worth of sauces in 48 hours",
+   "vistas": 75000,
+   "veces_mediana": 4.29,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7699143212945919264",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "url": "https://www.tiktok.com/@marketingconlaurita/video/7699143212945919264",
+   "titulo": "El skill de Claude que me ayuda a revisar todos mis proyectos 5 veces...",
+   "vistas": 4102,
+   "veces_mediana": 4.25,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7646017064217480470",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "url": "https://www.tiktok.com/@marketingconlaurita/video/7646017064217480470",
+   "titulo": "Claude analiza mi instagram y me dice en que mejorar 😮💨🏆",
+   "vistas": 4032,
+   "veces_mediana": 4.17,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7685823889045245217",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7685823889045245217",
+   "titulo": "Meta acaba de lanzar Muse, un agente de IA que no se limita a respond...",
+   "vistas": 33500,
+   "veces_mediana": 3.82,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "sr25G5qddV4",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "url": "https://www.youtube.com/shorts/sr25G5qddV4",
+   "titulo": "He left Wall Street to wash cars?",
+   "vistas": 59000,
+   "veces_mediana": 3.37,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7680954514920328480",
+   "fecha_ronda": "2026-11-23",
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "url": "https://www.tiktok.com/@alejavirivera/video/7680954514920328480",
+   "titulo": "DeepSeek no solo está compitiendo en potencia: está obligando a todo ...",
+   "vistas": 29000,
+   "veces_mediana": 3.31,
+   "desmontado": false,
+   "clonado": false
+  }
+ ]
+}

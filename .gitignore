@@ -6,3 +6,10 @@ datos/desmontajes/*/audio.wav
 remotion/node_modules/
 remotion/public/tmp/
 remotion/public/sfx/
+clones/*/assets/*.mp4
+clones/*/assets/*.mp3
+clones/*/assets/voz.wav
+clones/*/trabajo/lines/
+clones/*/salida.mp4
+clones/*/.hyperframes/
+clones/*/trabajo/*.wav

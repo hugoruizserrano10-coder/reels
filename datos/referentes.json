@@ -4,7 +4,7 @@
   {
    "usuario": "curiosfer",
    "motivo": "sistema content-os, ganchos y frases puente",
-   "no_usar": "youtube.com/@curiosfer y tiktok @curiosfer son otras personas"
+   "no_usar": "youtube.com/@curiosfer y tiktok @curiosfer son otras personas; tiktok @curiosfer es una cuenta brasileña de curiosidades (comprobado 23-nov)"
   },
   {
    "usuario": "santiremedio",
@@ -13,8 +13,38 @@
   },
   {
    "usuario": "marketingconlaurita",
-   "motivo": "reel de referencia del estilo de flujos por pasos"
+   "motivo": "reel de referencia del estilo de flujos por pasos",
+   "tiktok": "https://www.tiktok.com/@marketingconlaurita",
+   "youtube": "https://www.youtube.com/@marketingconlaurita/shorts"
+  },
+  {
+   "usuario": "alejavirivera",
+   "tiktok": "https://www.tiktok.com/@alejavirivera",
+   "youtube": "https://www.youtube.com/@AlejaviRivera/shorts",
+   "motivo": "(23-nov) IA en español, virales de 10-58x con ganchos de incredulidad/noticia y b-roll HUD; mediana ~8,8k en TikTok"
+  },
+  {
+   "usuario": "emprendeaprendiendo",
+   "youtube": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "motivo": "(23-nov) historias de negocios en español, virales de 4-21x (mediana 17,5k); sin TikTok. YouTube no deja descargar sin sesión: solo para ver títulos/vistas",
+   "no_usar": "tiktok @emprendeaprendiendo sin vídeos"
+  },
+  {
+   "usuario": "javadex",
+   "tiktok": "https://www.tiktok.com/@javadex",
+   "motivo": "(23-nov) IA para empresas en español, mediana baja (351); vigilar 2 semanas"
+  },
+  {
+   "usuario": "NateHerk",
+   "youtube": "https://www.youtube.com/@NateHerk/shorts",
+   "motivo": "(23-nov) automatización IA en inglés, mediana 12k, virales 5-11x (formatos, no idioma)"
   }
  ],
- "umbral_viral": 3.0
+ "umbral_viral": 3.0,
+ "fuentes_que_fallan": [
+  "YouTube: descargar vídeos pide iniciar sesión (bot check) desde la nube; listar con vistas sí funciona (23-nov)",
+  "tiktok @iafacil.es, @ramongonzalez.media, @trytaskless: yt-dlp no saca el id (Unable to extract secondary user ID)",
+  "youtube @RomualdFons, @IsraBravo, @xavimarcet, @CarlosGranadosV: 404 en /shorts; @ManoloRobles sin pestaña shorts",
+  "tiktok @liamottley sin vídeos"
+ ]
 }

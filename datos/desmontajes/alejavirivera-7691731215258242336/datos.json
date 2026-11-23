@@ -1,0 +1,116 @@
+{
+ "id": "alejavirivera-7691731215258242336",
+ "duracion_s": 65.1,
+ "cortes_s": [
+  1.56,
+  3.72,
+  9.16,
+  9.2,
+  9.28,
+  9.32,
+  12.16,
+  24.82,
+  32.62,
+  34.54,
+  40.3,
+  42.3,
+  43.98,
+  44.98,
+  45.98,
+  47.68,
+  48.7,
+  48.74,
+  48.82,
+  48.84,
+  48.86,
+  50.18,
+  51.56,
+  53.0,
+  53.04,
+  53.12,
+  53.16,
+  57.3,
+  57.34,
+  57.42,
+  57.46
+ ],
+ "cortes_por_10s": 4.8,
+ "palabras_por_s": 3.01,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 4.5,
+   "texto": "Google acaba de liberar el mejor modelo de vídeo por inteligencia artificial y al liberar"
+  },
+  {
+   "ini": 4.5,
+   "fin": 9.4,
+   "texto": "no me refiero que lo hayan publicitado, sino que realmente lo dejan utilizar de forma gratuita."
+  },
+  {
+   "ini": 9.4,
+   "fin": 15.0,
+   "texto": "De sería el modelo de Omni 1.1 y actualmente se posiciona como el mejor modelo de vídeo"
+  },
+  {
+   "ini": 15.0,
+   "fin": 18.4,
+   "texto": "y sí, por encima de modelos como SIDANS 2.5."
+  },
+  {
+   "ini": 18.4,
+   "fin": 22.8,
+   "texto": "Adicionalmente a esto tenen cuenta que una noticia que se acaba de lanzar no muestra"
+  },
+  {
+   "ini": 22.8,
+   "fin": 25.0,
+   "texto": "cómo vamos a poder utilizarlo gratuitamente."
+  },
+  {
+   "ini": 25.0,
+   "fin": 28.3,
+   "texto": "Para ello tenemos que saltar a Google Beach y desde aquí fíjate que aunque"
+  },
+  {
+   "ini": 28.3,
+   "fin": 31.1,
+   "texto": "tengas una versión gratuita desde aquí vas a poder generar vídeos,"
+  },
+  {
+   "ini": 31.1,
+   "fin": 34.4,
+   "texto": "yo por ejemplo poniéndole este prón y clicando en enviar me hizo este vídeo aquí."
+  },
+  {
+   "ini": 34.4,
+   "fin": 38.6,
+   "texto": "Aquí adicionalmente también cuando le pedí vídeos como la versión española del GTA 6 me hizo."
+  },
+  {
+   "ini": 38.6,
+   "fin": 39.4,
+   "texto": "¿Esto es otro vídeo?"
+  },
+  {
+   "ini": 48.6,
+   "fin": 53.2,
+   "texto": "Y como esto es ejemplo hay otro, mucho más, pero si te gustaría conocerlo en todo detalle e"
+  },
+  {
+   "ini": 53.2,
+   "fin": 56.7,
+   "texto": "incluso otras herramientas gratuitas e incluso limitadas que puedo utilizar para"
+  },
+  {
+   "ini": 56.7,
+   "fin": 59.2,
+   "texto": "generar vídeos sobre tu buscado de YouTube, escribe la palabra."
+  },
+  {
+   "ini": 59.2,
+   "fin": 64.9,
+   "texto": "Google vídeos, Alejavi y te vas a encontrar con este vídeo aquí de mi canal de YouTube, Alejavi Rivera."
+  }
+ ]
+}

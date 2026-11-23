@@ -1,0 +1,149 @@
+[
+{
+"scene": "s2",
+"txt": "Hay una herramienta",
+"big": false,
+"s": 2.87,
+"e": 3.71
+},
+{
+"scene": "s2",
+"txt": "que se está haciendo",
+"big": false,
+"s": 3.69,
+"e": 4.31
+},
+{
+"scene": "s2",
+"txt": "muy viral",
+"big": true,
+"s": 4.29,
+"e": 4.89
+},
+{
+"scene": "s2",
+"txt": "entre los negocios",
+"big": false,
+"s": 4.87,
+"e": 5.83
+},
+{
+"scene": "s2",
+"txt": "del norte de Madrid",
+"big": true,
+"s": 5.81,
+"e": 7.03
+},
+{
+"scene": "s3",
+"txt": "Una recepcionista",
+"big": true,
+"s": 7.24,
+"e": 8.01
+},
+{
+"scene": "s3",
+"txt": "con inteligencia artificial",
+"big": false,
+"s": 7.99,
+"e": 9.17
+},
+{
+"scene": "s3",
+"txt": "que contesta",
+"big": false,
+"s": 9.15,
+"e": 10.15
+},
+{
+"scene": "s3",
+"txt": "cualquier mensaje",
+"big": true,
+"s": 10.13,
+"e": 10.89
+},
+{
+"scene": "s3",
+"txt": "a cualquier hora",
+"big": true,
+"s": 10.87,
+"e": 12.07
+},
+{
+"scene": "s4",
+"txt": "Desde aquí vas a poder",
+"big": false,
+"s": 12.29,
+"e": 13.09
+},
+{
+"scene": "s4",
+"txt": "ver todo lo que pasa",
+"big": false,
+"s": 13.07,
+"e": 13.89
+},
+{
+"scene": "s4",
+"txt": "en tu negocio",
+"big": false,
+"s": 13.87,
+"e": 14.47
+},
+{
+"scene": "s4",
+"txt": "en tiempo real",
+"big": true,
+"s": 14.45,
+"e": 15.68
+},
+{
+"scene": "s7",
+"txt": "No solo eso:",
+"big": false,
+"s": 22.66,
+"e": 23.55
+},
+{
+"scene": "s7",
+"txt": "también le recuerda",
+"big": false,
+"s": 23.53,
+"e": 24.23
+},
+{
+"scene": "s7",
+"txt": "la cita",
+"big": true,
+"s": 24.21,
+"e": 24.59
+},
+{
+"scene": "s7",
+"txt": "al cliente el día antes",
+"big": false,
+"s": 24.57,
+"e": 25.79
+},
+{
+"scene": "s7",
+"txt": "para que no falte",
+"big": true,
+"s": 25.77,
+"e": 26.88
+},
+{
+"scene": "s8",
+"txt": "Y todo eso",
+"big": false,
+"s": 27.09,
+"e": 27.59
+},
+{
+"scene": "s8",
+"txt": "mientras tú duermes",
+"big": true,
+"s": 27.57,
+"e": 28.99
+}
+]

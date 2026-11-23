@@ -47,3 +47,14 @@ Números gigantes 01…N, una idea por golpe, pensado para que lo guarden ("guar
 ## Efectos para dar profundidad (vídeo de @annderrey) — ideas para el generador
 Zoom rápido de entrada en cada escena (ya: efecto "zoom"), la cámara atraviesa un objeto al cambiar de escena,
 pantalla de móvil que se mueve, gráfico que crece con datos, titulares pegados en la pared, garabatos alrededor.
+
+## I. "God's Eye" / HUD de película (clon del 23-nov, @alejavirivera 58x)
+Pregunta de incredulidad sobre un globo con paneles HUD → tarjeta-logo (ojo + letras espaciadas + "conectando…") →
+vista aérea nocturna con etiquetas y pins por municipio "en directo" → ficha/chat que se rellena → "No solo eso…" con
+líneas amarillas tipo rutas de vuelo → CTA. Subtítulos de 1–4 palabras, los clave a dos tonos (Archivo Black en degradado
+naranja + Playfair cursiva blanca). Todo b-roll de Mixkit + HyperFrames, sin persona. Plantilla: `clones/alejavirivera-ojo/`
+(generar.py + subtitulos.py; se cambian textos de voz.json y se regenera). ~36 s.
+
+## J. "La mayoría hace A / los que saben hacen B" (@marketingconlaurita, 9,7x)
+Autoridad → error de la mayoría → qué es B (diagrama dibujado) → pausa "un segundo" en blanco y negro → antes/ahora
+("¿quién estaba detrás? Tú") → CTA comenta palabra. Hacerlo con el estilo dibujo (cuento.py/HyperFrames).
