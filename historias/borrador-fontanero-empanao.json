@@ -1,0 +1,19 @@
+{
+ "id": "borrador-fontanero-empanao",
+ "estado": "guion aprobado por Hugo (23-nov); falta decidir si se graba o se monta con vídeo de archivo",
+ "tipo": "grabado",
+ "tipo_negocio": "fontaneria",
+ "tipo_gancho": "humor: 'el fontanero más empanao' + giro absurdo (perro con traje = Hacienda)",
+ "idea_de": "Hugo",
+ "duracion_objetivo_s": 20,
+ "escenas": [
+  {"seg": "0-2", "plano": "Frente al local; el fontanero sale y se va", "texto": "ESTE ES EL FONTANERO MÁS EMPANAO DE TODO ALCOBENDAS", "voz": "Este es el fontanero más empanao de todo Alcobendas."},
+  {"seg": "2-4", "plano": "Fondo blanco con letras, el fontanero detrás", "texto": "¿POR QUÉ?", "voz": "¿Y sabes por qué?"},
+  {"seg": "4-9", "plano": "Trabajando bajo un fregadero; el móvil suena y se acumulan llamadas perdidas y WhatsApp", "texto": "3 llamadas perdidas · 2 WhatsApp", "voz": "Porque no puede parar de trabajar ni un segundo para coger el teléfono. Y esa era una obra de 800 euros."},
+  {"seg": "9-12", "plano": "La cámara gira: un perro con traje y maletín", "voz": "Y ya sabéis quién le fríe a impuestos."},
+  {"seg": "12-17", "plano": "Móvil contestando solo llamadas, WhatsApp y mensajes de Instagram", "texto": "Llamadas · WhatsApp · Instagram", "voz": "Nuestra recepcionista con IA contesta llamadas, WhatsApp y mensajes de Instagram por ti."},
+  {"seg": "17-20", "plano": "Vuelve el fontanero y mira a cámara", "texto": "Comenta RECEPCIÓN", "voz": "No seas como él. Comenta RECEPCIÓN y te enseñamos la demo gratis."}
+ ],
+ "cta": ["Comenta", "RECEPCIÓN"],
+ "caption": "El fontanero más empanao de Alcobendas 🔧📵 No para de trabajar… y no coge ni una llamada.\n\nNuestra recepcionista con IA contesta llamadas, WhatsApp y mensajes de Instagram mientras tú trabajas.\n\n👇 Comenta RECEPCIÓN y te enseñamos una demo gratis con tu negocio.\n\n#fontanero #fontaneria #alcobendas #sanse #madridnorte #negociolocal #inteligenciaartificial"
+}
