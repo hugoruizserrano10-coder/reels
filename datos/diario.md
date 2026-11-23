@@ -19,3 +19,4 @@
   (2) formato J «la mayoría contesta al día siguiente / ¿quién está detrás? Tú, a las 23:00»; (3) imagen surrealista en el s 2
   para romper el plano (formato «y no me refiero a…»).
 - Comparación con lo nuestro: aún no hay datos de 24–72 h de los reels del 22–23-nov para comparar (se hará en el informe del lunes).
+- 2026-11-23 (franja M, 13:40): publicado el clon de @asadwebsites (12,1 s) como reel (18124625351073554) + historia. El control pilló que la pantalla del móvil decía «viernes 22 de noviembre» y el 22-nov-2026 fue domingo: se cambió a «viernes 20» y se re-renderizó con HyperFrames en 30 s (hay que bajar antes assets/musica.mp3 de Mixkit 623, no está en el repo). raw.githubusercontent tardó ~3 min en servir el vídeo nuevo tras el push. Próxima vez: comprobar día de la semana de cualquier fecha en pantalla al preparar el clon. Windsor (plan gratuito) da datos en caché: las métricas de las últimas horas pueden ir atrasadas.

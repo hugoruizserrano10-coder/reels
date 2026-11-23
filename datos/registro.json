@@ -84,6 +84,36 @@
    "nota": "Publicado a petición de Hugo a las 23:10; su hora no cuenta para el experimento de horarios.",
    "metricas_24h": null,
    "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-23",
+   "hora_publicacion": "13:40",
+   "franja": "M",
+   "historia": "historias/2026-11-23-M-clon-asadwebsites.json",
+   "video": "videos/2026-11-23-M.mp4",
+   "media_id": "18124625351073554",
+   "story_id": "18202419277384543",
+   "duracion_s": 12.1,
+   "formato": "clon",
+   "clon_de": "https://www.instagram.com/asadwebsites/ (reel 'need a website? clean. modern. converting.', grabación de Hugo 22-nov)",
+   "tipo_negocio": "comun",
+   "tipo_gancho": "móvil a las 21:47 llenándose de mensajes y llamadas perdidas (contador hasta 37) + corte seco a palabras gigantes",
+   "variante": "primer clon con HyperFrames: estructura del viral + gancho propio aprobado por Hugo",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "investigacion": "ok: Análisis 2026-11-23 en diario.md; clon de @asadwebsites con clon_de y desmontaje datos/desmontajes/hugo-1122-v3 (ficha rellena)",
+    "gancho": "ok: móvil a las 21:47 con contador 0→37 y notificaciones, se entiende sin sonido en 1–2 s (promesa/curiosidad/disrupción); sigue el corte seco del viral",
+    "se_entiende": "ok: una palabra por tarjeta, CTA y marca alargadas; revisados 12 fotogramas",
+    "sin_errores": "corregido: la pantalla decía 'viernes 22 de noviembre' y el 22-nov-2026 es domingo; cambiado a 'viernes 20 de noviembre' y re-renderizado (30 s, HyperFrames). Resto coherente",
+    "audio": "ok: sin voz, música Mixkit 623 (media -18 dB, pico -1,1 dB, sin saturar); el texto lo cuenta todo",
+    "derechos": "ok: estructura copiada, no vídeo/música/texto; música y sonidos libres",
+    "variedad": "ok: reel anterior fue extracto F (balón); este es clon HyperFrames, negocio 'común'",
+    "cta_descripcion": "ok: 'Comenta RECEPCIÓN para una demo gratis'; descripción con servicio + municipios y 5 hashtags",
+    "duracion_formato": "ok: 1080x1920, 12,1 s, cierre con logo norte.local",
+    "aprendizaje": "ok: variante = primer clon con HyperFrames (cambia el formato frente a historias propias)"
+   },
+   "metricas_24h": null,
+   "metricas_72h": null
   }
  ],
  "cuenta_tiktok": {
