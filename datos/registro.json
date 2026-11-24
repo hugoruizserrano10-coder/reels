@@ -93,7 +93,19 @@
     "aprendizaje": "ok"
    },
    "nota": "Publicado a petición de Hugo a las 23:10; su hora no cuenta para el experimento de horarios.",
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-24 13:40",
+    "views": 6,
+    "reach": 4,
+    "avg_watch_ms": 4121,
+    "skip_rate": 0.5,
+    "likes": 2,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "pct_visto": 0.408,
+    "nota": "medido a ~38 h (no se midió a las 24 h); datos en caché de Windsor"
+   },
    "metricas_72h": null
   },
   {
@@ -123,7 +135,18 @@
     "duracion_formato": "ok: 1080x1920, 12,1 s, cierre con logo norte.local",
     "aprendizaje": "ok: variante = primer clon con HyperFrames (cambia el formato frente a historias propias)"
    },
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-24 13:40",
+    "views": 7,
+    "reach": 3,
+    "avg_watch_ms": 2519,
+    "skip_rate": 1.0,
+    "likes": 1,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0,
+    "pct_visto": 0.208
+   },
    "metricas_72h": null
   },
   {
@@ -152,6 +175,36 @@
     "8_cta_descripcion": "ok (CTA demo gratis + RECEPCIÓN en descripción; «norte de Madrid» sin municipio concreto; 5 hashtags)",
     "9_duracion_formato": "ok (1080x1920, 25,4 s, última imagen con norte.local)",
     "10_aprendizaje": "ok (variante: humor con dibujos)"
+   },
+   "metricas_24h": null,
+   "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-24",
+   "hora_publicacion": "13:40",
+   "franja": "M",
+   "historia": "historias/2026-11-24-M-clon-alejavirivera.json",
+   "video": "videos/2026-11-24-M.mp4",
+   "media_id": "18083757878723093",
+   "story_id": "18076588232765834",
+   "duracion_s": 36.2,
+   "formato": "clon",
+   "clon_de": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+   "tipo_negocio": "comun",
+   "tipo_gancho": "pregunta de incredulidad '¿Cómo puede ser LEGAL…?' + visual imponente (globo con paneles HUD) en el segundo 0",
+   "variante": "clon fiel de un viral de 58x: mismo gancho y orden de escenas, 36 s, todo b-roll con voz davefx y subtítulos a dos tonos",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok (Análisis 2026-11-23/24 en diario; viral desmontado en datos/desmontajes/alejavirivera-7688762956502355233)",
+    "2_gancho": "ok (globo + «¿Cómo puede ser LEGAL…?» en grande en 0,5 s; sigue al viral)",
+    "3_se_entiende": "ok (hoja de 12 fotogramas + CTA revisados; una idea por escena, sin subtítulos sobre el chat)",
+    "4_sin_errores": "ok (23:04 coherente en chat; recordatorio 9:30 coincide con la respuesta; bot se presenta como asistente automático)",
+    "5_audio": "ok (-14,1 LUFS integrados)",
+    "6_derechos": "ok (b-roll Mixkit, voz davefx, nada del creador original)",
+    "7_variedad": "ok (anterior: fontanero humor con dibujos; formato distinto)",
+    "8_cta_descripcion": "ok (Comenta RECEPCIÓN + y te mando la demo; 5 municipios; 5 hashtags)",
+    "9_duracion_formato": "ok (1080x1920, 36,2 s, cierre con logo norte.local)",
+    "10_aprendizaje": "ok (variante: clon fiel de viral 58x)"
    },
    "metricas_24h": null,
    "metricas_72h": null
