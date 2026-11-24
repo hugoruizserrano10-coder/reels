@@ -1,0 +1,1 @@
+Extracto literal (petición de Hugo, 24-nov) de un reel de fútsal hasta el impacto de la bola en la cámara (s 0–8,37, con su audio) + edit propio de norte.local en HyperFrames (gen.py). El extracto no se sube al repo.
