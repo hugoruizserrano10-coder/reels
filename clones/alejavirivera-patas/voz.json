@@ -1,0 +1,17 @@
+{
+ "voz_velocidad": 0.97,
+ "voz": [
+  ["s1", "La inteligencia artificial acaba de hacer otra locura,"],
+  ["s2", "y ha puesto patas arriba todo el sector de las reformas."],
+  ["s3", "No solamente contesta a tus clientes a cualquier hora,"],
+  ["s4", "ni se queda solo con lo que necesitan,"],
+  ["s5", "sino que además ahora, les ofrece una hora de tu agenda, y les crea la visita."],
+  ["s6", "Y no hablo de un contestador. Hablo de una recepcionista."],
+  ["s7", "Ya que ahora, desde aquí, vas a poder ver cada visita que ha agendado,"],
+  ["s8", "qué quería cada cliente, y en qué estado está."],
+  ["s9", "De igual forma, te avisa a ti en el momento,"],
+  ["s10", "y le recuerda la cita al cliente el día antes, para que no falte."],
+  ["s11", "Incluso puedes ver de dónde te escriben: Alcobendas, Tres Cantos, Sanse."],
+  ["s12", "Si quieres verlo en detalle, comenta la palabra recepción, y te mando la demo."]
+ ]
+}

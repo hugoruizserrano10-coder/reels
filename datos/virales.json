@@ -31,7 +31,7 @@
    "titulo": "¿Cómo ves eso? Para mí, la ingeniería de software está cambiando: nec...",
    "vistas": 5210,
    "veces_mediana": 14.84,
-   "desmontado": false,
+   "desmontado": true,
    "clonado": false
   },
   {
@@ -130,8 +130,8 @@
    "titulo": "🤯 ¡DeepSeek acaba de hacer otra LOCURA con su nuevo Modo Creador! Aho...",
    "vistas": 51200,
    "veces_mediana": 5.84,
-   "desmontado": false,
-   "clonado": false
+   "desmontado": true,
+   "clonado": true
   },
   {
    "id": "PmSVAtTKZ8U",
@@ -163,7 +163,7 @@
    "titulo": "🎬 ¡6 herramientas de IA para crear vídeos completamente GRATIS! 🤯🔥 ¿Q...",
    "vistas": 45000,
    "veces_mediana": 5.13,
-   "desmontado": false,
+   "desmontado": true,
    "clonado": false
   },
   {
@@ -284,6 +284,171 @@
    "titulo": "DeepSeek no solo está compitiendo en potencia: está obligando a todo ...",
    "vistas": 29000,
    "veces_mediana": 3.31,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "6RDL094JKGo",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/6RDL094JKGo",
+   "titulo": "The Hottest AI Job of 2027 pays $325k/year",
+   "vistas": 35000,
+   "veces_mediana": 3.04,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "ozn5Jr9mszY",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/ozn5Jr9mszY",
+   "titulo": "Cuánto Puede Ganar Un Piloto de Jet Privado",
+   "vistas": 390000,
+   "veces_mediana": 12.58,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "hiacSK6UAmc",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/hiacSK6UAmc",
+   "titulo": "Cómo Trabajan Las Máquinas Que Generan $1,026 Al Mes",
+   "vistas": 371000,
+   "veces_mediana": 11.97,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "iZhhaJMsQ98",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/iZhhaJMsQ98",
+   "titulo": "Regalo 10.000€ Al Mejor Proyecto: ¿Se Lo Merece?",
+   "vistas": 196000,
+   "veces_mediana": 6.32,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "3iekjbOHjTg",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/3iekjbOHjTg",
+   "titulo": "Millonario Aconseja Qué Hacer En Tiempos Difíciles",
+   "vistas": 153000,
+   "veces_mediana": 4.94,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "ZCRvaGYDy7E",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/ZCRvaGYDy7E",
+   "titulo": "Millonario Explica Sus Negocios Más Rentables",
+   "vistas": 103000,
+   "veces_mediana": 3.32,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7CV08z9vlKU",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "url": "https://www.youtube.com/shorts/7CV08z9vlKU",
+   "titulo": "Cómo Genero $1,026 Al Mes Sin Hacer Nada",
+   "vistas": 101000,
+   "veces_mediana": 3.26,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "YWrHW9ZFVLU",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "url": "https://www.youtube.com/shorts/YWrHW9ZFVLU",
+   "titulo": "This Is How the Kitchen Looked After Knocking Down a Wall #renovations #remodeling #renovation",
+   "vistas": 76000,
+   "veces_mediana": 4.75,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "3C6GNNU6cDs",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "url": "https://www.youtube.com/shorts/3C6GNNU6cDs",
+   "titulo": "How to hide all your appliances 🪄 #kitchenhacks #minimalisthome #shorts",
+   "vistas": 72000,
+   "veces_mediana": 4.5,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "otDeFCmsDds",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "url": "https://www.youtube.com/shorts/otDeFCmsDds",
+   "titulo": "Total Transformation: The Bathroom and the Bedroom. PART 2 #renovation #home #shorts",
+   "vistas": 54000,
+   "veces_mediana": 3.38,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "lGKuPJaejrI",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "url": "https://www.youtube.com/shorts/lGKuPJaejrI",
+   "titulo": "Goodbye wall, hello space #renovations #home #ideas",
+   "vistas": 53000,
+   "veces_mediana": 3.31,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "cuTvi80JHmc",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "url": "https://www.youtube.com/shorts/cuTvi80JHmc",
+   "titulo": "New layout for this house🙌🏼 💙",
+   "vistas": 49000,
+   "veces_mediana": 3.06,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7MsrufljOHQ",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCSUwTmHIP_rlCTZeQW2oiEg/shorts",
+   "url": "https://www.youtube.com/shorts/7MsrufljOHQ",
+   "titulo": "Investing VS Spending 📈 #Money #Finance #PersonalFinance #Habits #Investing",
+   "vistas": 1200000,
+   "veces_mediana": 6.5,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "AicvakFRS9I",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCSUwTmHIP_rlCTZeQW2oiEg/shorts",
+   "url": "https://www.youtube.com/shorts/AicvakFRS9I",
+   "titulo": "How Much Do You Have to Pay in Taxes? 💵 #Money #Finance #PersonalFinance #Taxes #Investing",
+   "vistas": 1000000,
+   "veces_mediana": 5.42,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "-sIOWoFUV6M",
+   "fecha_ronda": "2026-11-24",
+   "perfil": "https://www.youtube.com/channel/UCSUwTmHIP_rlCTZeQW2oiEg/shorts",
+   "url": "https://www.youtube.com/shorts/-sIOWoFUV6M",
+   "titulo": "The Truth About Taxes 💰 #Money #Finance #PersonalFinance #Taxes #Investing",
+   "vistas": 597000,
+   "veces_mediana": 3.24,
    "desmontado": false,
    "clonado": false
   }

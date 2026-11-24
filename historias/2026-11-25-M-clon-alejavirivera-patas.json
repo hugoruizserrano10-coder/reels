@@ -1,0 +1,16 @@
+{
+ "id": "2026-11-25-M-clon-alejavirivera-patas",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-25-M.mp4",
+ "formato": "clon",
+ "clon_de": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+ "viral": "52.200 vistas, 5,8x la mediana de @alejavirivera («DeepSeek acaba de hacer otra LOCURA… ha puesto patas arriba todo el mercado»)",
+ "proyecto": "clones/alejavirivera-patas/",
+ "tipo_negocio": "reformas",
+ "tipo_gancho": "noticia + hipérbole («La IA acaba de hacer otra locura y ha puesto patas arriba todo el sector de las reformas») con tipografía cinética verde neón y «arriba» boca abajo en el s 3",
+ "variante": "clon fiel de un viral de 5,8x: misma noticia + tipografía cinética, escalada «no solamente… sino que además…», pantallas de app en oscuro y CTA de caja escribiéndose; 41 s (el original 81 s, recortado su cierre de YouTube y la demo larga), b-roll Mixkit en vez de persona",
+ "duracion_s": 41.2,
+ "cta": "Comenta RECEPCIÓN",
+ "caption": "La IA ha puesto patas arriba las reformas 🙃 Una recepcionista con IA que contesta a tus clientes a cualquier hora, les ofrece una hora de tu agenda, crea la visita, te avisa al momento y le recuerda la cita al cliente el día antes. Para empresas de reformas de Alcobendas, San Sebastián de los Reyes, Tres Cantos, Algete y Colmenar Viejo. Comenta RECEPCIÓN y te mando la demo. #reformas #recepcionistaIA #alcobendas #trescantos #sansebastiandelosreyes",
+ "control": {"1_investigacion": "ok (Análisis 2026-11-24, viral desmontado con ficha)", "2_gancho": "ok («inteligencia artificial» grande desde 0,6 s; «otra locura» a 1,5 s; tipografía en 3 s)", "3_se_entiende": "ok (línea pequeña + palabra grande; en la app los textos los cuenta la voz)", "4_sin_errores": "ok (Marta, baño, jueves 10:00 coherente en agenda, aviso y recordatorio; el recordatorio sale el miércoles 25 = día de publicación; solo contesta, agenda, avisa y recuerda)", "5_audio": "ok (-13,9 LUFS, música 0,2)", "6_derechos": "ok (Mixkit 14669, 1442, 20874, 24217, 43033, 26112, música 175; voz Piper davefx)", "7_variedad": "ok (anterior 24-N extracto tanque; reformas sin repetir problema)", "8_cta": "ok", "9_formato": "ok 1080x1920, 41,2 s, cierre con marca", "10_aprendizaje": "ok (primer clon de 'noticia + tipografía cinética')"}
+}

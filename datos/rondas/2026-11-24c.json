@@ -1,0 +1,15 @@
+{
+ "fecha": "2026-11-24",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@hermanosgarciareformas",
+   "revisados": 4,
+   "mediana_vistas": 605.5,
+   "virales": [],
+   "error": ""
+  }
+ ],
+ "total_revisados": 4,
+ "total_virales": 0
+}

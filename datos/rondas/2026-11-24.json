@@ -1,0 +1,379 @@
+{
+ "fecha": "2026-11-24",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "revisados": 30,
+   "mediana_vistas": 967.5,
+   "virales": [
+    {
+     "id": "7670149322247277846",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7670149322247277846",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7670149322247277846",
+     "title": "Y tu, estás usando ya loops?? 🔂 o sigues prompteando🫤",
+     "view_count": 9354,
+     "like_count": 514,
+     "comment_count": 139,
+     "duration": 61,
+     "timestamp": 1785845774,
+     "upload_date": "20260804",
+     "veces_mediana": 9.67,
+     "viral": true
+    },
+    {
+     "id": "7651593972300680470",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7651593972300680470",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7651593972300680470",
+     "title": "🟠 Creo una app para entrenadores online con Claude.",
+     "view_count": 4220,
+     "like_count": 133,
+     "comment_count": 134,
+     "duration": 61,
+     "timestamp": 1781525535,
+     "upload_date": "20260615",
+     "veces_mediana": 4.36,
+     "viral": true
+    },
+    {
+     "id": "7699143212945919264",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7699143212945919264",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7699143212945919264",
+     "title": "El skill de Claude que me ayuda a revisar todos mis proyectos 5 veces...",
+     "view_count": 4109,
+     "like_count": 157,
+     "comment_count": 53,
+     "duration": 57,
+     "timestamp": 1792596457,
+     "upload_date": "20261021",
+     "veces_mediana": 4.25,
+     "viral": true
+    },
+    {
+     "id": "7646017064217480470",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7646017064217480470",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7646017064217480470",
+     "title": "Claude analiza mi instagram y me dice en que mejorar 😮💨🏆",
+     "view_count": 4032,
+     "like_count": 138,
+     "comment_count": 3,
+     "duration": 43,
+     "timestamp": 1780227062,
+     "upload_date": "20260531",
+     "veces_mediana": 4.17,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "revisados": 30,
+   "mediana_vistas": 8833.0,
+   "virales": [
+    {
+     "id": "7688762956502355233",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+     "title": "¿Cómo puede ser LEGAL tener acceso a todo esto? 🌍 God’s Eye View reún...",
+     "view_count": 512900,
+     "like_count": 37900,
+     "comment_count": 175,
+     "duration": 64,
+     "timestamp": 1790179611,
+     "upload_date": "20260923",
+     "veces_mediana": 58.07,
+     "viral": true
+    },
+    {
+     "id": "7691731215258242336",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7691731215258242336",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7691731215258242336",
+     "title": "Google acaba de liberar su mejor modelo de generación de vídeo con IA...",
+     "view_count": 102300,
+     "like_count": 6159,
+     "comment_count": 72,
+     "duration": 65,
+     "timestamp": 1790870716,
+     "upload_date": "20261001",
+     "veces_mediana": 11.58,
+     "viral": true
+    },
+    {
+     "id": "7708818254814383393",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+     "title": "🤯 ¡DeepSeek acaba de hacer otra LOCURA con su nuevo Modo Creador! Aho...",
+     "view_count": 52200,
+     "like_count": 3361,
+     "comment_count": 46,
+     "duration": 80,
+     "timestamp": 1794849100,
+     "upload_date": "20261116",
+     "veces_mediana": 5.91,
+     "viral": true
+    },
+    {
+     "id": "7696185141852409121",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7696185141852409121",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7696185141852409121",
+     "title": "🎬 ¡6 herramientas de IA para crear vídeos completamente GRATIS! 🤯🔥 ¿Q...",
+     "view_count": 45200,
+     "like_count": 2236,
+     "comment_count": 24,
+     "duration": 79,
+     "timestamp": 1791907723,
+     "upload_date": "20261013",
+     "veces_mediana": 5.12,
+     "viral": true
+    },
+    {
+     "id": "7691367052703026464",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7691367052703026464",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7691367052703026464",
+     "title": "¿Más de 7.000 MILLONES de tokens GRATIS al mes? 🤯 FreeLLMAPI está reg...",
+     "view_count": 41000,
+     "like_count": 3023,
+     "comment_count": 47,
+     "duration": 64,
+     "timestamp": 1790785922,
+     "upload_date": "20260930",
+     "veces_mediana": 4.64,
+     "viral": true
+    },
+    {
+     "id": "7685823889045245217",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7685823889045245217",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7685823889045245217",
+     "title": "Meta acaba de lanzar Muse, un agente de IA que no se limita a respond...",
+     "view_count": 33600,
+     "like_count": 1756,
+     "comment_count": 25,
+     "duration": 67,
+     "timestamp": 1789495302,
+     "upload_date": "20260915",
+     "veces_mediana": 3.8,
+     "viral": true
+    },
+    {
+     "id": "7680954514920328480",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7680954514920328480",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7680954514920328480",
+     "title": "DeepSeek no solo está compitiendo en potencia: está obligando a todo ...",
+     "view_count": 29000,
+     "like_count": 1768,
+     "comment_count": 27,
+     "duration": 81,
+     "timestamp": 1788361564,
+     "upload_date": "20260902",
+     "veces_mediana": 3.28,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@javadex",
+   "revisados": 30,
+   "mediana_vistas": 351.0,
+   "virales": [
+    {
+     "id": "7614218882076740896",
+     "url": "https://www.tiktok.com/@javadex/video/7614218882076740896",
+     "webpage_url": "https://www.tiktok.com/@javadex/video/7614218882076740896",
+     "title": "¿Cómo ves eso? Para mí, la ingeniería de software está cambiando: nec...",
+     "view_count": 5210,
+     "like_count": 82,
+     "comment_count": 9,
+     "duration": 93,
+     "timestamp": 1772823485,
+     "upload_date": "20260306",
+     "veces_mediana": 14.84,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "revisados": 30,
+   "mediana_vistas": 17500.0,
+   "virales": [
+    {
+     "id": "pwcrn5bdr9c",
+     "url": "https://www.youtube.com/shorts/pwcrn5bdr9c",
+     "webpage_url": "https://www.youtube.com/shorts/pwcrn5bdr9c",
+     "title": "She became a millionaire by reinventing gym wear",
+     "view_count": 365000,
+     "veces_mediana": 20.86,
+     "viral": true
+    },
+    {
+     "id": "tXRno9MAa-I",
+     "url": "https://www.youtube.com/shorts/tXRno9MAa-I",
+     "webpage_url": "https://www.youtube.com/shorts/tXRno9MAa-I",
+     "title": "Recording herself cooking changed her life",
+     "view_count": 186000,
+     "veces_mediana": 10.63,
+     "viral": true
+    },
+    {
+     "id": "iTOXHp4c1YE",
+     "url": "https://www.youtube.com/shorts/iTOXHp4c1YE",
+     "webpage_url": "https://www.youtube.com/shorts/iTOXHp4c1YE",
+     "title": "He was fired for recording viral videos",
+     "view_count": 143000,
+     "veces_mediana": 8.17,
+     "viral": true
+    },
+    {
+     "id": "Hk20QLW6nEc",
+     "url": "https://www.youtube.com/shorts/Hk20QLW6nEc",
+     "webpage_url": "https://www.youtube.com/shorts/Hk20QLW6nEc",
+     "title": "The knife sharpener who created a knife empire",
+     "view_count": 82000,
+     "veces_mediana": 4.69,
+     "viral": true
+    },
+    {
+     "id": "_agQV6gtDGE",
+     "url": "https://www.youtube.com/shorts/_agQV6gtDGE",
+     "webpage_url": "https://www.youtube.com/shorts/_agQV6gtDGE",
+     "title": "This is how he sold 10k worth of sauces in 48 hours",
+     "view_count": 75000,
+     "veces_mediana": 4.29,
+     "viral": true
+    },
+    {
+     "id": "sr25G5qddV4",
+     "url": "https://www.youtube.com/shorts/sr25G5qddV4",
+     "webpage_url": "https://www.youtube.com/shorts/sr25G5qddV4",
+     "title": "He left Wall Street to wash cars?",
+     "view_count": 59000,
+     "veces_mediana": 3.37,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@AlejaviRivera/shorts",
+   "revisados": 4,
+   "mediana_vistas": 63000.0,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@DotCSV/shorts",
+   "revisados": 1,
+   "mediana_vistas": 136000,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "revisados": 30,
+   "mediana_vistas": 11500.0,
+   "virales": [
+    {
+     "id": "hc34VXRoX7s",
+     "url": "https://www.youtube.com/shorts/hc34VXRoX7s",
+     "webpage_url": "https://www.youtube.com/shorts/hc34VXRoX7s",
+     "title": "Claude Can Run a GTA 6 Clipping Channel on Autopilot",
+     "view_count": 137000,
+     "veces_mediana": 11.91,
+     "viral": true
+    },
+    {
+     "id": "0IPuk63FwU0",
+     "url": "https://www.youtube.com/shorts/0IPuk63FwU0",
+     "webpage_url": "https://www.youtube.com/shorts/0IPuk63FwU0",
+     "title": "You Can Make $100/day With a Grok Bot GTA 6 Clipper",
+     "view_count": 93000,
+     "veces_mediana": 8.09,
+     "viral": true
+    },
+    {
+     "id": "V0PzEBcnAdk",
+     "url": "https://www.youtube.com/shorts/V0PzEBcnAdk",
+     "webpage_url": "https://www.youtube.com/shorts/V0PzEBcnAdk",
+     "title": "Claude code mods are insane. Steal these 3.",
+     "view_count": 74000,
+     "veces_mediana": 6.43,
+     "viral": true
+    },
+    {
+     "id": "_EChYLC3Vag",
+     "url": "https://www.youtube.com/shorts/_EChYLC3Vag",
+     "webpage_url": "https://www.youtube.com/shorts/_EChYLC3Vag",
+     "title": "I Turned Codex Into My AI Operating System",
+     "view_count": 61000,
+     "veces_mediana": 5.3,
+     "viral": true
+    },
+    {
+     "id": "6RDL094JKGo",
+     "url": "https://www.youtube.com/shorts/6RDL094JKGo",
+     "webpage_url": "https://www.youtube.com/shorts/6RDL094JKGo",
+     "title": "The Hottest AI Job of 2027 pays $325k/year",
+     "view_count": 35000,
+     "veces_mediana": 3.04,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@LiamOttley/shorts",
+   "revisados": 1,
+   "mediana_vistas": 95000,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@nicksaraev/shorts",
+   "revisados": 19,
+   "mediana_vistas": 10000,
+   "virales": [
+    {
+     "id": "aIflIQMacV4",
+     "url": "https://www.youtube.com/shorts/aIflIQMacV4",
+     "webpage_url": "https://www.youtube.com/shorts/aIflIQMacV4",
+     "title": "Why Saturation Doesn't Matter",
+     "view_count": 54000,
+     "veces_mediana": 5.4,
+     "viral": true
+    },
+    {
+     "id": "On_DVAjnkRY",
+     "url": "https://www.youtube.com/shorts/On_DVAjnkRY",
+     "webpage_url": "https://www.youtube.com/shorts/On_DVAjnkRY",
+     "title": "AI automation is just like any other business",
+     "view_count": 51000,
+     "veces_mediana": 5.1,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@LaHoraMaker/shorts",
+   "revisados": 12,
+   "mediana_vistas": 482.5,
+   "virales": [
+    {
+     "id": "oXDab_CKCrg",
+     "url": "https://www.youtube.com/shorts/oXDab_CKCrg",
+     "webpage_url": "https://www.youtube.com/shorts/oXDab_CKCrg",
+     "title": "¿Cuál es la diferencia entre RAG y fine-tune para añadir información a nuestro #LLM?",
+     "view_count": 3700,
+     "veces_mediana": 7.67,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 187,
+ "total_virales": 26
+}

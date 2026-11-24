@@ -71,3 +71,15 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
 - **Noticia + "y no me refiero a…, sino a…"** (@alejavirivera, 11,7x): la aclaración sube la promesa en el segundo 4.
 - Frases puente nuevas: «Desde aquí vas a poder ver…» · «Podrías incluso…» · «No solo eso, sino que también…» ·
   «¿Y quién estaba detrás de todo esto? Tú.» · «Y un segundo, que ahora te explico.»
+
+## Ganchos de los virales del 24-nov (análisis diario, TikTok)
+- **Noticia + hipérbole + tipografía cinética** (@alejavirivera, DeepSeek «patas arriba», 52k vistas, **5,8x**): «X acaba de
+  hacer otra LOCURA y ha puesto patas arriba todo el mercado». En el s 2–6 rompe el plano con palabras gigantes en serif
+  cursiva verde neón y la palabra «arriba» BOCA ABAJO (disrupción literal). Adaptado: «La inteligencia artificial acaba de
+  hacer otra locura y ha puesto patas arriba todo el sector de las reformas» (clon del 25-nov).
+- **Lista con número gigante en el s 1** (@alejavirivera, 6 herramientas, 5,1x): «Aquí van 6…» con un «6» neón enorme detrás
+  del texto. Cierra con «pero tienen algunos peros» (bucle abierto) antes del CTA.
+- **Titular-polémica fijo** (@javadex, 14,8x en cuenta pequeña): caja blanca arriba todo el vídeo con «¿El fin del X?» y el
+  vídeo empieza en mitad de una frase («¿Cómo ves eso?»). Para nosotros: «¿El fin de perder clientes por no coger el teléfono?».
+- Frases puente nuevas: «No solamente… ni… sino que además ahora…» · «Y no hablo de A, hablo de B» · «Ya que ahora, desde
+  aquí…» · «De igual forma…» · «Incluso…».

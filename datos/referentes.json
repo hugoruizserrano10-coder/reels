@@ -38,6 +38,23 @@
    "usuario": "NateHerk",
    "youtube": "https://www.youtube.com/@NateHerk/shorts",
    "motivo": "(23-nov) automatización IA en inglés, mediana 12k, virales 5-11x (formatos, no idioma)"
+  },
+  {
+   "usuario": "adriansaenz",
+   "youtube": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "motivo": "(24-nov) negocios/dinero en español, mediana 31k, virales 3-12x (entrevistas a empresarios: '¿Cuánto gana un…?'). Solo YouTube (no descarga)",
+   "no_usar": "tiktok @adriansaenz es otra persona"
+  },
+  {
+   "usuario": "hermanosgarciareformas",
+   "tiktok": "https://www.tiktok.com/@hermanosgarciareformas",
+   "youtube": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "motivo": "(24-nov) empresa de reformas (nuestro cliente tipo): mediana 16k en YouTube, virales 3-4,8x de antes/después y 'adiós tabique'; TikTok casi sin vistas (mediana 605)"
+  },
+  {
+   "usuario": "anthonyshoosh",
+   "youtube": "https://www.youtube.com/channel/UCA785fwozexkQnTEckfqjgw/shorts",
+   "motivo": "(24-nov) vende recepcionistas con IA en español; mediana 895, 0 virales: vigilar 2 semanas"
   }
  ],
  "umbral_viral": 3.0,
@@ -45,6 +62,9 @@
   "YouTube: descargar vídeos pide iniciar sesión (bot check) desde la nube; listar con vistas sí funciona (23-nov)",
   "tiktok @iafacil.es, @ramongonzalez.media, @trytaskless: yt-dlp no saca el id (Unable to extract secondary user ID)",
   "youtube @RomualdFons, @IsraBravo, @xavimarcet, @CarlosGranadosV: 404 en /shorts; @ManoloRobles sin pestaña shorts",
-  "tiktok @liamottley sin vídeos"
+  "tiktok @liamottley sin vídeos",
+  "tiktok @techconpaula, @automatiza_tu_vida, @loshermanosgarciareformas: Unable to extract secondary user ID; @aprende_ia sin vídeos (24-nov)",
+  "TikTok /tag/<hashtag> con yt-dlp: 'No working app info' (24-nov)",
+  "Búsqueda web de reels sueltos de Instagram (site:instagram.com/reel): no devuelve enlaces a reels, solo blogs (23 y 24-nov)"
  ]
 }

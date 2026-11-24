@@ -58,3 +58,11 @@ naranja + Playfair cursiva blanca). Todo b-roll de Mixkit + HyperFrames, sin per
 ## J. "La mayoría hace A / los que saben hacen B" (@marketingconlaurita, 9,7x)
 Autoridad → error de la mayoría → qué es B (diagrama dibujado) → pausa "un segundo" en blanco y negro → antes/ahora
 ("¿quién estaba detrás? Tú") → CTA comenta palabra. Hacerlo con el estilo dibujo (cuento.py/HyperFrames).
+
+## K. "Noticia + patas arriba" con tipografía cinética (clon del 24-nov, @alejavirivera 5,8x)
+Noticia en el s 0 sobre b-roll → destello (cielo) → fondo gris oscuro con palabras gigantes en Playfair cursiva verde neón,
+una palabra boca abajo, cruces verdes 3D, marca de agua «IA» y cinta tipo cotizaciones → escalada «No solamente… ni… sino
+que además ahora…» sobre b-roll de obra → «Y no hablo de A, hablo de B» → la app en oscuro (agenda, tablero por estados,
+aviso, recordatorio, mapa con pines por municipio) → CTA con caja de búsqueda que escribe «RECEPCIÓN». Subtítulos: línea
+pequeña + palabra clave grande (Inter 900 / Playfair cursiva). Plantilla: `clones/alejavirivera-patas/` (generar.py +
+subtitulos.py; cambiar voz.json y regenerar). ~41 s, render HyperFrames ~3 min.

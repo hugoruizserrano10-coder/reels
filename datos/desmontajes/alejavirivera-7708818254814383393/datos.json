@@ -1,0 +1,143 @@
+{
+ "id": "alejavirivera-7708818254814383393",
+ "duracion_s": 81.0,
+ "cortes_s": [
+  2.24,
+  2.28,
+  2.32,
+  2.4,
+  2.44,
+  2.48,
+  2.6,
+  2.64,
+  6.46,
+  9.92,
+  14.38,
+  17.88,
+  24.96,
+  25.0,
+  25.04,
+  25.16,
+  25.2,
+  25.32,
+  25.36,
+  70.26,
+  70.3,
+  70.34,
+  70.46,
+  70.5,
+  70.62,
+  73.88,
+  73.92,
+  73.96,
+  74.04,
+  74.08,
+  74.12,
+  74.24,
+  74.28
+ ],
+ "cortes_por_10s": 4.1,
+ "palabras_por_s": 3.19,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 5.7,
+   "texto": "DeepSync acaba de hacer otra locura y ha puesto patas arriba todo el mercado de la inteligencia"
+  },
+  {
+   "ini": 5.7,
+   "fin": 6.7,
+   "texto": "artificial."
+  },
+  {
+   "ini": 6.7,
+   "fin": 11.0,
+   "texto": "No solamente se ha quedado tranquilo con lanzar el modelo más eficiente de IA, ni haber lanzado"
+  },
+  {
+   "ini": 11.0,
+   "fin": 16.1,
+   "texto": "el jarnes de código abierto más completo que existe, sino que además ahora dentro"
+  },
+  {
+   "ini": 16.1,
+   "fin": 20.9,
+   "texto": "de este tenemos el modo creador, con la que literalmente te permite construir tu propia"
+  },
+  {
+   "ini": 20.9,
+   "fin": 25.4,
+   "texto": "herramienta de inteligencia artificial y no hablo de personalizar, sino de crear."
+  },
+  {
+   "ini": 25.4,
+   "fin": 28.7,
+   "texto": "Ya que ahora, desde aquí, nosotros entrando al modo creador, le vamos a poder pedir"
+  },
+  {
+   "ini": 28.7,
+   "fin": 32.7,
+   "texto": "cañadas funciones como un cronómero para los diferentes chats que hacemos utilizando y"
+  },
+  {
+   "ini": 32.7,
+   "fin": 37.2,
+   "texto": "poder ver cómo van y cuánto tardó en completar las tareas, pedirle también de glosses de iluso"
+  },
+  {
+   "ini": 37.2,
+   "fin": 41.3,
+   "texto": "de cada uno de los modelos y tener por ahí ya enclada esa funcionada para que lo podamos"
+  },
+  {
+   "ini": 41.3,
+   "fin": 42.3,
+   "texto": "ver siempre."
+  },
+  {
+   "ini": 42.3,
+   "fin": 46.3,
+   "texto": "De igual forma, podríamos crear un espacio colaborativo para poder trabajar nuestras"
+  },
+  {
+   "ini": 46.3,
+   "fin": 51.7,
+   "texto": "tareas y poder ver en qué estado se encuentran, crear incluso nuestros propios mundos interactivos"
+  },
+  {
+   "ini": 51.7,
+   "fin": 56.6,
+   "texto": "con datos reales como por ejemplo aquí cuando estuve viendo los fuegos y terremotos"
+  },
+  {
+   "ini": 56.7,
+   "fin": 61.4,
+   "texto": "que había por el mundo y junto a esto cambiar por completo la experiencia como por ejemplo"
+  },
+  {
+   "ini": 61.4,
+   "fin": 67.0,
+   "texto": "aquí este efecto retro que le quiso aplicar o incluso cambiar directamente el nombre y"
+  },
+  {
+   "ini": 67.0,
+   "fin": 70.5,
+   "texto": "logo de la aplicación por este de alejavi jarnes."
+  },
+  {
+   "ini": 70.5,
+   "fin": 74.4,
+   "texto": "Si te gustaría conocer todo esto en detalle sobre tu buscador de youtube, escribe la"
+  },
+  {
+   "ini": 74.4,
+   "fin": 79.2,
+   "texto": "palabra DeepSync creador alejavi y te vas a encontrar con este vídeo aquí de mi"
+  },
+  {
+   "ini": 79.2,
+   "fin": 80.8,
+   "texto": "canal de youtube, alejavi ribera."
+  }
+ ]
+}

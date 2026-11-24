@@ -1,0 +1,77 @@
+{
+ "lines": [
+  {
+   "scene": "s1",
+   "text": "La inteligencia artificial acaba de hacer otra locura,",
+   "start": 0.35,
+   "end": 2.793
+  },
+  {
+   "scene": "s2",
+   "text": "y ha puesto patas arriba todo el sector de las reformas.",
+   "start": 3.223,
+   "end": 5.871
+  },
+  {
+   "scene": "s3",
+   "text": "No solamente contesta a tus clientes a cualquier hora,",
+   "start": 6.301,
+   "end": 8.683
+  },
+  {
+   "scene": "s4",
+   "text": "ni se queda solo con lo que necesitan,",
+   "start": 9.113,
+   "end": 10.793
+  },
+  {
+   "scene": "s5",
+   "text": "sino que además ahora, les ofrece una hora de tu agenda, y les crea la visita.",
+   "start": 11.223,
+   "end": 15.332
+  },
+  {
+   "scene": "s6",
+   "text": "Y no hablo de un contestador. Hablo de una recepcionista.",
+   "start": 15.762,
+   "end": 18.865
+  },
+  {
+   "scene": "s7",
+   "text": "Ya que ahora, desde aquí, vas a poder ver cada visita que ha agendado,",
+   "start": 19.295,
+   "end": 22.195
+  },
+  {
+   "scene": "s8",
+   "text": "qué quería cada cliente, y en qué estado está.",
+   "start": 22.625,
+   "end": 24.382
+  },
+  {
+   "scene": "s9",
+   "text": "De igual forma, te avisa a ti en el momento,",
+   "start": 24.812,
+   "end": 26.531
+  },
+  {
+   "scene": "s10",
+   "text": "y le recuerda la cita al cliente el día antes, para que no falte.",
+   "start": 26.961,
+   "end": 29.794
+  },
+  {
+   "scene": "s11",
+   "text": "Incluso puedes ver de dónde te escriben: Alcobendas, Tres Cantos, Sanse.",
+   "start": 30.224,
+   "end": 34.315
+  },
+  {
+   "scene": "s12",
+   "text": "Si quieres verlo en detalle, comenta la palabra recepción, y te mando la demo.",
+   "start": 34.745,
+   "end": 38.372
+  }
+ ],
+ "total": 40.152
+}

@@ -1,0 +1,182 @@
+[
+{
+"scene": "s1",
+"peq": "La",
+"gr": "inteligencia artificial",
+"estilo": "#",
+"s": 0.35,
+"sg": 0.4,
+"e": 1.49
+},
+{
+"scene": "s1",
+"peq": "acaba de hacer",
+"gr": "otra locura",
+"estilo": "*",
+"s": 1.47,
+"sg": 2.06,
+"e": 3.01
+},
+{
+"scene": "s3",
+"peq": "No solamente",
+"gr": "contesta",
+"estilo": "#",
+"s": 6.25,
+"sg": 6.8,
+"e": 7.31
+},
+{
+"scene": "s3",
+"peq": "a tus clientes",
+"gr": "a cualquier hora",
+"estilo": "*",
+"s": 7.29,
+"sg": 7.94,
+"e": 8.9
+},
+{
+"scene": "s4",
+"peq": "ni se queda solo",
+"gr": "",
+"estilo": "",
+"s": 9.06,
+"sg": null,
+"e": 9.75
+},
+{
+"scene": "s4",
+"peq": "con lo que",
+"gr": "necesitan",
+"estilo": "#",
+"s": 9.73,
+"sg": 10.08,
+"e": 11.01
+},
+{
+"scene": "s5",
+"peq": "sino que además ahora",
+"gr": "",
+"estilo": "",
+"s": 11.17,
+"sg": null,
+"e": 12.15
+},
+{
+"scene": "s5",
+"peq": "les ofrece una hora",
+"gr": "de tu agenda",
+"estilo": "#",
+"s": 12.13,
+"sg": 13.28,
+"e": 13.87
+},
+{
+"scene": "s5",
+"peq": "y les crea",
+"gr": "la visita",
+"estilo": "*",
+"s": 13.85,
+"sg": 14.68,
+"e": 15.55
+},
+{
+"scene": "s6",
+"peq": "Y no hablo de",
+"gr": "un contestador",
+"estilo": "#",
+"s": 15.71,
+"sg": 16.24,
+"e": 17.49
+},
+{
+"scene": "s6",
+"peq": "Hablo de una",
+"gr": "recepcionista",
+"estilo": "*",
+"s": 17.47,
+"sg": 17.98,
+"e": 19.08
+},
+{
+"scene": "s7",
+"peq": "Ya que ahora",
+"gr": "",
+"estilo": "",
+"s": 19.25,
+"sg": null,
+"e": 19.69
+},
+{
+"scene": "s7",
+"peq": "desde aquí vas a poder ver",
+"gr": "cada visita",
+"estilo": "#",
+"s": 19.67,
+"sg": 20.82,
+"e": 22.41
+},
+{
+"scene": "s8",
+"peq": "qué quería",
+"gr": "cada cliente",
+"estilo": "#",
+"s": 22.57,
+"sg": 22.9,
+"e": 23.53
+},
+{
+"scene": "s8",
+"peq": "y en qué",
+"gr": "estado está",
+"estilo": "*",
+"s": 23.51,
+"sg": 23.78,
+"e": 24.6
+},
+{
+"scene": "s9",
+"peq": "De igual forma",
+"gr": "te avisa a ti",
+"estilo": "#",
+"s": 24.76,
+"sg": 25.28,
+"e": 25.81
+},
+{
+"scene": "s9",
+"peq": "en el",
+"gr": "momento",
+"estilo": "*",
+"s": 25.79,
+"sg": 26.0,
+"e": 26.75
+},
+{
+"scene": "s10",
+"peq": "y le recuerda",
+"gr": "la cita",
+"estilo": "#",
+"s": 26.91,
+"sg": 27.44,
+"e": 28.31
+},
+{
+"scene": "s10",
+"peq": "el día antes",
+"gr": "para que no falte",
+"estilo": "*",
+"s": 28.29,
+"sg": 28.84,
+"e": 30.01
+},
+{
+"scene": "s11",
+"peq": "Incluso puedes ver",
+"gr": "de dónde te escriben",
+"estilo": "#",
+"s": 30.17,
+"sg": 31.06,
+"e": 34.53
+}
+]

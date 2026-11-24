@@ -1,9 +1,9 @@
 {
  "explicacion": "Contador de reels analizados. Lo actualiza la tarea diaria cada vez que analiza algo. 'revisados' = reels de otras cuentas cuyos datos se han mirado con el Descubridor; 'virales' = de esos, los que superan el umbral; 'desmontados' = analizados a fondo (transcripción, fotogramas, estructura); 'propios_medidos' = mediciones de nuestros reels.",
  "total": {
-  "revisados": 187,
-  "virales": 26,
-  "desmontados": 12,
+  "revisados": 497,
+  "virales": 41,
+  "desmontados": 15,
   "propios_medidos": 2
  },
  "historial": [
@@ -31,6 +31,15 @@
    "propios_medidos": 0,
    "clonados": 1,
    "detalle": "Primer análisis con descubrir.py: 8 perfiles de TikTok/YouTube Shorts (alejavirivera, marketingconlaurita, javadex, emprendeaprendiendo, NateHerk, nicksaraev, LaHoraMaker; AlejaviRivera/DotCSV/LiamOttley en YouTube casi sin shorts). Desmontados 3 TikTok (YouTube pide iniciar sesión para descargar). Clon del viral God's Eye (58x) para el 24-nov 13:40."
+  },
+  {
+   "fecha": "2026-11-24",
+   "revisados": 310,
+   "virales": 15,
+   "desmontados": 3,
+   "propios_medidos": 0,
+   "clonados": 1,
+   "detalle": "14 perfiles (10 habituales + 4 nuevos de YouTube: Adrián Sáenz, Hermanos García Reformas, Anthony Shoosh y Andrés Garza (finanzas, descartado); + TikTok hermanosgarciareformas). 310 revisados (187 de cuentas ya vistas ayer, con vistas actualizadas), 15 virales nuevos. Desmontados 3 TikTok de 5,1-14,8x. Clon de @alejavirivera 'patas arriba' (5,8x) para el 25-nov 13:40."
   }
  ]
 }

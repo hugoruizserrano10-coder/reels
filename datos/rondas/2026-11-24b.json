@@ -1,0 +1,165 @@
+{
+ "fecha": "2026-11-24",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.youtube.com/channel/UCA785fwozexkQnTEckfqjgw/shorts",
+   "revisados": 29,
+   "mediana_vistas": 895,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "revisados": 30,
+   "mediana_vistas": 31000.0,
+   "virales": [
+    {
+     "id": "ozn5Jr9mszY",
+     "url": "https://www.youtube.com/shorts/ozn5Jr9mszY",
+     "webpage_url": "https://www.youtube.com/shorts/ozn5Jr9mszY",
+     "title": "Cuánto Puede Ganar Un Piloto de Jet Privado",
+     "view_count": 390000,
+     "veces_mediana": 12.58,
+     "viral": true
+    },
+    {
+     "id": "hiacSK6UAmc",
+     "url": "https://www.youtube.com/shorts/hiacSK6UAmc",
+     "webpage_url": "https://www.youtube.com/shorts/hiacSK6UAmc",
+     "title": "Cómo Trabajan Las Máquinas Que Generan $1,026 Al Mes",
+     "view_count": 371000,
+     "veces_mediana": 11.97,
+     "viral": true
+    },
+    {
+     "id": "iZhhaJMsQ98",
+     "url": "https://www.youtube.com/shorts/iZhhaJMsQ98",
+     "webpage_url": "https://www.youtube.com/shorts/iZhhaJMsQ98",
+     "title": "Regalo 10.000€ Al Mejor Proyecto: ¿Se Lo Merece?",
+     "view_count": 196000,
+     "veces_mediana": 6.32,
+     "viral": true
+    },
+    {
+     "id": "3iekjbOHjTg",
+     "url": "https://www.youtube.com/shorts/3iekjbOHjTg",
+     "webpage_url": "https://www.youtube.com/shorts/3iekjbOHjTg",
+     "title": "Millonario Aconseja Qué Hacer En Tiempos Difíciles",
+     "view_count": 153000,
+     "veces_mediana": 4.94,
+     "viral": true
+    },
+    {
+     "id": "ZCRvaGYDy7E",
+     "url": "https://www.youtube.com/shorts/ZCRvaGYDy7E",
+     "webpage_url": "https://www.youtube.com/shorts/ZCRvaGYDy7E",
+     "title": "Millonario Explica Sus Negocios Más Rentables",
+     "view_count": 103000,
+     "veces_mediana": 3.32,
+     "viral": true
+    },
+    {
+     "id": "7CV08z9vlKU",
+     "url": "https://www.youtube.com/shorts/7CV08z9vlKU",
+     "webpage_url": "https://www.youtube.com/shorts/7CV08z9vlKU",
+     "title": "Cómo Genero $1,026 Al Mes Sin Hacer Nada",
+     "view_count": 101000,
+     "veces_mediana": 3.26,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "revisados": 30,
+   "mediana_vistas": 16000.0,
+   "virales": [
+    {
+     "id": "YWrHW9ZFVLU",
+     "url": "https://www.youtube.com/shorts/YWrHW9ZFVLU",
+     "webpage_url": "https://www.youtube.com/shorts/YWrHW9ZFVLU",
+     "title": "This Is How the Kitchen Looked After Knocking Down a Wall #renovations #remodeling #renovation",
+     "view_count": 76000,
+     "veces_mediana": 4.75,
+     "viral": true
+    },
+    {
+     "id": "3C6GNNU6cDs",
+     "url": "https://www.youtube.com/shorts/3C6GNNU6cDs",
+     "webpage_url": "https://www.youtube.com/shorts/3C6GNNU6cDs",
+     "title": "How to hide all your appliances 🪄 #kitchenhacks #minimalisthome #shorts",
+     "view_count": 72000,
+     "veces_mediana": 4.5,
+     "viral": true
+    },
+    {
+     "id": "otDeFCmsDds",
+     "url": "https://www.youtube.com/shorts/otDeFCmsDds",
+     "webpage_url": "https://www.youtube.com/shorts/otDeFCmsDds",
+     "title": "Total Transformation: The Bathroom and the Bedroom. PART 2 #renovation #home #shorts",
+     "view_count": 54000,
+     "veces_mediana": 3.38,
+     "viral": true
+    },
+    {
+     "id": "lGKuPJaejrI",
+     "url": "https://www.youtube.com/shorts/lGKuPJaejrI",
+     "webpage_url": "https://www.youtube.com/shorts/lGKuPJaejrI",
+     "title": "Goodbye wall, hello space #renovations #home #ideas",
+     "view_count": 53000,
+     "veces_mediana": 3.31,
+     "viral": true
+    },
+    {
+     "id": "cuTvi80JHmc",
+     "url": "https://www.youtube.com/shorts/cuTvi80JHmc",
+     "webpage_url": "https://www.youtube.com/shorts/cuTvi80JHmc",
+     "title": "New layout for this house🙌🏼 💙",
+     "view_count": 49000,
+     "veces_mediana": 3.06,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCSUwTmHIP_rlCTZeQW2oiEg/shorts",
+   "revisados": 30,
+   "mediana_vistas": 184500.0,
+   "virales": [
+    {
+     "id": "7MsrufljOHQ",
+     "url": "https://www.youtube.com/shorts/7MsrufljOHQ",
+     "webpage_url": "https://www.youtube.com/shorts/7MsrufljOHQ",
+     "title": "Investing VS Spending 📈 #Money #Finance #PersonalFinance #Habits #Investing",
+     "view_count": 1200000,
+     "veces_mediana": 6.5,
+     "viral": true
+    },
+    {
+     "id": "AicvakFRS9I",
+     "url": "https://www.youtube.com/shorts/AicvakFRS9I",
+     "webpage_url": "https://www.youtube.com/shorts/AicvakFRS9I",
+     "title": "How Much Do You Have to Pay in Taxes? 💵 #Money #Finance #PersonalFinance #Taxes #Investing",
+     "view_count": 1000000,
+     "veces_mediana": 5.42,
+     "viral": true
+    },
+    {
+     "id": "-sIOWoFUV6M",
+     "url": "https://www.youtube.com/shorts/-sIOWoFUV6M",
+     "webpage_url": "https://www.youtube.com/shorts/-sIOWoFUV6M",
+     "title": "The Truth About Taxes 💰 #Money #Finance #PersonalFinance #Taxes #Investing",
+     "view_count": 597000,
+     "veces_mediana": 3.24,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 119,
+ "total_virales": 14
+}
