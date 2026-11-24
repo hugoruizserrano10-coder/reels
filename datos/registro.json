@@ -176,7 +176,18 @@
     "9_duracion_formato": "ok (1080x1920, 25,4 s, última imagen con norte.local)",
     "10_aprendizaje": "ok (variante: humor con dibujos)"
    },
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-24 20:30 (Windsor caché)",
+    "views": 142,
+    "reach": 124,
+    "avg_watch_ms": 8001,
+    "pct_visto": 0.315,
+    "skip_rate": 0.427,
+    "likes": 2,
+    "comentarios": 0,
+    "guardados": 0,
+    "envios": 0
+   },
    "metricas_72h": null
   },
   {
@@ -205,6 +216,36 @@
     "8_cta_descripcion": "ok (Comenta RECEPCIÓN + y te mando la demo; 5 municipios; 5 hashtags)",
     "9_duracion_formato": "ok (1080x1920, 36,2 s, cierre con logo norte.local)",
     "10_aprendizaje": "ok (variante: clon fiel de viral 58x)"
+   },
+   "metricas_24h": null,
+   "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-24",
+   "hora_publicacion": "20:40",
+   "franja": "N",
+   "historia": "historias/2026-11-24-N-extracto-tanque.json",
+   "video": "videos/2026-11-24-N.mp4",
+   "media_id": null,
+   "story_id": null,
+   "duracion_s": 28.4,
+   "formato": "G-extracto",
+   "clon_de": null,
+   "tipo_negocio": "comun",
+   "tipo_gancho": "analogía absurda con giro (tanque con códigos QR, idea de @trytaskless) redibujada; el QR lleva a norte.local",
+   "variante": "prueba pedida por Hugo: historia absurda + final con nuestra web",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok (Análisis 2026-11-24 en diario; gancho «analogía absurda con giro» de datos/ganchos.md)",
+    "2_gancho": "ok (soldado pegando QR en un tanque + subtítulo en caja desde el s0; disrupción visual clara sin sonido)",
+    "3_se_entiende": "ok (hoja de 15 fotogramas: una frase por plano en caja, sin dos textos a la vez; web en el móvil como fondo)",
+    "4_sin_errores": "ok (sin textos cortados ni faltas; la oferta: contesta y deja la cita apuntada en la agenda)",
+    "5_audio": "ok (media -17,1 dB, pico -0,5 dB, sin saturar)",
+    "6_derechos": "ok (dibujos propios, voz sintética; idea de @trytaskless aprobada por Hugo como extracto, sin su vídeo ni su audio)",
+    "7_variedad": "ok (anterior: clon b-roll; formato dibujo distinto). Aviso: tipo_negocio genérico como el anterior",
+    "8_cta_descripcion": "ok (Comenta RECEPCIÓN en vídeo y descripción; norte de Madrid + 3 municipios; 5 hashtags)",
+    "9_duracion_formato": "ok (1080x1920, 28,4 s, cierre con norte.local)",
+    "10_aprendizaje": "ok (variante: historia absurda ajena + final con nuestra web)"
    },
    "metricas_24h": null,
    "metricas_72h": null
