@@ -24,7 +24,7 @@ fontanero Paco (142 vis.) son los reels que más retienen. Clones "de anuncio" c
 ## Ideas (tachar al usarlas; añadir las nuevas que salgan del análisis diario)
 - [x] Soldados con códigos QR en el tanque → el QR lleva a norte.local (24-nov)
 - [x] Paco, el fontanero más empanao, no coge el teléfono; el perro de Hacienda le fríe a impuestos (23-nov)
-- [ ] El panadero que contrató 3 loros para coger el teléfono: los loros solo dicen "¿diga?" y "¡ring ring!" → clientes locos → IA
+- [x] (26-nov) El panadero que contrató 3 loros para coger el teléfono: los loros solo dicen "¿diga?" y "¡ring ring!" → clientes locos → IA
 - [ ] La peluquera que contesta WhatsApps con los pies mientras corta el pelo → el cliente acaba con un corte en zigzag → IA
 - [ ] El electricista que se clonó para coger el teléfono: 5 clones peleándose por el móvil → ninguno lo coge → IA
 - [ ] La clínica que pidió a los pacientes que pidieran cita por paloma mensajera → la sala de espera llena de palomas → IA
