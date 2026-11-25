@@ -43,3 +43,27 @@
   lo nuestro: los reels con historia y humor retienen más que los cortos de impacto. Aún es pronto: decidir en el informe del lunes.
 - 2026-11-24 (franja M, 13:40): publicado el clon de @alejavirivera «God's Eye» (video_listo, 36,2 s) como reel (18083757878723093) + historia (18076588232765834). Control 10/10 ok, sin incidencias (vídeo ya servido por raw desde la preparación). Métricas 24 h: clon @asadwebsites 7 vistas, 100 % skip (casi sin distribución); extracto balón 6 vistas (medido tarde, a ~38 h). Fontanero empanao lleva 141 vistas, skip 43 % (el mejor skip hasta ahora). TikTok: Windsor da 0 vistas por vídeo (solo el total de cuenta, 313), así que no sirve aún para comparar. Sin comentarios ni correos de FormSubmit. Próxima vez: medir el 22-N a tiempo no aplica ya; vigilar si los clones cortos siguen sin empuje.
 - 2026-11-24 (franja N, 20:40): publicado «tanque con QR» (video_listo, dibujos, idea de @trytaskless aprobada por Hugo, 28,4 s) como reel (18649476994032328) + historia (18657631903055336). Control 10/10 ok (aviso: tipo_negocio genérico, igual que el clon de mediodía). Sin incidencias; el clon arrancó otra vez con HEAD separado, resuelto con `git checkout -B main origin/main` (árbol limpio). Métricas 24 h de fontanero empanao: 142 vistas, 124 alcance, 8,0 s (31 % visto), skip 43 %. TikTok: Windsor ya da tiempo medio por vídeo (Paco 4,97 s, 2,9 % completo; 37 mensajes 1,3 s) y 1.413 vistas de cuenta en 30 días, pero no vistas por vídeo. 0 comentarios, 2 seguidores, sin correos de FormSubmit.
+
+## Análisis 2026-11-25
+- Revisados 325 vídeos (TikTok + YouTube Shorts con descubrir.py): 277 de los 11 perfiles habituales, que **no dieron ningún
+  viral nuevo** (repiten los mismos de ayer), y 48 de 6 cuentas exploradas en TikTok. Nueva referente: **@dotcsv** (DotCSV,
+  divulgación de IA en español, mediana 12,2k, 7 virales de 3,4–50,8x, se descarga bien). Es la 4.ª cuenta nueva de la semana
+  (el máximo es 3): excepción porque sin cuentas nuevas la ronda no da nada. @iaparatodos y @marketingconia no aportan;
+  @ia_productividad, @xavimarcet y @reformasyobras fallan (en referentes.json). Instagram: la búsqueda web sigue sin dar reels
+  (solo blogs); Make sigue sin webhook. 9 virales nuevos (≥3x).
+- Desmontados 3 (TikTok @dotcsv): Seedance «hace tres años… tres años más tarde» (**50,8x**), Genie 3 «Tremenda tecnología…
+  Imagínate que…» (10,6x), Claude Cowork «Hablemos de…» (7,3x). Los tres son presentador + insertos; el primero se puede clonar
+  sin persona porque su fuerza está en el contraste de imágenes.
+- **Clon**: Seedance antes/ahora → `videos/2026-11-26-M.mp4` (46,9 s, taller: Raúl, frenos, domingo 23:10 → lunes 8:30) +
+  `historias/2026-11-26-M-clon-dotcsv.json`, sale el **26-nov a las 13:40**. Control 10/10 ok. Render HyperFrames 4 min 24 s.
+  Ojo: los clips de Mixkit con id 1008xx no tienen URL directa -720; el look viejo sale mejor hecho con ffmpeg (bajar a 270x480
+  + ruido) que con filtros CSS; el check de HyperFrames avisa de textos cortos (line_unread): mensajes de chat de ≤8 palabras.
+- Ideas: (1) el formato antes/ahora sirve para cualquier negocio (agenda de papel, «pulse 1», buzón lleno) y se puede repetir en
+  dibujos para la franja N; (2) «Imagínate que un cliente te escribe a las 23:00…» con caja de texto escribiéndose (de Genie 3);
+  (3) interfaz con cursor que pulsa pestañas «Contestar / Agendar / Avisar / Recordar» (de Cowork).
+- **Comparación con lo nuestro (Windsor, últimos 7 días)**: los reels de la franja N (20:40) con dibujos/humor son los que
+  funcionan: «tanque con QR» 199 vistas (11,5 s de media, skip 31 %), «fontanero empanao» 142 (8,0 s, skip 43 %), «fuga» 122.
+  Los **clones de mediodía casi no reciben distribución**: @asadwebsites 8 vistas (skip 80 %), God's Eye 5 vistas (2 de
+  alcance). Lo que se viraliza fuera no está funcionando en nuestra cuenta a las 13:40; puede ser la hora o el formato
+  (b-roll + voz sintética). Hoy se prueba un clon con gancho de contraste visual muy fuerte; si también se queda en <20 vistas,
+  proponer a Hugo en el informe del lunes mover los clones a la franja N o hacerlos en dibujos.

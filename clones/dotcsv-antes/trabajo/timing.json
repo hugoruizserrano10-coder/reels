@@ -1,0 +1,59 @@
+{
+ "lines": [
+  {
+   "scene": "s1",
+   "text": "Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche.",
+   "start": 0.35,
+   "end": 4.104
+  },
+  {
+   "scene": "s2",
+   "text": "«Deje su mensaje después de la señal.»",
+   "start": 4.534,
+   "end": 6.218
+  },
+  {
+   "scene": "s3",
+   "text": "Impresionante, para lo que permitía la tecnología en 2023.",
+   "start": 6.648,
+   "end": 10.299
+  },
+  {
+   "scene": "s4",
+   "text": "Pero tres años más tarde, esto es lo que podemos lograr.",
+   "start": 10.729,
+   "end": 13.156
+  },
+  {
+   "scene": "s5",
+   "text": "Un cliente escribe a las once de la noche porque le chirrían los frenos, y al momento tiene respuesta, un hueco para el lunes, y la cita hecha.",
+   "start": 13.586,
+   "end": 20.695
+  },
+  {
+   "scene": "s6",
+   "text": "Resultado que viene de una recepcionista con inteligencia artificial, que está suponiendo un terremoto para los negocios locales.",
+   "start": 21.125,
+   "end": 27.456
+  },
+  {
+   "scene": "s7",
+   "text": "Contesta a cualquier hora, ofrece huecos de tu agenda, te avisa a ti, y le recuerda la cita al cliente.",
+   "start": 27.886,
+   "end": 32.633
+  },
+  {
+   "scene": "s8",
+   "text": "Estamos ante un antes y un después. Un terremoto para talleres, clínicas, peluquerías, reformas, academias… todo.",
+   "start": 33.063,
+   "end": 39.276
+  },
+  {
+   "scene": "s9",
+   "text": "Si tienes un negocio en el norte de Madrid, comenta la palabra recepción, y te mando la demo.",
+   "start": 39.706,
+   "end": 44.25
+  }
+ ],
+ "total": 46.03
+}

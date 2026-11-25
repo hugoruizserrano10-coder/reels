@@ -1,0 +1,14 @@
+{
+ "voz_velocidad": 0.95,
+ "voz": [
+  ["s1", "Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche."],
+  ["s2", "«Deje su mensaje después de la señal.»"],
+  ["s3", "Impresionante, para lo que permitía la tecnología en 2023."],
+  ["s4", "Pero tres años más tarde, esto es lo que podemos lograr."],
+  ["s5", "Un cliente escribe a las once de la noche porque le chirrían los frenos, y al momento tiene respuesta, un hueco para el lunes, y la cita hecha."],
+  ["s6", "Resultado que viene de una recepcionista con inteligencia artificial, que está suponiendo un terremoto para los negocios locales."],
+  ["s7", "Contesta a cualquier hora, ofrece huecos de tu agenda, te avisa a ti, y le recuerda la cita al cliente."],
+  ["s8", "Estamos ante un antes y un después. Un terremoto para talleres, clínicas, peluquerías, reformas, academias… todo."],
+  ["s9", "Si tienes un negocio en el norte de Madrid, comenta la palabra recepción, y te mando la demo."]
+ ]
+}

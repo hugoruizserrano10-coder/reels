@@ -66,3 +66,11 @@ que además ahora…» sobre b-roll de obra → «Y no hablo de A, hablo de B» 
 aviso, recordatorio, mapa con pines por municipio) → CTA con caja de búsqueda que escribe «RECEPCIÓN». Subtítulos: línea
 pequeña + palabra clave grande (Inter 900 / Playfair cursiva). Plantilla: `clones/alejavirivera-patas/` (generar.py +
 subtitulos.py; cambiar voz.json y regenerar). ~41 s, render HyperFrames ~3 min.
+
+## L. "Antes/ahora" con imagen vieja (clon del 25-nov, @dotcsv 50,8x)
+ANTES con look VHS (grano, baja resolución, REC/PLAY, «2023» gigante) y voz «Hace tres años, esto era…» → plano limpio →
+destello + «2026» en «Pero tres años más tarde, esto es lo que podemos lograr» → el AHORA nítido (chat que contesta y agenda)
+→ «Resultado que viene de… un terremoto» con sacudida → agenda / aviso / recordatorio en tarjetas → pantalla partida
+ANTES/AHORA → fondo coral con la enumeración de negocios palabra a palabra y «TODO.» → CTA en coral → marca. Subtítulos de una
+línea blanca en negrita. Plantilla: `clones/dotcsv-antes/` (generar.py; cambiar voz.json, el chat y los planos). ~47 s,
+render HyperFrames ~4,5 min. Sirve para cualquier negocio: cambiar el ANTES (contestador, agenda de papel, «pulse 1»).

@@ -1,0 +1,81 @@
+{
+ "id": "dotcsv-7606027425373228310",
+ "duracion_s": 57.3,
+ "cortes_s": [
+  0.04,
+  4.0,
+  6.0,
+  9.4,
+  11.48,
+  14.36,
+  16.32,
+  17.28,
+  19.92,
+  23.12,
+  25.52,
+  27.64,
+  29.84,
+  30.56,
+  31.76,
+  33.04,
+  38.64,
+  40.08,
+  42.32,
+  43.56,
+  46.32,
+  47.16,
+  50.8,
+  52.32,
+  54.32,
+  55.2
+ ],
+ "cortes_por_10s": 4.5,
+ "palabras_por_s": 2.24,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 6.5,
+   "texto": "Hace tres años, estará el resultado de generar a Will Smith comiendo pasta, impresionante"
+  },
+  {
+   "ini": 6.5,
+   "fin": 12.5,
+   "texto": "para lo que permitía la tecnología en 2023, pero tres años más tarde, esto es lo que"
+  },
+  {
+   "ini": 12.5,
+   "fin": 19.2,
+   "texto": "podemos lograr. Resultado que proviene del nuevo modelo Seedance 2.0 que está suponiendo"
+  },
+  {
+   "ini": 19.2,
+   "fin": 27.1,
+   "texto": "un terremoto en cuanto a generación de contenido audiovisual. Con resultados que a primera"
+  },
+  {
+   "ini": 27.1,
+   "fin": 32.4,
+   "texto": "vista sorprendían por claramente estar por delante, con mucha diferencia de lo que uno"
+  },
+  {
+   "ini": 32.4,
+   "fin": 38.3,
+   "texto": "podría esperar sería el progreso de los generadores de video con IA, pues en esta época de 2026."
+  },
+  {
+   "ini": 38.3,
+   "fin": 45.4,
+   "texto": "Estamos claramente ante un modelo superior, que supone un antes y un después, un terremoto,"
+  },
+  {
+   "ini": 45.4,
+   "fin": 51.4,
+   "texto": "un movimiento de placas tectónicas para toda la industria de efectos especiales, animación,"
+  },
+  {
+   "ini": 51.4,
+   "fin": 57.0,
+   "texto": "2D, 3D, producción de películas, de series, de publicidad, todo."
+  }
+ ]
+}

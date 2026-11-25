@@ -5,7 +5,7 @@ No repetir negocio + problema en 14 días. Marcar con [x] y la fecha al usarla; 
 Todos en el norte de Madrid, con nombres y negocios inventados.
 
 ## Talleres de coches
-- [ ] Ruido al frenar un domingo por la noche: cita para el lunes a primera hora (Alcobendas)
+- [x] Ruido al frenar un domingo por la noche: cita para el lunes a primera hora (clon @dotcsv antes/ahora) — 26-nov
 - [ ] ITV caducada: la cliente pregunta precio de pre-ITV a las 23:00 (Sanse)
 - [ ] Cambio de neumáticos antes de un viaje: pide precio por foto de la rueda
 ## Reformas

@@ -1,0 +1,16 @@
+{
+ "id": "2026-11-26-M-clon-dotcsv",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-26-M.mp4",
+ "formato": "clon",
+ "clon_de": "https://www.tiktok.com/@dotcsv/video/7606027425373228310",
+ "viral": "619.900 vistas, 50,8x la mediana de @dotcsv («Hace tres años, este era el resultado de generar a Will Smith comiendo pasta… pero tres años más tarde, esto es lo que podemos lograr»)",
+ "proyecto": "clones/dotcsv-antes/",
+ "tipo_negocio": "taller",
+ "tipo_gancho": "antes/ahora («Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche» sobre teléfono viejo con grano y REC/PLAY; en el s 11 «Pero tres años más tarde…» y corte a imagen nítida con «2026»)",
+ "variante": "clon fiel de un viral de 50,8x: mismo gancho antes/ahora, ANTES feo con grano y VHS → AHORA nítido, subtítulos de una línea blanca en negrita, fondo coral del set en la enumeración final «…talleres, clínicas, peluquerías, reformas, academias… todo»; 47 s (el original 57 s) con CTA, b-roll Mixkit en vez de presentador",
+ "duracion_s": 46.9,
+ "cta": "Comenta RECEPCIÓN",
+ "caption": "Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche 📼 Hoy una recepcionista con IA contesta al momento, ofrece un hueco de tu agenda, deja la cita hecha, te avisa y le recuerda la cita al cliente. Para talleres y negocios de Alcobendas, San Sebastián de los Reyes, Tres Cantos, Algete y Colmenar Viejo. Comenta RECEPCIÓN y te mando la demo. #talleresmecanicos #recepcionistaIA #alcobendas #trescantos #negocioslocales",
+ "control": {"1_investigacion": "ok (Análisis 2026-11-25, viral desmontado con ficha en datos/desmontajes/dotcsv-7606027425373228310)", "2_gancho": "ok (antes/ahora: imagen vieja con REC y «Hace tres años» desde 0 s; sigue al viral)", "3_se_entiende": "ok (una línea de subtítulo; chat con mensajes cortos sin subtítulo encima; tarjetas de 1–2 líneas)", "4_sin_errores": "ok (Raúl, frenos, domingo 23:10 → lunes 8:30 coherente en chat, aviso y recordatorio a las 7:30; solo contesta, ofrece hueco, agenda, avisa y recuerda)", "5_audio": "ok (-14,2 LUFS; música Mixkit 140 desde el «Pero tres años más tarde», pitido del contestador, golpes y dings)", "6_derechos": "ok (Mixkit 234, 48532, 46291, 13270, 4716, 13260, 14669, 41165; música 140; voz Piper davefx)", "7_variedad": "ok (anterior 25-N «gato» común; taller sin usar en 14 días)", "8_cta": "ok", "9_formato": "ok 1080x1920, 46,9 s (clon de 57 s), cierre con marca", "10_aprendizaje": "ok (primer clon de antes/ahora; prueba si un gancho de contraste visual saca a los clones de mediodía de las <10 vistas)"}
+}

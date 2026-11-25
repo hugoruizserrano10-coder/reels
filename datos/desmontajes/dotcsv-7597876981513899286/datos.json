@@ -1,0 +1,82 @@
+{
+ "id": "dotcsv-7597876981513899286",
+ "duracion_s": 63.7,
+ "cortes_s": [
+  0.04,
+  0.16,
+  2.4,
+  12.64,
+  16.04,
+  18.16,
+  19.92,
+  37.04,
+  42.44,
+  52.16,
+  56.84,
+  60.76
+ ],
+ "cortes_por_10s": 1.9,
+ "palabras_por_s": 2.81,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 6.0,
+   "texto": "Hablemos de Cloud Cowork, porque la semana pasada Anthropixor prendió publicando su primer"
+  },
+  {
+   "ini": 6.0,
+   "fin": 12.0,
+   "texto": "sistema de agente generalista, una forma de agente autónomo que podemos instalar en nuestro"
+  },
+  {
+   "ini": 12.0,
+   "fin": 17.9,
+   "texto": "ordenador y que, inspirado en el funcionamiento de Cloud Code, será capaz de trabajar y resolver"
+  },
+  {
+   "ini": 17.9,
+   "fin": 23.2,
+   "texto": "aquellas tareas que le propongamos trabajando con los ficheros de nuestro equipo. También"
+  },
+  {
+   "ini": 23.2,
+   "fin": 28.3,
+   "texto": "podrá conectarse al navegador para surfear la web y aprovechará todas las ventajas"
+  },
+  {
+   "ini": 28.3,
+   "fin": 35.0,
+   "texto": "de un modelo tan potente como es Opus 4.5 con todas sus conexiones, con todas sus integraciones para"
+  },
+  {
+   "ini": 35.0,
+   "fin": 39.8,
+   "texto": "hacernos la vida más sencilla. Permitiendonos hacer cosas como este ejemplo que mostró Anthropix y"
+  },
+  {
+   "ini": 39.8,
+   "fin": 45.8,
+   "texto": "que para muchos creo que va a ser de mucha utilidad, que es invitar a Cloud Cowork a que vea pues todos"
+  },
+  {
+   "ini": 45.8,
+   "fin": 50.3,
+   "texto": "los archivos que tenemos en el escritorio de nuestro ordenador y pedirle que inteligentemente"
+  },
+  {
+   "ini": 50.3,
+   "fin": 55.9,
+   "texto": "analizando esos archivos pues los agrupe y los ordene para tener un escritorio mucho más"
+  },
+  {
+   "ini": 55.9,
+   "fin": 61.7,
+   "texto": "limpio. Pero esto es solo una pequeña cosa de lo que Cloud Cowork nos puede ofrecer así que vamos a"
+  },
+  {
+   "ini": 61.7,
+   "fin": 63.6,
+   "texto": "ver unos cuantos casos de uso."
+  }
+ ]
+}

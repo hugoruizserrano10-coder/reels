@@ -1,0 +1,138 @@
+{
+ "id": "dotcsv-7536962648559062294",
+ "duracion_s": 89.7,
+ "cortes_s": [
+  0.03,
+  3.77,
+  18.47,
+  32.47,
+  35.27,
+  36.83,
+  37.27,
+  37.67,
+  38.27,
+  55.97,
+  61.0,
+  84.33,
+  86.7
+ ],
+ "cortes_por_10s": 1.4,
+ "palabras_por_s": 3.16,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 3.8,
+   "texto": "Tremenda tecnología acaba de presentar Google esta semana."
+  },
+  {
+   "ini": 3.8,
+   "fin": 9.5,
+   "texto": "Imagínate que te colocas delante de tu modelo de generación de vídeo favorito y escribes un prompt,"
+  },
+  {
+   "ini": 9.5,
+   "fin": 12.5,
+   "texto": "e inmediatamente se genera ante tus ojos."
+  },
+  {
+   "ini": 12.5,
+   "fin": 18.4,
+   "texto": "Un vídeo generado con inteligencia artificial que ya bueno, en 2025 quizás no te sorprenda tanto,"
+  },
+  {
+   "ini": 18.4,
+   "fin": 22.5,
+   "texto": "excepto porque este vídeo se está generando en tiempo real."
+  },
+  {
+   "ini": 22.5,
+   "fin": 26.7,
+   "texto": "Y no solo eso, sino que también podrás interactuar con tu teclado,"
+  },
+  {
+   "ini": 26.7,
+   "fin": 32.5,
+   "texto": "haciendo que todo se simule ante tus ojos como si de un videojuego se tratara."
+  },
+  {
+   "ini": 32.5,
+   "fin": 38.2,
+   "texto": "Un videojuego que no se ha programado, sino que está simulado dentro de una red neuronal."
+  },
+  {
+   "ini": 38.2,
+   "fin": 42.3,
+   "texto": "Todo esto viene con un montón de cosas muy interesantes, con persistencia temporal,"
+  },
+  {
+   "ini": 42.3,
+   "fin": 45.8,
+   "texto": "con memoria, con manipulación de objetos, como podemos ver aquí, pues fijaos,"
+  },
+  {
+   "ini": 45.8,
+   "fin": 50.0,
+   "texto": "el poder hacer acciones de pintar sobre una pared, porque eso es lo que hemos prompteado,"
+  },
+  {
+   "ini": 50.0,
+   "fin": 54.9,
+   "texto": "y además con la persistencia de memoria donde estas marcas que hemos dibujado se mantienen."
+  },
+  {
+   "ini": 55.1,
+   "fin": 56.1,
+   "texto": "¿Qué fijaos en este ejemplo?"
+  },
+  {
+   "ini": 56.1,
+   "fin": 61.1,
+   "texto": "A partir de un prompt le hemos pedido una especie de carretera donde hay una persona que está explorando."
+  },
+  {
+   "ini": 61.1,
+   "fin": 64.9,
+   "texto": "Y ya ha tenido una iniciativa muy curiosa que es generarle botas de agua,"
+  },
+  {
+   "ini": 64.9,
+   "fin": 67.6,
+   "texto": "porque sabe que está en un espacio donde hay charcos,"
+  },
+  {
+   "ini": 67.6,
+   "fin": 71.6,
+   "texto": "con lo cual lo normal es que esté vistiendo botas de agua, pero más interesante que esto, fijaos."
+  },
+  {
+   "ini": 71.6,
+   "fin": 74.9,
+   "texto": "¿Qué pasa cuando esta persona sigue avanzando y mirándose a los pies,"
+  },
+  {
+   "ini": 74.9,
+   "fin": 76.5,
+   "texto": "se sitúa sobre el charco de agua?"
+  },
+  {
+   "ini": 76.5,
+   "fin": 81.0,
+   "texto": "La interacción es la de un vídeo real, unas físicas que no se han programado,"
+  },
+  {
+   "ini": 81.0,
+   "fin": 84.3,
+   "texto": "unas físicas que no responden a ningún paper de dinámica de fluidos,"
+  },
+  {
+   "ini": 84.3,
+   "fin": 87.9,
+   "texto": "un charco con agua donde estamos pisando y todo funciona."
+  },
+  {
+   "ini": 87.9,
+   "fin": 89.6,
+   "texto": "Es una locura, chicos."
+  }
+ ]
+}

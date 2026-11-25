@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --coral: #e9605a; --coral2: #c9443f; --verde: #25d366; --wa: #0b141a; --gris: #8696a0; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { width: 100%; height: 100%; position: relative; font-family: "Inter"; color: #fff; }
+      .escena { position: absolute; inset: 0; overflow: hidden; background: #111; }
+      .vid { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.3)); }
+      /* look VHS para el ANTES */
+      .vhs { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.22) 0 3px, rgba(0,0,0,0) 3px 7px); mix-blend-mode: multiply; }
+      .vign { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 100%); }
+      .osd { position: absolute; left: 70px; top: 110px; font-family: "JetBrains Mono"; font-weight: 700; font-size: 50px; color: #f2f2f2; text-shadow: 3px 3px 0 #000; letter-spacing: 2px; }
+      .osd2 { position: absolute; right: 70px; top: 110px; font-family: "JetBrains Mono"; font-weight: 700; font-size: 50px; color: #f2f2f2; text-shadow: 3px 3px 0 #000; }
+      .osd .rec { color: #ff3b30; }
+      #lcd { position: absolute; left: 90px; right: 90px; top: 560px; padding: 40px 44px; background: #93a37a; border: 10px solid #3a3a36; border-radius: 18px; box-shadow: inset 0 0 40px rgba(0,0,0,0.45), 0 20px 50px rgba(0,0,0,0.6); font-family: "JetBrains Mono"; font-weight: 700; color: #20261a; font-size: 58px; line-height: 1.25; text-transform: uppercase; }
+      #lcd small { display: block; font-size: 34px; opacity: 0.75; margin-bottom: 14px; }
+      #piip { position: absolute; left: 0; right: 0; top: 1020px; text-align: center; font-family: "Archivo Black"; font-size: 150px; color: #fff; text-shadow: 0 6px 30px #000; }
+      #ano { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-family: "Archivo Black"; font-size: 300px; line-height: 1; color: #fff; text-shadow: 0 10px 40px #000; }
+      #ano2 { position: absolute; left: 0; right: 0; top: 240px; text-align: center; font-family: "Archivo Black"; font-size: 210px; line-height: 1; color: #fff; text-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+      #flash { position: absolute; inset: 0; background: #fff; }
+      /* móvil con WhatsApp */
+      .fondo-borroso { filter: blur(14px) brightness(0.55); transform: scale(1.1); }
+      .movil { position: absolute; left: 140px; top: 150px; width: 800px; height: 1330px; border-radius: 70px; background: #000; padding: 22px; box-shadow: 0 50px 120px rgba(0,0,0,0.7), 0 0 0 4px #2a2a2a; }
+      .pant { position: relative; width: 100%; height: 100%; border-radius: 52px; overflow: hidden; background: var(--wa); }
+      .wa-top { height: 170px; background: #1f2c34; display: flex; align-items: flex-end; gap: 22px; padding: 0 30px 24px; }
+      .wa-top .av { width: 86px; height: 86px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; }
+      .wa-top .av img { width: 64px; height: 64px; }
+      .wa-top b { display: block; font-size: 36px; } .wa-top span { display: block; font-size: 25px; color: var(--gris); margin-top: 4px; }
+      .wa-body { padding: 30px 28px; }
+      .dia { text-align: center; margin: 0 auto 26px; width: 320px; padding: 8px 0; border-radius: 14px; background: #182229; color: var(--gris); font-size: 24px; }
+      .msg { max-width: 600px; padding: 20px 26px; border-radius: 24px; font-size: 35px; line-height: 1.28; margin-bottom: 20px; }
+      .msg small { display: block; font-size: 21px; color: rgba(255,255,255,0.55); margin-top: 6px; text-align: right; }
+      .cli { background: #202c33; border-top-left-radius: 6px; }
+      .bot { background: #005c4b; border-top-right-radius: 6px; margin-left: auto; }
+      .ok { position: absolute; left: 40px; right: 40px; bottom: 50px; padding: 26px 30px; border-radius: 26px; background: #f4f5f6; color: #111; display: flex; gap: 22px; align-items: center; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+      .ok .ic { width: 84px; height: 84px; flex: none; border-radius: 22px; background: var(--verde); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+      .ok b { display: block; font-size: 33px; } .ok span { display: block; font-size: 28px; color: #333; margin-top: 4px; }
+      /* tarjetas */
+      .tarj { position: absolute; left: 80px; right: 80px; top: 560px; padding: 40px 40px; border-radius: 36px; background: rgba(246,247,248,0.97); color: #111; box-shadow: 0 40px 100px rgba(0,0,0,0.6); }
+      .tarj h3 { font-size: 40px; font-weight: 900; margin-bottom: 20px; }
+      .tarj .noti { display: flex; gap: 24px; align-items: center; }
+      .tarj .noti .ic { width: 110px; height: 110px; flex: none; border-radius: 28px; background: var(--coral); display: flex; align-items: center; justify-content: center; font-size: 60px; }
+      .tarj .noti b { display: block; font-size: 40px; } .tarj .noti span { display: block; font-size: 34px; color: #333; margin-top: 6px; } .tarj .noti small { display: block; font-size: 26px; color: #777; margin-top: 6px; }
+      .hora { display: flex; gap: 18px; align-items: center; padding: 22px 22px; border-radius: 18px; background: #eceef0; margin-bottom: 14px; font-size: 34px; }
+      .hora b { width: 150px; font-family: "JetBrains Mono"; color: #555; }
+      .hora.libre { background: #d9f7e5; border: 3px solid var(--verde); }
+      .hora.libre b { color: #0d7a3c; }
+      .hora em { font-style: normal; margin-left: auto; font-size: 28px; color: #0d7a3c; font-weight: 700; }
+      /* split antes / después */
+      .mitad { position: absolute; left: 0; width: 1080px; height: 960px; overflow: hidden; }
+      .mitad .vid { height: 1920px; top: -480px; }
+      .etq { position: absolute; left: 50px; font-family: "Archivo Black"; font-size: 96px; text-shadow: 0 6px 24px #000; }
+      #raya { position: absolute; left: 0; right: 0; top: 954px; height: 12px; background: #fff; }
+      /* lista en coral (el fondo del set del original) */
+      .coral { background: radial-gradient(circle at 50% 35%, #f07a6f 0%, var(--coral) 45%, var(--coral2) 100%); }
+      #terr { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font-size: 60px; font-weight: 800; }
+      .pal { position: absolute; left: 0; right: 0; top: 760px; text-align: center; font-family: "Archivo Black"; font-size: 150px; line-height: 1; text-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+      #todo { font-size: 300px; top: 690px; }
+      /* CTA */
+      #ctab { position: absolute; left: 0; right: 0; top: 560px; text-align: center; }
+      #ctab .l1 { font-size: 60px; font-weight: 800; line-height: 1.2; }
+      #ctab .pal2 { display: inline-block; margin-top: 50px; padding: 26px 56px; border-radius: 30px; background: #fff; color: var(--coral2); font-family: "Archivo Black"; font-size: 120px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+      #ctab .l3 { margin-top: 50px; font-size: 52px; font-weight: 700; }
+      #marca { background: #0f1012; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      #marca img { width: 260px; height: 260px; }
+      #marca b { font-weight: 900; font-size: 84px; margin-top: 40px; letter-spacing: -1px; }
+      #marca span { font-size: 40px; margin-top: 14px; color: rgba(255,255,255,0.75); }
+      /* subtítulos como el original: una línea blanca en negrita */
+      .cap { position: absolute; left: 40px; right: 40px; top: 1470px; text-align: center; font-weight: 800; font-size: 66px; line-height: 1.1; text-shadow: 0 3px 14px rgba(0,0,0,0.95), 0 0 4px #000; }
+      .cap.alto { top: 300px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="46.93" data-width="1080" data-height="1920">
+      <div id="p1" class="escena clip " data-start="0.000" data-duration="2.73" data-track-index="1">
+        <video id="v1" class="clip vid" src="assets/viejo_tel.mp4" data-start="0.000" data-duration="2.73" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="vhs"></div><div class="vign"></div>
+        <div class="osd"><span class="rec">●</span> PLAY</div><div class="osd2">DOM 23:47</div>
+      </div>
+      <div id="p2" class="escena clip " data-start="2.730" data-duration="1.724" data-track-index="1">
+        <video id="v2" class="clip vid" src="assets/viejo_tel2.mp4" data-start="2.730" data-duration="1.724" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="vhs"></div><div class="vign"></div>
+        <div class="osd"><span class="rec">●</span> PLAY</div><div class="osd2">DOM 23:47</div>
+      </div>
+      <div id="p3" class="escena clip " data-start="4.454" data-duration="2.264" data-track-index="1">
+        <video id="v3" class="clip vid" src="assets/viejo_cinta.mp4" data-start="4.454" data-duration="2.264" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="vhs"></div><div class="vign"></div>
+        <div class="osd"><span class="rec">●</span> PLAY</div><div class="osd2">DOM 23:47</div>
+        <div id="lcd">Deje su mensaje después de la señal</div>
+        <div id="piip">PIIIP</div>
+      </div>
+      <div id="p4" class="escena clip " data-start="6.718" data-duration="2.332" data-track-index="1">
+        <video id="v4" class="clip vid" src="assets/taller1.mp4" data-start="6.718" data-duration="2.332" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="p5" class="escena clip " data-start="9.050" data-duration="2.37" data-track-index="1">
+        <video id="v5" class="clip vid" src="assets/estatica.mp4" data-start="9.050" data-duration="2.37" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="vhs"></div><div class="vign"></div>
+        <div class="osd"><span class="rec">●</span> PLAY</div><div class="osd2">DOM 23:47</div>
+        <div id="ano">2023</div>
+      </div>
+      <div id="p6" class="escena clip " data-start="11.420" data-duration="2.42" data-track-index="1">
+        <video id="v6" class="clip vid" src="assets/noche.mp4" data-start="11.420" data-duration="2.42" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+        <div id="ano2">2026</div>
+        <div id="flash"></div>
+      </div>
+      <div id="p7" class="escena clip " data-start="13.840" data-duration="7.205" data-track-index="1">
+        <video id="v7" class="clip vid fondo-borroso" src="assets/noche.mp4" data-start="13.840" data-duration="7.205" data-media-start="2" muted playsinline data-track-index="2"></video>
+        <div class="movil"><div class="pant"><div class="wa-top"><div class="av"><img src="assets/logo.svg" alt="" /></div><div><b>Talleres Robledo</b><span>Asistente · en línea</span></div></div><div class="wa-body"><div class="dia">DOMINGO</div><div id="m1" class="msg cli">Me chirrían los frenos 😬 ¿Podéis mirarlo?<small>23:10</small></div><div id="m2" class="msg bot">¡Claro, Raúl! 🔧 Mañana lunes a las 8:30. ¿Te va bien?<small>23:10 ✓✓</small></div><div id="m3" class="msg cli">Sí 👍<small>23:11</small></div><div id="m4" class="msg bot">Hecho ✅ Lunes 8:30, frenos.<small>23:11 ✓✓</small></div></div><div id="ok7" class="ok"><div class="ic">📅</div><div><b>Cita creada</b><span>Raúl · frenos · lun 8:30</span></div></div></div></div>
+      </div>
+      <div id="p8" class="escena clip " data-start="21.045" data-duration="1.115" data-track-index="1">
+        <video id="v8" class="clip vid" src="assets/taller2.mp4" data-start="21.045" data-duration="1.115" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="p9" class="escena clip " data-start="22.160" data-duration="5.646" data-track-index="1">
+        <video id="v9" class="clip vid" src="assets/taller3.mp4" data-start="22.160" data-duration="5.646" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+        <div id="n9" class="tarj" style="top:420px"><div class="noti"><div class="ic">🔔</div><div><b>Nueva cita agendada</b><span>Raúl · ruido al frenar</span><small>Lunes 8:30 · por WhatsApp a las 23:10</small></div></div></div>
+      </div>
+      <div id="p10" class="escena clip " data-start="27.806" data-duration="1.174" data-track-index="1">
+        <video id="v10" class="clip vid" src="assets/whatsapp.mp4" data-start="27.806" data-duration="1.174" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="p11" class="escena clip " data-start="28.980" data-duration="1.35" data-track-index="1">
+        <video id="v11" class="clip vid fondo-borroso" src="assets/taller1.mp4" data-start="28.980" data-duration="1.35" data-media-start="2.5" muted playsinline data-track-index="2"></video>
+        <div id="ag" class="tarj"><h3>Agenda del lunes</h3><div class="hora"><b>8:00</b>ITV</div><div class="hora libre"><b>8:30</b>Libre<em>ofrecida ✓</em></div><div class="hora"><b>9:30</b>Cambio de aceite</div></div>
+      </div>
+      <div id="p12" class="escena clip " data-start="30.330" data-duration="2.653" data-track-index="1">
+        <video id="v12" class="clip vid" src="assets/taller3.mp4" data-start="30.330" data-duration="2.653" data-media-start="3" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+        <div id="n12" class="tarj" style="top:420px"><div class="noti"><div class="ic">🔔</div><div><b>Cita nueva</b><span>Raúl · frenos · lun 8:30</span></div></div></div>
+        <div id="n13" class="tarj" style="top:760px"><div class="noti"><div class="ic" style="background:#25d366">⏰</div><div><b>Recordatorio enviado</b><span>a Raúl · lunes 7:30</span></div></div></div>
+      </div>
+      <div id="p14" class="escena clip " data-start="32.983" data-duration="2.397" data-track-index="1">
+        <div class="mitad" style="top:0"><video id="v14a" class="clip vid" src="assets/viejo_tel.mp4" data-start="32.983" data-duration="2.397" data-media-start="2" muted playsinline data-track-index="2"></video><div class="vhs"></div><div class="etq" style="top:760px">ANTES</div></div>
+        <div class="mitad" style="top:960px"><video id="v14b" class="clip vid" src="assets/whatsapp.mp4" data-start="32.983" data-duration="2.397" data-media-start="1" muted playsinline data-track-index="2"></video><div class="etq" style="top:60px">AHORA</div></div>
+        <div id="raya"></div>
+      </div>
+      <div id="p15" class="escena clip coral" data-start="35.380" data-duration="4.246" data-track-index="1">
+        <div id="terr">Un terremoto para…</div>
+        <div id="w0" class="pal">talleres</div>
+        <div id="w1" class="pal">clínicas</div>
+        <div id="w2" class="pal">peluquerías</div>
+        <div id="w3" class="pal">reformas</div>
+        <div id="w4" class="pal">academias</div>
+        <div id="todo" class="pal">TODO.</div>
+      </div>
+      <div id="p16" class="escena clip coral" data-start="39.626" data-duration="4.824" data-track-index="1">
+        <div id="ctab"><div class="l1">¿Tienes un negocio<br />en el norte de Madrid?</div><div class="l3" id="l3">Comenta la palabra</div><div class="pal2" id="pal2">RECEPCIÓN</div><div class="l3" id="l4">y te mando la demo</div></div>
+      </div>
+      <div id="marca" class="escena clip " data-start="44.450" data-duration="2.48" data-track-index="1">
+        <img id="logo" src="assets/logo.svg" alt="" />
+        <b>norte.local</b>
+        <span>Recepcionista con IA para negocios locales</span>
+      </div>
+      <div id="c0" class="cap clip" data-start="0.000" data-duration="1.37" data-track-index="20">Hace tres años,</div>
+      <div id="c1" class="cap clip" data-start="1.350" data-duration="0.79" data-track-index="20">esto era lo que oías</div>
+      <div id="c2" class="cap clip" data-start="2.120" data-duration="0.79" data-track-index="20">al llamar a un taller</div>
+      <div id="c3" class="cap clip" data-start="2.890" data-duration="1.43" data-track-index="20">un domingo por la noche.</div>
+      <div id="c4" class="cap clip" data-start="4.410" data-duration="0.8" data-track-index="20">«Deje su mensaje</div>
+      <div id="c5" class="cap clip" data-start="5.190" data-duration="1.25" data-track-index="20">después de la señal.»</div>
+      <div id="c6" class="cap clip" data-start="6.850" data-duration="0.8" data-track-index="20">Impresionante,</div>
+      <div id="c7" class="cap clip" data-start="7.630" data-duration="0.82" data-track-index="20">para lo que permitía</div>
+      <div id="c8" class="cap clip" data-start="8.430" data-duration="2.09" data-track-index="20">la tecnología en 2023.</div>
+      <div id="c9" class="cap clip" data-start="10.590" data-duration="0.72" data-track-index="20">Pero tres años</div>
+      <div id="c10" class="cap clip" data-start="11.290" data-duration="0.68" data-track-index="20">más tarde,</div>
+      <div id="c11" class="cap clip" data-start="11.950" data-duration="0.42" data-track-index="20">esto es lo que</div>
+      <div id="c12" class="cap clip" data-start="12.350" data-duration="1.03" data-track-index="20">podemos lograr.</div>
+      <div id="c13" class="cap clip" data-start="21.050" data-duration="0.84" data-track-index="20">Resultado que viene</div>
+      <div id="c14" class="cap clip" data-start="21.870" data-duration="1.04" data-track-index="20">de una recepcionista</div>
+      <div id="c15" class="cap clip" data-start="22.890" data-duration="1.34" data-track-index="20">con inteligencia artificial,</div>
+      <div id="c16" class="cap clip" data-start="24.210" data-duration="1.22" data-track-index="20">que está suponiendo</div>
+      <div id="c17" class="cap clip" data-start="25.410" data-duration="0.5" data-track-index="20">un terremoto</div>
+      <div id="c18" class="cap clip" data-start="25.890" data-duration="1.79" data-track-index="20">para los negocios locales.</div>
+      <div id="c19" class="cap alto clip" data-start="27.770" data-duration="1.28" data-track-index="20">Contesta a cualquier hora,</div>
+      <div id="c20" class="cap alto clip" data-start="29.030" data-duration="1.36" data-track-index="20">ofrece huecos de tu agenda,</div>
+      <div id="c21" class="cap alto clip" data-start="30.370" data-duration="0.56" data-track-index="20">te avisa a ti,</div>
+      <div id="c22" class="cap alto clip" data-start="30.910" data-duration="1.04" data-track-index="20">y le recuerda la cita</div>
+      <div id="c23" class="cap alto clip" data-start="31.930" data-duration="0.92" data-track-index="20">al cliente.</div>
+      <div id="c24" class="cap clip" data-start="32.970" data-duration="0.64" data-track-index="20">Estamos ante</div>
+      <div id="c25" class="cap clip" data-start="33.590" data-duration="1.76" data-track-index="20">un antes y un después.</div>
+      <audio id="voz" class="clip" src="assets/voz.wav" data-start="0" data-duration="46.93" data-volume="1" data-track-index="30"></audio>
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="11.42" data-duration="35.51" data-media-start="0" data-volume="0.22" data-fade-out="1.2" data-track-index="31"></audio>
+      <audio id="pip" class="clip" src="assets/pip.wav" data-start="6.24" data-duration="0.55" data-volume="0.35" data-track-index="50"></audio>
+      <audio id="g0" class="clip" src="assets/golpe.wav" data-start="6.69" data-duration="0.4" data-volume="0.45" data-track-index="32"></audio>
+      <audio id="g1" class="clip" src="assets/golpe.wav" data-start="11.39" data-duration="0.4" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="g2" class="clip" src="assets/golpe.wav" data-start="21.02" data-duration="0.4" data-volume="0.45" data-track-index="34"></audio>
+      <audio id="g3" class="clip" src="assets/golpe.wav" data-start="32.95" data-duration="0.4" data-volume="0.45" data-track-index="35"></audio>
+      <audio id="g4" class="clip" src="assets/golpe.wav" data-start="35.35" data-duration="0.4" data-volume="0.45" data-track-index="36"></audio>
+      <audio id="g5" class="clip" src="assets/golpe.wav" data-start="39.60" data-duration="0.4" data-volume="0.45" data-track-index="37"></audio>
+      <audio id="g6" class="clip" src="assets/golpe.wav" data-start="25.57" data-duration="0.4" data-volume="0.45" data-track-index="38"></audio>
+      <audio id="g7" class="clip" src="assets/golpe.wav" data-start="38.95" data-duration="0.4" data-volume="0.45" data-track-index="39"></audio>
+      <audio id="d0" class="clip" src="assets/ding.wav" data-start="14.19" data-duration="0.35" data-volume="0.3" data-track-index="42"></audio>
+      <audio id="d1" class="clip" src="assets/ding.wav" data-start="31.24" data-duration="0.35" data-volume="0.3" data-track-index="43"></audio>
+      <audio id="d2" class="clip" src="assets/ding.wav" data-start="17.42" data-duration="0.35" data-volume="0.3" data-track-index="44"></audio>
+      <audio id="d3" class="clip" src="assets/ding.wav" data-start="20.14" data-duration="0.35" data-volume="0.3" data-track-index="45"></audio>
+      <audio id="d4" class="clip" src="assets/ding.wav" data-start="22.31" data-duration="0.35" data-volume="0.3" data-track-index="46"></audio>
+      <audio id="d5" class="clip" src="assets/ding.wav" data-start="30.38" data-duration="0.35" data-volume="0.3" data-track-index="47"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // ANTES: temblor de cinta y zoom lento
+      ["#v1", "#v2", "#v3", "#v5"].forEach((v, i) => tl.fromTo(v, { scale: 1.08 }, { scale: 1.0, duration: 2.6, ease: "none" }, [0.0, 2.73, 4.454, 9.05][i]));
+      tl.fromTo("#lcd", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.2 }, 4.504);
+      tl.fromTo("#piip", { opacity: 0, scale: 1.4 }, { opacity: 1, scale: 1, duration: 0.15 }, 6.24);
+      tl.fromTo("#ano", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.18, ease: "power3.out" }, 9.25);
+      // DESPUÉS: destello blanco y nitidez
+      tl.fromTo("#flash", { opacity: 1 }, { opacity: 0, duration: 0.35 }, 11.42);
+      tl.fromTo("#v6", { scale: 1.15 }, { scale: 1.0, duration: 2.42, ease: "power1.out" }, 11.42);
+      tl.fromTo("#ano2", { opacity: 0, scale: 1.3 }, { opacity: 1, scale: 1, duration: 0.2, ease: "power3.out" }, 11.47);
+      // chat
+      tl.fromTo("#p7 .movil", { opacity: 0, y: 140, rotation: -4 }, { opacity: 1, y: 0, rotation: 0, duration: 0.45, ease: "power3.out" }, 13.84);
+      tl.fromTo("#m1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 14.19);
+      tl.fromTo("#m2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 17.02);
+      tl.fromTo("#m3", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 18.92);
+      tl.fromTo("#m4", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 19.34);
+      tl.fromTo("#ok7", { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, 20.14);
+      tl.fromTo("#v8", { scale: 1.0 }, { scale: 1.12, duration: 1.115, ease: "none" }, 21.045);
+      tl.fromTo("#n9", { opacity: 0, y: -160 }, { opacity: 1, y: 0, duration: 0.35, ease: "back.out(1.6)" }, 22.31);
+      // terremoto: sacudida
+      tl.to("#p9", { x: 18, duration: 0.05, yoyo: true, repeat: 7, ease: "none" }, 25.57);
+      tl.set("#p9", { x: 0 }, 26.00);
+      tl.fromTo("#v10", { scale: 1.12 }, { scale: 1.0, duration: 1.174, ease: "none" }, 27.806);
+      tl.fromTo("#ag", { opacity: 0, y: 60 }, { opacity: 1, y: 0, duration: 0.3 }, 28.98);
+      tl.fromTo("#ag .libre", { scale: 0.9 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, 29.28);
+      tl.fromTo("#n12", { opacity: 0, y: -160 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 30.38);
+      tl.fromTo("#n13", { opacity: 0, x: 200 }, { opacity: 1, x: 0, duration: 0.3, ease: "back.out(1.6)" }, 31.24);
+      tl.fromTo("#raya", { scaleX: 0 }, { scaleX: 1, duration: 0.3 }, 32.983);
+      // lista: cada palabra entra cuando se dice
+      tl.fromTo("#terr", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.2 }, 35.38);
+      const tp = [36.1, 36.64, 37.22, 37.9, 38.44, 38.98];
+      for (let i = 0; i < 5; i++) {
+        tl.fromTo("#w" + i, { opacity: 0, scale: 1.35 }, { opacity: 1, scale: 1, duration: 0.12, ease: "power3.out" }, tp[i] - 0.04);
+        tl.set("#w" + i, { opacity: 0 }, tp[i + 1] - 0.05);
+      }
+      tl.fromTo("#todo", { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }, tp[5] - 0.05);
+      tl.to("#p15", { x: 16, duration: 0.05, yoyo: true, repeat: 5, ease: "none" }, tp[5]);
+      tl.fromTo("#ctab .l1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 39.626);
+      tl.fromTo("#l3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 41.66);
+      tl.fromTo("#pal2", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 42.34);
+      tl.fromTo("#l4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 43.02);
+      tl.fromTo("#logo", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 44.45);
+      document.querySelectorAll(".cap").forEach((c) => tl.fromTo(c, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 0.08 }, parseFloat(c.dataset.start)));
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

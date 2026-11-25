@@ -83,3 +83,14 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
   vídeo empieza en mitad de una frase («¿Cómo ves eso?»). Para nosotros: «¿El fin de perder clientes por no coger el teléfono?».
 - Frases puente nuevas: «No solamente… ni… sino que además ahora…» · «Y no hablo de A, hablo de B» · «Ya que ahora, desde
   aquí…» · «De igual forma…» · «Incluso…».
+
+## Ganchos de los virales del 25-nov (análisis diario, TikTok @dotcsv)
+- **Antes/ahora con imagen vieja fea** (@dotcsv, Seedance 2.0, 620k vistas, **50,8x**, el viral más fuerte visto hasta ahora):
+  «Hace tres años, este era el resultado de… [imagen cutre]. Pero tres años más tarde, esto es lo que podemos lograr [imagen
+  nítida]». El contraste se entiende sin sonido en 0,5 s y la promesa se cumple en el s 12. Adaptado: «Hace tres años, esto era
+  lo que oías al llamar a un taller un domingo por la noche» (contestador con grano) → WhatsApp que contesta y agenda (clon del 26-nov).
+- **«Tremenda tecnología acaba de presentar X esta semana» + «Imagínate que…»** (@dotcsv, Genie 3, 10,6x): adjetivo fuerte
+  primero y luego meter al espectador en la escena. Para nosotros: «Imagínate que un cliente te escribe a las 23:00…».
+- **«Hablemos de X, porque la semana pasada…»** (@dotcsv, Claude Cowork, 7,3x): noticia de producto + interfaz real con cursor.
+- Frases puente nuevas: «Pero tres años más tarde…» · «Resultado que viene de…» · «Estamos ante un antes y un después» ·
+  enumeración que acaba en «…todo».
