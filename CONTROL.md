@@ -12,7 +12,8 @@ Los puntos con (*) son obligatorios: si fallan, no se publica.
    leer a la vez (reglas "Ritmo y claridad" de `datos/aprendizajes.md`). Mirar la hoja de revisión y 3–4 fotogramas.
 4. (*) **Sin errores**: textos sin cortar, sin faltas, horas/nombres/números coherentes entre escenas, el negocio y la
    oferta reales (la recepcionista contesta, ofrece horas, agenda, avisa y recuerda; nada de promesas falsas).
-5. (*) **Audio**: se oye la voz por encima de la música, sin cortes ni saturación; si no lleva voz, que el texto lo cuente todo.
+5. (*) **Audio**: lleva música de fondo libre de derechos que se oye (regla 3b del plan); la voz por encima, sin cortes ni
+   saturación; efectos en los golpes. Si no lleva voz, que el texto lo cuente todo.
 6. (*) **Derechos**: no hay vídeo, música ni voz de otros creadores, salvo extractos que Hugo haya aprobado para ese reel.
 7. **Variedad**: no repite tipo de negocio del reel anterior ni negocio + problema de los últimos 14 días; alterna formato
    respecto al reel anterior.

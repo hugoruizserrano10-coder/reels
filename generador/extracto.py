@@ -132,7 +132,7 @@ def main(hist, salida):
         tb += bar; k += 1
     for s0, _, _ in escenas:
         Lw = int(0.3 * SR); add(s0, rng.standard_normal(Lw) * np.exp(-np.arange(Lw) / SR * 14) * 0.3, 1)
-    mix = vo / max(1e-9, np.abs(vo).max()) * 0.9 + mu / max(1e-9, np.abs(mu).max()) * H_.get("musica_vol", 0.16)
+    mix = vo / max(1e-9, np.abs(vo).max()) * 0.9 + mu / max(1e-9, np.abs(mu).max()) * H_.get("musica_vol", 0.24)
     aud = f"{tmp}/a.wav"; w = wave.open(aud, "w"); w.setnchannels(1); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((np.clip(mix, -1, 1) * 32767).astype(np.int16).tobytes()); w.close()
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", vid, "-i", aud, "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11",

@@ -4,7 +4,10 @@ Instrucciones para la tarea programada. Desde el 23-nov **se publican 2 reels al
 Hugo; en el informe se compara con la etapa de 1 al día). La tarea arranca a las 13:25, 16:25 y 20:25 (Madrid) para tener
 el reel listo y revisado y **publicar a las :40**. Franjas en `datos/horarios.json`:
 - **Franja M (mediodía, 13:40)** → el clon del viral preparado por la tarea de análisis (o una historia PRO si no hay).
-- **Franja N (noche, 20:40)** → historia propia PRO, palabras gigantes o extracto aprobado por Hugo.
+- **Franja N (noche, 20:40)** → **historia absurda con giro, todos los días** (banco: `historias/absurdas.md`; es lo que
+  mejor funciona en Instagram y TikTok desde el 24-nov). Si hay un extracto aprobado por Hugo en la cola, va aquí.
+- Además, desde el 25-nov la franja M alterna: días pares clon del viral, días impares otra historia absurda (para
+  comparar clon frente a historia a la misma hora).
 - 1 de cada 5 días la franja M se mueve a las 16:40 para seguir probando horas (lo marca `horarios.json`).
 Las ejecuciones que no tocan terminan sin hacer nada.
 
@@ -121,6 +124,17 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
 - Generar: `generador/hacer_reel.sh historias/<id>.json videos/AAAA-MM-DD.mp4`.
 - **Revisar** la hoja `videos/AAAA-MM-DD_revision.jpg` (y fotogramas sueltos si hace falta): textos que no se corten,
   horas y nombres coherentes entre escenas, logo al final. Si algo falla, corregir y volver a generar. No subir la hoja de revisión.
+
+## 3b. Música (Hugo, 25-nov: "aplica la música de fondo")
+- **Todos los reels llevan música de fondo** que se oiga (no un pulso flojo): bajo la voz a volumen ~0,2–0,25 de la voz;
+  sin voz, protagonista. Siempre libre de derechos con uso comercial: Mixkit (https://mixkit.co/free-stock-music/,
+  descargar `https://assets.mixkit.co/music/<id>/<id>.mp3`) o Pixabay Music. Elegir estilos que suenan en tendencia en
+  reels (phonk, funk, hip-hop suave, lo-fi, electrónica con ritmo marcado) y cambiar de pista cada pocos días; apuntar el
+  id en el registro (`musica`) para ver cuál funciona mejor. Nunca canciones comerciales (Instagram/TikTok las silencian o
+  penalizan en contenido de empresa).
+- Lunes: mirar en TikTok Creative Center → Biblioteca de música comercial → "Top Music" (o búsqueda web de "canciones
+  tendencia TikTok España esta semana") y apuntar en `datos/musica.md` 3–5 sonidos en tendencia que estén en la biblioteca
+  comercial. En el mensaje a Hugo para TikTok, sugerirle uno de esos para que lo añada al subir (a volumen bajo, encima del nuestro).
 
 ## 3c. CONTROL DE CALIDAD (obligatorio, ~10 min antes de publicar — Hugo, 22-nov)
 Antes de publicar, repasar `CONTROL.md` punto por punto con el vídeo y la historia de esta franja, y guardar el resultado

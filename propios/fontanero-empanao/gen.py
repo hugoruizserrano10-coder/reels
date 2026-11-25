@@ -215,7 +215,7 @@ html = f'''<!doctype html>
 {caps_html}
 
       <audio id="voz" class="clip" src="assets/voz.wav" data-start="0" data-duration="{T}" data-volume="1" data-track-index="10"></audio>
-      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="0" data-duration="{T}" data-media-start="0" data-volume="0.12" data-fade-out="0.8" data-track-index="11"></audio>
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="0" data-duration="{T}" data-media-start="0" data-volume="0.25" data-fade-out="0.8" data-track-index="11"></audio>
       <audio id="ring" class="clip" src="assets/ring.wav" data-start="{SC['s3'][0]+0.3:.2f}" data-duration="1.6" data-volume="0.35" data-track-index="12"></audio>
       <audio id="ring2" class="clip" src="assets/ring.wav" data-start="{SC['s3'][0]+2.2:.2f}" data-duration="1.6" data-volume="0.35" data-track-index="13"></audio>
       <audio id="whoosh" class="clip" src="assets/whoosh.wav" data-start="{SC['s4'][0]-0.12:.2f}" data-duration="0.45" data-volume="0.6" data-track-index="14"></audio>

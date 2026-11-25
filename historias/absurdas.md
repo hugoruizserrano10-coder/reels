@@ -1,0 +1,37 @@
+# Banco de historias absurdas con giro (lo que mejor funciona — datos del 24/25-nov)
+
+El tanque (Instagram 187 vis., 32 % lo pasa en 3 s; TikTok 648 vis., 9,7 s de media, 18 me gusta, 2 comentarios) y el
+fontanero Paco (142 vis.) son los reels que más retienen. Clones "de anuncio" con texto: <3 s de media. Por eso, desde el
+25-nov, **cada día sale al menos una historia absurda**.
+
+## Estructura que funciona
+1. **Gancho en 1 s**: una situación absurda o un dato real increíble, contado como si fuera noticia o cotilleo
+   ("Esto hacían los soldados para que los drones…", "Este puto empanao es el fontanero más…"). Nunca empezar por el negocio.
+2. **Escalada**: 2–3 planos que hacen la situación más absurda (sin mencionar todavía nada nuestro).
+3. **Giro**: la historia acaba llevando a norte.local / al problema de no coger el teléfono (el QR lleva a nuestra web,
+   el fontanero no coge el teléfono, el perro de Hacienda…).
+4. **Lo que hacemos** en 1–3 tarjetas (llamadas, WhatsApp, MD de Instagram, agenda) y **CTA**: "Comenta RECEPCIÓN" /
+   "Pide tu demo gratis".
+5. 20–30 s, voz de Dave + subtítulos en caja, **música de fondo siempre** (ver "Música" en PLAN_DIARIO.md), efectos de
+   sonido en cada golpe (ring, whoosh, sello, boing).
+
+## Cómo se hacen
+- Dibujo cálido a mano en HyperFrames: copiar `propios/fontanero-empanao/gen.py` (escenas SVG, filtro de lápiz, voz,
+  subtítulos, efectos) y cambiar personajes y escenas. Animar siempre un `<g>` interior, nunca el que lleva `transform=`.
+- O con extracto literal de un vídeo raro (solo si Hugo lo pasa) + edit nuestro: `propios/extracto-futbol-impacto/gen.py`.
+- Humor: gamberro está bien (lo pidió Hugo), pero sin reírse de colectivos reales; el "tonto" es siempre un personaje inventado.
+
+## Ideas (tachar al usarlas; añadir las nuevas que salgan del análisis diario)
+- [x] Soldados con códigos QR en el tanque → el QR lleva a norte.local (24-nov)
+- [x] Paco, el fontanero más empanao, no coge el teléfono; el perro de Hacienda le fríe a impuestos (23-nov)
+- [ ] El panadero que contrató 3 loros para coger el teléfono: los loros solo dicen "¿diga?" y "¡ring ring!" → clientes locos → IA
+- [ ] La peluquera que contesta WhatsApps con los pies mientras corta el pelo → el cliente acaba con un corte en zigzag → IA
+- [ ] El electricista que se clonó para coger el teléfono: 5 clones peleándose por el móvil → ninguno lo coge → IA
+- [ ] La clínica que pidió a los pacientes que pidieran cita por paloma mensajera → la sala de espera llena de palomas → IA
+- [ ] El taller que puso al gato de recepcionista: el gato tira el móvil de la mesa cada vez que suena → IA
+- [ ] El fisio que contesta llamadas en mitad del masaje: el paciente acaba hecho un nudo → IA
+- [ ] Dato real: en Japón hubo un hotel atendido por robots dinosaurio → "tu negocio no necesita un dinosaurio, solo esto" → IA
+- [ ] Dato real: la primera llamada de teléfono de la historia (Bell, 1876) → 150 años después, tu negocio sigue sin cogerlo → IA
+- [ ] El cerrajero que dejó una nota en la puerta "si llamas y no contesto, vuelve en 3 días" → el cliente sigue ahí, con barba → IA
+- [ ] La academia cuyo profe contestaba los WhatsApps en clase: los alumnos acaban dando la clase ellos → IA
+- [ ] El dentista que contesta el teléfono con el paciente con la boca abierta 40 minutos → IA

@@ -85,7 +85,7 @@ def main(hist, salida):
         if not os.path.exists(cache):
             subprocess.run(["curl", "-sL", "--max-time", "120", "-o", cache, f"https://assets.mixkit.co/music/{mid}/{mid}.mp3"], check=True)
         shutil.copy(cache, f"{tmp}/musica.mp3"); musica = "tmp/musica.mp3"
-    props = {"scenes": escenas, "words": words, "voice": "tmp/voz.wav", "music": musica, "musicVol": H_.get("musica_vol", 0.13),
+    props = {"scenes": escenas, "words": words, "voice": "tmp/voz.wav", "music": musica, "musicVol": H_.get("musica_vol", 0.22),
              "totalFrames": int(T * FPS), "brand": H_.get("marca", "norte.local"), "sfx": sonidos}
     pj = os.path.join(tmp, "props.json"); json.dump(props, open(pj, "w"), ensure_ascii=False)
     crudo = os.path.join(tmp, "crudo.mp4")
