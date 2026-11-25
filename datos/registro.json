@@ -269,7 +269,18 @@
     "9_duracion_formato": "ok (1080x1920, 28,4 s, cierre con norte.local)",
     "10_aprendizaje": "ok (variante: historia absurda ajena + final con nuestra web)"
    },
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-25 20:27 (Windsor caché)",
+    "views": 238,
+    "reach": 219,
+    "avg_watch_ms": 11209,
+    "pct_visto": 0.395,
+    "skip_rate": 0.311,
+    "likes": 3,
+    "comments": 0,
+    "saved": 1,
+    "shares": 0
+   },
    "metricas_72h": null
   },
   {
@@ -303,6 +314,37 @@
    },
    "metricas_24h": null,
    "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-25",
+   "hora_publicacion": "20:40",
+   "franja": "N",
+   "historia": "historias/2026-11-25-N-palabras-gato.json",
+   "video": "videos/2026-11-25-N.mp4",
+   "media_id": "18140193463658887",
+   "story_id": "18226213798356274",
+   "duracion_s": 12.6,
+   "formato": "F",
+   "tipo_negocio": "comun",
+   "tipo_gancho": "inicio gracioso real (gato con gafas, Mixkit 49058) + texto arriba",
+   "clon_de": null,
+   "variante": "formato F con inicio real gracioso en franja N",
+   "cta": "Comenta RECEPCIÓN",
+   "musica": "mixkit-744 (+ pulso propio)",
+   "metricas_24h": null,
+   "metricas_72h": null,
+   "control": {
+    "1_investigacion": "ok (Análisis 25-nov: humor y 23:00 un cliente escribe; N con humor es lo que funciona)",
+    "2_gancho": "ok (gato con gafas + texto arriba, se entiende sin sonido; tipo: inicio gracioso real)",
+    "3_se_entiende": "ok (una palabra por tarjeta, 1,4–2 s cada una, revisada la hoja)",
+    "4_sin_errores": "ok (sin cortes ni faltas; promesas reales: contesta, resuelve dudas, agenda)",
+    "5_audio": "corregido: el generador solo ponía pulso sintético desde el corte (-24,7 LUFS, intro casi muda); añadida música Mixkit 744 desde el segundo 0 y normalizado a -13,9 LUFS",
+    "6_derechos": "ok (clip Mixkit 49058 y música Mixkit 744, licencia comercial gratuita)",
+    "7_variedad": "ok (anterior: clon reformas; ahora formato F genérico)",
+    "8_cta_descripcion": "ok (Comenta RECEPCIÓN; servicio + Alcobendas/SS Reyes/Tres Cantos, 5 hashtags)",
+    "9_duracion_formato": "ok (1080x1920, 12,6 s, marca al final)",
+    "10_aprendizaje": "corregido: faltaba \"variante\", añadida"
+   }
   }
  ],
  "cuenta_tiktok": {
