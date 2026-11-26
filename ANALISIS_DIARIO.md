@@ -41,7 +41,26 @@ Prioriza para desmontar los virales que se puedan clonar sin grabar a una person
 pantallas de móvil, vídeos de stock), porque esos los podemos rehacer igual.
 Si no aparece ningún viral nuevo, desmontar igualmente los 2 vídeos con más vistas revisados hoy.
 
-## 2b. CLONAR el mejor viral (lo más importante del día — Hugo, 22-nov)
+## 2a. Buscar HISTORIAS ABSURDAS virales (Hugo, 26-nov — prioridad máxima)
+Datos del 22–26-nov: las historias absurdas (tanque, Paco) retienen 8–11 s y tienen los únicos comentarios; los clones de
+anuncios/texto se ven <3 s. Desde el 26-nov **el clon de las 13:40 tiene que ser de una historia absurda viral**:
+- Buscar cada día ≥40 shorts de historias absurdas/curiosas con mucha audiencia: `yt-dlp --flat-playlist --print
+  "%(view_count)s|%(duration)s|%(title)s|%(url)s" "ytsearch40:<consulta>"` y quedarse con duración ≤ 90 s y ≥ 200.000
+  vistas (o ≥ 3x la mediana de su canal). Consultas que rotar (en español e inglés): "historia absurda", "esto hacían los
+  soldados", "dato curioso increíble", "la historia más absurda", "no te lo vas a creer", "true story animated", "weird
+  history facts", "storytime animado", "historia real increíble", "cuando un cliente…", "el trabajador más tonto".
+  Además los perfiles de TikTok de cuentas de historias/curiosidades animadas que vayas encontrando (añadirlas a referentes.json).
+- Desmontar las 2 mejores (desmontar.py + ficha) fijándose en: frase de arranque, cómo escala lo absurdo, en qué segundo
+  llega el giro, cuánto dura cada plano y el tono de la voz.
+- **Clonar la mejor como historia absurda nuestra** con el estilo de dibujo (`propios/panadero-loros/gen.py` o
+  `propios/fontanero-empanao/gen.py` como plantilla): misma frase de arranque adaptada, mismo ritmo y misma escalada, y el
+  giro final lleva a norte.local (recepcionista con IA: llamadas, WhatsApp, MD, agenda) + CTA. Si la historia es un dato
+  real (como el tanque), contarlo bien y luego el giro. Guardar en `historias/<fecha>-M-absurda-clon-<cuenta>.json`
+  ("video_listo", "clon_de") para el primer hueco M libre. Apuntar la idea en `historias/absurdas.md`.
+- Si un día no aparece ninguna historia absurda viral clonable, hacer una del banco `historias/absurdas.md`.
+- Los clones de anuncios/texto (2b) quedan solo como fuente de ganchos, no se publican salvo que Hugo lo pida.
+
+## 2b. CLONAR el mejor viral (desde el 26-nov solo como fuente de ideas: ver 2a)
 Hugo quiere que **no nos ciñamos a nuestro diseño**: si un reel se ha viralizado una vez, puede volver a hacerlo.
 Cada día se elige el viral más fuerte que se pueda rehacer y se **copia tal cual, cambiando solo la información**
 (el negocio, el problema y la oferta de norte.local):

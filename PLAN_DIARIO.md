@@ -6,8 +6,8 @@ el reel listo y revisado y **publicar a las :40**. Franjas en `datos/horarios.js
 - **Franja M (mediodía, 13:40)** → el clon del viral preparado por la tarea de análisis (o una historia PRO si no hay).
 - **Franja N (noche, 20:40)** → **historia absurda con giro, todos los días** (banco: `historias/absurdas.md`; es lo que
   mejor funciona en Instagram y TikTok desde el 24-nov). Si hay un extracto aprobado por Hugo en la cola, va aquí.
-- Además, desde el 25-nov la franja M alterna: días pares clon del viral, días impares otra historia absurda (para
-  comparar clon frente a historia a la misma hora).
+- Desde el 26-nov la franja M (13:40) es el **clon de una historia absurda viral** (ANALISIS_DIARIO.md §2a). Los clones de
+  anuncios/texto ya no se publican (datos: <3 s de media). Los que ya estén en la cola se publican a las 20:40 como prueba.
 - 1 de cada 5 días la franja M se mueve a las 16:40 para seguir probando horas (lo marca `horarios.json`).
 Las ejecuciones que no tocan terminan sin hacer nada.
 
