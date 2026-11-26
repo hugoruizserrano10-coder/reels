@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --coral: #e9605a; --coral2: #c9443f; --verde: #25d366; --wa: #0b141a; --gris: #8696a0; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { width: 100%; height: 100%; position: relative; font-family: "Inter"; color: #fff; }
+      .escena { position: absolute; inset: 0; overflow: hidden; background: #111; }
+      .vid { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.05) 50%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.3)); }
+      /* look VHS para el ANTES */
+      .vhs { position: absolute; inset: 0; background: repeating-linear-gradient(0deg, rgba(0,0,0,0.22) 0 3px, rgba(0,0,0,0) 3px 7px); mix-blend-mode: multiply; }
+      .vign { position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0) 45%, rgba(0,0,0,0.65) 100%); }
+      .osd { position: absolute; left: 70px; top: 110px; font-family: "JetBrains Mono"; font-weight: 700; font-size: 50px; color: #f2f2f2; text-shadow: 3px 3px 0 #000; letter-spacing: 2px; }
+      .osd2 { position: absolute; right: 70px; top: 110px; font-family: "JetBrains Mono"; font-weight: 700; font-size: 50px; color: #f2f2f2; text-shadow: 3px 3px 0 #000; }
+      .osd .rec { color: #ff3b30; }
+      #lcd { position: absolute; left: 90px; right: 90px; top: 560px; padding: 40px 44px; background: #93a37a; border: 10px solid #3a3a36; border-radius: 18px; box-shadow: inset 0 0 40px rgba(0,0,0,0.45), 0 20px 50px rgba(0,0,0,0.6); font-family: "JetBrains Mono"; font-weight: 700; color: #20261a; font-size: 58px; line-height: 1.25; text-transform: uppercase; }
+      #lcd small { display: block; font-size: 34px; opacity: 0.75; margin-bottom: 14px; }
+      #piip { position: absolute; left: 0; right: 0; top: 1020px; text-align: center; font-family: "Archivo Black"; font-size: 150px; color: #fff; text-shadow: 0 6px 30px #000; }
+      #ano { position: absolute; left: 0; right: 0; top: 640px; text-align: center; font-family: "Archivo Black"; font-size: 300px; line-height: 1; color: #fff; text-shadow: 0 10px 40px #000; }
+      #ano2 { position: absolute; left: 0; right: 0; top: 240px; text-align: center; font-family: "Archivo Black"; font-size: 210px; line-height: 1; color: #fff; text-shadow: 0 10px 40px rgba(0,0,0,0.8); }
+      #flash { position: absolute; inset: 0; background: #fff; }
+      /* móvil con WhatsApp */
+      .fondo-borroso { filter: blur(14px) brightness(0.55); transform: scale(1.1); }
+      .movil { position: absolute; left: 140px; top: 150px; width: 800px; height: 1330px; border-radius: 70px; background: #000; padding: 22px; box-shadow: 0 50px 120px rgba(0,0,0,0.7), 0 0 0 4px #2a2a2a; }
+      .pant { position: relative; width: 100%; height: 100%; border-radius: 52px; overflow: hidden; background: var(--wa); }
+      .wa-top { height: 170px; background: #1f2c34; display: flex; align-items: flex-end; gap: 22px; padding: 0 30px 24px; }
+      .wa-top .av { width: 86px; height: 86px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; }
+      .wa-top .av img { width: 64px; height: 64px; }
+      .wa-top b { display: block; font-size: 36px; } .wa-top span { display: block; font-size: 25px; color: var(--gris); margin-top: 4px; }
+      .wa-body { padding: 30px 28px; }
+      .dia { text-align: center; margin: 0 auto 26px; width: 320px; padding: 8px 0; border-radius: 14px; background: #182229; color: var(--gris); font-size: 24px; }
+      .msg { max-width: 600px; padding: 20px 26px; border-radius: 24px; font-size: 35px; line-height: 1.28; margin-bottom: 20px; }
+      .msg small { display: block; font-size: 21px; color: rgba(255,255,255,0.55); margin-top: 6px; text-align: right; }
+      .cli { background: #202c33; border-top-left-radius: 6px; }
+      .bot { background: #005c4b; border-top-right-radius: 6px; margin-left: auto; }
+      .ok { position: absolute; left: 40px; right: 40px; bottom: 50px; padding: 26px 30px; border-radius: 26px; background: #f4f5f6; color: #111; display: flex; gap: 22px; align-items: center; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+      .ok .ic { width: 84px; height: 84px; flex: none; border-radius: 22px; background: var(--verde); display: flex; align-items: center; justify-content: center; font-size: 48px; }
+      .ok b { display: block; font-size: 33px; } .ok span { display: block; font-size: 28px; color: #333; margin-top: 4px; }
+      /* tarjetas */
+      .tarj { position: absolute; left: 80px; right: 80px; top: 560px; padding: 40px 40px; border-radius: 36px; background: rgba(246,247,248,0.97); color: #111; box-shadow: 0 40px 100px rgba(0,0,0,0.6); }
+      .tarj h3 { font-size: 40px; font-weight: 900; margin-bottom: 20px; }
+      .tarj .noti { display: flex; gap: 24px; align-items: center; }
+      .tarj .noti .ic { width: 110px; height: 110px; flex: none; border-radius: 28px; background: var(--coral); display: flex; align-items: center; justify-content: center; font-size: 60px; }
+      .tarj .noti b { display: block; font-size: 40px; } .tarj .noti span { display: block; font-size: 34px; color: #333; margin-top: 6px; } .tarj .noti small { display: block; font-size: 26px; color: #777; margin-top: 6px; }
+      .hora { display: flex; gap: 18px; align-items: center; padding: 22px 22px; border-radius: 18px; background: #eceef0; margin-bottom: 14px; font-size: 34px; }
+      .hora b { width: 150px; font-family: "JetBrains Mono"; color: #555; }
+      .hora.libre { background: #d9f7e5; border: 3px solid var(--verde); }
+      .hora.libre b { color: #0d7a3c; }
+      .hora em { font-style: normal; margin-left: auto; font-size: 28px; color: #0d7a3c; font-weight: 700; }
+      /* split antes / después */
+      .mitad { position: absolute; left: 0; width: 1080px; height: 960px; overflow: hidden; }
+      .mitad .vid { height: 1920px; top: -480px; }
+      .etq { position: absolute; left: 50px; font-family: "Archivo Black"; font-size: 96px; text-shadow: 0 6px 24px #000; }
+      #raya { position: absolute; left: 0; right: 0; top: 954px; height: 12px; background: #fff; }
+      /* lista en coral (el fondo del set del original) */
+      .coral { background: radial-gradient(circle at 50% 35%, #f07a6f 0%, var(--coral) 45%, var(--coral2) 100%); }
+      #terr { position: absolute; left: 0; right: 0; top: 330px; text-align: center; font-size: 60px; font-weight: 800; }
+      .pal { position: absolute; left: 0; right: 0; top: 760px; text-align: center; font-family: "Archivo Black"; font-size: 150px; line-height: 1; text-shadow: 0 8px 30px rgba(0,0,0,0.25); }
+      #todo { font-size: 300px; top: 690px; }
+      /* CTA */
+      #ctab { position: absolute; left: 0; right: 0; top: 560px; text-align: center; }
+      #ctab .l1 { font-size: 60px; font-weight: 800; line-height: 1.2; }
+      #ctab .pal2 { display: inline-block; margin-top: 50px; padding: 26px 56px; border-radius: 30px; background: #fff; color: var(--coral2); font-family: "Archivo Black"; font-size: 120px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
+      #ctab .l3 { margin-top: 50px; font-size: 52px; font-weight: 700; }
+      #marca { background: #0f1012; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      #marca img { width: 260px; height: 260px; }
+      #marca b { font-weight: 900; font-size: 84px; margin-top: 40px; letter-spacing: -1px; }
+      #marca span { font-size: 40px; margin-top: 14px; color: rgba(255,255,255,0.75); }
+      /* subtítulos como el original: una línea blanca en negrita */
+      .cap { position: absolute; left: 40px; right: 40px; top: 1470px; text-align: center; font-weight: 800; font-size: 66px; line-height: 1.1; text-shadow: 0 3px 14px rgba(0,0,0,0.95), 0 0 4px #000; }
+      .cap.alto { top: 300px; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="6.646" data-width="1080" data-height="1920">
+      <div id="p16" class="escena clip coral" data-start="0" data-duration="4.166" data-track-index="1">
+        <div id="ctab"><div class="l1">¿Tienes un negocio?</div><div class="l3" id="l3">Comenta la palabra</div><div class="pal2" id="pal2">RECEPCIÓN</div><div class="l3" id="l4">y te mando la demo</div></div>
+      </div>
+      <div id="marca" class="escena clip " data-start="4.166" data-duration="2.48" data-track-index="1">
+        <img id="logo" src="assets/logo.svg" alt="" />
+        <b>norte.local</b>
+        <span>Recepcionista con IA para negocios locales</span>
+      </div>
+      <audio id="voz" class="clip" src="assets/voz.wav" data-start="0" data-duration="6.646" data-volume="1" data-track-index="30"></audio>
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="0" data-duration="6.646" data-media-start="0" data-volume="0.22" data-fade-out="1.2" data-track-index="31"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      tl.set("#ctab .l1", { opacity: 1 }, 0);
+      tl.fromTo("#l3", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 1.0899999999999999);
+      tl.fromTo("#pal2", { opacity: 0, scale: 1.5 }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 1.79);
+      tl.fromTo("#l4", { opacity: 0 }, { opacity: 1, duration: 0.2 }, 2.89);
+      tl.fromTo("#logo", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 4.166);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

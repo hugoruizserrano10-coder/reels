@@ -220,7 +220,7 @@ H["p14"] = (f'        <div class="mitad" style="top:0">' + vid("v14a", "viejo_te
 H["p15"] = ('        <div id="terr">Un terremoto para…</div>\n' +
             "\n".join(f'        <div id="w{i}" class="pal">{html.escape(p)}</div>' for i, p in enumerate(["talleres", "clínicas", "peluquerías", "reformas", "academias"])) +
             '\n        <div id="todo" class="pal">TODO.</div>')
-H["p16"] = ('        <div id="ctab"><div class="l1">¿Tienes un negocio<br />en el norte de Madrid?</div>'
+H["p16"] = ('        <div id="ctab"><div class="l1">¿Tienes un negocio?</div>'
             '<div class="l3" id="l3">Comenta la palabra</div><div class="pal2" id="pal2">RECEPCIÓN</div>'
             '<div class="l3" id="l4">y te mando la demo</div></div>')
 H["p17"] = ('        <img id="logo" src="assets/logo.svg" alt="" />\n        <b>norte.local</b>\n'

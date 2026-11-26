@@ -11,7 +11,7 @@
  "variante": "clon fiel de un viral de 50,8x: mismo gancho antes/ahora, ANTES feo con grano y VHS → AHORA nítido, subtítulos de una línea blanca en negrita, fondo coral del set en la enumeración final «…talleres, clínicas, peluquerías, reformas, academias… todo»; 47 s (el original 57 s) con CTA, b-roll Mixkit en vez de presentador | 26-nov: cambiado de franja por Hugo (absurda a las 13:40, clon a las 20:40) para separar efecto hora/contenido",
  "duracion_s": 46.9,
  "cta": "Comenta RECEPCIÓN",
- "caption": "Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche 📼 Hoy una recepcionista con IA contesta al momento, ofrece un hueco de tu agenda, deja la cita hecha, te avisa y le recuerda la cita al cliente. Para talleres y negocios de Alcobendas, San Sebastián de los Reyes, Tres Cantos, Algete y Colmenar Viejo. Comenta RECEPCIÓN y te mando la demo. #talleresmecanicos #recepcionistaIA #alcobendas #trescantos #negocioslocales",
+ "caption": "Hace tres años, esto era lo que oías al llamar a un taller un domingo por la noche 📼 Hoy una recepcionista con IA contesta al momento, ofrece un hueco de tu agenda, deja la cita hecha, te avisa y le recuerda la cita al cliente. Para talleres y cualquier negocio, estés donde estés: lo montamos todo en remoto. Comenta RECEPCIÓN y te mando la demo. #talleresmecanicos #recepcionistaIA #negocioslocales #inteligenciaartificial #autonomos",
  "control": {
   "1_investigacion": "ok (Análisis 2026-11-25, viral desmontado con ficha en datos/desmontajes/dotcsv-7606027425373228310)",
   "2_gancho": "ok (antes/ahora: imagen vieja con REC y «Hace tres años» desde 0 s; sigue al viral)",
@@ -23,5 +23,7 @@
   "8_cta": "ok",
   "9_formato": "ok 1080x1920, 46,9 s (clon de 57 s), cierre con marca",
   "10_aprendizaje": "ok (primer clon de antes/ahora; prueba si un gancho de contraste visual saca a los clones de mediodía de las <10 vistas)"
- }
+ },
+ "tiktok": "Hace 3 años, esto era llamar a un taller un domingo 📼 Hoy contesta una IA. Comenta RECEPCIÓN 👇 #talleres #inteligenciaartificial #negocioslocales #autonomos",
+ "nota": "26-nov: Hugo pidió quitar 'norte de Madrid' (trabajamos en remoto en cualquier sitio): final re-rendido con voz nueva."
 }
