@@ -12,7 +12,7 @@
  "duracion_s": 55.8,
  "musica": "mixkit-729",
  "cta": "Comenta RECEPCIÓN",
- "caption": "Acompáñame a darle mantenimiento preventivo al teléfono de un técnico de aire acondicionado 🔧📱 47 llamadas perdidas, el buzón lleno y un «luego te llamo» en cada WhatsApp. La pieza nueva: una recepcionista con IA que coge las llamadas, contesta los WhatsApps, apunta la visita y te avisa. Para empresas de climatización de Alcobendas, Sanse, Tres Cantos y Algete. Comenta RECEPCIÓN y te la monto. #climatizacion #aireacondicionado #negocioslocales #alcobendas #inteligenciaartificial",
+ "caption": "Acompáñame a darle mantenimiento preventivo al teléfono de un técnico de aire acondicionado 🔧📱 47 llamadas perdidas, el buzón lleno y un «luego te llamo» en cada WhatsApp. La pieza nueva: una recepcionista con IA que coge las llamadas, contesta los WhatsApps, apunta la visita y te avisa. Trabajamos en remoto: da igual dónde esté tu negocio. Comenta RECEPCIÓN y te la monto. #climatizacion #aireacondicionado #negocioslocales #inteligenciaartificial",
  "tiktok": "Mantenimiento preventivo… al teléfono 🔧📱 Comenta RECEPCIÓN 👇 #climatizacion #aireacondicionado #humor #negocioslocales #inteligenciaartificial",
  "control": {
   "1_investigacion": "ok (Análisis 2026-11-26, viral desmontado con ficha en datos/desmontajes/soyfranciscorivas-7649129985223019783)",
@@ -25,5 +25,6 @@
   "8_cta": "ok",
   "9_formato": "ok 1080x1920, 55,8 s (clon de 162 s), cierre con marca",
   "10_aprendizaje": "ok (primer clon que mezcla el viral con historia absurda, lo que mejor nos funciona; ¿saca a los clones de mediodía de las <10 vistas?)"
- }
+ },
+ "pendiente": "RE-RENDER antes de publicar: en pantalla salen 'Alcobendas', 'Tres Cantos' y 'Sanse' en avisos y chats (clones/franciscorivas-minisplit/index.html). Hugo (26-nov) no quiere referencias al norte de Madrid: cambiarlos por nombres sin lugar (p. ej. 'Cliente nuevo', 'Instalación chalet', 'Marcos', 'Oficina centro') y volver a renderizar."
 }

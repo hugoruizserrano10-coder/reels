@@ -32,7 +32,7 @@ Las ejecuciones que no tocan terminan sin hacer nada.
 - Leer `followers_count`. Si llega a 1.000 (umbral de los trial reels), empezar a usar `trial_params` para los experimentos arriesgados
   (graduation_strategy SS_PERFORMANCE) y apuntarlo en aprendizajes.
 - Contactos de la web: buscar en Gmail `subject:"norte.local ·" newer_than:2d` (correos de FormSubmit con "Nueva petición de demo"
-  o "Cuestionario rellenado"). Resumir cada uno para Hugo (empresa, municipio, teléfono, cuándo llamar). No contestar por él.
+  o "Cuestionario rellenado"). Resumir cada uno para Hugo (empresa, ciudad, teléfono, cuándo llamar). No contestar por él.
 
 ## 2. Aprender
 - Comparar el último experimento con la base (vistas, % visto, skip rate, envíos y me gusta por alcance).
@@ -113,7 +113,7 @@ Copia del sistema "content-os" de @curiosfer, con la API oficial de Instagram (s
   PCD de `datos/ganchos.md`. Apuntar `formato` en el registro para comparar formatos.
 - Consultar `datos/formatos.md`: si los datos dicen que el formato A se agota (vistas y % visto bajando 5 reels seguidos),
   construir el siguiente formato ampliando el generador.
-- Descripción: servicio + municipio concretos (Instagram muestra reels en Google), 3–6 hashtags locales y de oficio.
+- Descripción: servicio y oficio concretos (sin municipios: trabajamos en remoto), 3–6 hashtags de oficio y generales.
 - CTA: alternar "Comenta RECEPCIÓN" con "Envíaselo a alguien que tenga un <tipo de negocio del reel>" (los envíos pesan mucho)
   y medir cuál da más comentarios/envíos.
 - Mantener lo que funciona y **cambiar una sola cosa** respecto a la mejor versión (la siguiente de "Ideas pendientes"
@@ -172,3 +172,8 @@ Hugo. Nunca publicar algo que no haya pasado el control.
 Mensaje corto en español: qué se ha publicado y a qué hora, qué se probaba, cómo fueron los reels anteriores
 (vistas, % visto, skip rate) y qué se ha aprendido, y comentarios de posibles clientes para que los conteste él.
 Si algo falla (publicación, push, render), decirlo claramente y no reintentar en bucle.
+
+## Zona (Hugo, 26-nov)
+**Ya no decimos "norte de Madrid" ni nombres de municipios** (ni en el vídeo, ni en la voz, ni en la descripción, ni en los
+hashtags): trabajamos en remoto y por llamada con negocios de cualquier sitio. Si hace falta decirlo: "lo montamos todo en
+remoto, estés donde estés". Hashtags sin lugares (#negocioslocales #autonomos #pymes #inteligenciaartificial + oficio).

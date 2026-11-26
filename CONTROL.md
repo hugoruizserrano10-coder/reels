@@ -17,7 +17,7 @@ Los puntos con (*) son obligatorios: si fallan, no se publica.
 6. (*) **Derechos**: no hay vídeo, música ni voz de otros creadores, salvo extractos que Hugo haya aprobado para ese reel.
 7. **Variedad**: no repite tipo de negocio del reel anterior ni negocio + problema de los últimos 14 días; alterna formato
    respecto al reel anterior.
-8. **CTA y descripción**: CTA claro al final ("Comenta RECEPCIÓN" o "Envíaselo a…"); descripción con servicio + municipio
-   y 3–6 hashtags; coherente con lo que se ve en el vídeo.
+8. **CTA y descripción**: CTA claro al final ("Comenta RECEPCIÓN" o "Envíaselo a…"); descripción con el servicio (SIN municipios ni
+   "norte de Madrid": trabajamos en remoto) y 3–6 hashtags sin lugares; coherente con lo que se ve en el vídeo.
 9. **Duración y formato**: 1080x1920, entre 7 y 45 s (salvo clon que copie otra duración), última imagen con la marca.
 10. **Aprendizaje**: el JSON dice qué se prueba (`variante`) y cambia una sola cosa respecto a la mejor versión.
