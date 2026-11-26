@@ -312,7 +312,18 @@
     "10_aprendizaje": "ok (primer clon de 'noticia + tipografía cinética')",
     "revision_publicacion": "ok 13:28: repasado de nuevo (1080x1920, 41,2 s, -13,9 LUFS, hoja de 12 fotogramas sin textos cortados, raw 200, ficha en datos/desmontajes/alejavirivera-7708818254814383393)"
    },
-   "metricas_24h": null,
+   "metricas_24h": {
+    "medido": "2026-11-26 13:30 (Windsor caché)",
+    "views": 14,
+    "reach": 10,
+    "avg_watch_ms": 3989,
+    "pct_visto": 0.097,
+    "skip_rate": 0.833,
+    "likes": 1,
+    "comments": 0,
+    "saved": 0,
+    "shares": 0
+   },
    "metricas_72h": null
   },
   {
