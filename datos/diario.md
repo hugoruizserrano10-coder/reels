@@ -96,3 +96,5 @@
   también se quedan en <20 vistas, proponer a Hugo en el informe del lunes clonar los virales en dibujo o moverlos a la N.
 - Las cuentas habituales ya no dan virales nuevos (3.er día seguido): hace falta que Hugo conecte Instagram en Make o buscar
   más oficios en TikTok (técnicos, reformistas, mecánicos) como @soyfranciscorivas.
+
+- 2026-11-26 M (13:40): publicada absurda loros/panadería (video_listo, 23,8 s) como reel 18202348414392838 + historia. Control 10/10 (nota: descripción sin municipio concreto). Métricas 25-M a 24 h: 14 vistas, skip 83 %. Sin fallos. Próxima vez: meter municipio en la caption de las absurdas.

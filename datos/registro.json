@@ -356,6 +356,37 @@
     "9_duracion_formato": "ok (1080x1920, 12,6 s, marca al final)",
     "10_aprendizaje": "corregido: faltaba \"variante\", añadida"
    }
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora_publicacion": "13:40",
+   "franja": "M",
+   "historia": "historias/2026-11-26-M-absurda-loros.json",
+   "video": "videos/2026-11-26-M.mp4",
+   "media_id": "18202348414392838",
+   "story_id": "18134165953752171",
+   "duracion_s": 23.8,
+   "formato": "absurda-dibujo",
+   "tipo_negocio": "panaderia",
+   "tipo_gancho": "situación absurda contada como noticia + giro",
+   "clon_de": null,
+   "variante": "absurda en dibujo a las 13:40 (antes iba en N) para separar efecto hora/contenido",
+   "musica": "mixkit-623",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok (Análisis 26-nov: lo que retiene es historia absurda; se aplica en M)",
+    "2_gancho": "ok (panadería + 3 loros al teléfono, se entiende sin sonido)",
+    "3_se_entiende": "ok (una frase por escena, hoja revisada)",
+    "4_sin_errores": "ok (Panadería Lola inventada, promesas reales: coge llamadas, WhatsApps, encargos)",
+    "5_audio": "ok (música Mixkit 623 + voz, pico -1,1 dB)",
+    "6_derechos": "ok (dibujo propio, música Mixkit)",
+    "7_variedad": "ok (panadería nueva; anterior 'común' palabras)",
+    "8_cta_descripcion": "ok (Comenta RECEPCIÓN; falta municipio concreto, solo #madrid)",
+    "9_duracion_formato": "ok (1080x1920, 23,8 s, marca al final)",
+    "10_aprendizaje": "ok (variante: cambia solo la franja)"
+   },
+   "metricas_24h": null,
+   "metricas_72h": null
   }
  ],
  "cuenta_tiktok": {
