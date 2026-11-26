@@ -342,7 +342,18 @@
    "variante": "formato F con inicio real gracioso en franja N",
    "cta": "Comenta RECEPCIÓN",
    "musica": "mixkit-744 (+ pulso propio)",
-   "metricas_24h": null,
+   "metricas_24h": {
+    "media_views": 6,
+    "media_reach": 4,
+    "media_reel_avg_watch_time": 2369,
+    "media_reel_skip_rate": 0.75,
+    "media_like_count": 0,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-26 20:28",
+    "pct_visto": 0.188
+   },
    "metricas_72h": null,
    "control": {
     "1_investigacion": "ok (Análisis 25-nov: humor y 23:00 un cliente escribe; N con humor es lo que funciona)",
@@ -387,6 +398,35 @@
    },
    "metricas_24h": null,
    "metricas_72h": null
+  },
+  {
+   "fecha": "2026-11-26",
+   "franja": "N",
+   "historia": "historias/2026-11-26-N-clon-dotcsv.json",
+   "video": "videos/2026-11-26-N.mp4",
+   "duracion_s": 46.3,
+   "formato": "clon",
+   "clon_de": "https://www.tiktok.com/@dotcsv/video/7606027425373228310",
+   "tipo_negocio": "taller",
+   "tipo_gancho": "antes/ahora",
+   "variante": "clon fiel de un viral de 50,8x: mismo gancho antes/ahora, ANTES feo con grano y VHS → AHORA nítido, subtítulos de una línea blanca en negrita, fondo coral del set en la enumeración final «…talleres, clínicas, peluquerías, reformas, academias… todo»; 47 s (el original 57 s) con CTA, b-roll Mixkit en vez de presentador | 26-nov: cambiado de franja por Hugo (absurda a las 13:40, clon a las 20:40) para separar efecto hora/contenido",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok (Análisis 2026-11-26 en diario; viral desmontado en datos/desmontajes/dotcsv-7606027425373228310)",
+    "2_gancho": "ok (antes/ahora: imagen vieja con REC y «Hace tres años» desde 0 s; sigue al viral)",
+    "3_se_entiende": "ok (una línea de subtítulo; chat con mensajes cortos sin subtítulo encima; tarjetas de 1–2 líneas)",
+    "4_sin_errores": "ok (Raúl, frenos, domingo 23:10 → lunes 8:30 coherente en chat, aviso y recordatorio a las 7:30; solo contesta, ofrece hueco, agenda, avisa y recuerda)",
+    "5_audio": "ok (-14,3 LUFS medido a las 20:28; música, voz y golpes)",
+    "6_derechos": "ok (Mixkit 234, 48532, 46291, 13270, 4716, 13260, 14669, 41165; música 140; voz Piper davefx)",
+    "7_variedad": "ok (anterior 25-N «gato» común; taller sin usar en 14 días)",
+    "8_cta": "ok",
+    "9_formato": "ok 1080x1920, 46,3 s (clon de 57 s), cierre con marca",
+    "10_aprendizaje": "ok (primer clon de antes/ahora; prueba si un gancho de contraste visual saca a los clones de mediodía de las <10 vistas)"
+   },
+   "control_hora": "20:29",
+   "hora_publicacion": "20:40",
+   "media_id": "18114246296097327",
+   "story_id": "18163244941459952"
   }
  ],
  "cuenta_tiktok": {

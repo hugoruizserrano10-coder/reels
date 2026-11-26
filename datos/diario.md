@@ -98,3 +98,4 @@
   más oficios en TikTok (técnicos, reformistas, mecánicos) como @soyfranciscorivas.
 
 - 2026-11-26 M (13:40): publicada absurda loros/panadería (video_listo, 23,8 s) como reel 18202348414392838 + historia. Control 10/10 (nota: descripción sin municipio concreto). Métricas 25-M a 24 h: 14 vistas, skip 83 %. Sin fallos. Próxima vez: meter municipio en la caption de las absurdas.
+- 2026-11-26 N (20:40): publicado clon dotcsv antes/ahora (taller, video_listo, 46,3 s) como reel 18114246296097327 + historia 18163244941459952. Control 10/10 (re-medido -14,3 LUFS). Métricas 25-N gato a 24 h: 6 vistas, 19 % visto, skip 75 %. 26-M loros a 8 h: 151 vistas, 42 % visto, skip 39 %. Sin fallos.
