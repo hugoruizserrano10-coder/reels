@@ -1,0 +1,199 @@
+{
+ "id": "dotcsv-7511772881131490582",
+ "duracion_s": 89.7,
+ "cortes_s": [
+  0.03,
+  2.23,
+  5.8,
+  12.57,
+  17.93,
+  21.03,
+  22.5,
+  22.83,
+  23.17,
+  23.5,
+  23.83,
+  24.0,
+  26.07,
+  29.03,
+  35.7,
+  43.77,
+  48.03,
+  51.23,
+  61.13,
+  63.3,
+  68.57,
+  75.87,
+  79.0,
+  84.07
+ ],
+ "cortes_por_10s": 2.7,
+ "palabras_por_s": 3.61,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 2.2,
+   "texto": "Vamos a hablar de Flux Context."
+  },
+  {
+   "ini": 2.2,
+   "fin": 5.8,
+   "texto": "Y es que ya sabéis que el modelo de chargpt, pues si le subo una imagen como ésta"
+  },
+  {
+   "ini": 5.8,
+   "fin": 8.8,
+   "texto": "y le vamos a pedir, por ejemplo, una edición relativamente sencilla"
+  },
+  {
+   "ini": 8.8,
+   "fin": 10.5,
+   "texto": "que es que me quite la mano de la cara."
+  },
+  {
+   "ini": 10.5,
+   "fin": 14.2,
+   "texto": "En este caso, el resultado que vamos a observar es una imagen como ésta,"
+  },
+  {
+   "ini": 14.2,
+   "fin": 15.9,
+   "texto": "que es muy parecida."
+  },
+  {
+   "ini": 15.9,
+   "fin": 17.9,
+   "texto": "Pero chicos, yo no soy esta persona."
+  },
+  {
+   "ini": 17.9,
+   "fin": 20.0,
+   "texto": "Y aquí es donde entra Black Forest Labs,"
+  },
+  {
+   "ini": 20.0,
+   "fin": 22.8,
+   "texto": "que ahora está presentando una nueva familia de modelos"
+  },
+  {
+   "ini": 22.8,
+   "fin": 25.4,
+   "texto": "que en este caso se llaman Flux Context,"
+  },
+  {
+   "ini": 25.4,
+   "fin": 29.0,
+   "texto": "que no van a aportar esta capacidad multimodal de poder editar imágenes."
+  },
+  {
+   "ini": 29.1,
+   "fin": 31.8,
+   "texto": "Pero en este caso, con una precisión a nivel de píxel"
+  },
+  {
+   "ini": 31.8,
+   "fin": 35.7,
+   "texto": "que va a permitir que en muchos casos se conserve la apariencia de la imagen original."
+  },
+  {
+   "ini": 35.7,
+   "fin": 38.9,
+   "texto": "Vamos a pedirle que elimine a toda la gente de esta imagen."
+  },
+  {
+   "ini": 38.9,
+   "fin": 42.5,
+   "texto": "Qué barbaridad, porque fijaos que yo no me había dado cuenta ni siquiera del patrón"
+  },
+  {
+   "ini": 42.5,
+   "fin": 43.8,
+   "texto": "que había en el suelo de la plaza."
+  },
+  {
+   "ini": 43.8,
+   "fin": 48.1,
+   "texto": "Y vamos a probar, cambia esta palabra, Notish2.csb."
+  },
+  {
+   "ini": 48.1,
+   "fin": 51.2,
+   "texto": "Bueno, bueno, bueno, bueno, bueno, esto es una barbaridad, chavales."
+  },
+  {
+   "ini": 51.2,
+   "fin": 55.3,
+   "texto": "Y le voy a pedir al modelo que genera de cero, al final no deja de ser un modelo Flux,"
+  },
+  {
+   "ini": 55.3,
+   "fin": 59.0,
+   "texto": "pues un pangolin punk que lleva unas gafas que son raras"
+  },
+  {
+   "ini": 59.0,
+   "fin": 61.1,
+   "texto": "y que tiene una cresta verde en el pelo."
+  },
+  {
+   "ini": 61.1,
+   "fin": 63.3,
+   "texto": "El punk-golin, vamos a llamarle."
+  },
+  {
+   "ini": 63.3,
+   "fin": 65.7,
+   "texto": "El prompt en este caso es que el pangolin está ahora tocando"
+  },
+  {
+   "ini": 65.7,
+   "fin": 68.6,
+   "texto": "la batería en un concierto, en un club nocturno."
+  },
+  {
+   "ini": 68.6,
+   "fin": 71.0,
+   "texto": "Y tenemos un resultado que está bastante guapo."
+  },
+  {
+   "ini": 71.0,
+   "fin": 73.1,
+   "texto": "Voy a seleccionar esta imagen y voy a pedirle"
+  },
+  {
+   "ini": 73.1,
+   "fin": 75.9,
+   "texto": "que genera una ilustración de esta imagen para una camiseta."
+  },
+  {
+   "ini": 75.9,
+   "fin": 79.0,
+   "texto": "Y de nuevo, en cuestión de segundos, pues tenemos que guapo."
+  },
+  {
+   "ini": 79.0,
+   "fin": 81.7,
+   "texto": "Dejo en vuestra mano la parte creativa de explorar"
+  },
+  {
+   "ini": 81.7,
+   "fin": 84.0,
+   "texto": "las capacidades que este modelo puede aportar."
+  },
+  {
+   "ini": 84.0,
+   "fin": 85.9,
+   "texto": "Y, chicos, muchas gracias por verme"
+  },
+  {
+   "ini": 86.0,
+   "fin": 88.5,
+   "texto": "para conocer más sobre este tipo de herramientas"
+  },
+  {
+   "ini": 88.5,
+   "fin": 89.7,
+   "texto": "de inteligencia artificial."
+  }
+ ]
+}

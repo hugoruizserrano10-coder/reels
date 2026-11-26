@@ -69,3 +69,30 @@
   proponer a Hugo en el informe del lunes mover los clones a la franja N o hacerlos en dibujos.
 - 2026-11-25 (franja M, 13:40): publicado el clon de @alejavirivera «patas arriba» (video_listo, 41,2 s, reformas) como reel (18424332973154639) + historia (18114824471628485). Control 10/10 ok (repasado de nuevo: hoja de fotogramas, -13,9 LUFS, raw 200). Aviso: el plan dice que desde hoy los días impares la M es historia absurda, pero había clon preparado para hoy y se usó (paso 0); la tarea de análisis debería dejar absurda en los impares. Métricas: tanque con QR 208 vistas (11,3 s, 40 % visto, skip 32 %) en <24 h, el mejor hasta ahora; God's Eye 24 h: 5 vistas, 2 alcance (los clones de mediodía siguen sin distribución). TikTok: Paco alcance 222 (4,95 s), tanque 9,7 s de media (el mejor). 0 comentarios, 0 correos. Clon arrancó con HEAD separado otra vez: `git checkout -B main origin/main`.
 - 2026-11-25 (franja N, 20:40): publicado «gato con gafas» (formato F, palabras gigantes, 12,6 s) como reel (18140193463658887) + historia (18226213798356274). Control 10/10 (2 corregidos): el formato F salía con audio flojo (-24,7 LUFS, intro sin música) → añadida música Mixkit 744 desde el inicio y loudnorm a -14; faltaba "variante" en el JSON. Métricas: tanque con QR 24 h = 238 vistas, 219 alcance, 11,2 s (39 % visto), skip 31 % (el mejor); patas arriba (M de hoy) 5 vistas / 1 alcance a las 8 h; los clones de mediodía siguen sin distribución. TikTok: Hugo ya subió a las 16:54 un vídeo con el mismo texto del gato (2,1 s de media) → este de Instagram es el mismo concepto. 0 comentarios, 0 correos. Próxima vez: palabras.py debería meter música Mixkit desde el segundo 0 (2.ª vez que el audio de un formato sale flojo → arreglar el generador); y la tarea de análisis debería preparar historias absurdas para la N como dice el plan.
+
+## Análisis 2026-11-26
+- Revisados 369 vídeos (TikTok + YouTube Shorts con descubrir.py): 307 de los 11 perfiles habituales, que otra vez **no dieron
+  virales nuevos** (solo 1 de NateHerk en YouTube, que no se descarga), y 62 de 7 cuentas exploradas. Nueva referente:
+  **@soyfranciscorivas** (técnico de aire acondicionado y electricidad, nuestro cliente tipo; mediana 290, mini split **734x**,
+  213k vistas). Fallan: tiktok @alexhormozi (privada), @ibai, @lapapelerademaria, @moonpiofficial; @elmundotoday casi sin
+  vídeos. La búsqueda web sigue sin dar reels de Instagram (solo noticias). Make sigue sin webhook. 9 virales nuevos (≥3x).
+- Desmontados 4: @soyfranciscorivas mini split «Acompáñame a…» (734x), su historia de origen «hace 9 años… ¡BOOM!» (13x), la
+  acometida con el «chalán nuevo» (8,4x) y @dotcsv Flux Kontext «lo de siempre falla → lo nuevo acierta» (9,2x).
+- **Clon**: mini split → `videos/2026-11-28-M.mp4` (55,8 s, climatización, «mantenimiento preventivo al TELÉFONO de un técnico
+  de aire acondicionado») + `historias/2026-11-28-M-clon-franciscorivas.json`, sale el **sábado 28-nov a las 13:40** (el 27 es
+  impar → la M es absurda). Primer clon que mezcla la estructura del viral con historia absurda. Control 10/10 ok, -14,5 LUFS.
+  Render HyperFrames 6 min (x2: el primero tenía dos subtítulos solapados en la hidrolimpiadora → ahora generar.py fuerza que
+  cada subtítulo termine antes del siguiente). Ojo: la voz Piper davefx no está en la nube; se baja de huggingface
+  (rhasspy/piper-voices es/es_ES/davefx/medium) a ~/voces.
+- **27-M**: dejado `historias/2026-11-27-M-absurda-pendiente.json` (absurda del electricista que se clonó) para que la tarea del
+  reel no adelante el clon del 28. El 27 es día de prueba de 16:40 (días desde inicio % 5 == 4).
+- Ideas: (1) repetir «Acompáñame a…» con otros oficios (ITV al WhatsApp de un taller, revisión al buzón de un fontanero);
+  (2) historia de origen «hace 9 años… ¡BOOM!… ¡BAM!» de un fontanero inventado; (3) un personaje torpe secundario (el «chalán
+  nuevo») en las absurdas en dibujo.
+- **Comparación con lo nuestro (Windsor, 7 días)**: «tanque con QR» 239 vistas (11,2 s, skip 31 %), «fontanero empanao» 142,
+  «fuga» 122. Clones de mediodía: patas arriba 14 vistas (skip 83 %), God's Eye 5, @asadwebsites 8; el formato F del gato (N,
+  25-nov) solo 5 vistas a las ~15 h. Se confirma: lo que retiene es historia con humor/absurdo; el b-roll con voz sintética y el
+  texto de anuncio no reciben distribución. Por eso el clon de hoy va en clave absurda. Si el 26-M (antes/ahora) y el 28-M
+  también se quedan en <20 vistas, proponer a Hugo en el informe del lunes clonar los virales en dibujo o moverlos a la N.
+- Las cuentas habituales ya no dan virales nuevos (3.er día seguido): hace falta que Hugo conecte Instagram en Make o buscar
+  más oficios en TikTok (técnicos, reformistas, mecánicos) como @soyfranciscorivas.

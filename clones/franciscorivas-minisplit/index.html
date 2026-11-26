@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #111; }
+      #root { width: 100%; height: 100%; position: relative; font-family: "Inter"; color: #fff; }
+      .escena { position: absolute; inset: 0; overflow: hidden; background: #111; }
+      .vid { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      .borroso { filter: blur(10px) brightness(0.6); transform: scale(1.08); }
+      .velo { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.0) 50%, rgba(0,0,0,0.35) 100%); }
+      /* subtítulos estilo CapCut: blanco, borde negro */
+      .cap { position: absolute; left: 70px; right: 70px; top: 1250px; text-align: center; font-weight: 800; font-size: 66px; line-height: 1.15;
+             color: #fff; -webkit-text-stroke: 12px #000; paint-order: stroke fill; text-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+      .cap.alto { top: 1560px; }
+      /* móvil */
+      .movil { position: absolute; left: 230px; top: 170px; width: 620px; height: 1300px; border-radius: 74px; background: #0b0b0c; padding: 20px;
+               box-shadow: 0 50px 120px rgba(0,0,0,0.75), 0 0 0 5px #3a3a3c; }
+      .pant { position: relative; width: 100%; height: 100%; border-radius: 56px; overflow: hidden; }
+      .isla { position: absolute; left: 50%; top: 22px; width: 170px; height: 46px; margin-left: -85px; border-radius: 24px; background: #000; z-index: 5; }
+      .bloq { background: linear-gradient(160deg, #3b4a6b, #1c2333 60%, #111522); }
+      .hora { position: absolute; left: 0; right: 0; top: 120px; text-align: center; font-size: 150px; font-weight: 300; letter-spacing: -4px; }
+      .notis { position: absolute; left: 22px; right: 22px; top: 340px; }
+      .noti { display: flex; gap: 18px; align-items: center; padding: 20px 22px; margin-bottom: 14px; border-radius: 30px; background: rgba(245,245,247,0.82); color: #111; }
+      .noti .ic { width: 64px; height: 64px; flex: none; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+      .noti b { display: block; font-size: 27px; } .noti span { display: block; font-size: 25px; color: #333; margin-top: 2px; }
+      .tel { background: #34c759; } .wa { background: #25d366; } .buz { background: #ff3b30; }
+      .badge { position: absolute; right: -36px; top: -36px; width: 150px; height: 150px; border-radius: 50%; background: #ff3b30; color: #fff; font-size: 72px; font-weight: 900;
+               display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 40px rgba(255,59,48,0.6); border: 8px solid #fff; z-index: 6; }
+      /* ficha técnica (pegatina) */
+      #ficha { position: absolute; left: 90px; top: 1040px; width: 560px; padding: 26px 30px; background: #f4efe2; color: #1b1b1b; border-radius: 10px; transform: rotate(-4deg);
+               box-shadow: 0 20px 50px rgba(0,0,0,0.6); font-family: "JetBrains Mono"; font-weight: 700; font-size: 31px; line-height: 1.45; border-top: 16px solid #e25434; }
+      #ficha i { font-style: normal; color: #e25434; }
+      /* whatsapp */
+      .wapp { background: #0b141a; }
+      .wtop { height: 150px; background: #1f2c34; display: flex; align-items: flex-end; gap: 18px; padding: 0 26px 22px; }
+      .wtop .av { width: 70px; height: 70px; border-radius: 50%; background: #6b7c85; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+      .wtop b { display: block; font-size: 31px; } .wtop span { display: block; font-size: 22px; color: #8696a0; margin-top: 2px; }
+      .lista .fila { display: flex; gap: 18px; align-items: center; padding: 20px 24px; border-bottom: 1px solid #1f2c34; }
+      .lista .av { width: 78px; height: 78px; flex: none; border-radius: 50%; background: #45535c; display: flex; align-items: center; justify-content: center; font-size: 38px; }
+      .lista .tx { flex: 1; } .lista b { display: block; font-size: 29px; } .lista span { display: block; font-size: 25px; color: #8696a0; margin-top: 4px; }
+      .lista span em { font-style: normal; color: #53bdeb; }
+      .lista .n { width: 46px; height: 46px; border-radius: 50%; background: #25d366; color: #0b141a; font-size: 24px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+      #buzon { position: absolute; left: 18px; right: 18px; top: 18px; padding: 22px 24px; border-radius: 28px; background: #ff3b30; color: #fff; display: flex; gap: 16px; align-items: center; z-index: 7;
+               box-shadow: 0 16px 40px rgba(0,0,0,0.5); }
+      #buzon b { display: block; font-size: 30px; } #buzon span { display: block; font-size: 24px; opacity: 0.9; }
+      .chat { padding: 26px 22px; }
+      .msg { max-width: 470px; padding: 18px 22px; border-radius: 22px; font-size: 30px; line-height: 1.28; margin-bottom: 16px; }
+      .msg small { display: block; font-size: 19px; color: rgba(255,255,255,0.55); margin-top: 4px; text-align: right; }
+      .cli { background: #202c33; border-top-left-radius: 6px; }
+      .bot { background: #005c4b; border-top-right-radius: 6px; margin-left: auto; }
+      /* notificaciones que salen volando con el agua / burbujas de jabón */
+      .vuela { position: absolute; left: 110px; width: 860px; display: flex; gap: 20px; align-items: center; padding: 24px 26px; border-radius: 32px; background: rgba(245,245,247,0.9); color: #111;
+               box-shadow: 0 20px 50px rgba(0,0,0,0.45); }
+      .vuela .ic { width: 72px; height: 72px; flex: none; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 40px; }
+      .vuela b { display: block; font-size: 32px; } .vuela span { display: block; font-size: 28px; color: #333; }
+      .burbuja { position: absolute; padding: 22px 28px; border-radius: 34px; background: rgba(32,44,51,0.92); color: #fff; font-size: 36px; max-width: 640px;
+                 box-shadow: 0 0 0 4px rgba(255,255,255,0.55), inset 0 0 30px rgba(255,255,255,0.18); }
+      /* pieza nueva */
+      .nueva { background: radial-gradient(circle at 50% 35%, #17402f, #0a1712 70%); }
+      #brillo { position: absolute; left: 140px; top: 80px; width: 800px; height: 1480px; border-radius: 120px; background: radial-gradient(ellipse, rgba(61,220,132,0.55), rgba(61,220,132,0) 70%); }
+      .activa { position: absolute; left: 40px; right: 40px; top: 300px; text-align: center; }
+      .activa img { width: 170px; height: 170px; }
+      .activa h2 { font-size: 50px; font-weight: 900; margin-top: 26px; line-height: 1.15; }
+      .activa .pill { display: inline-block; margin-top: 30px; padding: 16px 34px; border-radius: 40px; background: #3ddc84; color: #06281a; font-size: 32px; font-weight: 800; }
+      .activa .cero { margin-top: 70px; font-size: 30px; color: #b9e8cf; line-height: 1.6; }
+      #flash { position: absolute; inset: 0; background: #fff; }
+      #okcita { position: absolute; left: 30px; right: 30px; bottom: 40px; padding: 24px 26px; border-radius: 28px; background: #f4f5f6; color: #111; display: flex; gap: 20px; align-items: center;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+      #okcita .ic { width: 78px; height: 78px; flex: none; border-radius: 20px; background: #3ddc84; display: flex; align-items: center; justify-content: center; font-size: 44px; }
+      #okcita b { display: block; font-size: 30px; } #okcita span { display: block; font-size: 26px; color: #333; margin-top: 2px; }
+      #llamada { position: absolute; left: 30px; right: 30px; top: 175px; padding: 20px 24px; border-radius: 28px; background: rgba(30,30,32,0.96); display: flex; gap: 18px; align-items: center; z-index: 7; }
+      #llamada .ic { width: 70px; height: 70px; border-radius: 50%; background: #34c759; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+      #llamada b { display: block; font-size: 28px; } #llamada span { display: block; font-size: 24px; color: #3ddc84; }
+      /* CTA */
+      .cta { background: #e25434; }
+      #ctab { position: absolute; left: 0; right: 0; top: 560px; text-align: center; }
+      #ctab .p { font-size: 70px; font-weight: 800; }
+      #ctab .g { display: inline-block; margin-top: 30px; padding: 26px 50px; border-radius: 30px; background: #fff; color: #e25434; font-family: "Archivo Black"; font-size: 120px; }
+      #ctab .s { margin-top: 40px; font-size: 40px; font-weight: 600; opacity: 0.95; }
+      .marca { background: #111; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 26px; }
+      .marca img { width: 220px; height: 220px; } .marca b { font-size: 84px; font-weight: 900; } .marca span { font-size: 38px; color: #ccc; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="55.672" data-width="1080" data-height="1920">
+      <div id="s1" class="escena clip " data-start="0.000" data-duration="9.455" data-track-index="1">
+        <video id="v1" class="clip vid borroso" src="assets/banco.mp4" data-start="0.000" data-duration="9.455" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div id="m1" class="movil"><div class="pant bloq"><div class="isla"></div><div class="hora">08:47</div><div class="notis"><div id="n0" class="noti"><div class="ic tel">📞</div><div><b>Llamada perdida</b><span>Cliente · Alcobendas</span></div></div><div id="n1" class="noti"><div class="ic wa">💬</div><div><b>WhatsApp · 4 mensajes</b><span>«¿Me podéis llamar? No enfría»</span></div></div><div id="n2" class="noti"><div class="ic tel">📞</div><div><b>Llamada perdida (3)</b><span>Número desconocido</span></div></div><div id="n3" class="noti"><div class="ic wa">💬</div><div><b>WhatsApp · Lucía</b><span>«Hola?? 😡»</span></div></div><div id="n4" class="noti"><div class="ic tel">📞</div><div><b>Llamada perdida</b><span>Comunidad Las Lomas</span></div></div></div></div><div id="badge" class="badge">47</div></div>
+      </div>
+      <div id="s2" class="clip" style="position:absolute;inset:0" data-start="5.667" data-duration="3.788" data-track-index="3">
+        <div id="ficha">MODELO: <i>móvil de técnico</i><br />ANTIGÜEDAD: <i>3 años</i><br />LLAMADAS PERDIDAS: <i>47</i><br />ESTADO: <i>no lo coge</i></div>
+      </div>
+      <div id="s3" class="escena clip " data-start="9.455" data-duration="4.439" data-track-index="1">
+        <video id="v3a" class="clip vid " src="assets/placa.mp4" data-start="9.455" data-duration="2.215" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <video id="v3b" class="clip vid " src="assets/soldar.mp4" data-start="11.670" data-duration="2.224" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="s4" class="escena clip " data-start="13.894" data-duration="5.907" data-track-index="1">
+        <video id="v4" class="clip vid borroso" src="assets/banco.mp4" data-start="13.894" data-duration="5.907" data-media-start="3" muted playsinline data-track-index="2"></video>
+        <div id="m4" class="movil"><div class="pant wapp"><div class="isla"></div><div class="wtop"><div><b>WhatsApp</b><span>21 chats sin leer</span></div></div><div class="lista"><div id="f0" class="fila"><div class="av">👷</div><div class="tx"><b>Instalación Tres Cantos</b><span><em>✓✓</em> Luego te llamo</span></div><div class="n">3</div></div><div id="f1" class="fila"><div class="av">🏠</div><div class="tx"><b>Lucía · split salón</b><span><em>✓✓</em> Luego te llamo</span></div><div class="n">5</div></div><div id="f2" class="fila"><div class="av">🔧</div><div class="tx"><b>Comunidad Las Lomas</b><span><em>✓✓</em> Luego te llamo</span></div><div class="n">2</div></div><div id="f3" class="fila"><div class="av">📞</div><div class="tx"><b>Marcos · Sanse</b><span><em>✓✓</em> Luego te llamo</span></div><div class="n">4</div></div><div id="f4" class="fila"><div class="av">🏢</div><div class="tx"><b>Oficina Alcobendas</b><span><em>✓✓</em> Luego te llamo</span></div><div class="n">7</div></div></div><div id="buzon"><div style="font-size:44px">📭</div><div><b>Buzón de voz lleno</b><span>No se pueden dejar más mensajes</span></div></div></div></div>
+      </div>
+      <div id="s5" class="escena clip " data-start="19.801" data-duration="5.906" data-track-index="1">
+        <video id="v5" class="clip vid " src="assets/hidro.mp4" data-start="19.801" data-duration="5.906" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+        <div id="vu0" class="vuela" style="top:330px"><div class="ic tel">📞</div><div><b>Llamada perdida</b><span>Cliente · Alcobendas</span></div></div>
+        <div id="vu1" class="vuela" style="top:520px"><div class="ic tel">📞</div><div><b>Llamada perdida (3)</b><span>Número desconocido</span></div></div>
+        <div id="vu2" class="vuela" style="top:710px"><div class="ic wa">💬</div><div><b>WhatsApp · 4 mensajes</b><span>«¿Me podéis llamar?»</span></div></div>
+        <div id="vu3" class="vuela" style="top:900px"><div class="ic tel">📞</div><div><b>Llamada perdida</b><span>Comunidad Las Lomas</span></div></div>
+      </div>
+      <div id="s6" class="escena clip " data-start="25.707" data-duration="3.518" data-track-index="1">
+        <video id="v6a" class="clip vid " src="assets/jabon.mp4" data-start="25.707" data-duration="1.503" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <video id="v6b" class="clip vid " src="assets/esponja.mp4" data-start="27.210" data-duration="2.015" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+        <div id="bu0" class="burbuja" style="left:120px;top:300px">¿Tenéis hueco esta semana?</div>
+        <div id="bu1" class="burbuja" style="left:520px;top:520px">Hola?? 😡</div>
+        <div id="bu2" class="burbuja" style="left:90px;top:720px">¿Cuánto cuesta revisar el split?</div>
+        <div id="bu3" class="burbuja" style="left:380px;top:920px">Bueno, llamo a otro</div>
+      </div>
+      <div id="s7" class="escena clip " data-start="29.225" data-duration="5.624" data-track-index="1">
+        <video id="v7" class="clip vid " src="assets/dueno.mp4" data-start="29.225" data-duration="5.624" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="s8" class="escena clip nueva" data-start="34.849" data-duration="5.549" data-track-index="1">
+        <div id="brillo"></div>
+        <div id="m8" class="movil"><div class="pant nueva"><div class="isla"></div><div class="activa"><img src="assets/logo.svg" alt="" /><h2>Recepcionista<br />con IA</h2><div class="pill">● Activa 24/7</div><div class="cero">Llamadas perdidas: 0<br />WhatsApps sin contestar: 0</div></div></div></div>
+        <div id="flash"></div>
+      </div>
+      <div id="s9" class="escena clip " data-start="40.398" data-duration="3.965" data-track-index="1">
+        <video id="v9" class="clip vid borroso" src="assets/banco.mp4" data-start="40.398" data-duration="3.965" data-media-start="1" muted playsinline data-track-index="2"></video>
+        <div id="m9" class="movil"><div class="pant wapp"><div class="isla"></div><div class="wtop"><div class="av">🏠</div><div><b>Lucía · split salón</b><span>Recepción de Climas Robledo</span></div></div><div class="chat"><div id="w1" class="msg cli">Hola, el split no calienta 🥶 ¿Podéis venir a mirarlo?<small>20:14</small></div><div id="w2" class="msg bot">¡Hola Lucía! Sí 🙂 El lunes tengo hueco a las 10:00 o a las 12:30. ¿Cuál te viene mejor?<small>20:14 ✓✓</small></div><div id="w3" class="msg cli">A las 10 👍<small>20:15</small></div></div><div id="llamada"><div class="ic">📞</div><div><b>Llamada de Marcos · Sanse</b><span>Atendida por la recepcionista</span></div></div><div id="okcita"><div class="ic">✓</div><div><b>Visita agendada · lunes 10:00</b><span>Lucía · el split no calienta</span></div></div></div></div>
+      </div>
+      <div id="s10" class="escena clip " data-start="44.363" data-duration="4.583" data-track-index="1">
+        <video id="v10" class="clip vid " src="assets/whatsapp.mp4" data-start="44.363" data-duration="4.583" data-media-start="0" muted playsinline data-track-index="2"></video>
+        <div class="velo"></div>
+      </div>
+      <div id="s11" class="escena clip cta" data-start="48.946" data-duration="3.597" data-track-index="1">
+        <div id="ctab"><div class="p">Comenta</div><div class="g">RECEPCIÓN</div><div class="s">y te monto la pieza nueva<br />en tu negocio</div></div>
+      </div>
+      <div id="marca" class="escena clip marca" data-start="52.543" data-duration="3.129" data-track-index="1">
+        <img id="logo" src="assets/logo.svg" alt="" />
+        <b>norte.local</b>
+        <span>Recepcionista con IA para negocios locales</span>
+      </div>
+      <div id="c0" class="cap alto clip" data-start="0.000" data-duration="1.31" data-track-index="20">Acompáñame a darle</div>
+      <div id="c1" class="cap alto clip" data-start="1.330" data-duration="1.36" data-track-index="20">mantenimiento preventivo</div>
+      <div id="c2" class="cap alto clip" data-start="2.710" data-duration="1.36" data-track-index="20">al teléfono de este técnico</div>
+      <div id="c3" class="cap alto clip" data-start="4.090" data-duration="1.5" data-track-index="20">de aire acondicionado.</div>
+      <div id="c4" class="cap alto clip" data-start="5.630" data-duration="1.58" data-track-index="20">Móvil de tres años.</div>
+      <div id="c5" class="cap alto clip" data-start="7.230" data-duration="2.15" data-track-index="20">47 llamadas perdidas.</div>
+      <div id="c6" class="cap clip" data-start="9.470" data-duration="1.12" data-track-index="20">A mí, en lo particular,</div>
+      <div id="c7" class="cap clip" data-start="10.610" data-duration="1.1" data-track-index="20">me gusta desmontarlo entero,</div>
+      <div id="c8" class="cap clip" data-start="11.730" data-duration="1.0" data-track-index="20">para que quede bien limpio</div>
+      <div id="c9" class="cap clip" data-start="12.750" data-duration="1.04" data-track-index="20">cada rincón.</div>
+      <div id="c10" class="cap alto clip" data-start="13.810" data-duration="0.92" data-track-index="20">No es por hablar mal</div>
+      <div id="c11" class="cap alto clip" data-start="14.750" data-duration="1.1" data-track-index="20">del anterior técnico,</div>
+      <div id="c12" class="cap alto clip" data-start="15.870" data-duration="1.6" data-track-index="20">pero le dejó el buzón de voz lleno,</div>
+      <div id="c13" class="cap alto clip" data-start="17.490" data-duration="0.74" data-track-index="20">y un «luego te llamo»</div>
+      <div id="c14" class="cap alto clip" data-start="18.250" data-duration="1.47" data-track-index="20">pegado en cada WhatsApp.</div>
+      <div id="c15" class="cap clip" data-start="19.970" data-duration="1.02" data-track-index="20">Posteriormente le metemos</div>
+      <div id="c16" class="cap clip" data-start="21.010" data-duration="1.1" data-track-index="20">la hidrolimpiadora,</div>
+      <div id="c17" class="cap clip" data-start="22.130" data-duration="0.9" data-track-index="20">arriba y abajo,</div>
+      <div id="c18" class="cap clip" data-start="23.050" data-duration="0.94" data-track-index="20">para quitar todas</div>
+      <div id="c19" class="cap clip" data-start="24.010" data-duration="1.62" data-track-index="20">las llamadas perdidas.</div>
+      <div id="c20" class="cap clip" data-start="25.670" data-duration="0.96" data-track-index="20">Ahora toca tallar</div>
+      <div id="c21" class="cap clip" data-start="26.650" data-duration="0.82" data-track-index="20">con agua y jabón</div>
+      <div id="c22" class="cap clip" data-start="27.490" data-duration="1.65" data-track-index="20">los mensajes sin contestar.</div>
+      <div id="c23" class="cap clip" data-start="29.310" data-duration="0.88" data-track-index="20">Le pregunté al dueño,</div>
+      <div id="c24" class="cap clip" data-start="30.210" data-duration="2.2" data-track-index="20">y me dijo: sí, es verdad.</div>
+      <div id="c25" class="cap clip" data-start="32.430" data-duration="0.92" data-track-index="20">Esta semana perdí</div>
+      <div id="c26" class="cap clip" data-start="33.370" data-duration="1.4" data-track-index="20">tres instalaciones.</div>
+      <div id="c27" class="cap alto clip" data-start="34.830" data-duration="1.18" data-track-index="20">Armamos de nuevo,</div>
+      <div id="c28" class="cap alto clip" data-start="36.030" data-duration="1.7" data-track-index="20">y le ponemos la pieza nueva:</div>
+      <div id="c29" class="cap alto clip" data-start="37.750" data-duration="0.84" data-track-index="20">una recepcionista</div>
+      <div id="c30" class="cap alto clip" data-start="38.610" data-duration="1.71" data-track-index="20">con inteligencia artificial.</div>
+      <div id="c31" class="cap alto clip" data-start="40.350" data-duration="0.94" data-track-index="20">Coge las llamadas,</div>
+      <div id="c32" class="cap alto clip" data-start="41.310" data-duration="0.8" data-track-index="20">contesta los WhatsApps,</div>
+      <div id="c33" class="cap alto clip" data-start="42.130" data-duration="1.14" data-track-index="20">te apunta la cita,</div>
+      <div id="c34" class="cap alto clip" data-start="43.290" data-duration="0.99" data-track-index="20">y te avisa a ti.</div>
+      <div id="c35" class="cap clip" data-start="44.390" data-duration="0.7" data-track-index="20">Ya no grabé lo demás</div>
+      <div id="c36" class="cap clip" data-start="45.110" data-duration="1.3" data-track-index="20">porque se me hacía tarde,</div>
+      <div id="c37" class="cap clip" data-start="46.430" data-duration="0.66" data-track-index="20">jajaja.</div>
+      <div id="c38" class="cap clip" data-start="47.110" data-duration="1.76" data-track-index="20">Pero este es el proceso.</div>
+      <audio id="voz" class="clip" src="assets/voz.wav" data-start="0" data-duration="55.672" data-volume="1" data-track-index="30"></audio>
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="0" data-duration="55.672" data-media-start="0" data-volume="0.22" data-fade-out="1.2" data-track-index="31"></audio>
+      <audio id="g0" class="clip" src="assets/golpe.wav" data-start="9.43" data-duration="0.4" data-volume="0.4" data-track-index="32"></audio>
+      <audio id="g1" class="clip" src="assets/golpe.wav" data-start="11.64" data-duration="0.4" data-volume="0.4" data-track-index="33"></audio>
+      <audio id="g2" class="clip" src="assets/golpe.wav" data-start="19.77" data-duration="0.4" data-volume="0.4" data-track-index="34"></audio>
+      <audio id="g3" class="clip" src="assets/golpe.wav" data-start="25.68" data-duration="0.4" data-volume="0.4" data-track-index="35"></audio>
+      <audio id="g4" class="clip" src="assets/golpe.wav" data-start="29.20" data-duration="0.4" data-volume="0.4" data-track-index="36"></audio>
+      <audio id="g5" class="clip" src="assets/golpe.wav" data-start="36.74" data-duration="0.4" data-volume="0.4" data-track-index="37"></audio>
+      <audio id="g6" class="clip" src="assets/golpe.wav" data-start="44.33" data-duration="0.4" data-volume="0.4" data-track-index="38"></audio>
+      <audio id="g7" class="clip" src="assets/golpe.wav" data-start="48.92" data-duration="0.4" data-volume="0.4" data-track-index="39"></audio>
+      <audio id="p0" class="clip" src="assets/ding.wav" data-start="7.18" data-duration="0.35" data-volume="0.28" data-track-index="44"></audio>
+      <audio id="p1" class="clip" src="assets/ding.wav" data-start="16.40" data-duration="0.35" data-volume="0.28" data-track-index="45"></audio>
+      <audio id="p2" class="clip" src="assets/ding.wav" data-start="40.30" data-duration="0.35" data-volume="0.28" data-track-index="46"></audio>
+      <audio id="p3" class="clip" src="assets/ding.wav" data-start="42.69" data-duration="0.35" data-volume="0.28" data-track-index="47"></audio>
+      <audio id="p4" class="clip" src="assets/pip.wav" data-start="0.15" data-duration="0.35" data-volume="0.28" data-track-index="48"></audio>
+      <audio id="p5" class="clip" src="assets/pip.wav" data-start="0.65" data-duration="0.35" data-volume="0.28" data-track-index="49"></audio>
+      <audio id="p6" class="clip" src="assets/pip.wav" data-start="1.15" data-duration="0.35" data-volume="0.28" data-track-index="50"></audio>
+      <audio id="p7" class="clip" src="assets/pip.wav" data-start="1.65" data-duration="0.35" data-volume="0.28" data-track-index="51"></audio>
+      <audio id="p8" class="clip" src="assets/pip.wav" data-start="2.15" data-duration="0.35" data-volume="0.28" data-track-index="52"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      // s1-s2: móvil lleno de avisos, zoom lento como el plano de la unidad en el suelo
+      tl.fromTo("#m1", { scale: 0.92, rotation: -3 }, { scale: 1.0, rotation: 0, duration: 9.46, ease: "power1.out" }, 0);
+      for (let i = 0; i < 5; i++) tl.fromTo("#n" + i, { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.2 }, 0.15 + i * 0.5);
+      tl.fromTo("#badge", { scale: 0 }, { scale: 1, duration: 0.35, ease: "back.out(2.5)" }, 7.18);
+      tl.fromTo("#ficha", { opacity: 0, y: 40, rotation: -10 }, { opacity: 1, y: 0, rotation: -4, duration: 0.3, ease: "back.out(1.6)" }, 5.72);
+      // s3: desmontar
+      tl.fromTo("#v3a", { scale: 1.08 }, { scale: 1.0, duration: 2.21, ease: "none" }, 9.455);
+      tl.fromTo("#v3b", { scale: 1.0 }, { scale: 1.1, duration: 2.22, ease: "none" }, 11.67);
+      // s4: buzón lleno y "luego te llamo"
+      tl.fromTo("#m4", { y: 80, opacity: 0.4 }, { y: 0, opacity: 1, duration: 0.35, ease: "power2.out" }, 13.894);
+      tl.fromTo("#buzon", { y: -140, opacity: 0 }, { y: 0, opacity: 1, duration: 0.35, ease: "back.out(1.6)" }, 16.40);
+      for (let i = 0; i < 5; i++) tl.fromTo("#f" + i + " span", { color: "#8696a0" }, { color: "#ffd166", duration: 0.12 }, 17.74 + i * 0.12);
+      // s5: hidrolimpiadora: las notificaciones salen volando arriba y abajo
+      tl.fromTo("#v5", { scale: 1.0 }, { scale: 1.08, duration: 5.906, ease: "none" }, 19.801);
+      for (let i = 0; i < 4; i++) {
+        tl.fromTo("#vu" + i, { opacity: 0, x: -40 }, { opacity: 1, x: 0, duration: 0.15 }, 19.90 + i * 0.12);
+        tl.to("#vu" + i, { x: (i % 2 ? 1300 : -1300), rotation: (i % 2 ? 25 : -25), opacity: 0, duration: 0.45, ease: "power2.in" }, 21.98 + i * 0.45);
+      }
+      // s6: agua y jabón: los mensajes sin contestar son burbujas que explotan
+      for (let i = 0; i < 4; i++) {
+        tl.fromTo("#bu" + i, { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.2, ease: "back.out(2)" }, 25.81 + i * 0.15);
+        tl.to("#bu" + i, { scale: 1.35, opacity: 0, duration: 0.18, ease: "power2.out" }, 27.58 + i * 0.3);
+      }
+      // s7: el dueño
+      tl.fromTo("#v7", { scale: 1.12 }, { scale: 1.0, duration: 5.624, ease: "none" }, 29.225);
+      // s8: pieza nueva, destello
+      tl.fromTo("#m8", { scale: 0.8, opacity: 0, rotation: 6 }, { scale: 1, opacity: 1, rotation: 0, duration: 0.5, ease: "back.out(1.4)" }, 34.849);
+      tl.fromTo("#flash", { opacity: 0 }, { opacity: 0.9, duration: 0.06 }, 36.77);
+      tl.to("#flash", { opacity: 0, duration: 0.35 }, 36.84);
+      tl.fromTo("#brillo", { opacity: 0, scale: 0.8 }, { opacity: 1, scale: 1, duration: 0.6 }, 36.82);
+      tl.fromTo("#m8 .pill", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 37.84);
+      // s9: lo que hace
+      tl.fromTo("#m9", { y: 60, opacity: 0.5 }, { y: 0, opacity: 1, duration: 0.3 }, 40.398);
+      tl.fromTo("#llamada", { y: -120, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(1.6)" }, 40.30);
+      tl.to("#llamada", { opacity: 0, y: -120, duration: 0.25 }, 41.21);
+      tl.fromTo("#w1", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.2 }, 41.06);
+      tl.fromTo("#w2", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.2 }, 41.61);
+      tl.fromTo("#w3", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.2 }, 42.09);
+      tl.fromTo("#okcita", { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.6)" }, 42.69);
+      // s10
+      tl.fromTo("#v10", { scale: 1.0 }, { scale: 1.1, duration: 4.583, ease: "none" }, 44.363);
+      // s11: CTA
+      tl.fromTo("#ctab .p", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.25 }, 49.00);
+      tl.fromTo("#ctab .g", { scale: 1.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 49.20);
+      tl.fromTo("#ctab .s", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 49.55);
+      tl.to("#ctab .g", { scale: 1.1, duration: 0.15, yoyo: true, repeat: 1 }, 51.51);
+      tl.fromTo("#logo", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)" }, 52.543);
+      document.querySelectorAll(".cap").forEach((c) => {
+        const s = parseFloat(c.dataset.start);
+        tl.fromTo(c, { scale: 0.85 }, { scale: 1, duration: 0.12, ease: "power2.out" }, s);
+      });
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

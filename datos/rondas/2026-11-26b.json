@@ -1,0 +1,156 @@
+{
+ "fecha": "2026-11-26",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@alexhormozi",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] alexhormozi: This user's account is private. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies"
+  },
+  {
+   "perfil": "https://www.tiktok.com/@elmundotoday",
+   "revisados": 2,
+   "mediana_vistas": 516.0,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@ibai",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] ibai: This account does not have any videos posted"
+  },
+  {
+   "perfil": "https://www.tiktok.com/@lapapelerademaria",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] lapapelerademaria: Unable to extract secondary user ID. If you are able to get the channel_id from a video posted by this user, try using \"tiktokuser:channel_id\" as the input URL (replacing `channel_id` with its actual value)"
+  },
+  {
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "revisados": 30,
+   "mediana_vistas": 290.5,
+   "virales": [
+    {
+     "id": "7649129985223019783",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+     "title": "Lavando un mini split #CapCut #airesacondicionados #hvactechnician ",
+     "view_count": 213200,
+     "like_count": 4763,
+     "comment_count": 294,
+     "duration": 161,
+     "timestamp": 1780951866,
+     "upload_date": "20260608",
+     "veces_mediana": 733.91,
+     "viral": true
+    },
+    {
+     "id": "7650013582289095954",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650013582289095954",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7650013582289095954",
+     "title": "Te cuento una breve historia de mi vida en la refrigeración #CapCut #...",
+     "view_count": 3881,
+     "like_count": 170,
+     "comment_count": 4,
+     "duration": 71,
+     "timestamp": 1781157593,
+     "upload_date": "20260611",
+     "veces_mediana": 13.36,
+     "viral": true
+    },
+    {
+     "id": "7657802849404980488",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7657802849404980488",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7657802849404980488",
+     "title": "Vamos a instalar una acometida para comisión Federal de Electricidad ...",
+     "view_count": 2430,
+     "like_count": 66,
+     "comment_count": 0,
+     "duration": 113,
+     "timestamp": 1782971178,
+     "upload_date": "20260702",
+     "veces_mediana": 8.36,
+     "viral": true
+    },
+    {
+     "id": "7672216763710393607",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7672216763710393607",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7672216763710393607",
+     "title": "No gastes de más en energía eléctrica #CapCut ",
+     "view_count": 1421,
+     "like_count": 30,
+     "comment_count": 0,
+     "duration": 160,
+     "timestamp": 1786327182,
+     "upload_date": "20260810",
+     "veces_mediana": 4.89,
+     "viral": true
+    },
+    {
+     "id": "7650910375679888647",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650910375679888647",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7650910375679888647",
+     "title": "Respuesta a @titito yemir ",
+     "view_count": 924,
+     "like_count": 17,
+     "comment_count": 0,
+     "duration": 57,
+     "timestamp": 1781366392,
+     "upload_date": "20260613",
+     "veces_mediana": 3.18,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@moonpiofficial",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] moonpiofficial: Unable to extract secondary user ID. If you are able to get the channel_id from a video posted by this user, try using \"tiktokuser:channel_id\" as the input URL (replacing `channel_id` with its actual value)"
+  },
+  {
+   "perfil": "https://www.youtube.com/@AlexHormozi/shorts",
+   "revisados": 30,
+   "mediana_vistas": 19500.0,
+   "virales": [
+    {
+     "id": "_pne88RNbO0",
+     "url": "https://www.youtube.com/shorts/_pne88RNbO0",
+     "webpage_url": "https://www.youtube.com/shorts/_pne88RNbO0",
+     "title": "The best way to retain a customer is to sell them something else.",
+     "view_count": 82000,
+     "veces_mediana": 4.21,
+     "viral": true
+    },
+    {
+     "id": "NBwqKG0odHM",
+     "url": "https://www.youtube.com/shorts/NBwqKG0odHM",
+     "webpage_url": "https://www.youtube.com/shorts/NBwqKG0odHM",
+     "title": "If you don't do anything, nothing's going to happen.",
+     "view_count": 62000,
+     "veces_mediana": 3.18,
+     "viral": true
+    },
+    {
+     "id": "Sdi8C56nuq8",
+     "url": "https://www.youtube.com/shorts/Sdi8C56nuq8",
+     "webpage_url": "https://www.youtube.com/shorts/Sdi8C56nuq8",
+     "title": "Three years into your thing, you have more information than when you started. You get an idea for a",
+     "view_count": 59000,
+     "veces_mediana": 3.03,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 62,
+ "total_virales": 8
+}

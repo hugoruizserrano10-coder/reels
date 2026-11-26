@@ -60,6 +60,11 @@
    "usuario": "dotcsv",
    "tiktok": "https://www.tiktok.com/@dotcsv",
    "motivo": "(25-nov) Carlos Santana (DotCSV), divulgación de IA en español; mediana 12,2k en TikTok, virales 3-51x (antes/ahora, noticias con demo). Se descarga bien. 4.ª cuenta nueva de la semana (excepción: las habituales repetían los mismos vídeos)"
+  },
+  {
+   "usuario": "soyfranciscorivas",
+   "tiktok": "https://www.tiktok.com/@soyfranciscorivas",
+   "motivo": "(26-nov) técnico de aire acondicionado/electricidad en español (México): vídeos de proceso «Acompáñame a…» con voz en off; mediana 290, virales de 3-734x (mini split 213k vistas). Oficio = nuestro cliente tipo. 1.ª cuenta nueva de la semana del 30-nov si se cuenta por semanas; vigilar 2 semanas"
   }
  ],
  "umbral_viral": 3.0,
@@ -72,6 +77,7 @@
   "TikTok /tag/<hashtag> con yt-dlp: 'No working app info' (24-nov)",
   "Búsqueda web de reels sueltos de Instagram (site:instagram.com/reel): no devuelve enlaces a reels, solo blogs (23 y 24-nov)",
   "tiktok @ia_productividad, @xavimarcet: Unable to extract secondary user ID; @reformasyobras sin vídeos; @marketingconia e @iaparatodos casi sin vídeos/vistas, fuera de nicho (25-nov)",
-  "Mixkit: los clips con id 1008xx (teléfonos antiguos nuevos) no tienen URL -720/-1080/-360 directa (25-nov)"
+  "Mixkit: los clips con id 1008xx (teléfonos antiguos nuevos) no tienen URL -720/-1080/-360 directa (25-nov)",
+  "tiktok @alexhormozi privada, @ibai sin vídeos, @lapapelerademaria y @moonpiofficial: Unable to extract secondary user ID; @elmundotoday casi sin vídeos (26-nov). youtube @AlexHormozi/shorts lista bien (mediana 19,5k) pero no descarga. Búsqueda web de reels de humor de negocios: solo noticias, ningún enlace a reel (26-nov)"
  ]
 }

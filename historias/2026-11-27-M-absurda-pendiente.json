@@ -1,0 +1,10 @@
+{
+ "id": "2026-11-27-M-absurda-pendiente",
+ "tipo": "absurda_por_hacer",
+ "franja": "M (día impar → historia absurda, PLAN_DIARIO.md)",
+ "instrucciones": "Dejado por el análisis del 26-nov. Hoy (27, impar) la franja M es historia absurda, NO el clon: el clon preparado es para el 28-M (historias/2026-11-28-M-clon-franciscorivas.json), no adelantarlo. Hacer la absurda siguiendo historias/absurdas.md (copiar propios/fontanero-empanao/gen.py o propios/panadero-loros/): dibujo cálido, voz davefx + subtítulos en caja, música Mixkit desde el s 0, 20–30 s. Guardar como videos/2026-11-27-M.mp4 y renombrar este JSON a video_listo. Si no da tiempo, publicar una historia PRO como dice el plan, pero nunca el clon del 28.",
+ "idea": "El electricista que se clonó para coger el teléfono: 5 clones peleándose por el móvil → ninguno lo coge → el cliente llama a otro → «no hace falta clonarte» → recepcionista con IA (llamadas, WhatsApp, agenda, aviso) → Comenta RECEPCIÓN",
+ "tipo_negocio": "electricista",
+ "tipo_gancho": "situación absurda contada como noticia («Este electricista se clonó cinco veces para coger el teléfono…») + giro",
+ "extra_del_analisis": "del viral de @soyfranciscorivas (acometida, 8,4x): un personaje secundario torpe (el «chalán nuevo») da risa; se puede usar como uno de los clones"
+}

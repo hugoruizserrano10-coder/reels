@@ -1,0 +1,29 @@
+{
+ "id": "2026-11-28-M-clon-franciscorivas",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-28-M.mp4",
+ "formato": "clon",
+ "clon_de": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+ "viral": "213.200 vistas, 734x la mediana de @soyfranciscorivas (técnico de aire acondicionado: «Acompáñame a darle mantenimiento preventivo a este mini split»)",
+ "proyecto": "clones/franciscorivas-minisplit/",
+ "tipo_negocio": "climatizacion",
+ "tipo_gancho": "«Acompáñame a…» (POV de proceso de oficio) llevado al absurdo: mantenimiento preventivo al TELÉFONO de un técnico de aire acondicionado, con el móvil lleno de llamadas perdidas desde el s 0",
+ "variante": "clon fiel de la estructura del viral (acompáñame → ficha técnica → «no es por hablar mal del anterior técnico» → hidrolimpiadora → agua y jabón → «le pregunté al dueño y me dijo: sí, es verdad» → pieza nueva → «ya no grabé lo demás porque se me hacía tarde, jajaja») mezclado con historia absurda; voz pausada 2,5 pal/s como el original; subtítulos blancos con borde negro; 55,8 s (el original 162 s)",
+ "duracion_s": 55.8,
+ "musica": "mixkit-729",
+ "cta": "Comenta RECEPCIÓN",
+ "caption": "Acompáñame a darle mantenimiento preventivo al teléfono de un técnico de aire acondicionado 🔧📱 47 llamadas perdidas, el buzón lleno y un «luego te llamo» en cada WhatsApp. La pieza nueva: una recepcionista con IA que coge las llamadas, contesta los WhatsApps, apunta la visita y te avisa. Para empresas de climatización de Alcobendas, Sanse, Tres Cantos y Algete. Comenta RECEPCIÓN y te la monto. #climatizacion #aireacondicionado #negocioslocales #alcobendas #inteligenciaartificial",
+ "tiktok": "Mantenimiento preventivo… al teléfono 🔧📱 Comenta RECEPCIÓN 👇 #climatizacion #aireacondicionado #humor #negocioslocales #inteligenciaartificial",
+ "control": {
+  "1_investigacion": "ok (Análisis 2026-11-26, viral desmontado con ficha en datos/desmontajes/soyfranciscorivas-7649129985223019783)",
+  "2_gancho": "ok (móvil con avisos de llamadas perdidas y «Acompáñame a darle mantenimiento preventivo» desde 0 s; badge 47 en el s 6)",
+  "3_se_entiende": "ok (subtítulos de 1 línea sin solapes; chats y avisos cortos; CTA sin subtítulo encima)",
+  "4_sin_errores": "ok (sin fechas con día de la semana salvo «el lunes» de la cita; la recepcionista coge, contesta, apunta la cita y avisa; nombres inventados: Climas Robledo, Lucía, Marcos)",
+  "5_audio": "ok (-14,5 LUFS; música Mixkit 729 a 0,22, golpes en cortes, dings en avisos)",
+  "6_derechos": "ok (Mixkit 29995, 29994, 47049, 47588, 46626, 47587, 35955, 41165; música 729; voz Piper davefx; nada del original)",
+  "7_variedad": "ok (27-N fútbol común; climatización sin usar en 14 días)",
+  "8_cta": "ok",
+  "9_formato": "ok 1080x1920, 55,8 s (clon de 162 s), cierre con marca",
+  "10_aprendizaje": "ok (primer clon que mezcla el viral con historia absurda, lo que mejor nos funciona; ¿saca a los clones de mediodía de las <10 vistas?)"
+ }
+}

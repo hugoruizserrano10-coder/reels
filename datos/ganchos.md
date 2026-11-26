@@ -94,3 +94,15 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
 - **«Hablemos de X, porque la semana pasada…»** (@dotcsv, Claude Cowork, 7,3x): noticia de producto + interfaz real con cursor.
 - Frases puente nuevas: «Pero tres años más tarde…» · «Resultado que viene de…» · «Estamos ante un antes y un después» ·
   enumeración que acaba en «…todo».
+
+## Ganchos de los virales del 26-nov (análisis diario, TikTok @soyfranciscorivas)
+- **«Acompáñame a…» (POV de proceso de oficio)** (@soyfranciscorivas, mini split, 213k vistas, **734x**): el técnico invita a
+  ver un trabajo de principio a fin; la imagen del aparato sucio y abierto engancha antes que la frase. Retienen la ficha técnica
+  («una tonelada, R22»), el pique con «el anterior técnico» y el plano satisfactorio de agua a presión. Adaptado en absurdo:
+  «Acompáñame a darle mantenimiento preventivo al TELÉFONO de este técnico de aire acondicionado» (clon del 28-nov).
+- **Historia de origen con onomatopeyas** (@soyfranciscorivas, 13x): «Mira, hace ya como nueve años que me metí en…» y los giros
+  marcados con «¡BOOM!» y «¡BAM!», sobre b-roll del trabajo. Para un personaje inventado, nunca como si fuera Hugo.
+- **Contraste «lo de siempre falla → lo nuevo acierta»** (@dotcsv, Flux Kontext, 9,2x): «ya sabéis que X, si le pido… el
+  resultado es este. Pero chicos, yo no soy esta persona». Para nosotros: el contestador de siempre falla → la recepcionista acierta.
+- Frases puente nuevas: «No es por hablar mal del anterior, pero…» · «Posteriormente…» · «Ahora lo que sigue es…» · «Le pregunté
+  al cliente y me dijo: sí, es verdad» · «Ya no grabé lo demás porque se me hacía tarde, jajaja» · «el nuevo chalán quería…».

@@ -1,10 +1,10 @@
 {
  "explicacion": "Contador de reels analizados. Lo actualiza la tarea diaria cada vez que analiza algo. 'revisados' = reels de otras cuentas cuyos datos se han mirado con el Descubridor; 'virales' = de esos, los que superan el umbral; 'desmontados' = analizados a fondo (transcripción, fotogramas, estructura); 'propios_medidos' = mediciones de nuestros reels.",
  "total": {
-  "revisados": 822,
-  "virales": 50,
-  "desmontados": 18,
-  "propios_medidos": 11
+  "revisados": 1191,
+  "virales": 59,
+  "desmontados": 22,
+  "propios_medidos": 20
  },
  "historial": [
   {
@@ -49,6 +49,15 @@
    "propios_medidos": 7,
    "clonados": 1,
    "detalle": "11 perfiles habituales (277 revisados, todos sus virales ya vistos) + 6 cuentas exploradas en TikTok (48): nueva @dotcsv (mediana 12,2k, 7 virales hasta 50,8x). 9 virales nuevos. Desmontados 3 de @dotcsv (50,8x, 10,6x, 7,3x). Clon de @dotcsv 'antes/ahora' (Seedance, 50,8x) para el 26-nov 13:40. Medidos 7 reels propios con Windsor (7 días)."
+  },
+  {
+   "fecha": "2026-11-26",
+   "revisados": 369,
+   "virales": 9,
+   "desmontados": 4,
+   "propios_medidos": 9,
+   "clonados": 1,
+   "detalle": "11 perfiles habituales (307 revisados, sin virales nuevos salvo 1 de NateHerk) + 7 exploradas (62): nueva @soyfranciscorivas (técnico de aire acondicionado, viral de 734x). Desmontados 4: 3 de @soyfranciscorivas (734x, 13,4x, 8,4x) y @dotcsv Flux Kontext (9,2x). Clon de @soyfranciscorivas «Acompáñame a darle mantenimiento preventivo…» en clave absurda (al teléfono) para el 28-nov 13:40. Medidos 9 reels propios (Windsor, 7 días)."
   }
  ]
 }

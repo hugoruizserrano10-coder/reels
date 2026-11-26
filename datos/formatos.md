@@ -74,3 +74,13 @@ destello + «2026» en «Pero tres años más tarde, esto es lo que podemos logr
 ANTES/AHORA → fondo coral con la enumeración de negocios palabra a palabra y «TODO.» → CTA en coral → marca. Subtítulos de una
 línea blanca en negrita. Plantilla: `clones/dotcsv-antes/` (generar.py; cambiar voz.json, el chat y los planos). ~47 s,
 render HyperFrames ~4,5 min. Sirve para cualquier negocio: cambiar el ANTES (contestador, agenda de papel, «pulse 1»).
+
+## M. "Acompáñame a…" proceso de oficio en clave absurda (clon del 26-nov, @soyfranciscorivas 734x)
+Voz en off pausada de técnico (2,5 palabras/s) sobre planos de trabajo (Mixkit: banco de taller, placa, soldador,
+hidrolimpiadora, esponja con jabón, mecánico con tablet, móvil con WhatsApp) y un móvil en HTML que es «el aparato» al que se
+le hace el mantenimiento: lleno de llamadas perdidas → ficha técnica en pegatina → buzón lleno y «luego te llamo» → las
+notificaciones salen volando con el agua → los mensajes sin contestar explotan como burbujas de jabón → pieza nueva (la
+recepcionista, destello verde) → chat que contesta y agenda → «ya no grabé lo demás…» → CTA coral. Subtítulos blancos con
+borde negro (estilo CapCut). Plantilla: `clones/franciscorivas-minisplit/` (generar.py; cambiar voz.json, el oficio y los chats).
+~56 s, render HyperFrames ~6–7 min. Sirve para cualquier oficio: «la ITV al WhatsApp de un taller», «la revisión del gas al
+buzón de un fontanero»…

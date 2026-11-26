@@ -504,7 +504,7 @@
    "titulo": "Si te gustó el editor de imágenes de ChatGPT debes probar los nuevos ...",
    "vistas": 112300,
    "veces_mediana": 9.2,
-   "desmontado": false,
+   "desmontado": true,
    "clonado": false
   },
   {
@@ -548,6 +548,105 @@
    "titulo": "Google golpeó fuerte con todas las novedades presentadas en el Google...",
    "vistas": 41500,
    "veces_mediana": 3.4,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "reRtVTuXbNc",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "url": "https://www.youtube.com/shorts/reRtVTuXbNc",
+   "titulo": "Claude Artifacts Just Got a HUGE Upgrade: Apps",
+   "vistas": 62000,
+   "veces_mediana": 5.17,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7649129985223019783",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "url": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+   "titulo": "Lavando un mini split #CapCut #airesacondicionados #hvactechnician ",
+   "vistas": 213200,
+   "veces_mediana": 733.91,
+   "desmontado": true,
+   "clonado": true
+  },
+  {
+   "id": "7650013582289095954",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650013582289095954",
+   "titulo": "Te cuento una breve historia de mi vida en la refrigeración #CapCut #.",
+   "vistas": 3881,
+   "veces_mediana": 13.36,
+   "desmontado": true,
+   "clonado": false
+  },
+  {
+   "id": "7657802849404980488",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "url": "https://www.tiktok.com/@soyfranciscorivas/video/7657802849404980488",
+   "titulo": "Vamos a instalar una acometida para comisión Federal de Electricidad .",
+   "vistas": 2430,
+   "veces_mediana": 8.36,
+   "desmontado": true,
+   "clonado": false
+  },
+  {
+   "id": "7672216763710393607",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "url": "https://www.tiktok.com/@soyfranciscorivas/video/7672216763710393607",
+   "titulo": "No gastes de más en energía eléctrica #CapCut ",
+   "vistas": 1421,
+   "veces_mediana": 4.89,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "7650910375679888647",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650910375679888647",
+   "titulo": "Respuesta a @titito yemir ",
+   "vistas": 924,
+   "veces_mediana": 3.18,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "_pne88RNbO0",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.youtube.com/@AlexHormozi/shorts",
+   "url": "https://www.youtube.com/shorts/_pne88RNbO0",
+   "titulo": "The best way to retain a customer is to sell them something else.",
+   "vistas": 82000,
+   "veces_mediana": 4.21,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "NBwqKG0odHM",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.youtube.com/@AlexHormozi/shorts",
+   "url": "https://www.youtube.com/shorts/NBwqKG0odHM",
+   "titulo": "If you don't do anything, nothing's going to happen.",
+   "vistas": 62000,
+   "veces_mediana": 3.18,
+   "desmontado": false,
+   "clonado": false
+  },
+  {
+   "id": "Sdi8C56nuq8",
+   "fecha_ronda": "2026-11-26",
+   "perfil": "https://www.youtube.com/@AlexHormozi/shorts",
+   "url": "https://www.youtube.com/shorts/Sdi8C56nuq8",
+   "titulo": "Three years into your thing, you have more information than when you s",
+   "vistas": 59000,
+   "veces_mediana": 3.03,
    "desmontado": false,
    "clonado": false
   }

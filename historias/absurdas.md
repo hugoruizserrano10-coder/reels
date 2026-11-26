@@ -26,7 +26,7 @@ fontanero Paco (142 vis.) son los reels que más retienen. Clones "de anuncio" c
 - [x] Paco, el fontanero más empanao, no coge el teléfono; el perro de Hacienda le fríe a impuestos (23-nov)
 - [x] (26-nov) El panadero que contrató 3 loros para coger el teléfono: los loros solo dicen "¿diga?" y "¡ring ring!" → clientes locos → IA
 - [ ] La peluquera que contesta WhatsApps con los pies mientras corta el pelo → el cliente acaba con un corte en zigzag → IA
-- [ ] El electricista que se clonó para coger el teléfono: 5 clones peleándose por el móvil → ninguno lo coge → IA
+- [~] (reservada para 27-M; ver historias/2026-11-27-M-absurda-pendiente.json) El electricista que se clonó para coger el teléfono: 5 clones peleándose por el móvil → ninguno lo coge → IA
 - [ ] La clínica que pidió a los pacientes que pidieran cita por paloma mensajera → la sala de espera llena de palomas → IA
 - [ ] El taller que puso al gato de recepcionista: el gato tira el móvil de la mesa cada vez que suena → IA
 - [ ] El fisio que contesta llamadas en mitad del masaje: el paciente acaba hecho un nudo → IA
@@ -35,3 +35,6 @@ fontanero Paco (142 vis.) son los reels que más retienen. Clones "de anuncio" c
 - [ ] El cerrajero que dejó una nota en la puerta "si llamas y no contesto, vuelve en 3 días" → el cliente sigue ahí, con barba → IA
 - [ ] La academia cuyo profe contestaba los WhatsApps en clase: los alumnos acaban dando la clase ellos → IA
 - [ ] El dentista que contesta el teléfono con el paciente con la boca abierta 40 minutos → IA
+- [x] (26-nov, clon 28-M) Mantenimiento preventivo al TELÉFONO de un técnico de aire acondicionado (clon de @soyfranciscorivas)
+- [ ] «Acompáñame a…» otra vez: acompáñame a hacerle la ITV al WhatsApp de un taller (luces fundidas = mensajes sin leer) → IA
+- [ ] Historia de origen absurda «Hace 9 años me metí en la fontanería… ¡BOOM!… ¡BAM!» de un fontanero inventado (plantilla de @soyfranciscorivas, 13x)
