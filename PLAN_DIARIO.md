@@ -152,10 +152,17 @@ Hugo. Nunca publicar algo que no haya pasado el control.
 - Publicar a las :40 (esperar si el control termina antes). Apuntar en el registro: fecha, hora_publicacion, franja (M/N),
   historia, video, media_id, duracion_s, formato, clon_de, variante, cta y control. Commit y push.
 
-## 4a. TikTok (conectado el 22-nov, cuenta Windsor tiktok_organic `_000yNAuStHLUPyUtg3B5rtCXhsZx_ubs-8N`)
-- Windsor solo lee métricas de TikTok, no publica. Tras publicar en Instagram, mandar a Hugo en el resumen el vídeo
-  (enlace raw de GitHub) y el texto para TikTok (caption más corta + 3–5 hashtags) para que lo suba él desde el móvil
-  con un sonido en tendencia. Medir también los vídeos de TikTok (get_data, conector tiktok_organic) y compararlos en el informe.
+## 4a. TikTok — AUTOMÁTICO con Metricool (desde el 27-nov)
+- Tras publicar en Instagram, programar el mismo vídeo en TikTok con el conector de Metricool: `createScheduledPost`
+  con blogId **8407772** (marca norte.local_, zona Europe/Madrid), fecha = ahora + 5 min, `media` = enlace raw de GitHub
+  del vídeo, `providers` [{"network":"tiktok"}], `text` = texto TikTok (corto + 3–5 hashtags sin lugares), y
+  `tiktokData` {"privacyOption":"PUBLIC_TO_EVERYONE","title":"<primera frase, obligatorio>","commercialContentOwnBrand":true,
+  "isAigc":true,"autoAddMusic":false}. Apuntar en el registro `tiktok_metricool_id` y el plannerUrl.
+- Si Metricool da error (p. ej. límite de publicaciones del plan gratis), no reintentar en bucle: mandar a Hugo el enlace
+  del vídeo y el texto para que lo suba él, y apuntarlo en diario.md. Si el límite mensual no da para 2 al día, subir a
+  TikTok solo el reel con mejor gancho del día (preferir historias absurdas).
+- Métricas de TikTok: Windsor (conector tiktok_organic) o Metricool (getAnalyticsDataByMetrics).
+- En el mensaje a Hugo, sugerir un sonido en tendencia de la Biblioteca de música comercial por si quiere añadirlo a mano.
 
 ## 4b. Retroalimentación de la propia tarea
 - Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.
