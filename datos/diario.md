@@ -122,3 +122,5 @@
   122; los clones de anuncio/texto siguen sin distribución (dotcsv antes/ahora: 9 vistas, skip 100 %; patas arriba 14; gato 6).
   Lo que funciona fuera (personaje + situación absurda + giro) coincide con lo único que nos funciona: por eso el clon de hoy
   va en dibujo y en clave absurda. Mañana sale el clon del mini split (28-M), otra prueba de «estructura de viral + absurdo».
+
+- 2026-11-27 M (16:40, día de prueba de hora): publicado clon absurdo @zachking «mensaje a todas las llamadas perdidas» (electricista, video_listo, 28,3 s) como reel 17947618140366827 + historia 18081076379729327. Control 10/10 (re-medido -13,6 LUFS, hoja revisada). Métricas: 26-M loros a 27 h 152 vistas, 42 % visto, skip 39 %; 26-N antes/ahora 10 vistas, skip 100 %. TikTok: soldados/drones 662 vistas y 9,7 s de media (el mejor en retención), loros 213. Sin comentarios ni formularios. Sin fallos.

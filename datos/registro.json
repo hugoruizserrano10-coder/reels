@@ -396,7 +396,18 @@
     "9_duracion_formato": "ok (1080x1920, 23,8 s, marca al final)",
     "10_aprendizaje": "ok (variante: cambia solo la franja)"
    },
-   "metricas_24h": null,
+   "metricas_24h": {
+    "media_views": 152,
+    "media_reach": 125,
+    "media_reel_avg_watch_time": 10032,
+    "media_reel_skip_rate": 0.386,
+    "media_like_count": 1,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-27 16:27 (Windsor caché, ~27 h)",
+    "pct_visto": 0.422
+   },
    "metricas_72h": null
   },
   {
@@ -427,6 +438,38 @@
    "hora_publicacion": "20:40",
    "media_id": "18114246296097327",
    "story_id": "18163244941459952"
+  },
+  {
+   "fecha": "2026-11-27",
+   "franja": "M",
+   "hora_programada": "16:40",
+   "nota_hora": "día de prueba 16:40 (días desde inicio %5==4)",
+   "historia": "historias/2026-11-27-M-absurda-clon-zachking.json",
+   "video": "videos/2026-11-27-M.mp4",
+   "duracion_s": 28.3,
+   "formato": "absurda-dibujo (clon de estructura y estilo)",
+   "clon_de": "https://www.tiktok.com/@zachking/video/7655004069190192398",
+   "tipo_negocio": "electricista",
+   "tipo_gancho": "mensaje solemne a un destinatario inesperado («Este es un mensaje para todas las llamadas perdidas») + silueta «me llamo… y soy…» + giro «mi jefa»",
+   "variante": "absurda en dibujo (formato ganador) con la estructura y la estética de un viral de 68 M (oscuro, contraluz, palabras gigantes en serif roja una a una, voz lenta); música Mixkit 671 (cinematic thriller) a 0,4 + golpes de graves en cada palabra",
+   "musica": "mixkit-671",
+   "cta": "Síguela / Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok: Análisis 2026-11-27 en diario.md; clon_de @zachking con desmontaje y ficha",
+    "2_gancho": "ok: «Este es un mensaje…» en rojo desde el s 0, sigue el gancho del viral",
+    "3_se_entiende": "ok: hoja de 12 fotogramas revisada, una palabra gigante por escena",
+    "4_sin_errores": "ok: sin textos cortados; Toni/5 clones/jefa coherentes; oferta real (coge llamadas, contesta WhatsApps, agenda)",
+    "5_audio": "ok: voz + música Mixkit 671; -13,6 LUFS re-medido",
+    "6_derechos": "ok: dibujado, voz y música libres",
+    "7_variedad": "ok: electricista (reel anterior: taller); formato distinto (dibujo vs antes/ahora)",
+    "8_cta_descripcion": "ok: Comenta RECEPCIÓN / Síguela; sin municipios; 5 hashtags",
+    "9_duracion_formato": "ok: 1080x1920, 28,3 s, cierre con logo",
+    "10_aprendizaje": "ok: variante anotada (estructura viral de 68 M en dibujo absurdo)"
+   },
+   "control_hora": "16:28",
+   "hora_publicacion": "16:42",
+   "media_id": "17947618140366827",
+   "story_id": "18081076379729327"
   }
  ],
  "cuenta_tiktok": {
