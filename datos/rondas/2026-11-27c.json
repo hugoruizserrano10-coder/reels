@@ -1,0 +1,235 @@
+{
+ "fecha": "2026-11-27",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@curiosidadesconmike",
+   "revisados": 30,
+   "mediana_vistas": 2637.0,
+   "virales": [
+    {
+     "id": "7305739688789282081",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7305739688789282081",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7305739688789282081",
+     "title": "🎄 Empieza la Navidad y estos personajes se ven muy sospechosos!! #cur...",
+     "view_count": 240800,
+     "like_count": 3839,
+     "comment_count": 10,
+     "duration": 26,
+     "timestamp": 1701000083,
+     "upload_date": "20231126",
+     "veces_mediana": 91.32,
+     "viral": true
+    },
+    {
+     "id": "7244494248601455898",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7244494248601455898",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7244494248601455898",
+     "title": "🔥 ¿Qué hay amigos? Volvemos a Tiktok con contenidos exclusivos. Salud...",
+     "view_count": 156500,
+     "like_count": 3155,
+     "comment_count": 15,
+     "duration": 9,
+     "timestamp": 1686740269,
+     "upload_date": "20230614",
+     "veces_mediana": 59.35,
+     "viral": true
+    },
+    {
+     "id": "7244497330374790427",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7244497330374790427",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7244497330374790427",
+     "title": "¿Quién se viene de fiesta? #curiosidadesconmike #mate #fiesta #pizza",
+     "view_count": 75600,
+     "like_count": 1252,
+     "comment_count": 20,
+     "duration": 66,
+     "timestamp": 1686740988,
+     "upload_date": "20230614",
+     "veces_mediana": 28.67,
+     "viral": true
+    },
+    {
+     "id": "7191176143200881925",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7191176143200881925",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7191176143200881925",
+     "title": "#curiosidadesconmike ",
+     "view_count": 62500,
+     "like_count": 1109,
+     "comment_count": 9,
+     "duration": 9,
+     "timestamp": 1674326174,
+     "upload_date": "20230121",
+     "veces_mediana": 23.7,
+     "viral": true
+    },
+    {
+     "id": "7185143426839547141",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7185143426839547141",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7185143426839547141",
+     "title": "Relax y cosas interesantes ",
+     "view_count": 54100,
+     "like_count": 1570,
+     "comment_count": 16,
+     "duration": 68,
+     "timestamp": 1672921574,
+     "upload_date": "20230105",
+     "veces_mediana": 20.52,
+     "viral": true
+    },
+    {
+     "id": "7187682398493084934",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7187682398493084934",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7187682398493084934",
+     "title": "Un regalo de Navidad !!",
+     "view_count": 51100,
+     "like_count": 1655,
+     "comment_count": 21,
+     "duration": 47,
+     "timestamp": 1673512729,
+     "upload_date": "20230112",
+     "veces_mediana": 19.38,
+     "viral": true
+    },
+    {
+     "id": "7693192821171424534",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7693192821171424534",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7693192821171424534",
+     "title": "Haciendo cirugía de mínima invasión en terrario de araña Cyrtophora c...",
+     "view_count": 36700,
+     "like_count": 812,
+     "comment_count": 5,
+     "duration": 176,
+     "timestamp": 1791211044,
+     "upload_date": "20261005",
+     "veces_mediana": 13.92,
+     "viral": true
+    },
+    {
+     "id": "7705448856468688150",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7705448856468688150",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7705448856468688150",
+     "title": "Así es la riñonera o bolsa militar usada por los Navy Seals de USA 🇺🇸...",
+     "view_count": 34900,
+     "like_count": 890,
+     "comment_count": 24,
+     "duration": 24,
+     "timestamp": 1794064624,
+     "upload_date": "20261107",
+     "veces_mediana": 13.23,
+     "viral": true
+    },
+    {
+     "id": "7190436710516362502",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7190436710516362502",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7190436710516362502",
+     "title": "#fobiasraras #fobiasextrañas #fobias #fobiachallenge #fobia #curiosid...",
+     "view_count": 30500,
+     "like_count": 695,
+     "comment_count": 4,
+     "duration": 36,
+     "timestamp": 1674154012,
+     "upload_date": "20230119",
+     "veces_mediana": 11.57,
+     "viral": true
+    },
+    {
+     "id": "7166254843642809606",
+     "url": "https://www.tiktok.com/@curiosidadesconmike/video/7166254843642809606",
+     "webpage_url": "https://www.tiktok.com/@curiosidadesconmike/video/7166254843642809606",
+     "title": "😱😵‍💫😨",
+     "view_count": 24300,
+     "like_count": 717,
+     "comment_count": 10,
+     "duration": 59,
+     "timestamp": 1668523731,
+     "upload_date": "20221115",
+     "veces_mediana": 9.22,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@zachking",
+   "revisados": 30,
+   "mediana_vistas": 12000000.0,
+   "virales": [
+    {
+     "id": "7655004069190192398",
+     "url": "https://www.tiktok.com/@zachking/video/7655004069190192398",
+     "webpage_url": "https://www.tiktok.com/@zachking/video/7655004069190192398",
+     "title": "a message to all AI",
+     "view_count": 68500000,
+     "like_count": 14000000,
+     "comment_count": 105000,
+     "duration": 27,
+     "timestamp": 1782319549,
+     "upload_date": "20260624",
+     "veces_mediana": 5.71,
+     "viral": true
+    },
+    {
+     "id": "7661646300332494094",
+     "url": "https://www.tiktok.com/@zachking/video/7661646300332494094",
+     "webpage_url": "https://www.tiktok.com/@zachking/video/7661646300332494094",
+     "title": "Which one is cake? 🍰 ",
+     "view_count": 67900000,
+     "like_count": 3800000,
+     "comment_count": 19100,
+     "duration": 14,
+     "timestamp": 1783866091,
+     "upload_date": "20260712",
+     "veces_mediana": 5.66,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@historiasconcarlos",
+   "revisados": 10,
+   "mediana_vistas": 604.5,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@datocurioso",
+   "revisados": 2,
+   "mediana_vistas": 131.0,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@elmundoalreves",
+   "revisados": 0,
+   "mediana_vistas": null,
+   "virales": [],
+   "error": "ERROR: [tiktok:user] elmundoalreves: This user's account is private. Log into an account that has access. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies"
+  },
+  {
+   "perfil": "https://www.tiktok.com/@cuentoscortos",
+   "revisados": 30,
+   "mediana_vistas": 467.5,
+   "virales": [
+    {
+     "id": "7502568759043951890",
+     "url": "https://www.tiktok.com/@cuentoscortos/video/7502568759043951890",
+     "webpage_url": "https://www.tiktok.com/@cuentoscortos/video/7502568759043951890",
+     "title": "Despedida Lauro",
+     "view_count": 2090,
+     "like_count": 54,
+     "comment_count": 1,
+     "duration": 21,
+     "timestamp": 1746827925,
+     "upload_date": "20250509",
+     "veces_mediana": 4.47,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 102,
+ "total_virales": 13
+}

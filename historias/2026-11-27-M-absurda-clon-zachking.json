@@ -1,0 +1,30 @@
+{
+ "id": "2026-11-27-M-absurda-clon-zachking",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-27-M.mp4",
+ "formato": "absurda-dibujo (clon de estructura y estilo)",
+ "proyecto": "clones/zachking-mensaje/",
+ "clon_de": "https://www.tiktok.com/@zachking/video/7655004069190192398",
+ "clon_info": "@zachking «a message to all AI»: 68,5 M vistas, 5,7x su mediana. Desmontaje en datos/desmontajes/zachking-7655004069190192398/",
+ "tipo_negocio": "electricista",
+ "tipo_gancho": "mensaje solemne a un destinatario inesperado («Este es un mensaje para todas las llamadas perdidas») + silueta «me llamo… y soy…» + giro «mi jefa»",
+ "variante": "absurda en dibujo (formato ganador) con la estructura y la estética de un viral de 68 M (oscuro, contraluz, palabras gigantes en serif roja una a una, voz lenta); música Mixkit 671 (cinematic thriller) a 0,4 + golpes de graves en cada palabra",
+ "musica": "mixkit-671",
+ "duracion_s": 28.3,
+ "cta": "Síguela / Comenta RECEPCIÓN",
+ "caption": "Este es un mensaje para todas las llamadas perdidas 📵 Toni, electricista, se clonó cinco veces para cogerlas todas… y se pelearon por el móvil. No hace falta clonarte: nuestra recepcionista con IA coge las llamadas, contesta los WhatsApps y agenda las visitas las 24 horas. Síguela o comenta RECEPCIÓN y te la monto en tu negocio. #electricista #autonomos #negocioslocales #inteligenciaartificial #humor",
+ "tiktok": "Este es un mensaje para todas las llamadas perdidas 📵 Comenta RECEPCIÓN 👇 #electricista #humor #autonomos #inteligenciaartificial",
+ "control": {
+  "fecha": "2026-11-27 (análisis)",
+  "1_investigacion": "ok (Análisis 2026-11-27; viral desmontado con ficha)",
+  "2_gancho": "ok: subtítulo rojo «Este es un mensaje para todas las llamadas perdidas» completo a los 2,2 s",
+  "3_se_entiende": "ok: una palabra clave cada vez, hoja revisada",
+  "4_sin_errores": "ok: sin textos cortados; Toni/5 clones/jefa coherentes; la recepcionista solo coge llamadas, contesta WhatsApps y agenda",
+  "5_audio": "ok: voz davefx + música Mixkit 671 desde el s 0 + golpes; -13,6 LUFS",
+  "6_derechos": "ok: todo dibujado, voz y música propias/libres",
+  "7_variedad": "ok: electricista no sale en los últimos 14 días; formato nuevo (N)",
+  "8_cta_descripcion": "ok: sin municipios, 5 hashtags",
+  "9_duracion_formato": "ok: 1080x1920, 28,3 s, cierre con logo",
+  "10_aprendizaje": "ok: variante anotada"
+ }
+}

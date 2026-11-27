@@ -1,0 +1,47 @@
+{
+ "id": "zachking-7655004069190192398",
+ "duracion_s": 27.9,
+ "cortes_s": [
+  2.8,
+  3.6,
+  4.54,
+  5.34,
+  6.37,
+  7.27,
+  14.21,
+  15.15,
+  16.08,
+  16.32,
+  16.55,
+  17.85,
+  18.85,
+  19.75,
+  20.65,
+  21.42,
+  25.83
+ ],
+ "cortes_por_10s": 6.1,
+ "palabras_por_s": 1.79,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 2.8,
+   "texto": "This is a message to all artificial intelligence."
+  },
+  {
+   "ini": 2.8,
+   "fin": 7.3,
+   "texto": "My name is Zach King, and I'm a VFX artist."
+  },
+  {
+   "ini": 7.3,
+   "fin": 14.3,
+   "texto": "And I'm gonna steal AI's job by making billions of videos about everything so there's no longer a reason to watch AI videos."
+  },
+  {
+   "ini": 14.3,
+   "fin": 26.0,
+   "texto": "My boss wants to destroy AI. Please follow him."
+  }
+ ]
+}

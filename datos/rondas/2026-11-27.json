@@ -1,0 +1,651 @@
+{
+ "fecha": "2026-11-27",
+ "umbral": 3.0,
+ "cuentas": [
+  {
+   "perfil": "https://www.tiktok.com/@marketingconlaurita",
+   "revisados": 30,
+   "mediana_vistas": 968.5,
+   "virales": [
+    {
+     "id": "7670149322247277846",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7670149322247277846",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7670149322247277846",
+     "title": "Y tu, estás usando ya loops?? 🔂 o sigues prompteando🫤",
+     "view_count": 9364,
+     "like_count": 515,
+     "comment_count": 139,
+     "duration": 61,
+     "timestamp": 1785845774,
+     "upload_date": "20260804",
+     "veces_mediana": 9.67,
+     "viral": true
+    },
+    {
+     "id": "7651593972300680470",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7651593972300680470",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7651593972300680470",
+     "title": "🟠 Creo una app para entrenadores online con Claude.",
+     "view_count": 4327,
+     "like_count": 137,
+     "comment_count": 135,
+     "duration": 61,
+     "timestamp": 1781525535,
+     "upload_date": "20260615",
+     "veces_mediana": 4.47,
+     "viral": true
+    },
+    {
+     "id": "7699143212945919264",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7699143212945919264",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7699143212945919264",
+     "title": "El skill de Claude que me ayuda a revisar todos mis proyectos 5 veces...",
+     "view_count": 4126,
+     "like_count": 157,
+     "comment_count": 53,
+     "duration": 57,
+     "timestamp": 1792596457,
+     "upload_date": "20261021",
+     "veces_mediana": 4.26,
+     "viral": true
+    },
+    {
+     "id": "7646017064217480470",
+     "url": "https://www.tiktok.com/@marketingconlaurita/video/7646017064217480470",
+     "webpage_url": "https://www.tiktok.com/@marketingconlaurita/video/7646017064217480470",
+     "title": "Claude analiza mi instagram y me dice en que mejorar 😮💨🏆",
+     "view_count": 4033,
+     "like_count": 138,
+     "comment_count": 3,
+     "duration": 43,
+     "timestamp": 1780227062,
+     "upload_date": "20260531",
+     "veces_mediana": 4.16,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@marketingconlaurita/shorts",
+   "revisados": 30,
+   "mediana_vistas": 1050.0,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@alejavirivera",
+   "revisados": 30,
+   "mediana_vistas": 9040.5,
+   "virales": [
+    {
+     "id": "7688762956502355233",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7688762956502355233",
+     "title": "¿Cómo puede ser LEGAL tener acceso a todo esto? 🌍 God’s Eye View reún...",
+     "view_count": 516000,
+     "like_count": 38000,
+     "comment_count": 175,
+     "duration": 64,
+     "timestamp": 1790179611,
+     "upload_date": "20260923",
+     "veces_mediana": 57.08,
+     "viral": true
+    },
+    {
+     "id": "7691731215258242336",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7691731215258242336",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7691731215258242336",
+     "title": "Google acaba de liberar su mejor modelo de generación de vídeo con IA...",
+     "view_count": 102900,
+     "like_count": 6202,
+     "comment_count": 73,
+     "duration": 65,
+     "timestamp": 1790870716,
+     "upload_date": "20261001",
+     "veces_mediana": 11.38,
+     "viral": true
+    },
+    {
+     "id": "7708818254814383393",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7708818254814383393",
+     "title": "🤯 ¡DeepSeek acaba de hacer otra LOCURA con su nuevo Modo Creador! Aho...",
+     "view_count": 54000,
+     "like_count": 3465,
+     "comment_count": 48,
+     "duration": 80,
+     "timestamp": 1794849100,
+     "upload_date": "20261116",
+     "veces_mediana": 5.97,
+     "viral": true
+    },
+    {
+     "id": "7696185141852409121",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7696185141852409121",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7696185141852409121",
+     "title": "🎬 ¡6 herramientas de IA para crear vídeos completamente GRATIS! 🤯🔥 ¿Q...",
+     "view_count": 45600,
+     "like_count": 2259,
+     "comment_count": 24,
+     "duration": 79,
+     "timestamp": 1791907723,
+     "upload_date": "20261013",
+     "veces_mediana": 5.04,
+     "viral": true
+    },
+    {
+     "id": "7691367052703026464",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7691367052703026464",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7691367052703026464",
+     "title": "¿Más de 7.000 MILLONES de tokens GRATIS al mes? 🤯 FreeLLMAPI está reg...",
+     "view_count": 41100,
+     "like_count": 3031,
+     "comment_count": 47,
+     "duration": 64,
+     "timestamp": 1790785922,
+     "upload_date": "20260930",
+     "veces_mediana": 4.55,
+     "viral": true
+    },
+    {
+     "id": "7685823889045245217",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7685823889045245217",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7685823889045245217",
+     "title": "Meta acaba de lanzar Muse, un agente de IA que no se limita a respond...",
+     "view_count": 33600,
+     "like_count": 1760,
+     "comment_count": 25,
+     "duration": 67,
+     "timestamp": 1789495302,
+     "upload_date": "20260915",
+     "veces_mediana": 3.72,
+     "viral": true
+    },
+    {
+     "id": "7680954514920328480",
+     "url": "https://www.tiktok.com/@alejavirivera/video/7680954514920328480",
+     "webpage_url": "https://www.tiktok.com/@alejavirivera/video/7680954514920328480",
+     "title": "DeepSeek no solo está compitiendo en potencia: está obligando a todo ...",
+     "view_count": 29000,
+     "like_count": 1768,
+     "comment_count": 27,
+     "duration": 81,
+     "timestamp": 1788361564,
+     "upload_date": "20260902",
+     "veces_mediana": 3.21,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@AlejaviRivera/shorts",
+   "revisados": 4,
+   "mediana_vistas": 63000.0,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@emprendeaprendiendo/shorts",
+   "revisados": 30,
+   "mediana_vistas": 17500.0,
+   "virales": [
+    {
+     "id": "pwcrn5bdr9c",
+     "url": "https://www.youtube.com/shorts/pwcrn5bdr9c",
+     "webpage_url": "https://www.youtube.com/shorts/pwcrn5bdr9c",
+     "title": "She became a millionaire by reinventing gym wear",
+     "view_count": 365000,
+     "veces_mediana": 20.86,
+     "viral": true
+    },
+    {
+     "id": "tXRno9MAa-I",
+     "url": "https://www.youtube.com/shorts/tXRno9MAa-I",
+     "webpage_url": "https://www.youtube.com/shorts/tXRno9MAa-I",
+     "title": "Recording herself cooking changed her life",
+     "view_count": 186000,
+     "veces_mediana": 10.63,
+     "viral": true
+    },
+    {
+     "id": "iTOXHp4c1YE",
+     "url": "https://www.youtube.com/shorts/iTOXHp4c1YE",
+     "webpage_url": "https://www.youtube.com/shorts/iTOXHp4c1YE",
+     "title": "He was fired for recording viral videos",
+     "view_count": 143000,
+     "veces_mediana": 8.17,
+     "viral": true
+    },
+    {
+     "id": "Hk20QLW6nEc",
+     "url": "https://www.youtube.com/shorts/Hk20QLW6nEc",
+     "webpage_url": "https://www.youtube.com/shorts/Hk20QLW6nEc",
+     "title": "The knife sharpener who created a knife empire",
+     "view_count": 82000,
+     "veces_mediana": 4.69,
+     "viral": true
+    },
+    {
+     "id": "_agQV6gtDGE",
+     "url": "https://www.youtube.com/shorts/_agQV6gtDGE",
+     "webpage_url": "https://www.youtube.com/shorts/_agQV6gtDGE",
+     "title": "This is how he sold 10k worth of sauces in 48 hours",
+     "view_count": 75000,
+     "veces_mediana": 4.29,
+     "viral": true
+    },
+    {
+     "id": "sr25G5qddV4",
+     "url": "https://www.youtube.com/shorts/sr25G5qddV4",
+     "webpage_url": "https://www.youtube.com/shorts/sr25G5qddV4",
+     "title": "He left Wall Street to wash cars?",
+     "view_count": 59000,
+     "veces_mediana": 3.37,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@javadex",
+   "revisados": 30,
+   "mediana_vistas": 351.5,
+   "virales": [
+    {
+     "id": "7614218882076740896",
+     "url": "https://www.tiktok.com/@javadex/video/7614218882076740896",
+     "webpage_url": "https://www.tiktok.com/@javadex/video/7614218882076740896",
+     "title": "¿Cómo ves eso? Para mí, la ingeniería de software está cambiando: nec...",
+     "view_count": 5210,
+     "like_count": 82,
+     "comment_count": 10,
+     "duration": 93,
+     "timestamp": 1772823485,
+     "upload_date": "20260306",
+     "veces_mediana": 14.82,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/@NateHerk/shorts",
+   "revisados": 30,
+   "mediana_vistas": 13000.0,
+   "virales": [
+    {
+     "id": "hc34VXRoX7s",
+     "url": "https://www.youtube.com/shorts/hc34VXRoX7s",
+     "webpage_url": "https://www.youtube.com/shorts/hc34VXRoX7s",
+     "title": "Claude Can Run a GTA 6 Clipping Channel on Autopilot",
+     "view_count": 147000,
+     "veces_mediana": 11.31,
+     "viral": true
+    },
+    {
+     "id": "0IPuk63FwU0",
+     "url": "https://www.youtube.com/shorts/0IPuk63FwU0",
+     "webpage_url": "https://www.youtube.com/shorts/0IPuk63FwU0",
+     "title": "You Can Make $100/day With a Grok Bot GTA 6 Clipper",
+     "view_count": 106000,
+     "veces_mediana": 8.15,
+     "viral": true
+    },
+    {
+     "id": "V0PzEBcnAdk",
+     "url": "https://www.youtube.com/shorts/V0PzEBcnAdk",
+     "webpage_url": "https://www.youtube.com/shorts/V0PzEBcnAdk",
+     "title": "Claude code mods are insane. Steal these 3.",
+     "view_count": 80000,
+     "veces_mediana": 6.15,
+     "viral": true
+    },
+    {
+     "id": "reRtVTuXbNc",
+     "url": "https://www.youtube.com/shorts/reRtVTuXbNc",
+     "webpage_url": "https://www.youtube.com/shorts/reRtVTuXbNc",
+     "title": "Claude Artifacts Just Got a HUGE Upgrade: Apps",
+     "view_count": 68000,
+     "veces_mediana": 5.23,
+     "viral": true
+    },
+    {
+     "id": "_EChYLC3Vag",
+     "url": "https://www.youtube.com/shorts/_EChYLC3Vag",
+     "webpage_url": "https://www.youtube.com/shorts/_EChYLC3Vag",
+     "title": "I Turned Codex Into My AI Operating System",
+     "view_count": 65000,
+     "veces_mediana": 5.0,
+     "viral": true
+    },
+    {
+     "id": "6RDL094JKGo",
+     "url": "https://www.youtube.com/shorts/6RDL094JKGo",
+     "webpage_url": "https://www.youtube.com/shorts/6RDL094JKGo",
+     "title": "The Hottest AI Job of 2027 pays $325k/year",
+     "view_count": 39000,
+     "veces_mediana": 3.0,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCVt4ugq2txl_szlXAO7B3-g/shorts",
+   "revisados": 30,
+   "mediana_vistas": 31000.0,
+   "virales": [
+    {
+     "id": "ozn5Jr9mszY",
+     "url": "https://www.youtube.com/shorts/ozn5Jr9mszY",
+     "webpage_url": "https://www.youtube.com/shorts/ozn5Jr9mszY",
+     "title": "Cuánto Puede Ganar Un Piloto de Jet Privado",
+     "view_count": 390000,
+     "veces_mediana": 12.58,
+     "viral": true
+    },
+    {
+     "id": "hiacSK6UAmc",
+     "url": "https://www.youtube.com/shorts/hiacSK6UAmc",
+     "webpage_url": "https://www.youtube.com/shorts/hiacSK6UAmc",
+     "title": "Cómo Trabajan Las Máquinas Que Generan $1,026 Al Mes",
+     "view_count": 371000,
+     "veces_mediana": 11.97,
+     "viral": true
+    },
+    {
+     "id": "iZhhaJMsQ98",
+     "url": "https://www.youtube.com/shorts/iZhhaJMsQ98",
+     "webpage_url": "https://www.youtube.com/shorts/iZhhaJMsQ98",
+     "title": "Regalo 10.000€ Al Mejor Proyecto: ¿Se Lo Merece?",
+     "view_count": 196000,
+     "veces_mediana": 6.32,
+     "viral": true
+    },
+    {
+     "id": "3iekjbOHjTg",
+     "url": "https://www.youtube.com/shorts/3iekjbOHjTg",
+     "webpage_url": "https://www.youtube.com/shorts/3iekjbOHjTg",
+     "title": "Millonario Aconseja Qué Hacer En Tiempos Difíciles",
+     "view_count": 153000,
+     "veces_mediana": 4.94,
+     "viral": true
+    },
+    {
+     "id": "ZCRvaGYDy7E",
+     "url": "https://www.youtube.com/shorts/ZCRvaGYDy7E",
+     "webpage_url": "https://www.youtube.com/shorts/ZCRvaGYDy7E",
+     "title": "Millonario Explica Sus Negocios Más Rentables",
+     "view_count": 103000,
+     "veces_mediana": 3.32,
+     "viral": true
+    },
+    {
+     "id": "7CV08z9vlKU",
+     "url": "https://www.youtube.com/shorts/7CV08z9vlKU",
+     "webpage_url": "https://www.youtube.com/shorts/7CV08z9vlKU",
+     "title": "Cómo Genero $1,026 Al Mes Sin Hacer Nada",
+     "view_count": 101000,
+     "veces_mediana": 3.26,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@hermanosgarciareformas",
+   "revisados": 4,
+   "mediana_vistas": 607.5,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCs0cBGmaf90AI7cYws1NeOQ/shorts",
+   "revisados": 30,
+   "mediana_vistas": 16000.0,
+   "virales": [
+    {
+     "id": "YWrHW9ZFVLU",
+     "url": "https://www.youtube.com/shorts/YWrHW9ZFVLU",
+     "webpage_url": "https://www.youtube.com/shorts/YWrHW9ZFVLU",
+     "title": "This Is How the Kitchen Looked After Knocking Down a Wall #renovations #remodeling #renovation",
+     "view_count": 77000,
+     "veces_mediana": 4.81,
+     "viral": true
+    },
+    {
+     "id": "3C6GNNU6cDs",
+     "url": "https://www.youtube.com/shorts/3C6GNNU6cDs",
+     "webpage_url": "https://www.youtube.com/shorts/3C6GNNU6cDs",
+     "title": "How to hide all your appliances 🪄 #kitchenhacks #minimalisthome #shorts",
+     "view_count": 72000,
+     "veces_mediana": 4.5,
+     "viral": true
+    },
+    {
+     "id": "otDeFCmsDds",
+     "url": "https://www.youtube.com/shorts/otDeFCmsDds",
+     "webpage_url": "https://www.youtube.com/shorts/otDeFCmsDds",
+     "title": "Total Transformation: The Bathroom and the Bedroom. PART 2 #renovation #home #shorts",
+     "view_count": 55000,
+     "veces_mediana": 3.44,
+     "viral": true
+    },
+    {
+     "id": "lGKuPJaejrI",
+     "url": "https://www.youtube.com/shorts/lGKuPJaejrI",
+     "webpage_url": "https://www.youtube.com/shorts/lGKuPJaejrI",
+     "title": "Goodbye wall, hello space #renovations #home #ideas",
+     "view_count": 53000,
+     "veces_mediana": 3.31,
+     "viral": true
+    },
+    {
+     "id": "cuTvi80JHmc",
+     "url": "https://www.youtube.com/shorts/cuTvi80JHmc",
+     "webpage_url": "https://www.youtube.com/shorts/cuTvi80JHmc",
+     "title": "New layout for this house🙌🏼 💙",
+     "view_count": 49000,
+     "veces_mediana": 3.06,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.youtube.com/channel/UCA785fwozexkQnTEckfqjgw/shorts",
+   "revisados": 29,
+   "mediana_vistas": 897,
+   "virales": [],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@dotcsv",
+   "revisados": 30,
+   "mediana_vistas": 12200.0,
+   "virales": [
+    {
+     "id": "7606027425373228310",
+     "url": "https://www.tiktok.com/@dotcsv/video/7606027425373228310",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7606027425373228310",
+     "title": "Seedance 2.0 es el nuevo modelo de vídeo de ByteDance que promete mov...",
+     "view_count": 619900,
+     "like_count": 16100,
+     "comment_count": 223,
+     "duration": 57,
+     "timestamp": 1770916264,
+     "upload_date": "20260212",
+     "veces_mediana": 50.81,
+     "viral": true
+    },
+    {
+     "id": "7536962648559062294",
+     "url": "https://www.tiktok.com/@dotcsv/video/7536962648559062294",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7536962648559062294",
+     "title": "Google ha presentado Genie 3, capaz de generar vídeos interactivos a ...",
+     "view_count": 128800,
+     "like_count": 9714,
+     "comment_count": 149,
+     "duration": 89,
+     "timestamp": 1754835870,
+     "upload_date": "20250810",
+     "veces_mediana": 10.56,
+     "viral": true
+    },
+    {
+     "id": "7511772881131490582",
+     "url": "https://www.tiktok.com/@dotcsv/video/7511772881131490582",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7511772881131490582",
+     "title": "Si te gustó el editor de imágenes de ChatGPT debes probar los nuevos ...",
+     "view_count": 112300,
+     "like_count": 8694,
+     "comment_count": 76,
+     "duration": 89,
+     "timestamp": 1748970919,
+     "upload_date": "20250603",
+     "veces_mediana": 9.2,
+     "viral": true
+    },
+    {
+     "id": "7597876981513899286",
+     "url": "https://www.tiktok.com/@dotcsv/video/7597876981513899286",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7597876981513899286",
+     "title": "Anthropic presenta su primer agente generalista capaz de trabajar en ...",
+     "view_count": 88700,
+     "like_count": 5251,
+     "comment_count": 34,
+     "duration": 63,
+     "timestamp": 1769018592,
+     "upload_date": "20260121",
+     "veces_mediana": 7.27,
+     "viral": true
+    },
+    {
+     "id": "7688387020800019734",
+     "url": "https://www.tiktok.com/@dotcsv/video/7688387020800019734",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7688387020800019734",
+     "title": "¿Qué es Jev? #dotcsv #inteligenciaartificial #jev #TypeSafe #IA ",
+     "view_count": 72600,
+     "like_count": 4892,
+     "comment_count": 42,
+     "duration": 122,
+     "timestamp": 1790092108,
+     "upload_date": "20260922",
+     "veces_mediana": 5.95,
+     "viral": true
+    },
+    {
+     "id": "7522147313003941142",
+     "url": "https://www.tiktok.com/@dotcsv/video/7522147313003941142",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7522147313003941142",
+     "title": "Esta demo demuestra el futuro de los asistentes de voz, conectados a ...",
+     "view_count": 42300,
+     "like_count": 2467,
+     "comment_count": 33,
+     "duration": 83,
+     "timestamp": 1751386406,
+     "upload_date": "20250701",
+     "veces_mediana": 3.47,
+     "viral": true
+    },
+    {
+     "id": "7507330484767231255",
+     "url": "https://www.tiktok.com/@dotcsv/video/7507330484767231255",
+     "webpage_url": "https://www.tiktok.com/@dotcsv/video/7507330484767231255",
+     "title": "Google golpeó fuerte con todas las novedades presentadas en el Google...",
+     "view_count": 41500,
+     "like_count": 1501,
+     "comment_count": 27,
+     "duration": 112,
+     "timestamp": 1747936592,
+     "upload_date": "20250522",
+     "veces_mediana": 3.4,
+     "viral": true
+    }
+   ],
+   "error": ""
+  },
+  {
+   "perfil": "https://www.tiktok.com/@soyfranciscorivas",
+   "revisados": 30,
+   "mediana_vistas": 291.5,
+   "virales": [
+    {
+     "id": "7649129985223019783",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+     "title": "Lavando un mini split #CapCut #airesacondicionados #hvactechnician ",
+     "view_count": 213200,
+     "like_count": 4764,
+     "comment_count": 294,
+     "duration": 161,
+     "timestamp": 1780951866,
+     "upload_date": "20260608",
+     "veces_mediana": 731.39,
+     "viral": true
+    },
+    {
+     "id": "7650013582289095954",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650013582289095954",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7650013582289095954",
+     "title": "Te cuento una breve historia de mi vida en la refrigeración #CapCut #...",
+     "view_count": 3881,
+     "like_count": 170,
+     "comment_count": 4,
+     "duration": 71,
+     "timestamp": 1781157593,
+     "upload_date": "20260611",
+     "veces_mediana": 13.31,
+     "viral": true
+    },
+    {
+     "id": "7657802849404980488",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7657802849404980488",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7657802849404980488",
+     "title": "Vamos a instalar una acometida para comisión Federal de Electricidad ...",
+     "view_count": 2430,
+     "like_count": 66,
+     "comment_count": 0,
+     "duration": 113,
+     "timestamp": 1782971178,
+     "upload_date": "20260702",
+     "veces_mediana": 8.34,
+     "viral": true
+    },
+    {
+     "id": "7672216763710393607",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7672216763710393607",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7672216763710393607",
+     "title": "No gastes de más en energía eléctrica #CapCut ",
+     "view_count": 1421,
+     "like_count": 30,
+     "comment_count": 0,
+     "duration": 160,
+     "timestamp": 1786327182,
+     "upload_date": "20260810",
+     "veces_mediana": 4.87,
+     "viral": true
+    },
+    {
+     "id": "7650910375679888647",
+     "url": "https://www.tiktok.com/@soyfranciscorivas/video/7650910375679888647",
+     "webpage_url": "https://www.tiktok.com/@soyfranciscorivas/video/7650910375679888647",
+     "title": "Respuesta a @titito yemir ",
+     "view_count": 924,
+     "like_count": 17,
+     "comment_count": 0,
+     "duration": 57,
+     "timestamp": 1781366392,
+     "upload_date": "20260613",
+     "veces_mediana": 3.17,
+     "viral": true
+    }
+   ],
+   "error": ""
+  }
+ ],
+ "total_revisados": 337,
+ "total_virales": 47
+}

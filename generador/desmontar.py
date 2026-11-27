@@ -23,7 +23,7 @@ try:
     from faster_whisper import WhisperModel
     a, _ = sf.read(wav, dtype="float32")
     m = WhisperModel(os.environ.get("WHISPER_MODELO", "small"), device="cpu", compute_type="int8")
-    for s in m.transcribe(a, language="es", vad_filter=True)[0]:
+    for s in m.transcribe(a, language=os.environ.get("WHISPER_IDIOMA", "es"), vad_filter=True)[0]:
         segs.append({"ini": round(s.start, 1), "fin": round(s.end, 1), "texto": s.text.strip()})
 except Exception as e:
     segs.append({"ini": 0, "fin": 0, "texto": f"(sin transcripción: {e})"})

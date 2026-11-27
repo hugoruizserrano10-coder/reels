@@ -1,0 +1,19 @@
+{
+ "id": "zachking-7661646300332494094",
+ "duracion_s": 14.3,
+ "cortes_s": [],
+ "cortes_por_10s": 0.0,
+ "palabras_por_s": 2.45,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 7.4,
+   "texto": "is it cake or is it fake let's see oh well that's not going to cut because that is paper and this"
+  },
+  {
+   "ini": 7.4,
+   "fin": 15.9,
+   "texto": "is also a fake hand hello oh oh why is it cake now"
+  }
+ ]
+}

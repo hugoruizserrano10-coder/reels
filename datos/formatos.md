@@ -84,3 +84,12 @@ recepcionista, destello verde) → chat que contesta y agenda → «ya no grabé
 borde negro (estilo CapCut). Plantilla: `clones/franciscorivas-minisplit/` (generar.py; cambiar voz.json, el oficio y los chats).
 ~56 s, render HyperFrames ~6–7 min. Sirve para cualquier oficio: «la ITV al WhatsApp de un taller», «la revisión del gas al
 buzón de un fontanero»…
+
+## N. "Mensaje solemne de villano" en dibujo (clon del 27-nov, @zachking 5,7x / 68,5 M)
+Despacho a oscuras con contraluz (monitor azul, estantes con bombillas), personaje con jersey de cuello alto y gorra naranja
+con las manos en pico; subtítulo rojo (Inter 900) que se acumula palabra a palabra en el gancho; después, cortes secos y UNA
+palabra clave gigante en serif roja (Playfair Display 700, arriba) por golpe, cada una con golpe de graves; plano en silueta
+sobre fondo gris con foco para «me llamo…»; giro «mi jefa» = móvil con gorra y corona que se ilumina; montaje rápido de lo que
+hace (llamadas / WhatsApps / visitas / 24 horas) y «Síguela» + CTA. Voz davefx lenta (voz_velocidad 1,08), música Mixkit 671
+(cinematic thriller) a 0,4. Plantilla: `clones/zachking-mensaje/` (generar.py; cambiar voz.json y PAL). ~28 s, render ~6 min.
+Ojo: el tamaño de las palabras se calcula por longitud (min(210, 900/(0,74·letras))) para que no se corten.

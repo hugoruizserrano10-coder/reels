@@ -1,0 +1,13 @@
+{
+ "voz_velocidad": 1.08,
+ "voz": [
+  ["s1", "Este es un mensaje para todas las llamadas perdidas."],
+  ["s2", "Me llamo Toni. Y soy electricista."],
+  ["s3", "Y voy a cogeros a todas. Clonándome cinco veces."],
+  ["s4", "Cinco Tonis. Un solo móvil."],
+  ["s5", "Se pelean por el móvil. Y no lo coge ninguno."],
+  ["s6", "Por eso, mi jefa va a acabar con vosotras."],
+  ["s7", "Coge las llamadas, contesta los WhatsApps y agenda las visitas. Las veinticuatro horas."],
+  ["s8", "Síguela. O comenta RECEPCIÓN."]
+ ]
+}

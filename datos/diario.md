@@ -99,3 +99,26 @@
 
 - 2026-11-26 M (13:40): publicada absurda loros/panadería (video_listo, 23,8 s) como reel 18202348414392838 + historia. Control 10/10 (nota: descripción sin municipio concreto). Métricas 25-M a 24 h: 14 vistas, skip 83 %. Sin fallos. Próxima vez: meter municipio en la caption de las absurdas.
 - 2026-11-26 N (20:40): publicado clon dotcsv antes/ahora (taller, video_listo, 46,3 s) como reel 18114246296097327 + historia 18163244941459952. Control 10/10 (re-medido -14,3 LUFS). Métricas 25-N gato a 24 h: 6 vistas, 19 % visto, skip 75 %. 26-M loros a 8 h: 151 vistas, 42 % visto, skip 39 %. Sin fallos.
+
+## Análisis 2026-11-27
+- Revisados 539 vídeos: 337 de los perfiles habituales con descubrir.py (**4.º día sin virales nuevos**), 162 de 8 cuentas
+  exploradas para el paso 2a (historias absurdas) y 40 de una búsqueda de YouTube. **YouTube ya no deja nada desde la nube**:
+  `ytsearch` da 403 a partir de la 2.ª consulta y las descargas piden «confirmar que no eres un bot» con cualquier cliente;
+  solo se pueden listar canales. Así que las absurdas salen de TikTok. Nuevas referentes: **@zachking** (mediana 12 M) y
+  **@curiosidadesconmike** (humor visual tonto en español, 10 virales hasta 91x). Make sigue sin webhook. 24 virales nuevos.
+- Desmontados 3: @zachking «a message to all AI» (**68,5 M, 5,7x**), @zachking «is it cake» (67,9 M, 5,7x) y @curiosidadesconmike
+  juguetes navideños sospechosos (240k, 91x).
+- **Clon (absurda, paso 2a)**: «a message to all AI» → `videos/2026-11-27-M.mp4` (28,2 s, electricista) +
+  `historias/2026-11-27-M-absurda-clon-zachking.json`, sale **hoy 27-nov a las 13:40**. «Este es un mensaje para todas las
+  llamadas perdidas. Me llamo Toni y soy electricista. Y voy a cogeros a todas, clonándome cinco veces…» → los 5 Tonis se
+  pelean por el móvil y no lo coge ninguno → «mi jefa va a acabar con vosotras» (la recepcionista, un móvil con gorra y corona)
+  → llamadas / WhatsApps / visitas / 24 horas → «Síguela. O comenta RECEPCIÓN». Misma estética del viral (oscuro, contraluz,
+  palabras gigantes en serif roja una a una, voz lenta) pero dibujado (formato N en formatos.md). Usa la idea reservada del
+  electricista que se clona. Música Mixkit 671.
+- Ideas: (1) formato N como serie: «Este es un mensaje para todos los WhatsApps sin leer» y la «jefa» como personaje fijo;
+  (2) diciembre: «Empieza la Navidad y estos clientes se ven muy sospechosos» (juguetes de cuerda dibujados, sin voz);
+  (3) «¿Es real o es IA?» con dos móviles.
+- **Comparación con lo nuestro (Windsor, 7 días)**: tanque 240 vistas (11,2 s), loros 152 (10,0 s, skip 39 %), Paco 142, fuga
+  122; los clones de anuncio/texto siguen sin distribución (dotcsv antes/ahora: 9 vistas, skip 100 %; patas arriba 14; gato 6).
+  Lo que funciona fuera (personaje + situación absurda + giro) coincide con lo único que nos funciona: por eso el clon de hoy
+  va en dibujo y en clave absurda. Mañana sale el clon del mini split (28-M), otra prueba de «estructura de viral + absurdo».

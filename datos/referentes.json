@@ -65,6 +65,18 @@
    "usuario": "soyfranciscorivas",
    "tiktok": "https://www.tiktok.com/@soyfranciscorivas",
    "motivo": "(26-nov) técnico de aire acondicionado/electricidad en español (México): vídeos de proceso «Acompáñame a…» con voz en off; mediana 290, virales de 3-734x (mini split 213k vistas). Oficio = nuestro cliente tipo. 1.ª cuenta nueva de la semana del 30-nov si se cuenta por semanas; vigilar 2 semanas"
+  },
+  {
+   "usuario": "zachking",
+   "tiktok": "https://www.tiktok.com/@zachking",
+   "motivo": "27-nov: historias visuales absurdas (VFX); mediana 12 M, «a message to all AI» 5,7x (68,5 M). Fuente para el paso 2a (historias absurdas).",
+   "añadida": "2026-11-27"
+  },
+  {
+   "usuario": "curiosidadesconmike",
+   "tiktok": "https://www.tiktok.com/@curiosidadesconmike",
+   "motivo": "27-nov: humor visual tonto/de temporada en español; mediana 2,6k, 10 virales (hasta 91x). Fuente para el paso 2a.",
+   "añadida": "2026-11-27"
   }
  ],
  "umbral_viral": 3.0,
@@ -78,6 +90,9 @@
   "Búsqueda web de reels sueltos de Instagram (site:instagram.com/reel): no devuelve enlaces a reels, solo blogs (23 y 24-nov)",
   "tiktok @ia_productividad, @xavimarcet: Unable to extract secondary user ID; @reformasyobras sin vídeos; @marketingconia e @iaparatodos casi sin vídeos/vistas, fuera de nicho (25-nov)",
   "Mixkit: los clips con id 1008xx (teléfonos antiguos nuevos) no tienen URL -720/-1080/-360 directa (25-nov)",
-  "tiktok @alexhormozi privada, @ibai sin vídeos, @lapapelerademaria y @moonpiofficial: Unable to extract secondary user ID; @elmundotoday casi sin vídeos (26-nov). youtube @AlexHormozi/shorts lista bien (mediana 19,5k) pero no descarga. Búsqueda web de reels de humor de negocios: solo noticias, ningún enlace a reel (26-nov)"
+  "tiktok @alexhormozi privada, @ibai sin vídeos, @lapapelerademaria y @moonpiofficial: Unable to extract secondary user ID; @elmundotoday casi sin vídeos (26-nov). youtube @AlexHormozi/shorts lista bien (mediana 19,5k) pero no descarga. Búsqueda web de reels de humor de negocios: solo noticias, ningún enlace a reel (26-nov)",
+  "2026-11-27: YouTube bloquea desde la nube tanto la búsqueda ytsearch (403) como las descargas («Sign in to confirm you're not a bot»), con cualquier player_client: los listados de canales sí funcionan (vistas), pero no se puede desmontar nada de YouTube. Buscar el mismo creador en TikTok.",
+  "2026-11-27: tiktok @zack.d.films falla («Unable to extract secondary user ID»); youtube.com/@ZackDFilms/shorts lista bien (mediana 4,7 M) pero no descarga. @zackdfilms y @zackdfilms1 en TikTok son copias, no el creador.",
+  "2026-11-27: tiktok @historiaparatontos (mediana 128k) es historia/política: no sirve para absurdas. @historiasconcarlos, @datocurioso, @cuentoscortos casi sin vistas; @elmundoalreves privada."
  ]
 }

@@ -1,0 +1,53 @@
+{
+ "lines": [
+  {
+   "scene": "s1",
+   "text": "Este es un mensaje para todas las llamadas perdidas.",
+   "start": 0.35,
+   "end": 2.936
+  },
+  {
+   "scene": "s2",
+   "text": "Me llamo Toni. Y soy electricista.",
+   "start": 3.366,
+   "end": 5.841
+  },
+  {
+   "scene": "s3",
+   "text": "Y voy a cogeros a todas. Clonándome cinco veces.",
+   "start": 6.271,
+   "end": 9.596
+  },
+  {
+   "scene": "s4",
+   "text": "Cinco Tonis. Un solo móvil.",
+   "start": 10.026,
+   "end": 12.456
+  },
+  {
+   "scene": "s5",
+   "text": "Se pelean por el móvil. Y no lo coge ninguno.",
+   "start": 12.886,
+   "end": 15.779
+  },
+  {
+   "scene": "s6",
+   "text": "Por eso, mi jefa va a acabar con vosotras.",
+   "start": 16.209,
+   "end": 18.277
+  },
+  {
+   "scene": "s7",
+   "text": "Coge las llamadas, contesta los WhatsApps y agenda las visitas. Las veinticuatro horas.",
+   "start": 18.707,
+   "end": 23.649
+  },
+  {
+   "scene": "s8",
+   "text": "Síguela. O comenta RECEPCIÓN.",
+   "start": 24.079,
+   "end": 26.445
+  }
+ ],
+ "total": 28.225
+}

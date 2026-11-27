@@ -106,3 +106,14 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
   resultado es este. Pero chicos, yo no soy esta persona». Para nosotros: el contestador de siempre falla → la recepcionista acierta.
 - Frases puente nuevas: «No es por hablar mal del anterior, pero…» · «Posteriormente…» · «Ahora lo que sigue es…» · «Le pregunté
   al cliente y me dijo: sí, es verdad» · «Ya no grabé lo demás porque se me hacía tarde, jajaja» · «el nuevo chalán quería…».
+
+## Ganchos de los virales del 27-nov (análisis diario, TikTok @zachking y @curiosidadesconmike)
+- **«Este es un mensaje para…» (mensaje solemne de villano)** (@zachking «a message to all AI», 68,5 M vistas, **5,7x**): a oscuras,
+  manos juntas, subtítulo rojo que se escribe palabra a palabra; luego «Me llamo X y soy Y» en silueta y «Mi jefe quiere…».
+  El destinatario inesperado (la IA) es la curiosidad; el tono de tráiler, la disrupción. Adaptado: «Este es un mensaje para
+  todas las llamadas perdidas. Me llamo Toni y soy electricista…» → «mi jefa va a acabar con vosotras» (clon del 27-M).
+  Sirve para cualquier oficio y cualquier enemigo: «…para todos los WhatsApps sin leer», «…para el buzón de voz».
+- **«¿Es tarta o no?» (adivinanza con doble giro)** (@zachking, 67,9 M, 5,7x, 14 s): «¿Es real o es IA?» con dos móviles.
+- **Objeto/personajes que avanzan hacia cámara + cara de sospecha, sin voz** (@curiosidadesconmike, 240k, 91x): de temporada
+  («empieza la Navidad y estos personajes se ven sospechosos»). Para diciembre.
+- Frases puente nuevas: «Me llamo… y soy…» · «Y voy a…» · «Por eso, mi jefa…» · «Síguela».
