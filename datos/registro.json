@@ -470,6 +470,37 @@
    "hora_publicacion": "16:42",
    "media_id": "17947618140366827",
    "story_id": "18081076379729327"
+  },
+  {
+   "fecha": "2026-11-27",
+   "franja": "N",
+   "hora_programada": "20:40",
+   "historia": "historias/2026-11-27-N-extracto-futbol.json",
+   "video": "videos/2026-11-27-N.mp4",
+   "duracion_s": 17.2,
+   "formato": "F-extracto + edit",
+   "tipo_negocio": "comun",
+   "tipo_gancho": "extracto literal de reel viral (regate de fútsal, 'NO WAY') + corte a edit de norte.local",
+   "variante": "extracto aprobado por Hugo (24-nov) + edit propio rápido",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok: Análisis 2026-11-27",
+    "2_gancho": "ok: regate en movimiento desde el s 0",
+    "3_se_entiende": "ok: hoja de 12 fotogramas revisada",
+    "4_sin_errores": "ok",
+    "5_audio": "ok: música + golpes; -15,6 LUFS (algo bajo de -14)",
+    "6_derechos": "ok: extracto aprobado por Hugo para este reel",
+    "7_variedad": "ok: común (anterior electricista), formato extracto vs dibujo",
+    "8_cta_descripcion": "ok: sin municipios, 4 hashtags",
+    "9_duracion_formato": "ok: 1080x1920, 17,2 s, cierre con logo",
+    "10_aprendizaje": "ok: variante anotada"
+   },
+   "control_hora": "21:40",
+   "hora_publicacion": "21:42",
+   "nota": "publicado con 1 h de retraso: la sesión de las 20:25 se quedó sin uso; Hugo pidió subirlo",
+   "media_id": "18381816013241074",
+   "story_id": "18130013126492714",
+   "tiktok": "Metricool 444751235, publicado 20:45 https://www.tiktok.com/@norte.local_/video/7712939823601929494"
   }
  ],
  "cuenta_tiktok": {
