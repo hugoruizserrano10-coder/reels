@@ -1,3 +1,5 @@
+> **Antes de crear cualquier reel, leer `GUIA_REEL.md`** (estructura por segundos, edición, ganchos; investigación del 27-nov).
+
 # Análisis diario de reels (tarea de cada mañana, 10:17)
 
 Objetivo: cada día ver reels que funcionan, detectar los virales, desmontar los mejores y pasar lo aprendido

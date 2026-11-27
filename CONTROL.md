@@ -21,3 +21,11 @@ Los puntos con (*) son obligatorios: si fallan, no se publica.
    "norte de Madrid": trabajamos en remoto) y 3–6 hashtags sin lugares; coherente con lo que se ve en el vídeo.
 9. **Duración y formato**: 1080x1920, entre 7 y 45 s (salvo clon que copie otra duración), última imagen con la marca.
 10. **Aprendizaje**: el JSON dice qué se prueba (`variante`) y cambia una sola cosa respecto a la mejor versión.
+
+## Añadidos por la investigación del 27-nov (GUIA_REEL.md)
+11. (*) **Fotograma 0** ya muestra la escena absurda en movimiento; sin logo, saludo ni "IA" antes del giro.
+12. (*) **Segundo gancho antes de los 10 s** y **regla de tres** en escalada; la recepcionista es el remate.
+13. **Subtítulos** de 1–3 palabras en el tercio central (nunca en el 15 % inferior); cambio visual cada 2–4 s con ritmo
+    variado; efecto en cada transición; música ≈ −18 dB; máster −14 LUFS.
+14. **Final en bucle**: el último fotograma enlaza con el primero; CTA de una sola línea después del remate.
+15. Duración objetivo 40–50 s para historias (25 s mínimo); nunca más de 60 s.

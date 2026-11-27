@@ -1,3 +1,5 @@
+> **Antes de crear cualquier reel, leer `GUIA_REEL.md`** (estructura por segundos, edición, ganchos; investigación del 27-nov).
+
 # Plan diario de reels — norte.local
 
 Instrucciones para la tarea programada. Desde el 23-nov **se publican 2 reels al día** (prueba de 2 semanas pedida por
