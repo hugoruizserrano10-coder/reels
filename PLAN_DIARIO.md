@@ -152,17 +152,21 @@ Hugo. Nunca publicar algo que no haya pasado el control.
 - Publicar a las :40 (esperar si el control termina antes). Apuntar en el registro: fecha, hora_publicacion, franja (M/N),
   historia, video, media_id, duracion_s, formato, clon_de, variante, cta y control. Commit y push.
 
-## 4a. TikTok — AUTOMÁTICO con Metricool (desde el 27-nov)
-- Tras publicar en Instagram, programar el mismo vídeo en TikTok con el conector de Metricool: `createScheduledPost`
-  con blogId **8407772** (marca norte.local_, zona Europe/Madrid), fecha = ahora + 5 min, `media` = enlace raw de GitHub
-  del vídeo, `providers` [{"network":"tiktok"}], `text` = texto TikTok (corto + 3–5 hashtags sin lugares), y
-  `tiktokData` {"privacyOption":"PUBLIC_TO_EVERYONE","title":"<primera frase, obligatorio>","commercialContentOwnBrand":true,
-  "isAigc":true,"autoAddMusic":false}. Apuntar en el registro `tiktok_metricool_id` y el plannerUrl.
-- Si Metricool da error (p. ej. límite de publicaciones del plan gratis), no reintentar en bucle: mandar a Hugo el enlace
-  del vídeo y el texto para que lo suba él, y apuntarlo en diario.md. Si el límite mensual no da para 2 al día, subir a
-  TikTok solo el reel con mejor gancho del día (preferir historias absurdas).
-- Métricas de TikTok: Windsor (conector tiktok_organic) o Metricool (getAnalyticsDataByMetrics).
-- En el mensaje a Hugo, sugerir un sonido en tendencia de la Biblioteca de música comercial por si quiere añadirlo a mano.
+## 4a. TikTok — 1 al día, la historia graciosa (Hugo, 27-nov)
+- **Solo un TikTok al día: el de la franja N (20:40), que es la historia graciosa/absurda** (lo que funciona en TikTok).
+  Si un día la N no es graciosa y la M sí, subir la M. Nunca los dos.
+- Metricool gratis = 20 publicaciones/mes → calendario en `datos/tiktok.json`:
+  - **Automático (lunes, martes, jueves y sábado)**: en la ejecución de las 20:25, tras publicar en Instagram, programarlo
+    con Metricool `createScheduledPost` (blogId **8407772**, Europe/Madrid) para las **20:45**: `media` = enlace raw de
+    GitHub, `providers` [{"network":"tiktok"}], `text` = texto TikTok (corto + 3–5 hashtags sin lugares), `tiktokData`
+    {"privacyOption":"PUBLIC_TO_EVERYONE","title":"<primera frase, obligatorio>","commercialContentOwnBrand":true,
+    "isAigc":true,"autoAddMusic":false}. Añadirlo a `publicados_metricool[<AAAA-MM>]` en datos/tiktok.json.
+  - **Manual (miércoles, viernes y domingo)**, o cuando en el mes ya haya 19 automáticos, o si Metricool falla: NO usar
+    Metricool. El mensaje a Hugo tiene que empezar por **"📲 HOY TOCA SUBIR A TIKTOK A MANO"** con el enlace
+    https://raw.githubusercontent.com/hugoruizserrano10-coder/reels/main/videos/<archivo>.mp4, el texto listo para copiar
+    y un sonido en tendencia sugerido.
+- Las ejecuciones de las 13:25/16:25 no tocan TikTok.
+- Métricas de TikTok: Windsor (tiktok_organic) o Metricool (getAnalyticsDataByMetrics).
 
 ## 4b. Retroalimentación de la propia tarea
 - Añadir al final de `datos/diario.md` una línea: fecha, qué se hizo, qué falló y cómo se resolvió, y qué cambiar la próxima vez.

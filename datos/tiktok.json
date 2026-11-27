@@ -1,0 +1,26 @@
+{
+ "explicacion": "Metricool gratis = 20 publicaciones/mes. 1 TikTok al día: el de la franja N (historia graciosa/absurda). Automático lunes, martes, jueves y sábado (~17/mes, deja margen); miércoles, viernes y domingo lo sube Hugo a mano (se le avisa a las 20:45). Si en el mes ya van 19 automáticos, el resto del mes a mano.",
+ "dias_automaticos": [
+  "lunes",
+  "martes",
+  "jueves",
+  "sabado"
+ ],
+ "dias_manuales": [
+  "miercoles",
+  "viernes",
+  "domingo"
+ ],
+ "limite_mes": 20,
+ "margen": 1,
+ "publicados_metricool": {
+  "2026-11": [
+   {
+    "fecha": "2026-11-27",
+    "video": "videos/2026-11-27-N.mp4",
+    "metricool_id": 444751235,
+    "uuid": "6801475366610092550"
+   }
+  ]
+ }
+}
