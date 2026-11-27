@@ -1,0 +1,31 @@
+{
+ "id": "2026-11-28-N-absurda-telediario",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-28-N.mp4",
+ "formato": "absurda-dibujo, primera con GUIA_REEL.md (estructura por segundos)",
+ "proyecto": "propios/telediario-antena/",
+ "clon_de": "https://www.tiktok.com/@duolingo/video/7702180642183859486",
+ "clon_info": "@duolingo «the capital of italy is what??»: 5,7 M vistas, 7,3x su mediana. Se copia la estructura (plató + corte al lugar del disparate), no el metraje ni el sonido.",
+ "tipo_negocio": "fontanero (serie: Paco, ep. 2)",
+ "tipo_gancho": "in medias res + pregunta en pantalla «¿Qué hace un fontanero en lo alto de una antena?»; segundo gancho a los 8 s; regla de tres; giro con golpe y pausa; final en bucle",
+ "musica": "mixkit-623 a 0,12",
+ "duracion_s": 45.8,
+ "cta": "Envíaselo a quien nunca coge el teléfono",
+ "caption": "Última hora: Paco lleva 3 días subido a una antena para no perder llamadas 📡 Cobertura tiene. Escalera para bajar, no. Su vecino electricista tiene una recepcionista con IA que coge llamadas, contesta WhatsApps y agenda citas las 24 h. Envíaselo a quien nunca coge el teléfono 👇 #fontanero #autonomos #humor",
+ "tiktok": "Última hora: Paco lleva 3 días subido a una antena 📡 Cobertura tiene. Escalera para bajar, no. Envíaselo a quien nunca coge el teléfono 👇 #fontanero #humor #autonomos #inteligenciaartificial",
+ "aprobado_por_hugo": "2026-11-27 22:27 («bien me gusta»)",
+ "control": {
+  "fecha": "2026-11-27",
+  "1_investigacion": "ok: viral desmontado (Duolingo 5,7 M)",
+  "2_gancho": "ok: fotograma 0 en movimiento + pregunta",
+  "3_se_entiende": "ok: subtítulos 1-3 palabras, voz pausada",
+  "4_sin_errores": "ok: hojas de fotogramas revisadas",
+  "5_audio": "ok: voz + música 0,12 + 26 efectos; -14 LUFS",
+  "6_derechos": "ok: todo dibujado, voz Piper, música Mixkit, SFX libres",
+  "7_variedad": "ok",
+  "8_cta_descripcion": "ok: sin municipios",
+  "9_duracion_formato": "ok: 1080x1920, 45,8 s",
+  "10_aprendizaje": "primera prueba de la guía nueva: comparar retención y envíos con tanque/fontanero",
+  "11_15_guia": "ok: fotograma 0, segundo gancho, regla de tres, subtítulos centrales, bucle"
+ }
+}
