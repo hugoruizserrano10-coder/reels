@@ -579,6 +579,40 @@
    "media_id": "18381816013241074",
    "story_id": "18130013126492714",
    "tiktok": "Metricool 444751235, publicado 20:45 https://www.tiktok.com/@norte.local_/video/7712939823601929494"
+  },
+  {
+   "fecha": "2026-11-28",
+   "hora_publicacion": "13:41",
+   "franja": "M",
+   "historia": "historias/2026-11-28-M-clon-franciscorivas.json",
+   "video": "videos/2026-11-28-M.mp4",
+   "media_id": "18106649879022364",
+   "story_id": "17914765479578963",
+   "duracion_s": 55.7,
+   "formato": "clon",
+   "tipo_negocio": "climatizacion",
+   "tipo_gancho": "«Acompáñame a…» (POV de proceso de oficio) llevado al absurdo: mantenimiento preventivo al TELÉFONO de un técnico de aire acondicionado, con el móvil lleno de llamadas perdidas desde el s 0",
+   "clon_de": "https://www.tiktok.com/@soyfranciscorivas/video/7649129985223019783",
+   "variante": "clon fiel de la estructura del viral (acompáñame → ficha técnica → «no es por hablar mal del anterior técnico» → hidrolimpiadora → agua y jabón → «le pregunté al dueño y me dijo: sí, es verdad» → pieza nueva → «ya no grabé lo demás porque se me hacía tarde, jajaja») mezclado con historia absurda; voz pausada 2,5 pal/s como el original; subtítulos blancos con borde negro; 55,8 s (el original 162 s)",
+   "musica": "mixkit-729",
+   "cta": "Comenta RECEPCIÓN",
+   "control": {
+    "1_investigacion": "ok (Análisis 2026-11-26, viral desmontado con ficha en datos/desmontajes/soyfranciscorivas-7649129985223019783)",
+    "2_gancho": "ok (móvil con avisos de llamadas perdidas y «Acompáñame a darle mantenimiento preventivo» desde 0 s; badge 47 en el s 6)",
+    "3_se_entiende": "ok (subtítulos de 1 línea sin solapes; chats y avisos cortos; CTA sin subtítulo encima)",
+    "4_sin_errores": "corregido: quitados Alcobendas/Tres Cantos/Sanse de avisos y chats (re-render 28-nov); resto ok (nombres inventados, promesas reales)",
+    "5_audio": "ok (-14,5 LUFS; música Mixkit 729 a 0,22, golpes en cortes, dings en avisos)",
+    "6_derechos": "ok (Mixkit 29995, 29994, 47049, 47588, 46626, 47587, 35955, 41165; música 729; voz Piper davefx; nada del original)",
+    "7_variedad": "ok (27-N fútbol común; climatización sin usar en 14 días)",
+    "8_cta": "ok (Comenta RECEPCIÓN; caption sin municipios; hashtags sin lugares)",
+    "9_formato": "ok 1080x1920, 55,8 s (clon de 162 s), cierre con marca",
+    "10_aprendizaje": "ok (primer clon que mezcla el viral con historia absurda, lo que mejor nos funciona; ¿saca a los clones de mediodía de las <10 vistas?)",
+    "11_fotograma0": "ok (móvil con avisos de llamadas perdidas desde el fotograma 0, sin logo)",
+    "12_segundo_gancho": "ok (badge 47 + ficha técnica en el s 6; escalada hidrolimpiadora → agua y jabón → pieza nueva = recepcionista)",
+    "13_subtitulos": "ok (1 línea en el tercio central-bajo, por encima del 15 % inferior; cambio visual cada 2–4 s)",
+    "14_bucle": "aviso: no cierra en bucle (termina en marca); no obligatorio",
+    "15_duracion": "ok 55,7 s (<60)"
+   }
   }
  ],
  "cuenta_tiktok": {
