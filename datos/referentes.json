@@ -77,6 +77,16 @@
    "tiktok": "https://www.tiktok.com/@curiosidadesconmike",
    "motivo": "27-nov: humor visual tonto/de temporada en español; mediana 2,6k, 10 virales (hasta 91x). Fuente para el paso 2a.",
    "añadida": "2026-11-27"
+  },
+  {
+   "usuario": "scrubdaddy",
+   "tiktok": "https://www.tiktok.com/@scrubdaddy",
+   "motivo": "(28-nov) marca con humor absurdo y lanzamientos 'nos lo pedisteis → aquí está'; mediana 67k, virales 3-91x (Scrub Baby 6,1 M). Excepción al máximo semanal: las habituales llevan 5 días sin virales"
+  },
+  {
+   "usuario": "duolingo",
+   "tiktok": "https://www.tiktok.com/@duolingo",
+   "motivo": "(28-nov) personajes dibujados en sketches absurdos; mediana 880k, virales 3-19x. Ya clonado «the capital of italy» (28-N). Ryanair (tiktok @ryanair, mediana 82k, virales 3-9x de stitches) revisada: humor de marca en inglés, sin añadir"
   }
  ],
  "umbral_viral": 3.0,
@@ -93,6 +103,7 @@
   "tiktok @alexhormozi privada, @ibai sin vídeos, @lapapelerademaria y @moonpiofficial: Unable to extract secondary user ID; @elmundotoday casi sin vídeos (26-nov). youtube @AlexHormozi/shorts lista bien (mediana 19,5k) pero no descarga. Búsqueda web de reels de humor de negocios: solo noticias, ningún enlace a reel (26-nov)",
   "2026-11-27: YouTube bloquea desde la nube tanto la búsqueda ytsearch (403) como las descargas («Sign in to confirm you're not a bot»), con cualquier player_client: los listados de canales sí funcionan (vistas), pero no se puede desmontar nada de YouTube. Buscar el mismo creador en TikTok.",
   "2026-11-27: tiktok @zack.d.films falla («Unable to extract secondary user ID»); youtube.com/@ZackDFilms/shorts lista bien (mediana 4,7 M) pero no descarga. @zackdfilms y @zackdfilms1 en TikTok son copias, no el creador.",
-  "2026-11-27: tiktok @historiaparatontos (mediana 128k) es historia/política: no sirve para absurdas. @historiasconcarlos, @datocurioso, @cuentoscortos casi sin vistas; @elmundoalreves privada."
+  "2026-11-27: tiktok @historiaparatontos (mediana 128k) es historia/política: no sirve para absurdas. @historiasconcarlos, @datocurioso, @cuentoscortos casi sin vistas; @elmundoalreves privada.",
+  "2026-11-28: tiktok @srpelo y @jaidenanimations sin vídeos; @illymation «Unable to extract secondary user ID»; @theodd1sout (5 vídeos) y @domics (1) casi vacías"
  ]
 }

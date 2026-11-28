@@ -93,3 +93,12 @@ sobre fondo gris con foco para «me llamo…»; giro «mi jefa» = móvil con go
 hace (llamadas / WhatsApps / visitas / 24 horas) y «Síguela» + CTA. Voz davefx lenta (voz_velocidad 1,08), música Mixkit 671
 (cinematic thriller) a 0,4. Plantilla: `clones/zachking-mensaje/` (generar.py; cambiar voz.json y PAL). ~28 s, render ~6 min.
 Ojo: el tamaño de las palabras se calcula por longitud (min(210, 900/(0,74·letras))) para que no se corten.
+
+## O. "Lanzamiento en blíster" en dibujo (clon del 28-nov, @scrubdaddy 91x / 6,1 M)
+Petición en un comentario (tarjeta blanca «Responder al comentario de…») con el personaje en su lío (Paco en la antena) →
+«te dijimos que estábamos trabajando en ello» (la jefa en el laboratorio con una caja tapada) → el blíster cae sobre la encimera
+con golpe y «¡AQUÍ ESTÁ!» gigante → zoom a cada línea del blíster (resaltado amarillo) con una burbuja redonda que muestra la
+situación absurda (regla de tres) → «¡Hemos pensado en todo!» + pegatinas → vuelta al personaje con su blíster en la mano y
+«Comenta RECEPCIÓN» (bucle). Blíster naranja arriba / verde abajo, título Archivo Black amarillo con borde azul, burbuja de
+plástico con la jefa dentro, insignias redondas. Plantilla: `clones/scrubdaddy-blister/` (voz.py + gen.py). ~39 s, render ~5 min.
+Ojo: para escalar un `<g>` de SVG desde un punto usar `svgOrigin: "x y"` (con `transformOrigin` en px se desplaza).

@@ -1,0 +1,31 @@
+{
+ "id": "2026-11-29-M-absurda-clon-scrubdaddy",
+ "tipo": "video_listo",
+ "video_listo": "videos/2026-11-29-M.mp4",
+ "formato": "absurda-dibujo, clon de lanzamiento de producto (blíster)",
+ "proyecto": "clones/scrubdaddy-blister/",
+ "clon_de": "https://www.tiktok.com/@scrubdaddy/video/7688381219578334494",
+ "clon_info": "@scrubdaddy «SCRUB BABY IS HERE»: 6,1 M vistas, 91x su mediana. Se copia la estructura (petición en un comentario → «te dijimos que estábamos trabajando en ello» → «¡Aquí está!» con el blíster naranja/verde → repaso por partes → «¡hemos pensado en todo!» → CTA), no el metraje, la voz ni el sonido.",
+ "tipo_negocio": "fontanero (serie: Paco, ep. 3; sigue en la antena del 28-N)",
+ "tipo_gancho": "respuesta a comentario + pregunta en pantalla «¿Qué le regalas a un fontanero atrapado en una antena?»; Paco balanceándose desde el fotograma 0; segundo gancho «¡AQUÍ ESTÁ!» a los 6,6 s; regla de tres (fregadero → escalera → bomberos en la antena); final en bucle (vuelve a la antena)",
+ "musica": "mixkit-738 a 0,12",
+ "duracion_s": 39.0,
+ "cta": "Comenta RECEPCIÓN",
+ "caption": "Paco nos lo pidió desde lo alto de una antena… y aquí está 📦 La recepcionista de bolsillo: coge las llamadas mientras estás debajo de un fregadero, contesta los WhatsApps, agenda las citas, te avisa y recuerda la cita al cliente el día antes. Las 24 horas. (El blíster es broma; la recepcionista con IA es de verdad.) Comenta RECEPCIÓN y te la montamos en tu negocio 👇 #fontanero #autonomos #humor #inteligenciaartificial",
+ "tiktok": "Paco lo pidió desde la antena… y aquí está 📦 La recepcionista de bolsillo. Comenta RECEPCIÓN 👇 #fontanero #humor #autonomos #inteligenciaartificial",
+ "variante": "primer clon de 'lanzamiento de producto' (blíster): comparar retención y comentarios con telediario (28-N) y Toni (27-M); continúa la serie de Paco",
+ "control": {
+  "fecha": "2026-11-28",
+  "1_investigacion": "ok: viral desmontado en datos/desmontajes/scrubdaddy-7688381219578334494 con ficha",
+  "2_gancho": "ok: Paco en la antena en movimiento + pregunta grande en 0,3 s; sigue al viral (respuesta a un comentario)",
+  "3_se_entiende": "ok: subtítulos 1-3 palabras; '¡Aquí está!', '¡Hemos pensado en todo!' y 'Comenta RECEPCIÓN' van en grande sin subtítulo duplicado; hojas de fotogramas revisadas (3 renders: se corrigió el resaltado de las líneas del blíster que se desplazaba y el rótulo que tapaba a Paco)",
+  "4_sin_errores": "ok: lo que hace la recepcionista es real (llamadas, WhatsApp, agenda, aviso, recordatorio, 24 h); el blíster es un chiste evidente y la descripción lo aclara",
+  "5_audio": "ok: voz Piper davefx (Paco más grave) + música Mixkit 738 a 0,12 + 24 efectos; -14,8 LUFS",
+  "6_derechos": "ok: todo dibujado, voz Piper, música Mixkit, SFX libres; nada del vídeo de Scrub Daddy",
+  "7_variedad": "aviso: repite fontanero (Paco) del 28-N, a propósito porque es serie (ep. 3); si la tarea del reel prefiere variar, mover a otro día",
+  "8_cta_descripcion": "ok: sin municipios",
+  "9_duracion_formato": "ok: 1080x1920, 39,0 s, última imagen con la marca",
+  "10_aprendizaje": "ok: 'variante' indicada",
+  "11_15_guia": "ok: fotograma 0 en movimiento, segundo gancho a 6,6 s, regla de tres, subtítulos en el tercio central, final en bucle, 39 s"
+ }
+}

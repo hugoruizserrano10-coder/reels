@@ -1,0 +1,46 @@
+{
+ "id": "duolingo-7707022192655060237",
+ "duracion_s": 12.5,
+ "cortes_s": [
+  3.42,
+  5.75,
+  7.75,
+  9.5,
+  10.04,
+  11.12
+ ],
+ "cortes_por_10s": 4.8,
+ "palabras_por_s": 1.84,
+ "transcripcion": [
+  {
+   "ini": 0.0,
+   "fin": 3.5,
+   "texto": "Comiendo con la cumpleañera, madre hermola."
+  },
+  {
+   "ini": 3.5,
+   "fin": 6.0,
+   "texto": "Feliz cumpleañera."
+  },
+  {
+   "ini": 6.0,
+   "fin": 8.0,
+   "texto": "Y amamos demas ya."
+  },
+  {
+   "ini": 8.0,
+   "fin": 9.5,
+   "texto": "Gracias, mis amores."
+  },
+  {
+   "ini": 9.5,
+   "fin": 11.0,
+   "texto": "Somos las que somos."
+  },
+  {
+   "ini": 11.0,
+   "fin": 12.5,
+   "texto": "Somos las que estamos."
+  }
+ ]
+}

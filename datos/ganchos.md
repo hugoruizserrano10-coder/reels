@@ -117,3 +117,15 @@ Todo gancho se revisa con 3 preguntas antes de publicar; si falla una, se reescr
 - **Objeto/personajes que avanzan hacia cámara + cara de sospecha, sin voz** (@curiosidadesconmike, 240k, 91x): de temporada
   («empieza la Navidad y estos personajes se ven sospechosos»). Para diciembre.
 - Frases puente nuevas: «Me llamo… y soy…» · «Y voy a…» · «Por eso, mi jefa…» · «Síguela».
+
+## Ganchos de los virales del 28-nov (análisis diario, TikTok @scrubdaddy y @duolingo)
+- **«Nos lo pedisteis… ¡Aquí está!» (respuesta a un comentario con el producto ya hecho)** (@scrubdaddy «Scrub Baby», 6,1 M,
+  **91x**): arranca con la petición de un usuario (stitch / «responder al comentario de…»), «os dijimos que estábamos trabajando
+  en ello» y, a los 5 s, «¡AQUÍ ESTÁ!» con el blíster en la mano (segundo gancho). Luego repaso por partes y «¡hemos pensado en
+  todo!». El público se siente escuchado y comenta para pedir más. Adaptado: Paco pide un invento desde la antena → «la
+  recepcionista de bolsillo» en blíster (clon del 29-M). Sirve para responder comentarios reales cuando lleguen.
+- **Teaser del problema sin voz + «Ojalá existiera algo para esto 👀»** (@scrubdaddy biberones, 3,9 M, 58x): plano cenital del
+  problema exagerado (montaña de biberones) un día antes del lanzamiento. Para hacer vídeos en 2 partes.
+- **Coro de personajes de serie, una línea cada uno** (@duolingo cumpleaños, 16,5 M, 18,8x, 12 s): barridos entre personajes,
+  remate tierno; muy corto para que se repita.
+- Frases puente nuevas: «Te dijimos que estábamos trabajando en ello» · «¡Aquí está!» · «Y también…» · «¡Hemos pensado en todo!».

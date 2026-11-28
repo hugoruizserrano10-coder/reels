@@ -125,3 +125,29 @@
 
 - 2026-11-27 M (16:40, día de prueba de hora): publicado clon absurdo @zachking «mensaje a todas las llamadas perdidas» (electricista, video_listo, 28,3 s) como reel 17947618140366827 + historia 18081076379729327. Control 10/10 (re-medido -13,6 LUFS, hoja revisada). Métricas: 26-M loros a 27 h 152 vistas, 42 % visto, skip 39 %; 26-N antes/ahora 10 vistas, skip 100 %. TikTok: soldados/drones 662 vistas y 9,7 s de media (el mejor en retención), loros 213. Sin comentarios ni formularios. Sin fallos.
 - 2026-11-27 N (20:40 → 21:42): publicado extracto fútsal + edit (video_listo, 17,2 s) como reel 18381816013241074 + historia 18130013126492714, con 1 h de retraso (la ejecución de las 20:25 se quedó sin uso y Hugo pidió subirlo). TikTok ya salió por Metricool a las 20:45 (444751235). Control 10/10 (audio -15,6 LUFS, algo bajo). Métricas: clon Toni 27-M a 5 h 126 vistas, 7,7 s de media; tanque 240, loros 152.
+
+## Análisis 2026-11-28
+- Revisados 400 vídeos con descubrir.py: 304 de los perfiles habituales (TikTok + listados de YouTube) y 96 de 8 cuentas de
+  humor/animación exploradas en TikTok. Las habituales **no dan virales nuevos por 5.º día** (solo listados de YouTube que no se
+  pueden descargar). Nuevas referentes: **@scrubdaddy** (marca con humor absurdo, mediana 67k, virales hasta 91x) y **@duolingo**
+  (sketches dibujados, mediana 880k, hasta 19x); excepción al máximo semanal por la sequía. Fallan @srpelo, @jaidenanimations,
+  @illymation; @theodd1sout y @domics casi vacías. Make sigue sin webhook; no se probó Instagram (la búsqueda web nunca da reels).
+  17 virales nuevos.
+- Desmontados 3: @scrubdaddy «Scrub Baby is here» (**91x, 6,1 M**), @scrubdaddy montaña de biberones (58x, 3,9 M, teaser sin voz)
+  y @duolingo coro de cumpleaños (18,8x, 16,5 M).
+- **Clon (absurda, paso 2a)**: Scrub Baby → `videos/2026-11-29-M.mp4` (39,0 s) + `historias/2026-11-29-M-absurda-clon-scrubdaddy.json`,
+  sale el **domingo 29-nov a las 13:40**. Paco (ep. 3, sigue en la antena del 28-N) pide un invento en un comentario → «Paco… te
+  dijimos que estábamos trabajando en ello» → «¡Aquí está!»: la recepcionista de bolsillo en blíster naranja/verde (la jefa dentro)
+  → coge llamadas debajo de un fregadero / contesta WhatsApps en una escalera / agenda citas mientras los bomberos le bajan de la
+  antena → «¡Hemos pensado en todo!» (avisa, recuerda la cita, 24 h) → «Comenta RECEPCIÓN» → Paco: «¿Y la escalera, para
+  cuándo?» (bucle). Control 10/10 (aviso en variedad: repite fontanero porque es serie). 3 renders de ~5 min (el resaltado de las
+  líneas del blíster se desplazaba: en SVG usar `svgOrigin`). -14,8 LUFS. Música Mixkit 738 (nueva).
+- Ideas: (1) cuando llegue un comentario de verdad, responderlo con este formato («nos lo pediste… ¡aquí está!»); (2) teaser en
+  2 partes: móvil sonando sobre una mesa de taller sin voz + «Ojalá existiera algo para esto 👀», y al día siguiente el blíster;
+  (3) coro de 12 s de los personajes de serie (Paco, loro, Toni, la jefa) para el cumpleaños de la jefa.
+- **Comparación con lo nuestro (Windsor, 7 días)**: tanque 240 vistas (11,2 s, skip 32 %), loros 152 (10,0 s, skip 39 %), Paco
+  142, fútsal (27-N) 142 (7,0 s, skip 42 %), Toni el electricista (clon absurdo de @zachking, 27-M) 126 (7,7 s, skip 50 %), fuga
+  122. Los clones de anuncio/texto siguen sin distribución (patas arriba 14, antes/ahora 14, gato 6). Se confirma por 4.º día:
+  lo que nos funciona es personaje + absurdo en dibujo, y los clones de virales funcionan cuando se pasan a ese estilo (Toni 126
+  frente a 5–14 de los clones de anuncio). Por eso el clon de hoy sigue con Paco: si la serie engancha, los ep. 2 y 3 deberían
+  superar las 142 vistas del ep. 1.

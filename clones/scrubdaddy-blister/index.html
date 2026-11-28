@@ -1,0 +1,750 @@
+<!doctype html>
+<html lang="es" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <style>
+      :root { --tinta: #1d1b19; --naranja: #e8692e; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #f0eee6; }
+      #root { position: relative; width: 100%; height: 100%; font-family: "Inter"; }
+      .esc { position: absolute; inset: 0; overflow: hidden; }
+      svg.lienzo { position: absolute; inset: 0; width: 1080px; height: 1920px; }
+      .mano { filter: url(#lapiz); }
+      .cap { position: absolute; left: 0; right: 0; top: 1115px; display: flex; justify-content: center; z-index: 5; }
+      .cap span { display: inline-block; background: var(--tinta); color: #fff; font-family: "Oswald"; font-weight: 700; font-size: 76px; letter-spacing: 1px; padding: 4px 28px 12px; border-radius: 18px; transform-origin: 50% 60%; }
+      .cap.paco span { background: #e8692e; }
+      .cap b { font-weight: 700; }
+      .pregunta { position: absolute; top: 300px; left: 90px; right: 90px; text-align: center; font-family: "Oswald"; font-weight: 700; font-size: 74px; line-height: 1.04; color: #fff; text-shadow: 0 6px 0 var(--tinta), 0 0 24px rgba(0,0,0,.35); -webkit-text-stroke: 3px var(--tinta); z-index: 4; }
+      .pregunta.abajo { top: 1290px; font-size: 96px; }
+      .pregunta em { font-style: normal; color: #ffb02e; }
+      .resp { position: absolute; top: 1290px; left: 90px; right: 90px; display: flex; gap: 20px; align-items: center; background: #fff; border: 5px solid var(--tinta); border-radius: 26px; padding: 18px 24px; font-weight: 800; font-size: 36px; line-height: 1.15; color: var(--tinta); z-index: 4; }
+      .resp small { display: block; font-size: 26px; font-weight: 600; color: #6b665f; margin-bottom: 4px; }
+      .resp .av { flex: none; width: 78px; height: 78px; border-radius: 39px; background: #e8692e; border: 4px solid var(--tinta); display: flex; align-items: center; justify-content: center; font-size: 40px; }
+      .tag { position: absolute; top: 420px; left: 90px; background: #ffb02e; color: var(--tinta); font-family: "Oswald"; font-weight: 700; font-size: 50px; padding: 6px 24px; border: 5px solid var(--tinta); border-radius: 12px; }
+      .intento { position: absolute; top: 230px; left: 0; right: 0; margin: 0 auto; width: fit-content; background: var(--tinta); color: #ffb02e; font-family: "Oswald"; font-weight: 700; font-size: 54px; padding: 2px 26px 6px; border-radius: 12px; z-index: 4; }
+      .burbuja { position: absolute; left: 140px; top: 280px; width: 800px; height: 800px; border-radius: 50%; overflow: hidden; border: 12px solid var(--tinta); box-shadow: 0 16px 0 rgba(0,0,0,.25); background: #fff; z-index: 3; }
+      .burbuja svg { width: 100%; height: 100%; }
+      #grande, #grande6 { position: absolute; top: 760px; left: 60px; right: 60px; text-align: center; font-family: "Oswald"; font-weight: 700; font-size: 170px; line-height: 1.0; color: #fff; -webkit-text-stroke: 5px var(--tinta); text-shadow: 0 10px 0 var(--tinta); z-index: 4; }
+      #grande6 { font-size: 130px; top: 700px; }
+      #grande em, #grande6 em { font-style: normal; color: #ffb02e; display: inline-block; }
+      .peg { position: absolute; background: #2e9e57; color: #fff; font-family: "Oswald"; font-weight: 700; font-size: 62px; padding: 6px 26px; border: 6px solid var(--tinta); border-radius: 16px; z-index: 4; }
+      #pg0 { top: 250px; left: 80px; } #pg1 { top: 820px; right: 60px; background: #2c3e8f; } #pg2 { top: 1560px; left: 120px; background: #e8692e; }
+      #marca { position: absolute; top: 1440px; left: 0; right: 0; display: flex; align-items: center; justify-content: center; gap: 18px; font-weight: 900; font-size: 60px; color: var(--tinta); z-index: 4; }
+      #marca img { width: 84px; height: 84px; }
+      #grano { position: absolute; inset: -40px; pointer-events: none; z-index: 20; opacity: 0.08; mix-blend-mode: multiply; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>"); }
+      #vineta { position: absolute; inset: 0; pointer-events: none; z-index: 19; background: radial-gradient(ellipse at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.2) 100%); }
+    </style>
+  </head>
+  <body>
+    <svg width="0" height="0" style="position:absolute"><defs>
+      <filter id="lapiz" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="r"/><feDisplacementMap in="SourceGraphic" in2="r" scale="5"/></filter>
+      <linearGradient id="gcielo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fc4e8"/><stop offset="1" stop-color="#d4eef7"/></linearGradient>
+    </defs></svg>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="38.899" data-width="1080" data-height="1920">
+      <div id="s0" class="esc clip" data-start="0" data-duration="3.878" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam0"><g class="mano"><rect width="1080" height="1920" fill="url(#gcielo)"/>
+      <g id="a0nubes"><path d="M80 520 Q90 450 170 460 Q210 400 280 440 Q350 430 345 500 Q350 540 290 545 L120 545 Q70 545 80 520 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M700 330 Q705 270 775 280 Q810 230 870 265 Q935 260 930 320 Q935 355 880 358 L730 358 Q690 355 700 330 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/></g>
+      <path d="M0 1700 Q270 1610 540 1690 Q810 1600 1080 1680 L1080 1920 L0 1920 Z" fill="#8fbf7f" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M0 1790 Q300 1730 600 1800 Q850 1740 1080 1790 L1080 1920 L0 1920 Z" fill="#7aab6b"/></g><g transform="translate(0 150)"><g class="mano">
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#c0392b" stroke-width="22" stroke-linecap="round"/>
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#1d1b19" stroke-width="5" opacity="0.5"/>
+      <path d="M470 760 L610 880 M610 760 L470 880" stroke="#e5e0d6" stroke-width="10"/><path d="M470 760 L610 760" stroke="#1d1b19" stroke-width="7"/><path d="M459 880 L621 1000 M621 880 L459 1000" stroke="#e5e0d6" stroke-width="10"/><path d="M459 880 L621 880" stroke="#1d1b19" stroke-width="7"/><path d="M447 1000 L633 1120 M633 1000 L447 1120" stroke="#e5e0d6" stroke-width="10"/><path d="M447 1000 L633 1000" stroke="#1d1b19" stroke-width="7"/><path d="M436 1120 L644 1240 M644 1120 L436 1240" stroke="#e5e0d6" stroke-width="10"/><path d="M436 1120 L644 1120" stroke="#1d1b19" stroke-width="7"/><path d="M425 1240 L655 1360 M655 1240 L425 1360" stroke="#e5e0d6" stroke-width="10"/><path d="M425 1240 L655 1240" stroke="#1d1b19" stroke-width="7"/><path d="M414 1360 L666 1480 M666 1360 L414 1480" stroke="#e5e0d6" stroke-width="10"/><path d="M414 1360 L666 1360" stroke="#1d1b19" stroke-width="7"/><path d="M402 1480 L678 1600 M678 1480 L402 1600" stroke="#e5e0d6" stroke-width="10"/><path d="M402 1480 L678 1480" stroke="#1d1b19" stroke-width="7"/><path d="M391 1600 L689 1720 M689 1600 L391 1720" stroke="#e5e0d6" stroke-width="10"/><path d="M391 1600 L689 1600" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="440" y="700" width="200" height="70" rx="10" fill="#e5e0d6" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M540 700 L540 520" stroke="#1d1b19" stroke-width="10"/><circle cx="540" cy="510" r="16" fill="#c0392b" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M470 600 Q540 560 610 600 M445 560 Q540 505 635 560" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/>
+    </g><g transform="translate(400 330) scale(0.62)"><g id="pa0"><g id="pa0p" class="mano">
+      <path d="M150 520 L140 660 L205 660 L208 540 Z M250 520 L262 660 L320 660 L300 520 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M118 662 Q120 640 145 640 L210 640 Q222 664 210 680 L120 680 Q110 674 118 662 Z M250 662 Q252 640 277 640 L330 640 Q345 664 335 680 L252 680 Q240 674 250 662 Z" fill="#1d1b19"/>
+      <path d="M125 300 Q200 270 280 300 L310 540 Q205 575 110 540 Z" fill="#5b7fa6" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M160 300 L165 420 L250 420 L255 300" fill="none" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="175" y="345" width="62" height="50" rx="8" fill="#4f6e93" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <circle cx="92" cy="478" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <circle cx="340" cy="450" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M335 445 L395 360 M380 340 Q400 330 412 350 Q420 368 400 378 L385 372" fill="none" stroke="#8a8f96" stroke-width="16" stroke-linecap="round"/>
+      <path d="M335 445 L395 360" fill="none" stroke="#1d1b19" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <ellipse cx="205" cy="215" rx="98" ry="104" fill="#f2c39b" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M108 180 Q110 95 205 92 Q300 95 302 180 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M285 172 Q340 170 352 188 Q330 198 290 192" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <circle cx="170" cy="215" r="13" fill="#1d1b19"/><circle cx="238" cy="210" r="7" fill="#1d1b19"/>
+      <path d="M150 255 Q178 238 205 252 Q232 238 262 255 Q250 285 205 272 Q160 285 150 255 Z" fill="#6b4a33" stroke="#1d1b19" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M185 285 Q205 300 228 284" fill="#7a2f22" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+      <path d="M198 222 Q192 245 210 246" fill="none" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+    </g>
+      <g transform="translate(395 250) rotate(18)"><rect x="-38" y="-70" width="76" height="140" rx="16" fill="#1d1b19"/><rect x="-28" y="-58" width="56" height="116" rx="10" fill="#6fd08c"/></g>
+      <path d="M440 120 Q470 90 500 120 M455 85 Q480 60 510 85" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/></g></g><g id="vi0" class="mano" opacity="0.8">
+      <path d="M60 900 Q220 880 300 905 M90 960 Q200 950 260 965 M760 820 Q900 800 1020 825 M800 880 Q930 870 1000 885" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g></g></g></svg><div class="resp"><div class="av">🔧</div><div><small>Responder al comentario de <b>paco_fontanero</b></small>
+      Que alguien invente algo para no perder llamadas 🙏</div></div><div class="pregunta" id="preg0">¿Qué le regalas a un fontanero atrapado en una <em>antena</em>?</div></div>
+<div id="s1" class="esc clip" data-start="3.878" data-duration="2.525" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam1"><g class="mano"><rect width="1080" height="1920" fill="#efe4d4"/>
+      <rect x="0" y="1250" width="1080" height="670" fill="#d9cdb9"/><path d="M0 1250 L1080 1250" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="120" y="260" width="840" height="120" rx="16" fill="#e8692e" stroke="#1d1b19" stroke-width="9"/>
+      <text x="540" y="345" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="70" fill="#fffaf2">LABORATORIO NORTE.LOCAL</text></g>
+      <g transform="translate(250 450) scale(0.95)"><g id="jefa1"><g id="jf1" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g></g>
+      <g id="caja1" class="mano"><path d="M300 1080 Q540 1010 780 1080 L800 1300 Q540 1340 280 1300 Z" fill="#7c9a7e" stroke="#1d1b19" stroke-width="9" stroke-linejoin="round"/>
+      <path d="M380 1140 Q420 1200 400 1290 M700 1130 Q660 1200 690 1290" fill="none" stroke="#1d1b19" stroke-width="6" opacity="0.5"/>
+      <text x="540" y="1230" text-anchor="middle" font-family="Archivo Black" font-size="110" fill="#ffd23f" stroke="#1d1b19" stroke-width="6" paint-order="stroke">?</text></g>
+      <rect x="0" y="1300" width="1080" height="620" fill="#d9cdb9"/></g></svg><div class="tag">PACO, EP. 3 · EL INVENTO</div></div>
+<div id="s2" class="esc clip" data-start="6.403" data-duration="5.430" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam2"><g class="mano"><rect width="1080" height="1920" fill="#e9e3d8"/>
+      <rect x="0" y="0" width="1080" height="700" fill="#d8d2c6"/>
+      <path d="M120 900 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M700 1100 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M300 1500 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M820 1650 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M90 1750 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M520 820 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/></g><g id="bw2"><g id="bl2">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="bl2j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="bl2badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="bl2b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="bl2b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="bl2b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="bl2b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g></g></svg><div id="grande">¡AQUÍ <em>ESTÁ!</em></div></div>
+<div id="s3" class="esc clip" data-start="11.833" data-duration="3.124" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam3"><g class="mano"><rect width="1080" height="1920" fill="#e9e3d8"/>
+      <rect x="0" y="0" width="1080" height="700" fill="#d8d2c6"/>
+      <path d="M120 900 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M700 1100 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M300 1500 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M820 1650 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M90 1750 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M520 820 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/></g><g id="bw3"><g id="bl3">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="bl3j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="bl3badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="bl3b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="bl3b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="bl3b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="bl3b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g></g></svg><div class="burbuja" id="bur3"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><g class="mano"><g class="mano">
+      <rect x="0" y="0" width="1080" height="1920" fill="#f0eee6"/>
+      <rect x="0" y="0" width="1080" height="1120" fill="#e9e1d3"/>
+      <g opacity="0.5" stroke="#d6cbb8" stroke-width="4"><path d="M0 0 L0 1120"/><path d="M120 0 L120 1120"/><path d="M240 0 L240 1120"/><path d="M360 0 L360 1120"/><path d="M480 0 L480 1120"/><path d="M600 0 L600 1120"/><path d="M720 0 L720 1120"/><path d="M840 0 L840 1120"/><path d="M960 0 L960 1120"/><path d="M1080 0 L1080 1120"/><path d="M0 0 L1080 0"/><path d="M0 120 L1080 120"/><path d="M0 240 L1080 240"/><path d="M0 360 L1080 360"/><path d="M0 480 L1080 480"/><path d="M0 600 L1080 600"/><path d="M0 720 L1080 720"/><path d="M0 840 L1080 840"/><path d="M0 960 L1080 960"/><path d="M0 1080 L1080 1080"/></g>
+      <rect x="140" y="700" width="800" height="70" rx="12" fill="#cfc4b4" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="170" y="770" width="740" height="420" fill="#f7f2ea" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="200" y="800" width="680" height="360" fill="#3b3631" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M470 700 L470 610 Q470 570 520 570 L640 570 L640 620" fill="none" stroke="#8a8f96" stroke-width="26" stroke-linecap="round"/>
+      <path d="M470 700 L470 610 Q470 570 520 570 L640 570 L640 620" fill="none" stroke="#1d1b19" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+      <path d="M540 800 L540 980 Q540 1010 570 1010 L650 1010" fill="none" stroke="#9aa0a6" stroke-width="22"/>
+      <rect x="0" y="1190" width="1080" height="730" fill="#d9cdb9"/>
+      <path d="M0 1190 L1080 1190" stroke="#1d1b19" stroke-width="9"/>
+    </g><g id="piernas" class="mano">
+      <path d="M380 1120 Q520 1080 640 1130 L640 1215 Q510 1250 380 1210 Z" fill="#5b7fa6" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <g id="pierna1"><path d="M600 1140 L860 1150 L860 1210 L600 1210 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M850 1120 Q900 1120 905 1160 L905 1215 L850 1215 Z" fill="#1d1b19"/></g>
+      <g id="pierna2"><path d="M560 1175 L820 1235 L808 1290 L550 1235 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M812 1215 Q860 1220 860 1262 L850 1305 L800 1295 Z" fill="#1d1b19"/></g>
+    </g></g>
+      <g transform="translate(330 700)"><g class="mano"><rect x="-60" y="-110" width="120" height="220" rx="24" fill="#1d1b19"/><rect x="-47" y="-95" width="94" height="190" rx="16" fill="#6fd08c"/></g>
+      <text x="0" y="20" text-anchor="middle" font-size="80">📞</text></g>
+      <g id="ok3"><rect x="150" y="380" width="520" height="110" rx="22" fill="#2e9e57" stroke="#1d1b19" stroke-width="7"/>
+      <text x="410" y="455" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="58" fill="#fff">LLAMADA COGIDA ✓</text></g></svg></div><div class="intento">DEBAJO DEL FREGADERO</div></div>
+<div id="s4" class="esc clip" data-start="14.957" data-duration="3.545" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam4"><g class="mano"><rect width="1080" height="1920" fill="#e9e3d8"/>
+      <rect x="0" y="0" width="1080" height="700" fill="#d8d2c6"/>
+      <path d="M120 900 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M700 1100 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M300 1500 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M820 1650 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M90 1750 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M520 820 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/></g><g id="bw4"><g id="bl4">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="bl4j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="bl4badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="bl4b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="bl4b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="bl4b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="bl4b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g></g></svg><div class="burbuja" id="bur4"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><g class="mano"><rect width="1080" height="1920" fill="#d7e7ea"/><rect y="1500" width="1080" height="420" fill="#b9cdd2"/><path d="M0 1500 L1080 1500" stroke="#1d1b19" stroke-width="9"/>
+      <path d="M380 1500 L470 420 M700 1500 L610 420" stroke="#c49a3a" stroke-width="22" stroke-linecap="round"/>
+      <path d="M387 1420 L693 1420" stroke="#c49a3a" stroke-width="16"/><path d="M397 1300 L683 1300" stroke="#c49a3a" stroke-width="16"/><path d="M407 1180 L673 1180" stroke="#c49a3a" stroke-width="16"/><path d="M417 1060 L663 1060" stroke="#c49a3a" stroke-width="16"/><path d="M427 940 L653 940" stroke="#c49a3a" stroke-width="16"/><path d="M437 820 L643 820" stroke="#c49a3a" stroke-width="16"/><path d="M447 700 L633 700" stroke="#c49a3a" stroke-width="16"/><path d="M457 580 L623 580" stroke="#c49a3a" stroke-width="16"/><path d="M467 460 L613 460" stroke="#c49a3a" stroke-width="16"/>
+      <path d="M380 1500 L470 420 M700 1500 L610 420" stroke="#1d1b19" stroke-width="5" opacity="0.5"/></g>
+      <g transform="translate(360 420) scale(0.8)"><g id="pacoE"><g id="pacoE" class="mano">
+      <path d="M150 520 L140 660 L205 660 L208 540 Z M250 520 L262 660 L320 660 L300 520 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M118 662 Q120 640 145 640 L210 640 Q222 664 210 680 L120 680 Q110 674 118 662 Z M250 662 Q252 640 277 640 L330 640 Q345 664 335 680 L252 680 Q240 674 250 662 Z" fill="#1d1b19"/>
+      <path d="M125 300 Q200 270 280 300 L310 540 Q205 575 110 540 Z" fill="#5b7fa6" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M160 300 L165 420 L250 420 L255 300" fill="none" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="175" y="345" width="62" height="50" rx="8" fill="#4f6e93" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <circle cx="92" cy="478" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <circle cx="340" cy="450" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M335 445 L395 360 M380 340 Q400 330 412 350 Q420 368 400 378 L385 372" fill="none" stroke="#8a8f96" stroke-width="16" stroke-linecap="round"/>
+      <path d="M335 445 L395 360" fill="none" stroke="#1d1b19" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <ellipse cx="205" cy="215" rx="98" ry="104" fill="#f2c39b" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M108 180 Q110 95 205 92 Q300 95 302 180 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M285 172 Q340 170 352 188 Q330 198 290 192" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <circle cx="170" cy="215" r="13" fill="#1d1b19"/><circle cx="238" cy="210" r="7" fill="#1d1b19"/>
+      <path d="M150 255 Q178 238 205 252 Q232 238 262 255 Q250 285 205 272 Q160 285 150 255 Z" fill="#6b4a33" stroke="#1d1b19" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M185 285 Q205 300 228 284" fill="#7a2f22" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+      <path d="M198 222 Q192 245 210 246" fill="none" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+    </g></g></g>
+      <g id="ok4"><path d="M560 560 L960 560 Q990 560 990 590 L990 700 Q990 730 960 730 L640 730 L600 790 L610 730 L560 730 Q530 730 530 700 L530 590 Q530 560 560 560 Z" fill="#dcf8c6" stroke="#1d1b19" stroke-width="7"/>
+      <text x="760" y="665" text-anchor="middle" font-family="Inter" font-weight="900" font-size="44" fill="#1d1b19">¡Contestado! ✓✓</text></g></svg></div><div class="intento">EN LA ESCALERA</div></div>
+<div id="s5" class="esc clip" data-start="18.502" data-duration="3.500" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam5"><g class="mano"><rect width="1080" height="1920" fill="#e9e3d8"/>
+      <rect x="0" y="0" width="1080" height="700" fill="#d8d2c6"/>
+      <path d="M120 900 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M700 1100 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M300 1500 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M820 1650 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M90 1750 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M520 820 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/></g><g id="bw5"><g id="bl5">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="bl5j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="bl5badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="bl5b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="bl5b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="bl5b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="bl5b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g></g></svg><div class="burbuja" id="bur5"><svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice"><g class="mano"><rect width="1080" height="1920" fill="url(#gcielo)"/>
+      <g id="abnubes"><path d="M80 520 Q90 450 170 460 Q210 400 280 440 Q350 430 345 500 Q350 540 290 545 L120 545 Q70 545 80 520 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M700 330 Q705 270 775 280 Q810 230 870 265 Q935 260 930 320 Q935 355 880 358 L730 358 Q690 355 700 330 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/></g>
+      <path d="M0 1700 Q270 1610 540 1690 Q810 1600 1080 1680 L1080 1920 L0 1920 Z" fill="#8fbf7f" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M0 1790 Q300 1730 600 1800 Q850 1740 1080 1790 L1080 1920 L0 1920 Z" fill="#7aab6b"/></g><g transform="translate(0 150)"><g class="mano">
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#c0392b" stroke-width="22" stroke-linecap="round"/>
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#1d1b19" stroke-width="5" opacity="0.5"/>
+      <path d="M470 760 L610 880 M610 760 L470 880" stroke="#e5e0d6" stroke-width="10"/><path d="M470 760 L610 760" stroke="#1d1b19" stroke-width="7"/><path d="M459 880 L621 1000 M621 880 L459 1000" stroke="#e5e0d6" stroke-width="10"/><path d="M459 880 L621 880" stroke="#1d1b19" stroke-width="7"/><path d="M447 1000 L633 1120 M633 1000 L447 1120" stroke="#e5e0d6" stroke-width="10"/><path d="M447 1000 L633 1000" stroke="#1d1b19" stroke-width="7"/><path d="M436 1120 L644 1240 M644 1120 L436 1240" stroke="#e5e0d6" stroke-width="10"/><path d="M436 1120 L644 1120" stroke="#1d1b19" stroke-width="7"/><path d="M425 1240 L655 1360 M655 1240 L425 1360" stroke="#e5e0d6" stroke-width="10"/><path d="M425 1240 L655 1240" stroke="#1d1b19" stroke-width="7"/><path d="M414 1360 L666 1480 M666 1360 L414 1480" stroke="#e5e0d6" stroke-width="10"/><path d="M414 1360 L666 1360" stroke="#1d1b19" stroke-width="7"/><path d="M402 1480 L678 1600 M678 1480 L402 1600" stroke="#e5e0d6" stroke-width="10"/><path d="M402 1480 L678 1480" stroke="#1d1b19" stroke-width="7"/><path d="M391 1600 L689 1720 M689 1600 L391 1720" stroke="#e5e0d6" stroke-width="10"/><path d="M391 1600 L689 1600" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="440" y="700" width="200" height="70" rx="10" fill="#e5e0d6" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M540 700 L540 520" stroke="#1d1b19" stroke-width="10"/><circle cx="540" cy="510" r="16" fill="#c0392b" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M470 600 Q540 560 610 600 M445 560 Q540 505 635 560" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/>
+    </g><g transform="translate(400 330) scale(0.62)"><g id="pab"><g id="pabp" class="mano">
+      <path d="M150 520 L140 660 L205 660 L208 540 Z M250 520 L262 660 L320 660 L300 520 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M118 662 Q120 640 145 640 L210 640 Q222 664 210 680 L120 680 Q110 674 118 662 Z M250 662 Q252 640 277 640 L330 640 Q345 664 335 680 L252 680 Q240 674 250 662 Z" fill="#1d1b19"/>
+      <path d="M125 300 Q200 270 280 300 L310 540 Q205 575 110 540 Z" fill="#5b7fa6" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M160 300 L165 420 L250 420 L255 300" fill="none" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="175" y="345" width="62" height="50" rx="8" fill="#4f6e93" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <circle cx="92" cy="478" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <circle cx="340" cy="450" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M335 445 L395 360 M380 340 Q400 330 412 350 Q420 368 400 378 L385 372" fill="none" stroke="#8a8f96" stroke-width="16" stroke-linecap="round"/>
+      <path d="M335 445 L395 360" fill="none" stroke="#1d1b19" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <ellipse cx="205" cy="215" rx="98" ry="104" fill="#f2c39b" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M108 180 Q110 95 205 92 Q300 95 302 180 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M285 172 Q340 170 352 188 Q330 198 290 192" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <circle cx="170" cy="215" r="13" fill="#1d1b19"/><circle cx="238" cy="210" r="7" fill="#1d1b19"/>
+      <path d="M150 255 Q178 238 205 252 Q232 238 262 255 Q250 285 205 272 Q160 285 150 255 Z" fill="#6b4a33" stroke="#1d1b19" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M185 285 Q205 300 228 284" fill="#7a2f22" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+      <path d="M198 222 Q192 245 210 246" fill="none" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+    </g>
+      <g transform="translate(395 250) rotate(18)"><rect x="-38" y="-70" width="76" height="140" rx="16" fill="#1d1b19"/><rect x="-28" y="-58" width="56" height="116" rx="10" fill="#6fd08c"/></g>
+      <path d="M440 120 Q470 90 500 120 M455 85 Q480 60 510 85" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/></g></g></g>
+      <g id="esc5" class="mano"><path d="M1180 1900 L700 760 M1290 1860 L800 720" stroke="#c0392b" stroke-width="26" stroke-linecap="round"/>
+      <path d="M1132 1786 L1241 1746" stroke="#c0392b" stroke-width="16"/><path d="M1084 1672 L1192 1632" stroke="#c0392b" stroke-width="16"/><path d="M1036 1558 L1143 1518" stroke="#c0392b" stroke-width="16"/><path d="M988 1444 L1094 1404" stroke="#c0392b" stroke-width="16"/><path d="M940 1330 L1045 1290" stroke="#c0392b" stroke-width="16"/><path d="M892 1216 L996 1176" stroke="#c0392b" stroke-width="16"/><path d="M844 1102 L947 1062" stroke="#c0392b" stroke-width="16"/><path d="M796 988 L898 948" stroke="#c0392b" stroke-width="16"/><path d="M748 874 L849 834" stroke="#c0392b" stroke-width="16"/><path d="M700 760 L800 720" stroke="#c0392b" stroke-width="16"/>
+      <circle cx="850" cy="760" r="44" fill="#ffd23f" stroke="#1d1b19" stroke-width="7"/><path d="M800 760 Q850 690 900 760 Z" fill="#c0392b" stroke="#1d1b19" stroke-width="7"/></g>
+      <g id="ok5"><rect x="130" y="330" width="560" height="120" rx="22" fill="#fff" stroke="#1d1b19" stroke-width="7"/>
+      <text x="410" y="410" text-anchor="middle" font-family="Oswald" font-weight="700" font-size="58" fill="#1d1b19">📅 CITA AGENDADA ✓</text></g></svg></div><div class="intento">EN LA ANTENA 🚒</div></div>
+<div id="s6" class="esc clip" data-start="22.002" data-duration="8.186" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam6"><g class="mano"><rect width="1080" height="1920" fill="#e9e3d8"/>
+      <rect x="0" y="0" width="1080" height="700" fill="#d8d2c6"/>
+      <path d="M120 900 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M700 1100 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M300 1500 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M820 1650 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M90 1750 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/><path d="M520 820 q40 -14 80 6" fill="none" stroke="#c9c1b3" stroke-width="5"/></g><g id="bw6"><g id="bl6">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="bl6j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="bl6badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="bl6b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="bl6b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="bl6b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="bl6b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g></g></svg><div id="grande6">¡Hemos pensado <em>en todo!</em></div><div class="peg" id="pg0">TE AVISA ✓</div><div class="peg" id="pg1">RECUERDA LA CITA ✓</div><div class="peg" id="pg2">24 H ✓</div></div>
+<div id="s7" class="esc clip" data-start="30.188" data-duration="8.711" data-track-index="0"><svg data-layout-allow-overflow class="lienzo" viewBox="0 0 1080 1920"><g id="cam7"><g class="mano"><rect width="1080" height="1920" fill="url(#gcielo)"/>
+      <g id="a7nubes"><path d="M80 520 Q90 450 170 460 Q210 400 280 440 Q350 430 345 500 Q350 540 290 545 L120 545 Q70 545 80 520 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M700 330 Q705 270 775 280 Q810 230 870 265 Q935 260 930 320 Q935 355 880 358 L730 358 Q690 355 700 330 Z" fill="#fff" stroke="#1d1b19" stroke-width="7"/></g>
+      <path d="M0 1700 Q270 1610 540 1690 Q810 1600 1080 1680 L1080 1920 L0 1920 Z" fill="#8fbf7f" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M0 1790 Q300 1730 600 1800 Q850 1740 1080 1790 L1080 1920 L0 1920 Z" fill="#7aab6b"/></g><g transform="translate(0 150)"><g class="mano">
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#c0392b" stroke-width="22" stroke-linecap="round"/>
+      <path d="M470 760 L380 1720 M610 760 L700 1720" stroke="#1d1b19" stroke-width="5" opacity="0.5"/>
+      <path d="M470 760 L610 880 M610 760 L470 880" stroke="#e5e0d6" stroke-width="10"/><path d="M470 760 L610 760" stroke="#1d1b19" stroke-width="7"/><path d="M459 880 L621 1000 M621 880 L459 1000" stroke="#e5e0d6" stroke-width="10"/><path d="M459 880 L621 880" stroke="#1d1b19" stroke-width="7"/><path d="M447 1000 L633 1120 M633 1000 L447 1120" stroke="#e5e0d6" stroke-width="10"/><path d="M447 1000 L633 1000" stroke="#1d1b19" stroke-width="7"/><path d="M436 1120 L644 1240 M644 1120 L436 1240" stroke="#e5e0d6" stroke-width="10"/><path d="M436 1120 L644 1120" stroke="#1d1b19" stroke-width="7"/><path d="M425 1240 L655 1360 M655 1240 L425 1360" stroke="#e5e0d6" stroke-width="10"/><path d="M425 1240 L655 1240" stroke="#1d1b19" stroke-width="7"/><path d="M414 1360 L666 1480 M666 1360 L414 1480" stroke="#e5e0d6" stroke-width="10"/><path d="M414 1360 L666 1360" stroke="#1d1b19" stroke-width="7"/><path d="M402 1480 L678 1600 M678 1480 L402 1600" stroke="#e5e0d6" stroke-width="10"/><path d="M402 1480 L678 1480" stroke="#1d1b19" stroke-width="7"/><path d="M391 1600 L689 1720 M689 1600 L391 1720" stroke="#e5e0d6" stroke-width="10"/><path d="M391 1600 L689 1600" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="440" y="700" width="200" height="70" rx="10" fill="#e5e0d6" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M540 700 L540 520" stroke="#1d1b19" stroke-width="10"/><circle cx="540" cy="510" r="16" fill="#c0392b" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M470 600 Q540 560 610 600 M445 560 Q540 505 635 560" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/>
+    </g><g transform="translate(400 330) scale(0.62)"><g id="pa7"><g id="pa7p" class="mano">
+      <path d="M150 520 L140 660 L205 660 L208 540 Z M250 520 L262 660 L320 660 L300 520 Z" fill="#4f6e93" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M118 662 Q120 640 145 640 L210 640 Q222 664 210 680 L120 680 Q110 674 118 662 Z M250 662 Q252 640 277 640 L330 640 Q345 664 335 680 L252 680 Q240 674 250 662 Z" fill="#1d1b19"/>
+      <path d="M125 300 Q200 270 280 300 L310 540 Q205 575 110 540 Z" fill="#5b7fa6" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M160 300 L165 420 L250 420 L255 300" fill="none" stroke="#1d1b19" stroke-width="7"/>
+      <rect x="175" y="345" width="62" height="50" rx="8" fill="#4f6e93" stroke="#1d1b19" stroke-width="6"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M128 310 Q80 380 92 470" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#1d1b19" stroke-width="44" stroke-linecap="round"/>
+      <path d="M282 310 Q330 370 340 440" fill="none" stroke="#5b7fa6" stroke-width="30" stroke-linecap="round"/>
+      <circle cx="92" cy="478" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <circle cx="340" cy="450" r="24" fill="#f2c39b" stroke="#1d1b19" stroke-width="7"/>
+      <path d="M335 445 L395 360 M380 340 Q400 330 412 350 Q420 368 400 378 L385 372" fill="none" stroke="#8a8f96" stroke-width="16" stroke-linecap="round"/>
+      <path d="M335 445 L395 360" fill="none" stroke="#1d1b19" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <ellipse cx="205" cy="215" rx="98" ry="104" fill="#f2c39b" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M108 180 Q110 95 205 92 Q300 95 302 180 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <path d="M285 172 Q340 170 352 188 Q330 198 290 192" fill="#e8692e" stroke="#1d1b19" stroke-width="8" stroke-linejoin="round"/>
+      <circle cx="170" cy="215" r="13" fill="#1d1b19"/><circle cx="238" cy="210" r="7" fill="#1d1b19"/>
+      <path d="M150 255 Q178 238 205 252 Q232 238 262 255 Q250 285 205 272 Q160 285 150 255 Z" fill="#6b4a33" stroke="#1d1b19" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M185 285 Q205 300 228 284" fill="#7a2f22" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+      <path d="M198 222 Q192 245 210 246" fill="none" stroke="#1d1b19" stroke-width="6" stroke-linecap="round"/>
+    </g>
+      <g transform="translate(395 250) rotate(18)"><rect x="-38" y="-70" width="76" height="140" rx="16" fill="#1d1b19"/><rect x="-28" y="-58" width="56" height="116" rx="10" fill="#6fd08c"/></g>
+      <path d="M440 120 Q470 90 500 120 M455 85 Q480 60 510 85" fill="none" stroke="#1d1b19" stroke-width="7" stroke-linecap="round"/></g></g><g id="mini7" transform="translate(640 600) rotate(12) scale(0.17)"><g id="mb7">
+      <g class="mano"><path d="M220 300 L860 300 Q890 300 890 330 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 L190 330 Q190 300 220 300 Z" fill="#f07a2a" stroke="#1d1b19" stroke-width="10"/>
+      <path d="M190 1090 Q400 1030 600 1080 Q760 1120 890 1060 L890 1480 Q890 1510 860 1510 L220 1510 Q190 1510 190 1480 Z" fill="#8fd6a4" stroke="#1d1b19" stroke-width="8"/>
+      <rect x="470" y="322" width="140" height="36" rx="18" fill="#f0eee6" stroke="#1d1b19" stroke-width="7"/></g>
+      <image href="assets/logo.svg" x="228" y="330" width="46" height="46"/>
+      <text x="282" y="366" font-family="Inter" font-weight="900" font-size="30" fill="#fff">norte.local</text>
+      <text x="230" y="480" font-family="Archivo Black" font-size="92" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 230 480)">Recepcionista</text>
+      <text x="250" y="590" font-family="Archivo Black" font-size="94" fill="#ffd23f" stroke="#2c3e8f" stroke-width="7" paint-order="stroke" transform="rotate(-4 250 590)">de BOLSILLO</text>
+      <text x="250" y="660" font-family="Inter" font-weight="900" font-size="36" fill="#fff" stroke="#2c3e8f" stroke-width="5" paint-order="stroke">Edición: manos ocupadas</text>
+      <g class="mano"><path d="M330 700 L760 700 Q800 700 800 740 L800 1220 Q800 1260 760 1260 L330 1260 Q290 1260 290 1220 L290 740 Q290 700 330 700 Z" fill="#fff" opacity="0.28" stroke="#fff" stroke-width="10"/></g>
+      <g transform="translate(305 640) scale(0.82)"><g id="mb7j" class="mano">
+      <path d="M120 700 Q60 560 150 470 M480 700 Q540 560 450 470" fill="none" stroke="#1f2430" stroke-width="44" stroke-linecap="round"/>
+      <rect x="150" y="215" width="300" height="560" rx="54" fill="#1f2430" stroke="#1d1b19" stroke-width="9"/>
+      <rect x="175" y="255" width="250" height="470" rx="30" fill="#2c3e8f"/>
+      <path d="M150 600 Q300 520 450 600 L450 660 Q300 585 150 660 Z" fill="#1f2430" stroke="#1d1b19" stroke-width="7" stroke-linejoin="round"/>
+      <path d="M168 240 Q170 120 300 115 Q430 120 432 240 Q380 205 300 205 Q220 205 168 240 Z" fill="#e8692e" stroke="#1d1b19" stroke-width="8"/>
+      <path d="M300 118 L300 205" stroke="#1d1b19" stroke-width="4" opacity="0.5"/>
+      <path d="M262 150 L278 128 L300 150 L322 128 L338 150 L338 172 L262 172 Z" fill="#f2c230" stroke="#1d1b19" stroke-width="5" stroke-linejoin="round"/>
+      
+      <path d="M215 330 L265 345 M385 330 L335 345" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="245" cy="372" rx="16" ry="12" fill="#fff"/><ellipse cx="355" cy="372" rx="16" ry="12" fill="#fff"/>
+      <path d="M262 445 Q300 465 338 445" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <image href="assets/logo.svg" x="268" y="560" width="64" height="64"/>
+    </g></g>
+      <g class="mano"><path d="M330 720 Q320 900 340 1000" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity="0.7"/></g>
+      <g id="mb7badge"><circle cx="770" cy="760" r="98" fill="#6fd08c" stroke="#1d1b19" stroke-width="7"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="27" fill="#1d1b19"><tspan x="770" y="738">¡Coge el</tspan><tspan x="770" y="772">teléfono</tspan><tspan x="770" y="806">por ti!</tspan></text></g>
+      <circle cx="250" cy="840" r="52" fill="#fff" stroke="#1d1b19" stroke-width="6"/>
+      <text text-anchor="middle" font-family="Inter" font-weight="900" font-size="22" fill="#1d1b19"><tspan x="250" y="834">100 %</tspan><tspan x="250" y="862">SIN PACO</tspan></text>
+      <g id="mb7b0"><rect x="232" y="1296" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1330" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Coge llamadas</text></g><g id="mb7b1"><rect x="232" y="1346" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1380" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Contesta WhatsApp</text></g><g id="mb7b2"><rect x="232" y="1396" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1430" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Agenda citas</text></g><g id="mb7b3"><rect x="232" y="1446" width="430" height="46" rx="10" fill="#ffd23f" opacity="0" class="hl"/><text x="250" y="1480" font-family="Inter" font-weight="900" font-size="34" fill="#1d1b19">✓ Recuerda citas · 24 h</text></g>
+    </g></g><g id="vi7" class="mano" opacity="0.8">
+      <path d="M60 900 Q220 880 300 905 M90 960 Q200 950 260 965 M760 820 Q900 800 1020 825 M800 880 Q930 870 1000 885" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round"/></g></g></g></svg><div class="pregunta abajo" id="preg7">Comenta <em>RECEPCIÓN</em></div><div id="marca"><img src="assets/logo.svg" alt="" />norte.local</div></div>
+      <div id="cap0" class="cap paco clip" data-start="0.100" data-duration="0.590" data-track-index="9"><span><b id="c0w0">¡QUE</b> <b id="c0w1">ALGUIEN</b></span></div>
+<div id="cap1" class="cap paco clip" data-start="0.690" data-duration="0.590" data-track-index="9"><span><b id="c1w0">INVENTE</b> <b id="c1w1">ALGO</b></span></div>
+<div id="cap2" class="cap paco clip" data-start="1.280" data-duration="0.635" data-track-index="9"><span><b id="c2w0">PARA</b> <b id="c2w1">COGER</b> <b id="c2w2">EL</b></span></div>
+<div id="cap3" class="cap paco clip" data-start="1.915" data-duration="0.589" data-track-index="9"><span><b id="c3w0">TELÉFONO</b> <b id="c3w1">SIN</b></span></div>
+<div id="cap4" class="cap paco clip" data-start="2.504" data-duration="0.635" data-track-index="9"><span><b id="c4w0">SUBIRME</b> <b id="c4w1">A</b> <b id="c4w2">UNA</b></span></div>
+<div id="cap5" class="cap paco clip" data-start="3.139" data-duration="0.735" data-track-index="9"><span><b id="c5w0">ANTENA!</b></span></div>
+<div id="cap6" class="cap clip" data-start="4.048" data-duration="0.320" data-track-index="9"><span><b id="c6w0">PACO</b> <b id="c6w1">TE</b></span></div>
+<div id="cap7" class="cap clip" data-start="4.368" data-duration="0.460" data-track-index="9"><span><b id="c7w0">DIJIMOS</b> <b id="c7w1">QUE</b></span></div>
+<div id="cap8" class="cap clip" data-start="4.828" data-duration="0.340" data-track-index="9"><span><b id="c8w0">ESTÁBAMOS</b></span></div>
+<div id="cap9" class="cap clip" data-start="5.168" data-duration="0.760" data-track-index="9"><span><b id="c9w0">TRABAJANDO</b> <b id="c9w1">EN</b></span></div>
+<div id="cap10" class="cap clip" data-start="5.928" data-duration="0.600" data-track-index="9"><span><b id="c10w0">ELLO</b></span></div>
+<div id="cap11" class="cap clip" data-start="7.826" data-duration="0.120" data-track-index="9"><span><b id="c11w0">LA</b></span></div>
+<div id="cap12" class="cap clip" data-start="7.946" data-duration="0.700" data-track-index="9"><span><b id="c12w0">RECEPCIONISTA</b></span></div>
+<div id="cap13" class="cap clip" data-start="8.646" data-duration="1.020" data-track-index="9"><span><b id="c13w0">DE</b> <b id="c13w1">BOLSILLO</b></span></div>
+<div id="cap14" class="cap clip" data-start="9.826" data-duration="0.740" data-track-index="9"><span><b id="c14w0">EDICIÓN</b></span></div>
+<div id="cap15" class="cap clip" data-start="10.566" data-duration="0.180" data-track-index="9"><span><b id="c15w0">MANOS</b></span></div>
+<div id="cap16" class="cap clip" data-start="10.746" data-duration="0.960" data-track-index="9"><span><b id="c16w0">OCUPADAS</b></span></div>
+<div id="cap17" class="cap clip" data-start="12.003" data-duration="0.400" data-track-index="9"><span><b id="c17w0">COGE</b> <b id="c17w1">LAS</b></span></div>
+<div id="cap18" class="cap clip" data-start="12.403" data-duration="0.400" data-track-index="9"><span><b id="c18w0">LLAMADAS</b></span></div>
+<div id="cap19" class="cap clip" data-start="12.803" data-duration="0.720" data-track-index="9"><span><b id="c19w0">MIENTRAS</b> <b id="c19w1">ESTÁS</b></span></div>
+<div id="cap20" class="cap clip" data-start="13.523" data-duration="0.620" data-track-index="9"><span><b id="c20w0">DEBAJO</b> <b id="c20w1">DE</b> <b id="c20w2">UN</b></span></div>
+<div id="cap21" class="cap clip" data-start="14.143" data-duration="0.860" data-track-index="9"><span><b id="c21w0">FREGADERO</b></span></div>
+<div id="cap22" class="cap clip" data-start="15.127" data-duration="0.639" data-track-index="9"><span><b id="c22w0">CONTESTA</b> <b id="c22w1">LOS</b></span></div>
+<div id="cap23" class="cap clip" data-start="15.766" data-duration="0.492" data-track-index="9"><span><b id="c23w0">WHATSAPPS</b></span></div>
+<div id="cap24" class="cap clip" data-start="16.258" data-duration="0.738" data-track-index="9"><span><b id="c24w0">MIENTRAS</b> <b id="c24w1">ESTÁS</b></span></div>
+<div id="cap25" class="cap clip" data-start="16.996" data-duration="0.639" data-track-index="9"><span><b id="c25w0">SUBIDO</b> <b id="c25w1">A</b> <b id="c25w2">UNA</b></span></div>
+<div id="cap26" class="cap clip" data-start="17.635" data-duration="0.862" data-track-index="9"><span><b id="c26w0">ESCALERA</b></span></div>
+<div id="cap27" class="cap clip" data-start="18.672" data-duration="0.613" data-track-index="9"><span><b id="c27w0">Y</b> <b id="c27w1">AGENDA</b> <b id="c27w2">LAS</b></span></div>
+<div id="cap28" class="cap clip" data-start="19.285" data-duration="0.708" data-track-index="9"><span><b id="c28w0">CITAS</b> <b id="c28w1">MIENTRAS</b></span></div>
+<div id="cap29" class="cap clip" data-start="19.993" data-duration="0.614" data-track-index="9"><span><b id="c29w0">LOS</b> <b id="c29w1">BOMBEROS</b></span></div>
+<div id="cap30" class="cap clip" data-start="20.607" data-duration="0.566" data-track-index="9"><span><b id="c30w0">TE</b> <b id="c30w1">BAJAN</b> <b id="c30w2">DE</b></span></div>
+<div id="cap31" class="cap clip" data-start="21.173" data-duration="0.889" data-track-index="9"><span><b id="c31w0">LA</b> <b id="c31w1">ANTENA</b></span></div>
+<div id="cap32" class="cap clip" data-start="23.654" data-duration="0.520" data-track-index="9"><span><b id="c32w0">TE</b> <b id="c32w1">AVISA</b> <b id="c32w2">DE</b></span></div>
+<div id="cap33" class="cap clip" data-start="24.174" data-duration="0.620" data-track-index="9"><span><b id="c33w0">CADA</b> <b id="c33w1">CITA</b> <b id="c33w2">AL</b></span></div>
+<div id="cap34" class="cap clip" data-start="24.794" data-duration="0.620" data-track-index="9"><span><b id="c34w0">MOMENTO</b></span></div>
+<div id="cap35" class="cap clip" data-start="25.604" data-duration="0.320" data-track-index="9"><span><b id="c35w0">Y</b> <b id="c35w1">HASTA</b> <b id="c35w2">LE</b></span></div>
+<div id="cap36" class="cap clip" data-start="25.924" data-duration="0.500" data-track-index="9"><span><b id="c36w0">RECUERDA</b> <b id="c36w1">LA</b></span></div>
+<div id="cap37" class="cap clip" data-start="26.424" data-duration="0.380" data-track-index="9"><span><b id="c37w0">CITA</b> <b id="c37w1">AL</b></span></div>
+<div id="cap38" class="cap clip" data-start="26.804" data-duration="0.680" data-track-index="9"><span><b id="c38w0">CLIENTE</b> <b id="c38w1">EL</b> <b id="c38w2">DÍA</b></span></div>
+<div id="cap39" class="cap clip" data-start="27.484" data-duration="0.780" data-track-index="9"><span><b id="c39w0">ANTES</b></span></div>
+<div id="cap40" class="cap clip" data-start="28.504" data-duration="0.260" data-track-index="9"><span><b id="c40w0">LAS</b></span></div>
+<div id="cap41" class="cap clip" data-start="28.764" data-duration="0.400" data-track-index="9"><span><b id="c41w0">VEINTICUATRO</b></span></div>
+<div id="cap42" class="cap clip" data-start="29.164" data-duration="0.840" data-track-index="9"><span><b id="c42w0">HORAS</b></span></div>
+<div id="cap43" class="cap clip" data-start="30.358" data-duration="0.480" data-track-index="9"><span><b id="c43w0">PACO</b> <b id="c43w1">YA</b> <b id="c43w2">LA</b></span></div>
+<div id="cap44" class="cap clip" data-start="30.838" data-duration="0.660" data-track-index="9"><span><b id="c44w0">TIENE</b></span></div>
+<div id="cap45" class="cap clip" data-start="31.738" data-duration="0.740" data-track-index="9"><span><b id="c45w0">AHORA</b> <b id="c45w1">SOLO</b> <b id="c45w2">LE</b></span></div>
+<div id="cap46" class="cap clip" data-start="32.478" data-duration="1.140" data-track-index="9"><span><b id="c46w0">FALTA</b> <b id="c46w1">BAJAR</b></span></div>
+<div id="cap47" class="cap paco clip" data-start="36.515" data-duration="0.155" data-track-index="9"><span><b id="c47w0">¿Y</b> <b id="c47w1">LA</b></span></div>
+<div id="cap48" class="cap paco clip" data-start="36.670" data-duration="0.446" data-track-index="9"><span><b id="c48w0">ESCALERA</b></span></div>
+<div id="cap49" class="cap paco clip" data-start="37.116" data-duration="0.808" data-track-index="9"><span><b id="c49w0">PARA</b> <b id="c49w1">CUÁNDO?</b></span></div>
+      <div id="vineta"></div><div id="grano"></div>
+      <audio id="voz" class="clip" src="assets/voz.wav" data-start="0" data-duration="38.899" data-volume="1" data-track-index="10"></audio>
+      <audio id="musica" class="clip" src="assets/musica.mp3" data-start="0" data-duration="38.899" data-media-start="0" data-volume="0.12" data-fade-out="1" data-track-index="11"></audio>
+      <audio id="fx0" class="clip" src="assets/whoosh.mp3" data-start="3.758" data-duration="0.6" data-volume="0.45" data-track-index="12"></audio>
+<audio id="fx1" class="clip" src="assets/whoosh.mp3" data-start="11.713" data-duration="0.6" data-volume="0.45" data-track-index="13"></audio>
+<audio id="fx2" class="clip" src="assets/whoosh.mp3" data-start="14.837" data-duration="0.6" data-volume="0.45" data-track-index="14"></audio>
+<audio id="fx3" class="clip" src="assets/whoosh.mp3" data-start="18.382" data-duration="0.6" data-volume="0.45" data-track-index="15"></audio>
+<audio id="fx4" class="clip" src="assets/whoosh.mp3" data-start="30.068" data-duration="0.6" data-volume="0.45" data-track-index="16"></audio>
+<audio id="fx5" class="clip" src="assets/notification.mp3" data-start="0.900" data-duration="0.8" data-volume="0.35" data-track-index="17"></audio>
+<audio id="fx6" class="clip" src="assets/riser.mp3" data-start="4.723" data-duration="1.9" data-volume="0.4" data-track-index="18"></audio>
+<audio id="fx7" class="clip" src="assets/impact-bass-1.mp3" data-start="6.623" data-duration="1.2" data-volume="0.8" data-track-index="19"></audio>
+<audio id="fx8" class="clip" src="assets/sparkle.mp3" data-start="6.773" data-duration="1.0" data-volume="0.4" data-track-index="20"></audio>
+<audio id="fx9" class="clip" src="assets/pop.mp3" data-start="8.836" data-duration="0.4" data-volume="0.5" data-track-index="21"></audio>
+<audio id="fx10" class="clip" src="assets/pop.mp3" data-start="9.876" data-duration="0.4" data-volume="0.45" data-track-index="22"></audio>
+<audio id="fx11" class="clip" src="assets/ring.wav" data-start="11.933" data-duration="1.2" data-volume="0.22" data-track-index="23"></audio>
+<audio id="fx12" class="clip" src="assets/chime.mp3" data-start="14.193" data-duration="0.8" data-volume="0.45" data-track-index="24"></audio>
+<audio id="fx13" class="clip" src="assets/notification.mp3" data-start="15.177" data-duration="0.8" data-volume="0.4" data-track-index="25"></audio>
+<audio id="fx14" class="clip" src="assets/boing.wav" data-start="17.685" data-duration="0.6" data-volume="0.5" data-track-index="26"></audio>
+<audio id="fx15" class="clip" src="assets/riser.mp3" data-start="18.832" data-duration="1.4" data-volume="0.35" data-track-index="27"></audio>
+<audio id="fx16" class="clip" src="assets/impact-bass-2.mp3" data-start="21.364" data-duration="1.0" data-volume="0.6" data-track-index="28"></audio>
+<audio id="fx17" class="clip" src="assets/impact-bass-1.mp3" data-start="22.422" data-duration="1.2" data-volume="0.75" data-track-index="29"></audio>
+<audio id="fx18" class="clip" src="assets/pop.mp3" data-start="23.784" data-duration="0.4" data-volume="0.5" data-track-index="30"></audio>
+<audio id="fx19" class="clip" src="assets/pop.mp3" data-start="25.974" data-duration="0.4" data-volume="0.5" data-track-index="31"></audio>
+<audio id="fx20" class="clip" src="assets/pop.mp3" data-start="28.814" data-duration="0.4" data-volume="0.5" data-track-index="32"></audio>
+<audio id="fx21" class="clip" src="assets/sparkle.mp3" data-start="29.114" data-duration="1.0" data-volume="0.35" data-track-index="33"></audio>
+<audio id="fx22" class="clip" src="assets/pop.mp3" data-start="33.816" data-duration="0.4" data-volume="0.5" data-track-index="34"></audio>
+<audio id="fx23" class="clip" src="assets/boing.wav" data-start="36.920" data-duration="0.6" data-volume="0.5" data-track-index="35"></audio>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+            tl.fromTo("#cam0", { scale: 1.2, transformOrigin: "50% 28%" }, { scale: 1.06, duration: 1.8, ease: "power2.out" }, 0);
+      tl.to("#pa0", { rotation: 6, transformOrigin: "205px 680px", duration: 0.32, yoyo: true, repeat: 13, ease: "sine.inOut" }, 0.000);
+      tl.fromTo("#vi0", { x: -120 }, { x: 160, duration: 1.2, repeat: 3, ease: "none" }, 0);
+      tl.fromTo("#preg0", { scale: 0.85, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "back.out(2.4)" }, 0.05);
+      tl.fromTo("#s0 .resp", { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "back.out(2)" }, 0.7);
+      tl.fromTo("#cam0", { scale: 1 }, { scale: 1.14, transformOrigin: "50% 30%", duration: 0.3, ease: "back.out(2)" }, 3.139);
+      tl.to("#a0nubes", { x: 60, duration: 4, ease: "none" }, 0);
+      tl.fromTo("#cam1", { scale: 1.12, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.5, ease: "power2.out" }, 3.878);
+      tl.fromTo("#s1 .tag", { x: -900 }, { x: 0, duration: 0.3, ease: "power3.out" }, 4.078);
+      tl.to("#jefa1", { y: -18, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, 3.878);
+      tl.to("#caja1", { rotation: 2, transformOrigin: "540px 1200px", duration: 0.08, yoyo: true, repeat: 13 }, 5.203);
+      tl.fromTo("#bw2", { y: -1500, rotation: -10, transformOrigin: "540px 900px" }, { y: 0, rotation: 0, duration: 0.32, ease: "power3.in" }, 6.403);
+      tl.fromTo("#cam2", { x: 0 }, { x: 16, duration: 0.04, yoyo: true, repeat: 7, ease: "none" }, 6.723);
+      tl.fromTo("#grande", { scale: 1.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, 6.623);
+      tl.to("#grande", { opacity: 0, y: -80, duration: 0.25 }, 8.236);
+      tl.fromTo("#cam2", { scale: 1 }, { scale: 1.16, transformOrigin: "50% 28%", duration: 0.3, ease: "back.out(2)" }, 8.786);
+      tl.to("#cam2", { scale: 1.05, duration: 0.4 }, 9.876);
+      tl.fromTo("#bl2badge", { scale: 1 }, { scale: 1.15, svgOrigin: "770 760", duration: 0.2, yoyo: true, repeat: 3 }, 10.176);
+      tl.fromTo("#cam3", { scale: 1.25, transformOrigin: "50% 60%" }, { scale: 1.6, duration: 3.12, ease: "power1.inOut" }, 11.833);
+      tl.set("#bl3b0 .hl", { opacity: 1 }, 12.053); tl.fromTo("#bl3b0", { scale: 1 }, { scale: 1.06, svgOrigin: "250 1320", duration: 0.2, ease: "back.out(3)" }, 12.053);
+      tl.fromTo("#bur3", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 11.883);
+      tl.fromTo("#s3 .intento", { y: -200 }, { y: 0, duration: 0.3, ease: "back.out(2)" }, 11.983);
+      tl.fromTo("#ok3", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(3)" }, 14.193);
+      tl.fromTo("#cam4", { scale: 1.25, transformOrigin: "50% 60%" }, { scale: 1.6, duration: 3.54, ease: "power1.inOut" }, 14.957);
+      tl.set("#bl4b1 .hl", { opacity: 1 }, 15.177); tl.fromTo("#bl4b1", { scale: 1 }, { scale: 1.06, svgOrigin: "250 1370", duration: 0.2, ease: "back.out(3)" }, 15.177);
+      tl.fromTo("#bur4", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 15.007);
+      tl.fromTo("#s4 .intento", { y: -200 }, { y: 0, duration: 0.3, ease: "back.out(2)" }, 15.107);
+      tl.fromTo("#ok4", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(3)" }, 17.685);
+      tl.fromTo("#cam5", { scale: 1.25, transformOrigin: "50% 60%" }, { scale: 1.6, duration: 3.50, ease: "power1.inOut" }, 18.502);
+      tl.set("#bl5b2 .hl", { opacity: 1 }, 18.816); tl.fromTo("#bl5b2", { scale: 1 }, { scale: 1.06, svgOrigin: "250 1420", duration: 0.2, ease: "back.out(3)" }, 18.816);
+      tl.fromTo("#bur5", { scale: 0, rotation: -12 }, { scale: 1, rotation: 0, duration: 0.35, ease: "back.out(1.8)" }, 18.552);
+      tl.fromTo("#s5 .intento", { y: -200 }, { y: 0, duration: 0.3, ease: "back.out(2)" }, 18.652);
+      tl.fromTo("#ok5", { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: 0.28, ease: "back.out(3)" }, 21.364);
+      tl.fromTo("#piernas #pierna1", { rotation: 0 }, { rotation: -6, transformOrigin: "600px 1175px", duration: 0.2, yoyo: true, repeat: 11 }, 11.833);
+      tl.to("#pacoE", { rotation: 5, transformOrigin: "205px 660px", duration: 0.2, yoyo: true, repeat: 13, ease: "sine.inOut" }, 14.957);
+      tl.fromTo("#esc5", { x: 500, y: 600 }, { x: 0, y: 0, duration: 1.3, ease: "power2.out" }, 19.932);
+      tl.to("#pab", { rotation: 6, transformOrigin: "205px 680px", duration: 0.32, yoyo: true, repeat: 11, ease: "sine.inOut" }, 18.502);
+      tl.fromTo("#bur5", { x: 0 }, { x: 10, duration: 0.04, yoyo: true, repeat: 5, ease: "none" }, 21.364);
+      tl.fromTo("#cam6", { scale: 1.35, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.45, ease: "power3.out" }, 22.002);
+      tl.fromTo("#grande6", { scale: 1.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.22, ease: "power4.out" }, 22.172);
+      tl.fromTo("#cam6", { x: 0 }, { x: 12, duration: 0.04, yoyo: true, repeat: 5, ease: "none" }, 22.422);
+      tl.to("#grande6", { opacity: 0, scale: 0.8, duration: 0.25 }, 23.484);
+      tl.fromTo("#pg0", { scale: 0, rotation: 25 }, { scale: 1, rotation: -5, duration: 0.3, ease: "back.out(3)" }, 23.734);
+      tl.set("#bl6b2 .hl", { opacity: 1 }, 23.784);
+      tl.fromTo("#pg1", { scale: 0, rotation: -25 }, { scale: 1, rotation: 5, duration: 0.3, ease: "back.out(3)" }, 25.924);
+      tl.set("#bl6b3 .hl", { opacity: 1 }, 25.974);
+      tl.fromTo("#pg2", { scale: 0, rotation: 25 }, { scale: 1, rotation: -5, duration: 0.3, ease: "back.out(3)" }, 28.764);
+      tl.set("#bl6b3 .hl", { opacity: 1 }, 28.814);
+      tl.fromTo("#cam7", { scale: 1.3, transformOrigin: "50% 28%" }, { scale: 1.2, duration: 8.71, ease: "power1.inOut" }, 30.188);
+      tl.to("#pa7", { rotation: 6, transformOrigin: "205px 680px", duration: 0.32, yoyo: true, repeat: 27, ease: "sine.inOut" }, 30.188);
+      tl.fromTo("#vi7", { x: -120 }, { x: 160, duration: 1.2, repeat: 6, ease: "none" }, 30.188);
+      tl.fromTo("#mini7", { scale: 0.05 }, { scale: 0.17, duration: 0.35, ease: "back.out(2)" }, 30.388);
+      tl.fromTo("#preg7", { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 0.3, ease: "power3.out" }, 33.816);
+      tl.fromTo("#marca", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 34.216);
+      tl.fromTo("#cam7", { scale: 1 }, { scale: 1.3, transformOrigin: "50% 30%", duration: 0.3, ease: "back.out(2)" }, 36.720);
+      tl.to("#grano", { backgroundPosition: "137px 91px", duration: 0.08, repeat: 486, ease: "steps(1)" }, 0);
+            tl.fromTo("#cap0 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 0.100);
+      tl.set("#c0w0", { color: "#ff8a3d" }, 0.150);
+      tl.set("#c0w1", { color: "#ff8a3d" }, 0.377);
+      tl.set("#c0w0", { color: "#ffffff" }, 0.377);
+      tl.fromTo("#cap1 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 0.690);
+      tl.set("#c1w0", { color: "#ff8a3d" }, 0.740);
+      tl.set("#c1w1", { color: "#ff8a3d" }, 1.103);
+      tl.set("#c1w0", { color: "#ffffff" }, 1.103);
+      tl.fromTo("#cap2 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 1.280);
+      tl.set("#c2w0", { color: "#ff8a3d" }, 1.330);
+      tl.set("#c2w1", { color: "#ff8a3d" }, 1.556);
+      tl.set("#c2w0", { color: "#ffffff" }, 1.556);
+      tl.set("#c2w2", { color: "#ff8a3d" }, 1.829);
+      tl.set("#c2w1", { color: "#ffffff" }, 1.829);
+      tl.fromTo("#cap3 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 1.915);
+      tl.set("#c3w0", { color: "#ff8a3d" }, 1.965);
+      tl.set("#c3w1", { color: "#ff8a3d" }, 2.373);
+      tl.set("#c3w0", { color: "#ffffff" }, 2.373);
+      tl.fromTo("#cap4 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 2.504);
+      tl.set("#c4w0", { color: "#ff8a3d" }, 2.554);
+      tl.set("#c4w1", { color: "#ff8a3d" }, 2.917);
+      tl.set("#c4w0", { color: "#ffffff" }, 2.917);
+      tl.set("#c4w2", { color: "#ff8a3d" }, 3.008);
+      tl.set("#c4w1", { color: "#ffffff" }, 3.008);
+      tl.fromTo("#cap5 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 3.139);
+      tl.set("#c5w0", { color: "#ff8a3d" }, 3.189);
+      tl.fromTo("#cap6 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 4.048);
+      tl.set("#c6w0", { color: "#ff8a3d" }, 4.098);
+      tl.set("#c6w1", { color: "#ff8a3d" }, 4.358);
+      tl.set("#c6w0", { color: "#ffffff" }, 4.358);
+      tl.fromTo("#cap7 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 4.368);
+      tl.set("#c7w0", { color: "#ff8a3d" }, 4.418);
+      tl.set("#c7w1", { color: "#ff8a3d" }, 4.738);
+      tl.set("#c7w0", { color: "#ffffff" }, 4.738);
+      tl.fromTo("#cap8 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 4.828);
+      tl.set("#c8w0", { color: "#ff8a3d" }, 4.878);
+      tl.fromTo("#cap9 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 5.168);
+      tl.set("#c9w0", { color: "#ff8a3d" }, 5.218);
+      tl.set("#c9w1", { color: "#ff8a3d" }, 5.638);
+      tl.set("#c9w0", { color: "#ffffff" }, 5.638);
+      tl.fromTo("#cap10 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 5.928);
+      tl.set("#c10w0", { color: "#ff8a3d" }, 5.978);
+      tl.fromTo("#cap11 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 7.826);
+      tl.set("#c11w0", { color: "#ff8a3d" }, 7.876);
+      tl.fromTo("#cap12 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 7.946);
+      tl.set("#c12w0", { color: "#ff8a3d" }, 7.996);
+      tl.fromTo("#cap13 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 8.646);
+      tl.set("#c13w0", { color: "#ff8a3d" }, 8.696);
+      tl.set("#c13w1", { color: "#ff8a3d" }, 8.836);
+      tl.set("#c13w0", { color: "#ffffff" }, 8.836);
+      tl.fromTo("#cap14 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 9.826);
+      tl.set("#c14w0", { color: "#ff8a3d" }, 9.876);
+      tl.fromTo("#cap15 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 10.566);
+      tl.set("#c15w0", { color: "#ff8a3d" }, 10.616);
+      tl.fromTo("#cap16 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 10.746);
+      tl.set("#c16w0", { color: "#ff8a3d" }, 10.796);
+      tl.fromTo("#cap17 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 12.003);
+      tl.set("#c17w0", { color: "#ff8a3d" }, 12.053);
+      tl.set("#c17w1", { color: "#ff8a3d" }, 12.293);
+      tl.set("#c17w0", { color: "#ffffff" }, 12.293);
+      tl.fromTo("#cap18 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 12.403);
+      tl.set("#c18w0", { color: "#ff8a3d" }, 12.453);
+      tl.fromTo("#cap19 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 12.803);
+      tl.set("#c19w0", { color: "#ff8a3d" }, 12.853);
+      tl.set("#c19w1", { color: "#ff8a3d" }, 13.113);
+      tl.set("#c19w0", { color: "#ffffff" }, 13.113);
+      tl.fromTo("#cap20 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 13.523);
+      tl.set("#c20w0", { color: "#ff8a3d" }, 13.573);
+      tl.set("#c20w1", { color: "#ff8a3d" }, 13.973);
+      tl.set("#c20w0", { color: "#ffffff" }, 13.973);
+      tl.set("#c20w2", { color: "#ff8a3d" }, 14.133);
+      tl.set("#c20w1", { color: "#ffffff" }, 14.133);
+      tl.fromTo("#cap21 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 14.143);
+      tl.set("#c21w0", { color: "#ff8a3d" }, 14.193);
+      tl.fromTo("#cap22 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 15.127);
+      tl.set("#c22w0", { color: "#ff8a3d" }, 15.177);
+      tl.set("#c22w1", { color: "#ff8a3d" }, 15.620);
+      tl.set("#c22w0", { color: "#ffffff" }, 15.620);
+      tl.fromTo("#cap23 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 15.766);
+      tl.set("#c23w0", { color: "#ff8a3d" }, 15.816);
+      tl.fromTo("#cap24 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 16.258);
+      tl.set("#c24w0", { color: "#ff8a3d" }, 16.308);
+      tl.set("#c24w1", { color: "#ff8a3d" }, 16.751);
+      tl.set("#c24w0", { color: "#ffffff" }, 16.751);
+      tl.fromTo("#cap25 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 16.996);
+      tl.set("#c25w0", { color: "#ff8a3d" }, 17.046);
+      tl.set("#c25w1", { color: "#ff8a3d" }, 17.390);
+      tl.set("#c25w0", { color: "#ffffff" }, 17.390);
+      tl.set("#c25w2", { color: "#ff8a3d" }, 17.488);
+      tl.set("#c25w1", { color: "#ffffff" }, 17.488);
+      tl.fromTo("#cap26 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 17.635);
+      tl.set("#c26w0", { color: "#ff8a3d" }, 17.685);
+      tl.fromTo("#cap27 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 18.672);
+      tl.set("#c27w0", { color: "#ff8a3d" }, 18.722);
+      tl.set("#c27w1", { color: "#ff8a3d" }, 18.816);
+      tl.set("#c27w0", { color: "#ffffff" }, 18.816);
+      tl.set("#c27w2", { color: "#ff8a3d" }, 19.147);
+      tl.set("#c27w1", { color: "#ffffff" }, 19.147);
+      tl.fromTo("#cap28 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 19.285);
+      tl.set("#c28w0", { color: "#ff8a3d" }, 19.335);
+      tl.set("#c28w1", { color: "#ff8a3d" }, 19.619);
+      tl.set("#c28w0", { color: "#ffffff" }, 19.619);
+      tl.fromTo("#cap29 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 19.993);
+      tl.set("#c29w0", { color: "#ff8a3d" }, 20.043);
+      tl.set("#c29w1", { color: "#ff8a3d" }, 20.232);
+      tl.set("#c29w0", { color: "#ffffff" }, 20.232);
+      tl.fromTo("#cap30 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 20.607);
+      tl.set("#c30w0", { color: "#ff8a3d" }, 20.657);
+      tl.set("#c30w1", { color: "#ff8a3d" }, 20.798);
+      tl.set("#c30w0", { color: "#ffffff" }, 20.798);
+      tl.set("#c30w2", { color: "#ff8a3d" }, 21.081);
+      tl.set("#c30w1", { color: "#ffffff" }, 21.081);
+      tl.fromTo("#cap31 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 21.173);
+      tl.set("#c31w0", { color: "#ff8a3d" }, 21.223);
+      tl.set("#c31w1", { color: "#ff8a3d" }, 21.364);
+      tl.set("#c31w0", { color: "#ffffff" }, 21.364);
+      tl.fromTo("#cap32 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 23.654);
+      tl.set("#c32w0", { color: "#ff8a3d" }, 23.704);
+      tl.set("#c32w1", { color: "#ff8a3d" }, 23.784);
+      tl.set("#c32w0", { color: "#ffffff" }, 23.784);
+      tl.set("#c32w2", { color: "#ff8a3d" }, 24.064);
+      tl.set("#c32w1", { color: "#ffffff" }, 24.064);
+      tl.fromTo("#cap33 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 24.174);
+      tl.set("#c33w0", { color: "#ff8a3d" }, 24.224);
+      tl.set("#c33w1", { color: "#ff8a3d" }, 24.384);
+      tl.set("#c33w0", { color: "#ffffff" }, 24.384);
+      tl.set("#c33w2", { color: "#ff8a3d" }, 24.724);
+      tl.set("#c33w1", { color: "#ffffff" }, 24.724);
+      tl.fromTo("#cap34 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 24.794);
+      tl.set("#c34w0", { color: "#ff8a3d" }, 24.844);
+      tl.fromTo("#cap35 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 25.604);
+      tl.set("#c35w0", { color: "#ff8a3d" }, 25.654);
+      tl.set("#c35w1", { color: "#ff8a3d" }, 25.734);
+      tl.set("#c35w0", { color: "#ffffff" }, 25.734);
+      tl.set("#c35w2", { color: "#ff8a3d" }, 25.854);
+      tl.set("#c35w1", { color: "#ffffff" }, 25.854);
+      tl.fromTo("#cap36 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 25.924);
+      tl.set("#c36w0", { color: "#ff8a3d" }, 25.974);
+      tl.set("#c36w1", { color: "#ff8a3d" }, 26.374);
+      tl.set("#c36w0", { color: "#ffffff" }, 26.374);
+      tl.fromTo("#cap37 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 26.424);
+      tl.set("#c37w0", { color: "#ff8a3d" }, 26.474);
+      tl.set("#c37w1", { color: "#ff8a3d" }, 26.734);
+      tl.set("#c37w0", { color: "#ffffff" }, 26.734);
+      tl.fromTo("#cap38 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 26.804);
+      tl.set("#c38w0", { color: "#ff8a3d" }, 26.854);
+      tl.set("#c38w1", { color: "#ff8a3d" }, 27.294);
+      tl.set("#c38w0", { color: "#ffffff" }, 27.294);
+      tl.set("#c38w2", { color: "#ff8a3d" }, 27.374);
+      tl.set("#c38w1", { color: "#ffffff" }, 27.374);
+      tl.fromTo("#cap39 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 27.484);
+      tl.set("#c39w0", { color: "#ff8a3d" }, 27.534);
+      tl.fromTo("#cap40 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 28.504);
+      tl.set("#c40w0", { color: "#ff8a3d" }, 28.554);
+      tl.fromTo("#cap41 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 28.764);
+      tl.set("#c41w0", { color: "#ff8a3d" }, 28.814);
+      tl.fromTo("#cap42 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 29.164);
+      tl.set("#c42w0", { color: "#ff8a3d" }, 29.214);
+      tl.fromTo("#cap43 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 30.358);
+      tl.set("#c43w0", { color: "#ff8a3d" }, 30.408);
+      tl.set("#c43w1", { color: "#ff8a3d" }, 30.668);
+      tl.set("#c43w0", { color: "#ffffff" }, 30.668);
+      tl.set("#c43w2", { color: "#ff8a3d" }, 30.768);
+      tl.set("#c43w1", { color: "#ffffff" }, 30.768);
+      tl.fromTo("#cap44 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 30.838);
+      tl.set("#c44w0", { color: "#ff8a3d" }, 30.888);
+      tl.fromTo("#cap45 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 31.738);
+      tl.set("#c45w0", { color: "#ff8a3d" }, 31.788);
+      tl.set("#c45w1", { color: "#ff8a3d" }, 32.028);
+      tl.set("#c45w0", { color: "#ffffff" }, 32.028);
+      tl.set("#c45w2", { color: "#ff8a3d" }, 32.328);
+      tl.set("#c45w1", { color: "#ffffff" }, 32.328);
+      tl.fromTo("#cap46 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 32.478);
+      tl.set("#c46w0", { color: "#ff8a3d" }, 32.528);
+      tl.set("#c46w1", { color: "#ff8a3d" }, 32.768);
+      tl.set("#c46w0", { color: "#ffffff" }, 32.768);
+      tl.fromTo("#cap47 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 36.515);
+      tl.set("#c47w0", { color: "#ff8a3d" }, 36.565);
+      tl.set("#c47w1", { color: "#ff8a3d" }, 36.662);
+      tl.set("#c47w0", { color: "#ffffff" }, 36.662);
+      tl.fromTo("#cap48 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 36.670);
+      tl.set("#c48w0", { color: "#ff8a3d" }, 36.720);
+      tl.fromTo("#cap49 span", { scale: 0.78, y: 14 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.6)" }, 37.116);
+      tl.set("#c49w0", { color: "#ff8a3d" }, 37.166);
+      tl.set("#c49w1", { color: "#ff8a3d" }, 37.263);
+      tl.set("#c49w0", { color: "#ffffff" }, 37.263);
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

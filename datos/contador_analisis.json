@@ -1,10 +1,10 @@
 {
  "explicacion": "Contador de reels analizados. Lo actualiza la tarea diaria cada vez que analiza algo. 'revisados' = reels de otras cuentas cuyos datos se han mirado con el Descubridor; 'virales' = de esos, los que superan el umbral; 'desmontados' = analizados a fondo (transcripción, fotogramas, estructura); 'propios_medidos' = mediciones de nuestros reels.",
  "total": {
-  "revisados": 1730,
-  "virales": 83,
-  "desmontados": 25,
-  "propios_medidos": 31
+  "revisados": 2130,
+  "virales": 100,
+  "desmontados": 28,
+  "propios_medidos": 44
  },
  "historial": [
   {
@@ -67,6 +67,15 @@
    "propios_medidos": 11,
    "clonados": 1,
    "detalle": "337 de los perfiles habituales (sin virales nuevos, 4.º día) + 162 de 8 cuentas exploradas en TikTok/YouTube para historias absurdas + 40 de una búsqueda de YouTube (las demás búsquedas dan 403). Nuevas: @zachking y @curiosidadesconmike. Desmontados 3: @zachking «a message to all AI» (5,7x, 68,5 M), @zachking «is it cake» (5,7x) y @curiosidadesconmike juguetes navideños (91x). Clon absurdo de «a message to all AI» (Toni el electricista que se clona) para el 27-M 13:40. Medidos 11 reels propios (Windsor, 7 días)."
+  },
+  {
+   "fecha": "2026-11-28",
+   "revisados": 400,
+   "virales": 17,
+   "desmontados": 3,
+   "propios_medidos": 13,
+   "clonados": 1,
+   "detalle": "304 de los perfiles habituales (TikTok + listados de YouTube; 5.º día sin virales nuevos de TikTok, solo listados de YouTube que no se pueden descargar) + 96 de 8 cuentas exploradas de humor/animación en TikTok. Nuevas: @scrubdaddy y @duolingo. Desmontados 3: @scrubdaddy Scrub Baby (91x, 6,1 M), @scrubdaddy biberones (58x) y @duolingo cumpleaños (18,8x). Clon absurdo de Scrub Baby (Paco, ep. 3: 'la recepcionista de bolsillo' en blíster) para el 29-M 13:40. Medidos 13 reels propios (Windsor, 7 días)."
   }
  ]
 }

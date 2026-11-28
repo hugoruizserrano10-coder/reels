@@ -41,3 +41,6 @@ fontanero Paco (142 vis.) son los reels que más retienen. Clones "de anuncio" c
 - [ ] «Este es un mensaje para todos los WhatsApps sin leer» (formato N) con una peluquera o un taller; la jefa vuelve como personaje fijo
 - [ ] (diciembre) «Empieza la Navidad y estos clientes se ven muy sospechosos»: juguetes de cuerda dibujados avanzando hacia un móvil que nadie coge (de @curiosidadesconmike, 91x)
 - [ ] «¿Es real o es IA?»: dos móviles, uno lo coge un humano y otro la recepcionista; el giro es que no se nota (de @zachking, 5,7x)
+- [x] (28-nov, clon 29-M de @scrubdaddy 91x) Paco pide un invento desde la antena → «¡Aquí está!»: la recepcionista de bolsillo en blíster (fregadero / escalera / bomberos)
+- [ ] Teaser + respuesta en 2 partes: día 1, móvil sonando sin parar sobre una mesa de taller llena de grasa, sin voz, «Ojalá existiera algo para esto 👀»; día 2, el blíster (de @scrubdaddy, 58x)
+- [ ] Coro de cumpleaños de la jefa: Paco, el loro, Toni y el vecino cantan una línea cada uno; la jefa llora de emoción (de @duolingo, 18,8x, 12 s)
