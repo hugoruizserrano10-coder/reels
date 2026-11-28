@@ -75,7 +75,18 @@
     "saved": 1,
     "shares": 0
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 24,
+    "media_reach": 20,
+    "media_reel_avg_watch_time": 6628,
+    "media_reel_skip_rate": 0.526,
+    "media_like_count": 3,
+    "media_comments_count": 0,
+    "media_saved": 1,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.192
+   }
   },
   {
    "fecha": "2026-11-22",
@@ -117,7 +128,18 @@
     "pct_visto": 0.408,
     "nota": "medido a ~38 h (no se midió a las 24 h); datos en caché de Windsor"
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 7,
+    "media_reach": 4,
+    "media_reel_avg_watch_time": 4584,
+    "media_reel_skip_rate": 0.4,
+    "media_like_count": 2,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.454
+   }
   },
   {
    "fecha": "2026-11-23",
@@ -158,7 +180,18 @@
     "shares": 0,
     "pct_visto": 0.208
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 8,
+    "media_reach": 3,
+    "media_reel_avg_watch_time": 3210,
+    "media_reel_skip_rate": 0.8,
+    "media_like_count": 1,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.265
+   }
   },
   {
    "fecha": "2026-11-23",
@@ -199,7 +232,18 @@
     "guardados": 0,
     "envios": 0
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 142,
+    "media_reach": 124,
+    "media_reel_avg_watch_time": 8001,
+    "media_reel_skip_rate": 0.427,
+    "media_like_count": 2,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.315
+   }
   },
   {
    "fecha": "2026-11-24",
@@ -240,7 +284,18 @@
     "saved": 0,
     "shares": 0
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 5,
+    "media_reach": 2,
+    "media_reel_avg_watch_time": 3225,
+    "media_reel_skip_rate": 0.333,
+    "media_like_count": 0,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.089
+   }
   },
   {
    "fecha": "2026-11-24",
@@ -281,7 +336,18 @@
     "saved": 1,
     "shares": 0
    },
-   "metricas_72h": null
+   "metricas_72h": {
+    "media_views": 240,
+    "media_reach": 221,
+    "media_reel_avg_watch_time": 11178,
+    "media_reel_skip_rate": 0.317,
+    "media_like_count": 3,
+    "media_comments_count": 0,
+    "media_saved": 1,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.394
+   }
   },
   {
    "fecha": "2026-11-25",
@@ -437,7 +503,19 @@
    "control_hora": "20:29",
    "hora_publicacion": "20:40",
    "media_id": "18114246296097327",
-   "story_id": "18163244941459952"
+   "story_id": "18163244941459952",
+   "metricas_24h": {
+    "media_views": 14,
+    "media_reach": 10,
+    "media_reel_avg_watch_time": 3406,
+    "media_reel_skip_rate": 0.818,
+    "media_like_count": 1,
+    "media_comments_count": 0,
+    "media_saved": 0,
+    "media_shares": 0,
+    "medido": "2026-11-28 13:30 (caché Windsor)",
+    "pct_visto": 0.074
+   }
   },
   {
    "fecha": "2026-11-27",

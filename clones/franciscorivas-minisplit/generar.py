@@ -179,7 +179,7 @@ VELO = '        <div class="velo"></div>'
 def movil(id_, clase, cuerpo, extra=""):
     return f'        <div id="{id_}" class="movil"><div class="pant {clase}"><div class="isla"></div>{cuerpo}</div>{extra}</div>'
 
-perdidas = [("tel", "📞", "Llamada perdida", "Cliente · Alcobendas"), ("wa", "💬", "WhatsApp · 4 mensajes", "«¿Me podéis llamar? No enfría»"),
+perdidas = [("tel", "📞", "Llamada perdida", "Cliente nuevo"), ("wa", "💬", "WhatsApp · 4 mensajes", "«¿Me podéis llamar? No enfría»"),
             ("tel", "📞", "Llamada perdida (3)", "Número desconocido"), ("wa", "💬", "WhatsApp · Lucía", "«Hola?? 😡»"),
             ("tel", "📞", "Llamada perdida", "Comunidad Las Lomas")]
 notis = "".join(f'<div id="n{i}" class="noti"><div class="ic {k}">{e}</div><div><b>{t}</b><span>{s}</span></div></div>' for i, (k, e, t, s) in enumerate(perdidas))
@@ -187,14 +187,14 @@ s1 = (vid("v1", "banco", B["s1"], dur("s1") + dur("s2"), cls="borroso") + "\n" +
       movil("m1", "bloq", f'<div class="hora">08:47</div><div class="notis">{notis}</div>', '<div id="badge" class="badge">47</div>'))
 s2 = ('        <div id="ficha">MODELO: <i>móvil de técnico</i><br />ANTIGÜEDAD: <i>3 años</i><br />LLAMADAS PERDIDAS: <i>47</i><br />ESTADO: <i>no lo coge</i></div>')
 s3 = vid("v3a", "placa", B["s3"], t_soldar - B["s3"]) + "\n" + vid("v3b", "soldar", t_soldar, B["s4"] - t_soldar) + "\n" + VELO
-chats = [("👷", "Instalación Tres Cantos", "<em>✓✓</em> Luego te llamo", "3"), ("🏠", "Lucía · split salón", "<em>✓✓</em> Luego te llamo", "5"),
-         ("🔧", "Comunidad Las Lomas", "<em>✓✓</em> Luego te llamo", "2"), ("📞", "Marcos · Sanse", "<em>✓✓</em> Luego te llamo", "4"),
-         ("🏢", "Oficina Alcobendas", "<em>✓✓</em> Luego te llamo", "7")]
+chats = [("👷", "Instalación chalet", "<em>✓✓</em> Luego te llamo", "3"), ("🏠", "Lucía · split salón", "<em>✓✓</em> Luego te llamo", "5"),
+         ("🔧", "Comunidad Las Lomas", "<em>✓✓</em> Luego te llamo", "2"), ("📞", "Marcos · urgente", "<em>✓✓</em> Luego te llamo", "4"),
+         ("🏢", "Oficina centro", "<em>✓✓</em> Luego te llamo", "7")]
 lista = "".join(f'<div id="f{i}" class="fila"><div class="av">{a}</div><div class="tx"><b>{n}</b><span>{m}</span></div><div class="n">{c}</div></div>' for i, (a, n, m, c) in enumerate(chats))
 s4 = (vid("v4", "banco", B["s4"], dur("s4"), ms=3, cls="borroso") + "\n" +
       movil("m4", "wapp", f'<div class="wtop"><div><b>WhatsApp</b><span>21 chats sin leer</span></div></div><div class="lista">{lista}</div>'
             '<div id="buzon"><div style="font-size:44px">📭</div><div><b>Buzón de voz lleno</b><span>No se pueden dejar más mensajes</span></div></div>'))
-vuelan = [("tel", "📞", "Llamada perdida", "Cliente · Alcobendas", 330), ("tel", "📞", "Llamada perdida (3)", "Número desconocido", 520),
+vuelan = [("tel", "📞", "Llamada perdida", "Cliente nuevo", 330), ("tel", "📞", "Llamada perdida (3)", "Número desconocido", 520),
           ("wa", "💬", "WhatsApp · 4 mensajes", "«¿Me podéis llamar?»", 710), ("tel", "📞", "Llamada perdida", "Comunidad Las Lomas", 900)]
 s5 = (vid("v5", "hidro", B["s5"], dur("s5")) + "\n" + VELO + "\n" +
       "\n".join(f'        <div id="vu{i}" class="vuela" style="top:{y}px"><div class="ic {k}">{e}</div><div><b>{t}</b><span>{s}</span></div></div>' for i, (k, e, t, s, y) in enumerate(vuelan)))
@@ -211,7 +211,7 @@ s9 = (vid("v9", "banco", B["s9"], dur("s9"), ms=1, cls="borroso") + "\n" +
             '<div id="w1" class="msg cli">Hola, el split no calienta 🥶 ¿Podéis venir a mirarlo?<small>20:14</small></div>'
             '<div id="w2" class="msg bot">¡Hola Lucía! Sí 🙂 El lunes tengo hueco a las 10:00 o a las 12:30. ¿Cuál te viene mejor?<small>20:14 ✓✓</small></div>'
             '<div id="w3" class="msg cli">A las 10 👍<small>20:15</small></div></div>'
-            '<div id="llamada"><div class="ic">📞</div><div><b>Llamada de Marcos · Sanse</b><span>Atendida por la recepcionista</span></div></div>'
+            '<div id="llamada"><div class="ic">📞</div><div><b>Llamada de Marcos · urgente</b><span>Atendida por la recepcionista</span></div></div>'
             '<div id="okcita"><div class="ic">✓</div><div><b>Visita agendada · lunes 10:00</b><span>Lucía · el split no calienta</span></div></div>'))
 s10 = vid("v10", "whatsapp", B["s10"], dur("s10")) + "\n" + VELO
 s11 = ('        <div id="ctab"><div class="p">Comenta</div><div class="g">RECEPCIÓN</div><div class="s">y te monto la pieza nueva<br />en tu negocio</div></div>')
